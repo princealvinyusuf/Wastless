@@ -1,0 +1,16 @@
+PODS:
+  - LinearProgressView (2.0.1)
+
+DEPENDENCIES:
+  - LinearProgressView (~> 2.0)
+
+SPEC REPOS:
+  trunk:
+    - LinearProgressView
+
+SPEC CHECKSUMS:
+  LinearProgressView: 353d4d45dc599b83cc4b43f14e6c0336aa6f3834
+
+PODFILE CHECKSUM: 807da8151927026098ee2c64932ec3981fc0800b
+
+COCOAPODS: 1.9.1
