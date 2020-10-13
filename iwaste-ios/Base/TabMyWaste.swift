@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TabMyWaste.swift
 //  iwaste-ios
 //
 //  Created by Muhammad Hilmy Fauzi on 10/10/20.
@@ -8,7 +8,7 @@
 import UIKit
 import LinearProgressView
 
-class ViewController: UIViewController {
+class TabMyWaste: UIViewController {
 
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!

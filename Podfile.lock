@@ -1,16 +1,22 @@
 PODS:
+  - ChameleonFramework/Default (2.1.0)
+  - ChameleonFramework/Swift (2.1.0):
+    - ChameleonFramework/Default
   - LinearProgressView (2.0.1)
 
 DEPENDENCIES:
+  - ChameleonFramework/Swift
   - LinearProgressView (~> 2.0)
 
 SPEC REPOS:
   trunk:
+    - ChameleonFramework
     - LinearProgressView
 
 SPEC CHECKSUMS:
+  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   LinearProgressView: 353d4d45dc599b83cc4b43f14e6c0336aa6f3834
 
-PODFILE CHECKSUM: 807da8151927026098ee2c64932ec3981fc0800b
+PODFILE CHECKSUM: 13ca2c043ffac6146486a6c61d8f0d06c6745a86
 
 COCOAPODS: 1.9.1
