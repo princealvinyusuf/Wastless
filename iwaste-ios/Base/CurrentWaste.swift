@@ -1,21 +1,21 @@
 //
-//  TabMyWaste.swift
+//  CurrentWaste.swift
 //  iwaste-ios
 //
-//  Created by Muhammad Hilmy Fauzi on 10/10/20.
+//  Created by Prince Alvin Yusuf on 14/10/20.
 //
 
 import UIKit
 import LinearProgressView
 
-class TabMyWaste: UIViewController {
-
+class CurrentWaste: UIViewController {
+    
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!
     @IBOutlet weak var linearProgressGlass: LinearProgressView!
     @IBOutlet weak var linearProgressPapers: LinearProgressView!
     @IBOutlet weak var linearProgressOrganic: LinearProgressView!
-    
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +40,7 @@ class TabMyWaste: UIViewController {
         linearProgressOrganic.trackColor = #colorLiteral(red: 0, green: 0.5792904496, blue: 0, alpha: 1)
         
         updateLinearProgress()
+        
     }
     
     @objc
@@ -65,4 +66,3 @@ class TabMyWaste: UIViewController {
         linearProgressOrganic.isCornersRounded = true
     }
 }
-
