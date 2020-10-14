@@ -1,5 +1,5 @@
 //
-//  CurrentWaste.swift
+//  CurrentWasteVC.swift
 //  iwaste-ios
 //
 //  Created by Prince Alvin Yusuf on 14/10/20.
@@ -8,7 +8,7 @@
 import UIKit
 import LinearProgressView
 
-class CurrentWaste: UIViewController {
+class CurrentWasteVC: UIViewController {
     
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!

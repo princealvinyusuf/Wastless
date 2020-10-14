@@ -1,5 +1,5 @@
 //
-//  TabMyWaste.swift
+//  TabMyWasteVC.swift
 //  iwaste-ios
 //
 //  Created by Muhammad Hilmy Fauzi on 10/10/20.
@@ -8,7 +8,7 @@
 import UIKit
 import LinearProgressView
 
-class TabMyWaste: UIViewController {
+class TabMyWasteVC: UIViewController {
 
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!
@@ -71,5 +71,10 @@ class TabMyWaste: UIViewController {
         self.present(addNewWasteVC, animated: true, completion: nil)
     }
     
+    @IBAction func btnCurrentWaste(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
+        self.present(currentWasteVC, animated: true, completion: nil)
+    }
 }
 

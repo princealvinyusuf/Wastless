@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +23,11 @@
                                 <color key="barTintColor" systemColor="systemBackgroundColor"/>
                                 <items>
                                     <navigationItem title="Plastics" id="b2r-uL-mWo">
-                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="dej-Od-wzr"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="dej-Od-wzr">
+                                            <connections>
+                                                <action selector="btnCancelClicked:" destination="X0u-77-TX6" id="Y8C-2k-rw1"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="6gg-7z-70g"/>
                                     </navigationItem>
                                 </items>
@@ -61,7 +66,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-NL-iIZ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7aB-NL-iIZ">
                                 <rect key="frame" x="0.0" y="475" width="414" height="379"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -152,10 +157,541 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="57.589285714285708"/>
         </scene>
+        <!--Current WasteVC-->
+        <scene sceneID="HzP-uu-Q4x">
+            <objects>
+                <viewController storyboardIdentifier="CurrentWasteVC" id="6Lv-BF-ZPd" customClass="CurrentWasteVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kR2-5f-Ecy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vq1-tE-xJQ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" name="navigationBarModal"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Current Waste" id="RZQ-mt-2NM">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="eGb-K2-ASz">
+                                            <color key="tintColor" name="navigationBarModal"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fu-mL-1Mv">
+                                <rect key="frame" x="28" y="100" width="64.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="plastic"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3H-0g-8kv" userLabel="counter plastic">
+                                <rect key="frame" x="324.5" y="101" width="61.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="plastic"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-ZM-cDX" userLabel="Linear Progress Plastics" customClass="LinearProgressView" customModule="LinearProgressView">
+                                <rect key="frame" x="28" y="126.5" width="358" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="a7p-7H-llx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ru3-Vd-Iy5">
+                                <rect key="frame" x="28" y="154.5" width="360" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputStraw" translatesAutoresizingMaskIntoConstraints="NO" id="hP8-my-NeM" userLabel="inputStraw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Hfv-Oc-mCl"/>
+                                            <constraint firstAttribute="height" constant="60" id="IBb-Je-T7v"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputBottle" translatesAutoresizingMaskIntoConstraints="NO" id="Qv0-bO-5AH" userLabel="inputBottle">
+                                        <rect key="frame" x="75" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="4ss-lI-hx9"/>
+                                            <constraint firstAttribute="height" constant="60" id="9e6-PQ-Rx3"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputSnackPackage" translatesAutoresizingMaskIntoConstraints="NO" id="o8E-EL-1mz" userLabel="inputSnackPackage">
+                                        <rect key="frame" x="150" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="YYA-af-lMo"/>
+                                            <constraint firstAttribute="width" constant="60" id="qIj-q6-OTK"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputDrinkCup" translatesAutoresizingMaskIntoConstraints="NO" id="2dB-Hi-Rcc" userLabel="inputDrinkCup">
+                                        <rect key="frame" x="225" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="UqN-qk-aqO"/>
+                                            <constraint firstAttribute="height" constant="60" id="it5-aE-xgZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputPlasticBag" translatesAutoresizingMaskIntoConstraints="NO" id="MQZ-SR-ewI" userLabel="inputPlasticBag">
+                                        <rect key="frame" x="300" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="0ul-yU-co7"/>
+                                            <constraint firstAttribute="height" constant="60" id="Elz-Un-1xQ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="STG-Yu-Cjk" userLabel="Metals">
+                                <rect key="frame" x="28" y="238.5" width="55" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="metal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vBc-Bm-Si7" userLabel="counter metal">
+                                <rect key="frame" x="324.5" y="239.5" width="61.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="metal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-dq-2Ys" userLabel="Linear Progress Metals" customClass="LinearProgressView" customModule="LinearProgressView">
+                                <rect key="frame" x="28" y="265" width="358" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="eca-u7-9Z3"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="cRn-9R-att">
+                                <rect key="frame" x="28" y="293" width="360" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputFoodCans" translatesAutoresizingMaskIntoConstraints="NO" id="bVs-wE-H71" userLabel="inputStraw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Jbt-40-5Oq"/>
+                                            <constraint firstAttribute="width" constant="60" id="sR1-YZ-Fg6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputBeverageCans" translatesAutoresizingMaskIntoConstraints="NO" id="IUv-an-xai" userLabel="inputBottle">
+                                        <rect key="frame" x="75" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="TuA-kW-NEY"/>
+                                            <constraint firstAttribute="width" constant="60" id="eI3-pd-tl1"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputScrew_Utensils" translatesAutoresizingMaskIntoConstraints="NO" id="t0r-WV-8rY" userLabel="inputSnackPackage">
+                                        <rect key="frame" x="150" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="2s7-Hx-2dY"/>
+                                            <constraint firstAttribute="width" constant="60" id="g9A-cD-LZw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputBattery" translatesAutoresizingMaskIntoConstraints="NO" id="cdH-af-ZoT" userLabel="inputDrinkCup">
+                                        <rect key="frame" x="225" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Imb-Rj-03U"/>
+                                            <constraint firstAttribute="height" constant="60" id="cpo-E7-s6Y"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputSprayCan" translatesAutoresizingMaskIntoConstraints="NO" id="ABi-V8-wCw" userLabel="inputPlasticBag">
+                                        <rect key="frame" x="300" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="NqA-lM-rxu"/>
+                                            <constraint firstAttribute="height" constant="60" id="f4r-d4-Gz0"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eS9-Wx-3XM" userLabel="glass">
+                                <rect key="frame" x="28" y="377" width="45" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="glass"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lD-LX-XNi" userLabel="counter glass">
+                                <rect key="frame" x="324.5" y="378" width="61.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="glass"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4a-4G-MmI" userLabel="Linear Progress Glass" customClass="LinearProgressView" customModule="LinearProgressView">
+                                <rect key="frame" x="28" y="403.5" width="358" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="Iid-xU-InS"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="bfQ-Vz-Mvz">
+                                <rect key="frame" x="28" y="431.5" width="360" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputjar" translatesAutoresizingMaskIntoConstraints="NO" id="yWe-TI-a95" userLabel="inputStraw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Oy3-Tx-F2U"/>
+                                            <constraint firstAttribute="height" constant="60" id="UXt-Rf-Uha"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputGlassCup" translatesAutoresizingMaskIntoConstraints="NO" id="rDB-tI-V9w" userLabel="inputBottle">
+                                        <rect key="frame" x="75" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Rvn-xc-ecB"/>
+                                            <constraint firstAttribute="width" constant="60" id="cIs-gn-PEZ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputCeramicCup" translatesAutoresizingMaskIntoConstraints="NO" id="oDK-jA-omw" userLabel="inputSnackPackage">
+                                        <rect key="frame" x="150" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="gxb-NK-eTh"/>
+                                            <constraint firstAttribute="width" constant="60" id="qi3-7A-LzB"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputGlassBottle" translatesAutoresizingMaskIntoConstraints="NO" id="cwP-Dk-mef" userLabel="inputDrinkCup">
+                                        <rect key="frame" x="225" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="HTN-nh-Cqk"/>
+                                            <constraint firstAttribute="height" constant="60" id="tr4-Tx-1w9"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputPlate" translatesAutoresizingMaskIntoConstraints="NO" id="EFa-B8-neA" userLabel="inputPlasticBag">
+                                        <rect key="frame" x="300" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="Ngp-6c-D0g"/>
+                                            <constraint firstAttribute="height" constant="60" id="u5t-se-Kuz"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwD-XN-Z2q" userLabel="papers">
+                                <rect key="frame" x="28" y="515.5" width="57" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="paper"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzq-bb-wx7" userLabel="counter paper">
+                                <rect key="frame" x="324.5" y="516.5" width="61.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="paper"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkr-DA-2cU" userLabel="Linear Progress Papers" customClass="LinearProgressView" customModule="LinearProgressView">
+                                <rect key="frame" x="28" y="542" width="358" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0TD-Lw-fwk"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OKa-R3-upj">
+                                <rect key="frame" x="28" y="570" width="360" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputFoodBox" translatesAutoresizingMaskIntoConstraints="NO" id="zJg-17-hY3" userLabel="inputStraw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="LdW-GL-Obp"/>
+                                            <constraint firstAttribute="width" constant="60" id="alu-EW-4hb"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputHardBox" translatesAutoresizingMaskIntoConstraints="NO" id="rV1-DX-Qhm" userLabel="inputBottle">
+                                        <rect key="frame" x="75" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="EAY-lW-1uG"/>
+                                            <constraint firstAttribute="width" constant="60" id="FGa-Cd-ULN"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputSoftBox" translatesAutoresizingMaskIntoConstraints="NO" id="rN3-4a-qSu" userLabel="inputSnackPackage">
+                                        <rect key="frame" x="150" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="jOP-nO-7k6"/>
+                                            <constraint firstAttribute="height" constant="60" id="myl-RE-3fu"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputDrinkCupPaper" translatesAutoresizingMaskIntoConstraints="NO" id="AgQ-to-MS6" userLabel="inputDrinkCup">
+                                        <rect key="frame" x="225" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="YfO-Zo-pj6"/>
+                                            <constraint firstAttribute="width" constant="60" id="uip-Xk-wTT"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputPapers" translatesAutoresizingMaskIntoConstraints="NO" id="lYw-PW-nQD" userLabel="inputPlasticBag">
+                                        <rect key="frame" x="300" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="WYM-fI-bj0"/>
+                                            <constraint firstAttribute="width" constant="60" id="fpO-tJ-0vK"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SzG-AV-RVT" userLabel="counter organic">
+                                <rect key="frame" x="324.5" y="655" width="61.5" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" name="organic"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhC-gL-r61" userLabel="organic">
+                                <rect key="frame" x="28" y="654" width="64.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="organic"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="vGa-2b-2QE">
+                                <rect key="frame" x="28" y="708.5" width="360" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputLeftlovers" translatesAutoresizingMaskIntoConstraints="NO" id="AtA-fd-fMo" userLabel="inputStraw">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="47k-c0-fpJ"/>
+                                            <constraint firstAttribute="width" constant="60" id="Ict-F4-S0D"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputCigarette" translatesAutoresizingMaskIntoConstraints="NO" id="Jih-Nv-Uls" userLabel="inputBottle">
+                                        <rect key="frame" x="75" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="4fO-sj-Bob"/>
+                                            <constraint firstAttribute="width" constant="60" id="tis-Tc-8zS"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputLeaves" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-od-cAq" userLabel="inputSnackPackage">
+                                        <rect key="frame" x="150" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="eps-gG-eJ2"/>
+                                            <constraint firstAttribute="width" constant="60" id="rbD-uT-DsA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputEggshell" translatesAutoresizingMaskIntoConstraints="NO" id="lLt-Zd-Euv" userLabel="inputDrinkCup">
+                                        <rect key="frame" x="225" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="0c2-3M-wl9"/>
+                                            <constraint firstAttribute="height" constant="60" id="wo0-vr-MAQ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputRindWeevils" translatesAutoresizingMaskIntoConstraints="NO" id="4Mu-lT-8cK" userLabel="inputPlasticBag">
+                                        <rect key="frame" x="300" y="0.0" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="60" id="cpx-nK-lcm"/>
+                                            <constraint firstAttribute="height" constant="60" id="hse-6e-Tan"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4I-Gt-yq4" userLabel="Linear Progress Organic" customClass="LinearProgressView" customModule="LinearProgressView">
+                                <rect key="frame" x="28" y="680.5" width="358" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="CsC-NG-eAP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="XVg-1T-bZW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="LwD-XN-Z2q" firstAttribute="leading" secondItem="8fu-mL-1Mv" secondAttribute="leading" id="145-sv-OvG"/>
+                            <constraint firstItem="bfQ-Vz-Mvz" firstAttribute="top" secondItem="g4a-4G-MmI" secondAttribute="bottom" constant="8" id="2LX-qs-xe8"/>
+                            <constraint firstItem="fkr-DA-2cU" firstAttribute="leading" secondItem="LwD-XN-Z2q" secondAttribute="leading" id="45E-Yl-WXV"/>
+                            <constraint firstItem="IhC-gL-r61" firstAttribute="top" secondItem="OKa-R3-upj" secondAttribute="bottom" constant="24" id="800-ui-Ceq"/>
+                            <constraint firstItem="uIb-ZM-cDX" firstAttribute="top" secondItem="8fu-mL-1Mv" secondAttribute="bottom" constant="6" id="8rr-UF-o4K"/>
+                            <constraint firstItem="uIb-ZM-cDX" firstAttribute="top" secondItem="c3H-0g-8kv" secondAttribute="bottom" constant="6" id="B8A-Wh-hFE"/>
+                            <constraint firstItem="lzq-bb-wx7" firstAttribute="trailing" secondItem="fkr-DA-2cU" secondAttribute="trailing" id="DBe-4l-w0A"/>
+                            <constraint firstItem="Vq1-tE-xJQ" firstAttribute="leading" secondItem="XVg-1T-bZW" secondAttribute="leading" id="Eca-R5-HSa"/>
+                            <constraint firstItem="XVg-1T-bZW" firstAttribute="trailing" secondItem="ru3-Vd-Iy5" secondAttribute="trailing" constant="26" id="FEi-t6-kwc"/>
+                            <constraint firstItem="LwD-XN-Z2q" firstAttribute="top" secondItem="bfQ-Vz-Mvz" secondAttribute="bottom" constant="24" id="GXh-1z-iEk"/>
+                            <constraint firstItem="XVg-1T-bZW" firstAttribute="trailing" secondItem="uIb-ZM-cDX" secondAttribute="trailing" constant="28" id="HLJ-aM-rqc"/>
+                            <constraint firstItem="STG-Yu-Cjk" firstAttribute="top" secondItem="ru3-Vd-Iy5" secondAttribute="bottom" constant="24" id="IMW-fM-Xyv"/>
+                            <constraint firstItem="g4a-4G-MmI" firstAttribute="top" secondItem="7lD-LX-XNi" secondAttribute="bottom" constant="6" id="KK2-t9-VIg"/>
+                            <constraint firstItem="bfQ-Vz-Mvz" firstAttribute="leading" secondItem="eS9-Wx-3XM" secondAttribute="leading" id="M84-8n-jjj"/>
+                            <constraint firstItem="XVg-1T-bZW" firstAttribute="trailing" secondItem="Y4I-Gt-yq4" secondAttribute="trailing" constant="28" id="MJ1-L5-klE"/>
+                            <constraint firstItem="eS9-Wx-3XM" firstAttribute="top" secondItem="cRn-9R-att" secondAttribute="bottom" constant="24" id="NAc-Cp-qkg"/>
+                            <constraint firstItem="cRn-9R-att" firstAttribute="top" secondItem="dWq-dq-2Ys" secondAttribute="bottom" constant="8" id="NYq-7u-rqw"/>
+                            <constraint firstItem="XVg-1T-bZW" firstAttribute="trailing" secondItem="dWq-dq-2Ys" secondAttribute="trailing" constant="28" id="Q8Z-fD-Ubm"/>
+                            <constraint firstItem="vBc-Bm-Si7" firstAttribute="trailing" secondItem="dWq-dq-2Ys" secondAttribute="trailing" id="Rby-79-7tm"/>
+                            <constraint firstItem="OKa-R3-upj" firstAttribute="top" secondItem="fkr-DA-2cU" secondAttribute="bottom" constant="8" id="SY9-2L-5Rp"/>
+                            <constraint firstItem="fkr-DA-2cU" firstAttribute="top" secondItem="LwD-XN-Z2q" secondAttribute="bottom" constant="6" id="TAo-bW-Dom"/>
+                            <constraint firstItem="g4a-4G-MmI" firstAttribute="leading" secondItem="eS9-Wx-3XM" secondAttribute="leading" id="TGN-GO-4JF"/>
+                            <constraint firstItem="XVg-1T-bZW" firstAttribute="trailing" secondItem="fkr-DA-2cU" secondAttribute="trailing" constant="28" id="UCx-Lg-ZuS"/>
+                            <constraint firstItem="Vq1-tE-xJQ" firstAttribute="trailing" secondItem="XVg-1T-bZW" secondAttribute="trailing" id="Wym-Y7-hJS"/>
+                            <constraint firstItem="dWq-dq-2Ys" firstAttribute="leading" secondItem="STG-Yu-Cjk" secondAttribute="leading" id="Xod-eP-aS8"/>
+                            <constraint firstItem="fkr-DA-2cU" firstAttribute="top" secondItem="lzq-bb-wx7" secondAttribute="bottom" constant="6" id="Yff-2c-M91"/>
+                            <constraint firstItem="cRn-9R-att" firstAttribute="leading" secondItem="STG-Yu-Cjk" secondAttribute="leading" id="ZXf-mN-0Bn"/>
+                            <constraint firstItem="uIb-ZM-cDX" firstAttribute="leading" secondItem="8fu-mL-1Mv" secondAttribute="leading" id="arW-Mc-Tg1"/>
+                            <constraint firstItem="vGa-2b-2QE" firstAttribute="leading" secondItem="IhC-gL-r61" secondAttribute="leading" id="dzm-CM-jz8"/>
+                            <constraint firstItem="vGa-2b-2QE" firstAttribute="top" secondItem="Y4I-Gt-yq4" secondAttribute="bottom" constant="8" id="efG-CK-VHt"/>
+                            <constraint firstItem="ru3-Vd-Iy5" firstAttribute="top" secondItem="uIb-ZM-cDX" secondAttribute="bottom" constant="8" id="ehJ-k9-L0X"/>
+                            <constraint firstItem="Vq1-tE-xJQ" firstAttribute="top" secondItem="XVg-1T-bZW" secondAttribute="top" id="evF-ol-eDv"/>
+                            <constraint firstItem="eS9-Wx-3XM" firstAttribute="leading" secondItem="8fu-mL-1Mv" secondAttribute="leading" id="fOJ-Q7-bFT"/>
+                            <constraint firstItem="8fu-mL-1Mv" firstAttribute="leading" secondItem="XVg-1T-bZW" secondAttribute="leading" constant="28" id="fZX-eA-RC3"/>
+                            <constraint firstItem="STG-Yu-Cjk" firstAttribute="leading" secondItem="8fu-mL-1Mv" secondAttribute="leading" id="fmG-Bu-cr2"/>
+                            <constraint firstItem="ru3-Vd-Iy5" firstAttribute="leading" secondItem="8fu-mL-1Mv" secondAttribute="leading" id="gp5-pw-mIE"/>
+                            <constraint firstItem="c3H-0g-8kv" firstAttribute="trailing" secondItem="uIb-ZM-cDX" secondAttribute="trailing" id="gzE-ZX-esY"/>
+                            <constraint firstItem="IhC-gL-r61" firstAttribute="leading" secondItem="8fu-mL-1Mv" secondAttribute="leading" id="iI9-gF-6zC"/>
+                            <constraint firstItem="7lD-LX-XNi" firstAttribute="trailing" secondItem="g4a-4G-MmI" secondAttribute="trailing" id="iOa-tn-55A"/>
+                            <constraint firstItem="Y4I-Gt-yq4" firstAttribute="leading" secondItem="IhC-gL-r61" secondAttribute="leading" id="m1o-NS-Q8u"/>
+                            <constraint firstItem="Y4I-Gt-yq4" firstAttribute="top" secondItem="IhC-gL-r61" secondAttribute="bottom" constant="6" id="n5C-Z2-84Q"/>
+                            <constraint firstItem="OKa-R3-upj" firstAttribute="leading" secondItem="LwD-XN-Z2q" secondAttribute="leading" id="oBA-GJ-Xa8"/>
+                            <constraint firstItem="Y4I-Gt-yq4" firstAttribute="top" secondItem="SzG-AV-RVT" secondAttribute="bottom" constant="6" id="pfX-SB-03B"/>
+                            <constraint firstItem="dWq-dq-2Ys" firstAttribute="top" secondItem="vBc-Bm-Si7" secondAttribute="bottom" constant="6" id="r2S-1r-QoJ"/>
+                            <constraint firstItem="8fu-mL-1Mv" firstAttribute="top" secondItem="Vq1-tE-xJQ" secondAttribute="bottom" constant="12" id="vf3-Xr-cRU"/>
+                            <constraint firstItem="SzG-AV-RVT" firstAttribute="trailing" secondItem="Y4I-Gt-yq4" secondAttribute="trailing" id="wBc-ui-wVU"/>
+                            <constraint firstItem="XVg-1T-bZW" firstAttribute="trailing" secondItem="g4a-4G-MmI" secondAttribute="trailing" constant="28" id="yIv-IG-IvW"/>
+                            <constraint firstItem="g4a-4G-MmI" firstAttribute="top" secondItem="eS9-Wx-3XM" secondAttribute="bottom" constant="6" id="yQD-Dc-0XJ"/>
+                            <constraint firstItem="dWq-dq-2Ys" firstAttribute="top" secondItem="STG-Yu-Cjk" secondAttribute="bottom" constant="6" id="ya4-Fd-zQp"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="linearProgressGlass" destination="g4a-4G-MmI" id="PTg-qG-o65"/>
+                        <outlet property="linearProgressMetals" destination="dWq-dq-2Ys" id="s1p-be-3Ze"/>
+                        <outlet property="linearProgressOrganic" destination="Y4I-Gt-yq4" id="h3d-XE-23F"/>
+                        <outlet property="linearProgressPapers" destination="fkr-DA-2cU" id="6AF-2W-uBQ"/>
+                        <outlet property="linearProgressPlastics" destination="uIb-ZM-cDX" id="KUf-sk-3AC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KgY-Ju-zJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="859" y="58"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="inputBattery" width="500" height="500"/>
+        <image name="inputBeverageCans" width="500" height="500"/>
+        <image name="inputBottle" width="200" height="200"/>
+        <image name="inputCeramicCup" width="500" height="500"/>
+        <image name="inputCigarette" width="500" height="500"/>
+        <image name="inputDrinkCup" width="500" height="500"/>
+        <image name="inputDrinkCupPaper" width="500" height="500"/>
+        <image name="inputEggshell" width="500" height="500"/>
+        <image name="inputFoodBox" width="500" height="500"/>
+        <image name="inputFoodCans" width="500" height="500"/>
+        <image name="inputGlassBottle" width="500" height="500"/>
+        <image name="inputGlassCup" width="500" height="500"/>
+        <image name="inputHardBox" width="500" height="500"/>
+        <image name="inputLeaves" width="500" height="500"/>
+        <image name="inputLeftlovers" width="500" height="500"/>
+        <image name="inputPapers" width="500" height="466"/>
+        <image name="inputPlasticBag" width="500" height="500"/>
+        <image name="inputPlate" width="500" height="500"/>
+        <image name="inputRindWeevils" width="500" height="500"/>
+        <image name="inputScrew_Utensils" width="500" height="500"/>
+        <image name="inputSnackPackage" width="200" height="200"/>
+        <image name="inputSoftBox" width="500" height="500"/>
+        <image name="inputSprayCan" width="500" height="500"/>
+        <image name="inputStraw" width="200" height="200"/>
+        <image name="inputjar" width="500" height="500"/>
         <image name="minus" catalog="system" width="128" height="24"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <namedColor name="glass">
+            <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="metal">
+            <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navigationBarModal">
+            <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="organic">
+            <color red="0.043000001460313797" green="0.5690000057220459" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paper">
+            <color red="0.98000001907348633" green="0.69800001382827759" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="plastic">
+            <color red="0.059000000357627869" green="0.49799999594688416" blue="0.68199998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

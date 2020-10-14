@@ -23,6 +23,7 @@ class AddNewWasteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("eeeee")
         collectionWaste.delegate = self
         collectionWaste.dataSource = self
         collectionWaste.register(UINib(nibName: "HorizontalModalListView", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalListView")
@@ -35,7 +36,6 @@ class AddNewWasteVC: UIViewController {
         lblNumTrash.layer.borderWidth = 2
         lblNumTrash.layer.borderColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
         lblNumTrash.textColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
-        
         
         btnPlus.tintColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
         btnMinus.tintColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
@@ -53,18 +53,29 @@ class AddNewWasteVC: UIViewController {
     }
 
     @IBAction func btnPlusMinusClicked(_ sender: UIButton) {
-        
+        var currentNum = Int(lblNumTrash.text!)!
+        if sender.tag == 0 {
+            currentNum += 1
+            lblNumTrash.text = String(describing: currentNum)
+        } else {
+            currentNum -= 1
+            lblNumTrash.text = String(describing: currentNum)
+        }
     }
     
     @IBAction func btnAddWasteClicked(_ sender: Any) {
         print("clicked")
     }
     
+    @IBAction func btnCancelClicked(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AddNewWasteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -88,6 +99,5 @@ extension AddNewWasteVC: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
-    
     
 }

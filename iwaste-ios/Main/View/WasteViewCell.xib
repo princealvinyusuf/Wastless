@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="77"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-XV-9FV">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputDrinkCup" translatesAutoresizingMaskIntoConstraints="NO" id="VyP-XV-9FV">
                         <rect key="frame" x="8" y="3.5" width="70" height="70"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="VyP-XV-9FV" secondAttribute="height" multiplier="1:1" id="97j-J2-jEU"/>
@@ -47,4 +47,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="134.26339285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="inputDrinkCup" width="500" height="500"/>
+    </resources>
 </document>
