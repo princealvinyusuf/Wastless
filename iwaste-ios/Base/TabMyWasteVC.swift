@@ -10,6 +10,9 @@ import LinearProgressView
 
 class TabMyWasteVC: UIViewController {
 
+    @IBOutlet weak var subView: UIView!
+    var tapGesture = UITapGestureRecognizer()
+    
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!
     @IBOutlet weak var linearProgressGlass: LinearProgressView!
@@ -40,6 +43,18 @@ class TabMyWasteVC: UIViewController {
         linearProgressOrganic.trackColor = #colorLiteral(red: 0, green: 0.5792904496, blue: 0, alpha: 1)
         
         updateLinearProgress()
+        
+        subView.layer.cornerRadius = 10
+        subView.layer.shadowColor = UIColor.label.cgColor
+        subView.layer.shadowOpacity = 0.5
+        subView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        subView.layer.shadowRadius = 25.0
+        
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(TabMyWasteVC.subViewTapped(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        subView.addGestureRecognizer(tapGesture)
+        subView.isUserInteractionEnabled = true
     }
     
     @objc
@@ -71,7 +86,13 @@ class TabMyWasteVC: UIViewController {
         self.present(addNewWasteVC, animated: true, completion: nil)
     }
     
-    @IBAction func btnCurrentWaste(_ sender: Any) {
+//    @IBAction func btnCurrentWaste(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
+//        self.present(currentWasteVC, animated: true, completion: nil)
+//    }
+    
+    @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
         self.present(currentWasteVC, animated: true, completion: nil)

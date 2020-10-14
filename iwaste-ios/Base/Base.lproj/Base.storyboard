@@ -258,7 +258,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="1" green="0.50267603632502156" blue="0.43697827390740274" alpha="0.41882491438356162" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstItem="Mi0-Zc-MFz" firstAttribute="leading" secondItem="hot-VU-Gty" secondAttribute="leading" constant="26" id="4E1-Sy-h50"/>
                                     <constraint firstItem="vAb-Je-KUX" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="top" constant="12" id="63B-Kf-NUM"/>
@@ -521,9 +521,6 @@
                                                 </constraints>
                                                 <color key="tintColor" name="organic"/>
                                                 <state key="normal" image="plus.circle.fill" catalog="system"/>
-                                                <connections>
-                                                    <action selector="btnCurrentWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="oRl-bS-XGL"/>
-                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="organicSoft"/>
@@ -575,6 +572,7 @@
                         <outlet property="linearProgressOrganic" destination="2Ia-ou-4W0" id="XCb-sO-uZV"/>
                         <outlet property="linearProgressPapers" destination="SDj-EF-VHs" id="2yX-Zy-mRc"/>
                         <outlet property="linearProgressPlastics" destination="3MO-nA-lrd" id="XEs-HB-Idb"/>
+                        <outlet property="subView" destination="hot-VU-Gty" id="cUa-FS-HJe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmn-Mo-Tt0" sceneMemberID="firstResponder"/>
