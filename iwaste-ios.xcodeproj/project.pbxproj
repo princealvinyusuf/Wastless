@@ -14,6 +14,11 @@
 		5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5934E33C2531FC480082D01D /* iwaste_ios.xcdatamodeld */; };
 		5934E3402531FC4A0082D01D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5934E33F2531FC4A0082D01D /* Assets.xcassets */; };
 		5934E3432531FC4A0082D01D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5934E3412531FC4A0082D01D /* LaunchScreen.storyboard */; };
+		595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90EF2536A50A004D40CE /* HorizontalModalListView.swift */; };
+		595F90F22536A50A004D40CE /* HorizontalModalListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F90F02536A50A004D40CE /* HorizontalModalListView.xib */; };
+		595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F42536A521004D40CE /* WasteViewCell.swift */; };
+		595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F90F52536A521004D40CE /* WasteViewCell.xib */; };
+		595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F92536A55D004D40CE /* AddNewWasteVC.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
@@ -29,6 +34,11 @@
 		5934E33F2531FC4A0082D01D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5934E3422531FC4A0082D01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5934E3442531FC4A0082D01D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		595F90EF2536A50A004D40CE /* HorizontalModalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModalListView.swift; sourceTree = "<group>"; };
+		595F90F02536A50A004D40CE /* HorizontalModalListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalModalListView.xib; sourceTree = "<group>"; };
+		595F90F42536A521004D40CE /* WasteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteViewCell.swift; sourceTree = "<group>"; };
+		595F90F52536A521004D40CE /* WasteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WasteViewCell.xib; sourceTree = "<group>"; };
+		595F90F92536A55D004D40CE /* AddNewWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddNewWasteVC.swift; path = View/AddNewWasteVC.swift; sourceTree = "<group>"; };
 		59FBF2AC25362AAD00F940D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -98,6 +108,17 @@
 			path = "iwaste-ios";
 			sourceTree = "<group>";
 		};
+		595F90EE2536A4C2004D40CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				595F90EF2536A50A004D40CE /* HorizontalModalListView.swift */,
+				595F90F02536A50A004D40CE /* HorizontalModalListView.xib */,
+				595F90F42536A521004D40CE /* WasteViewCell.swift */,
+				595F90F52536A521004D40CE /* WasteViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		59FBF2A5253629FE00F940D5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +131,8 @@
 		59FBF2A625362A0900F940D5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				595F90EE2536A4C2004D40CE /* View */,
+				595F90F92536A55D004D40CE /* AddNewWasteVC.swift */,
 				59FBF2AC25362AAD00F940D5 /* Main.storyboard */,
 			);
 			path = Main;
@@ -199,7 +222,9 @@
 				5934E3432531FC4A0082D01D /* LaunchScreen.storyboard in Resources */,
 				5934E3402531FC4A0082D01D /* Assets.xcassets in Resources */,
 				5934E33B2531FC480082D01D /* Base.storyboard in Resources */,
+				595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */,
 				59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */,
+				595F90F22536A50A004D40CE /* HorizontalModalListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */,
+				595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */,
+				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWaste.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
@@ -424,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KL6VLPSW8Q;
+				DEVELOPMENT_TEAM = 72C5A4RQ56;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

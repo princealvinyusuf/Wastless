@@ -64,5 +64,12 @@ class TabMyWaste: UIViewController {
         linearProgressOrganic.barInset = CGFloat(4)
         linearProgressOrganic.isCornersRounded = true
     }
+    
+    @IBAction func btnAddNewWaste(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
+        self.present(addNewWasteVC, animated: true, completion: nil)
+    }
+    
 }
 
