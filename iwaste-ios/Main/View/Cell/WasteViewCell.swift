@@ -12,7 +12,8 @@ class WasteViewCell: UITableViewCell {
     @IBOutlet weak var imgWaste: UIImageView!
     @IBOutlet weak var txtWasteStatus: UILabel!
     
-    func configureCell() {
-        
+    func configureCell(wasteAdded: WasteAdded) {
+        imgWaste.image = wasteAdded.waste.wasteImg
+        txtWasteStatus.text = "\(wasteAdded.numOfWaste) \(wasteAdded.waste.wasteName) added"
     }
 }

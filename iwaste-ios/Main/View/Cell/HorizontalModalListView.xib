@@ -61,6 +61,7 @@
             <connections>
                 <outlet property="imgWaste" destination="DSV-Hg-cW1" id="KOx-2V-39j"/>
                 <outlet property="txtWaste" destination="BgX-Hp-WKS" id="cBO-kj-Vm4"/>
+                <outlet property="viewBG" destination="Osa-Z0-bpK" id="GGL-LL-CKV"/>
             </connections>
             <point key="canvasLocation" x="170.28985507246378" y="141.29464285714286"/>
         </collectionViewCell>
