@@ -12,6 +12,8 @@
 		591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D069D2538059E0008098A /* ModelWasteAdded.swift */; };
 		591D06A225382CF80008098A /* AddNewWastePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06A125382CF80008098A /* AddNewWastePresenter.swift */; };
 		591D06A925382FA00008098A /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06A825382FA00008098A /* Constans.swift */; };
+		591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06D1253839880008098A /* HorizontalModalCurrentWaste.swift */; };
+		591D06D4253839880008098A /* HorizontalModalCurrentWaste.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */; };
 		5934E3342531FC480082D01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3332531FC480082D01D /* AppDelegate.swift */; };
 		5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3352531FC480082D01D /* SceneDelegate.swift */; };
 		5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3372531FC480082D01D /* TabMyWasteVC.swift */; };
@@ -26,8 +28,6 @@
 		595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F92536A55D004D40CE /* AddNewWasteVC.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
 		9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC20D722536BA30007A828E /* CurrentWasteVC.swift */; };
-		9FD7230025382AA800E761AB /* HorizontalModalCurrentWaste.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */; };
-		9FD7230325382BFF00E761AB /* HorizontalModalCurrentWaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +38,8 @@
 		591D069D2538059E0008098A /* ModelWasteAdded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWasteAdded.swift; sourceTree = "<group>"; };
 		591D06A125382CF80008098A /* AddNewWastePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWastePresenter.swift; sourceTree = "<group>"; };
 		591D06A825382FA00008098A /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		591D06D1253839880008098A /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalModalCurrentWaste.swift; path = ../../../../../HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
+		591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalModalCurrentWaste.xib; path = ../../../../../HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
 		5934E3302531FC480082D01D /* iwaste-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iwaste-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934E3332531FC480082D01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5934E3352531FC480082D01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -110,12 +112,23 @@
 		591D06A625382D590008098A /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				591D06D1253839880008098A /* HorizontalModalCurrentWaste.swift */,
+				591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */,
 				595F90EF2536A50A004D40CE /* HorizontalModalListView.swift */,
 				595F90F02536A50A004D40CE /* HorizontalModalListView.xib */,
 				595F90F42536A521004D40CE /* WasteViewCell.swift */,
 				595F90F52536A521004D40CE /* WasteViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		591D06AB253835660008098A /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */,
+				9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */,
+			);
+			name = "Recovered References";
 			sourceTree = "<group>";
 		};
 		5934E3272531FC480082D01D = {
@@ -125,6 +138,7 @@
 				5934E3312531FC480082D01D /* Products */,
 				21EA55DF880B70054A067BDB /* Pods */,
 				492F8A159DA1CD4762AD9655 /* Frameworks */,
+				591D06AB253835660008098A /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -269,7 +283,7 @@
 				5934E3402531FC4A0082D01D /* Assets.xcassets in Resources */,
 				5934E33B2531FC480082D01D /* Base.storyboard in Resources */,
 				595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */,
-				9FD7230025382AA800E761AB /* HorizontalModalCurrentWaste.xib in Resources */,
+				591D06D4253839880008098A /* HorizontalModalCurrentWaste.xib in Resources */,
 				59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */,
 				595F90F22536A50A004D40CE /* HorizontalModalListView.xib in Resources */,
 			);
@@ -332,12 +346,12 @@
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
+				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
 				591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */,
 				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
-				9FD7230325382BFF00E761AB /* HorizontalModalCurrentWaste.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,7 +6,6 @@ target 'iwaste-ios' do
   use_frameworks!
 
 pod 'LinearProgressView', '~> 2.0'
-pod 'ChameleonFramework/Swift'
 
   # Pods for iwaste-ios
 
