@@ -80,17 +80,14 @@ class TabMyWasteVC: UIViewController {
         linearProgressOrganic.isCornersRounded = true
     }
     
-    @IBAction func btnAddNewWaste(_ sender: Any) {
+    @IBAction func btnAddNewWaste(_ sender: UIButton) {
+        let category = dataWaste[sender.tag]
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
+        addNewWasteVC.selectedCategory = category
         self.present(addNewWasteVC, animated: true, completion: nil)
     }
-    
-//    @IBAction func btnCurrentWaste(_ sender: Any) {
-//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-//        let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
-//        self.present(currentWasteVC, animated: true, completion: nil)
-//    }
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -12,24 +12,23 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="horizontalModalListView" id="gTV-IL-0wX" customClass="HorizontalModalListView" customModule="iwaste_ios" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
+            <rect key="frame" x="0.0" y="0.0" width="75" height="105"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
+                <rect key="frame" x="0.0" y="0.0" width="75" height="105"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Osa-Z0-bpK">
-                        <rect key="frame" x="0.0" y="0.0" width="75" height="90"/>
+                        <rect key="frame" x="0.0" y="0.0" width="75" height="105"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputFoodCans" translatesAutoresizingMaskIntoConstraints="NO" id="DSV-Hg-cW1">
-                                <rect key="frame" x="2.5" y="0.0" width="70" height="70"/>
+                                <rect key="frame" x="2" y="2" width="71" height="69"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="DSV-Hg-cW1" secondAttribute="height" multiplier="1:1" id="rRi-YW-adD"/>
-                                    <constraint firstAttribute="width" constant="70" id="t2P-cn-Ts6"/>
+                                    <constraint firstAttribute="height" constant="69" id="Z1V-Xd-7qc"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgX-Hp-WKS">
-                                <rect key="frame" x="21" y="72" width="33" height="15"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Snack Package" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BgX-Hp-WKS">
+                                <rect key="frame" x="2" y="73" width="71" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,27 +36,33 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="BgX-Hp-WKS" firstAttribute="centerX" secondItem="Osa-Z0-bpK" secondAttribute="centerX" id="LpU-dS-dgP"/>
-                            <constraint firstItem="DSV-Hg-cW1" firstAttribute="top" secondItem="Osa-Z0-bpK" secondAttribute="top" id="b5N-Ls-Yns"/>
-                            <constraint firstItem="BgX-Hp-WKS" firstAttribute="top" secondItem="DSV-Hg-cW1" secondAttribute="bottom" constant="2" id="jti-03-EJk"/>
-                            <constraint firstItem="DSV-Hg-cW1" firstAttribute="centerX" secondItem="Osa-Z0-bpK" secondAttribute="centerX" id="xpg-6f-tfe"/>
+                            <constraint firstItem="DSV-Hg-cW1" firstAttribute="leading" secondItem="Osa-Z0-bpK" secondAttribute="leading" constant="2" id="Dch-Jt-bTN"/>
+                            <constraint firstItem="BgX-Hp-WKS" firstAttribute="top" secondItem="DSV-Hg-cW1" secondAttribute="bottom" constant="2" id="PxI-8O-Hve"/>
+                            <constraint firstAttribute="trailing" secondItem="BgX-Hp-WKS" secondAttribute="trailing" constant="2" id="i9y-Mm-m4c"/>
+                            <constraint firstAttribute="bottom" secondItem="BgX-Hp-WKS" secondAttribute="bottom" constant="2" id="jun-Uf-Grg"/>
+                            <constraint firstAttribute="trailing" secondItem="DSV-Hg-cW1" secondAttribute="trailing" constant="2" id="mwc-Yx-ENa"/>
+                            <constraint firstAttribute="bottom" secondItem="BgX-Hp-WKS" secondAttribute="bottom" constant="2" id="ntX-rn-dhh"/>
+                            <constraint firstAttribute="trailing" secondItem="BgX-Hp-WKS" secondAttribute="trailing" constant="2" id="qGf-h0-MlE"/>
+                            <constraint firstItem="BgX-Hp-WKS" firstAttribute="leading" secondItem="Osa-Z0-bpK" secondAttribute="leading" constant="2" id="rpz-Zc-MDj"/>
+                            <constraint firstItem="DSV-Hg-cW1" firstAttribute="top" secondItem="Osa-Z0-bpK" secondAttribute="top" constant="2" id="uHX-lJ-Wbv"/>
+                            <constraint firstItem="BgX-Hp-WKS" firstAttribute="leading" secondItem="Osa-Z0-bpK" secondAttribute="leading" constant="2" id="vKz-SJ-gVF"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
-                <constraint firstItem="Osa-Z0-bpK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="P9h-Dz-yWG"/>
-                <constraint firstItem="Osa-Z0-bpK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="PD2-mD-dCF"/>
-                <constraint firstAttribute="trailing" secondItem="Osa-Z0-bpK" secondAttribute="trailing" id="g3e-Xe-Jlh"/>
-                <constraint firstAttribute="bottom" secondItem="Osa-Z0-bpK" secondAttribute="bottom" id="ugI-LQ-x0W"/>
+                <constraint firstItem="Osa-Z0-bpK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="3bd-q6-HJr"/>
+                <constraint firstAttribute="trailing" secondItem="Osa-Z0-bpK" secondAttribute="trailing" id="GbM-ba-wWh"/>
+                <constraint firstItem="Osa-Z0-bpK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="HcV-jo-XQU"/>
+                <constraint firstAttribute="bottom" secondItem="Osa-Z0-bpK" secondAttribute="bottom" id="PEG-hB-ocp"/>
             </constraints>
-            <size key="customSize" width="75" height="90"/>
+            <size key="customSize" width="95" height="104"/>
             <connections>
                 <outlet property="imgWaste" destination="DSV-Hg-cW1" id="KOx-2V-39j"/>
                 <outlet property="txtWaste" destination="BgX-Hp-WKS" id="cBO-kj-Vm4"/>
             </connections>
-            <point key="canvasLocation" x="155.79710144927537" y="136.60714285714286"/>
+            <point key="canvasLocation" x="170.28985507246378" y="141.29464285714286"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -20,10 +20,11 @@ class AddNewWasteVC: UIViewController {
     @IBOutlet weak var btnAddWaste: UIButton!
     @IBOutlet weak var tableWasteAdded: UITableView!
     
+    var selectedCategory: ModelWaste? = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("eeeee")
         collectionWaste.delegate = self
         collectionWaste.dataSource = self
         collectionWaste.register(UINib(nibName: "HorizontalModalListView", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalListView")
@@ -48,7 +49,7 @@ class AddNewWasteVC: UIViewController {
         btnCancel.tintColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
         let textAttributes = [NSAttributedString.Key.foregroundColor:#colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)]
         navHeader.titleTextAttributes = textAttributes
-        
+        navHeader.topItem?.title = selectedCategory?.categoryName
 
     }
 
@@ -75,18 +76,18 @@ class AddNewWasteVC: UIViewController {
 
 extension AddNewWasteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return (selectedCategory?.waste.count)!
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "horizontalModalListView", for: indexPath) as? HorizontalModalListView else {return UICollectionViewCell()}
-        
+        cell.configureCell(waste: (selectedCategory?.waste[indexPath.row])!)
         return cell
     }
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-            return CGSize(width: view.frame.width/6, height: view.frame.height)
-    }
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+//            return CGSize(width: view.frame.width/5, height: view.frame.height)
+//    }
 }
 
 extension AddNewWasteVC: UITableViewDelegate, UITableViewDataSource {

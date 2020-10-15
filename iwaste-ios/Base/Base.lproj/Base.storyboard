@@ -347,7 +347,7 @@
                                                 <color key="tintColor" name="plastic"/>
                                                 <state key="normal" image="plus.circle.fill" catalog="system"/>
                                                 <connections>
-                                                    <action selector="btnAddNewWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="E0G-hB-yFl"/>
+                                                    <action selector="btnAddNewWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="zD4-Ho-trx"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -384,7 +384,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTm-fT-g1l">
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTm-fT-g1l">
                                                 <rect key="frame" x="24" y="78" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="694-T5-82s"/>
@@ -392,6 +392,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="glass"/>
                                                 <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnAddNewWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="hPS-jE-pa7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="glassSoft"/>
@@ -427,7 +430,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6n-mh-pf3">
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p6n-mh-pf3">
                                                 <rect key="frame" x="24" y="78" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="24" id="gMA-ed-xrX"/>
@@ -435,6 +438,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="paper"/>
                                                 <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnAddNewWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="dLR-JV-zJr"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="paperSoft"/>
@@ -470,7 +476,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFW-KS-WHi">
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFW-KS-WHi">
                                                 <rect key="frame" x="24.5" y="78" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ZFW-KS-WHi" secondAttribute="height" multiplier="1:1" id="0rW-bl-4LJ"/>
@@ -478,6 +484,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="metal"/>
                                                 <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnAddNewWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="jcw-qV-Zw3"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="metalSoft"/>
@@ -513,7 +522,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kc-4X-OdF">
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Kc-4X-OdF">
                                                 <rect key="frame" x="24.5" y="78" width="24" height="24"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="9Kc-4X-OdF" secondAttribute="height" multiplier="1:1" id="Ibf-is-9eS"/>
@@ -521,6 +530,9 @@
                                                 </constraints>
                                                 <color key="tintColor" name="organic"/>
                                                 <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                                <connections>
+                                                    <action selector="btnAddNewWaste:" destination="UCs-Mc-rqc" eventType="touchUpInside" id="XxK-Ck-Xj1"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" name="organicSoft"/>

@@ -12,7 +12,8 @@ class HorizontalModalListView: UICollectionViewCell {
     @IBOutlet weak var imgWaste: UIImageView!
     @IBOutlet weak var txtWaste: UILabel!
     
-    func configureCell() {
-        
+    func configureCell(waste: Waste) {
+        imgWaste.image = waste.wasteImg
+        txtWaste.text = waste.wasteName
     }
 }

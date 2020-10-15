@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		591D06982537E37A0008098A /* ModelWaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06972537E37A0008098A /* ModelWaste.swift */; };
+		591D069B2537E3F00008098A /* DataCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D069A2537E3F00008098A /* DataCategory.swift */; };
 		5934E3342531FC480082D01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3332531FC480082D01D /* AppDelegate.swift */; };
 		5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3352531FC480082D01D /* SceneDelegate.swift */; };
 		5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3372531FC480082D01D /* TabMyWasteVC.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		4CEA1D4D910B6032F99D3B7F /* Pods-iwaste-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.release.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.release.xcconfig"; sourceTree = "<group>"; };
+		591D06972537E37A0008098A /* ModelWaste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWaste.swift; sourceTree = "<group>"; };
+		591D069A2537E3F00008098A /* DataCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCategory.swift; sourceTree = "<group>"; };
 		5934E3302531FC480082D01D /* iwaste-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iwaste-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934E3332531FC480082D01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5934E3352531FC480082D01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +77,15 @@
 				855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		591D06962537E3680008098A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				591D06972537E37A0008098A /* ModelWaste.swift */,
+				591D069A2537E3F00008098A /* DataCategory.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		5934E3272531FC480082D01D = {
@@ -133,6 +146,7 @@
 		59FBF2A625362A0900F940D5 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				591D06962537E3680008098A /* Model */,
 				595F90EE2536A4C2004D40CE /* View */,
 				595F90F92536A55D004D40CE /* AddNewWasteVC.swift */,
 				9FC20D722536BA30007A828E /* CurrentWasteVC.swift */,
@@ -283,9 +297,11 @@
 				595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */,
 				595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */,
 				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
+				591D06982537E37A0008098A /* ModelWaste.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
+				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
 			);
