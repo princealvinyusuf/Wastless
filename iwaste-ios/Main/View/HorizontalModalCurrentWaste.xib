@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="horizontalModalCurrentWaste" id="mxR-hP-5dj" customClass="HorizontalModalCurrentWaste" customModule="iwaste_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="66" height="111"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qGl-8Y-DCj">
+                <rect key="frame" x="0.0" y="0.0" width="66" height="111"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inputStraw" translatesAutoresizingMaskIntoConstraints="NO" id="cJY-a8-hPB">
+                        <rect key="frame" x="3" y="4" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="crw-bf-ees"/>
+                            <constraint firstAttribute="width" constant="60" id="iWl-Xr-v5u"/>
+                            <constraint firstAttribute="width" secondItem="cJY-a8-hPB" secondAttribute="height" multiplier="1:1" id="xhd-oj-tcn"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yh4-zM-B4r">
+                        <rect key="frame" x="3" y="65" width="60" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Straw" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bWj-69-XAF">
+                        <rect key="frame" x="3" y="80" width="60" height="15"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="cJY-a8-hPB" firstAttribute="centerX" secondItem="qGl-8Y-DCj" secondAttribute="centerX" id="1ns-oH-M0S"/>
+                    <constraint firstItem="cJY-a8-hPB" firstAttribute="top" secondItem="qGl-8Y-DCj" secondAttribute="top" constant="4" id="RHD-3s-M5u"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="s12-N9-gG9"/>
+            <size key="customSize" width="66" height="111"/>
+            <connections>
+                <outlet property="imgCurrentWaste" destination="cJY-a8-hPB" id="grq-4c-gLU"/>
+                <outlet property="numberCurrentWaste" destination="yh4-zM-B4r" id="dOt-ne-nqA"/>
+                <outlet property="txtCurrentWaste" destination="bWj-69-XAF" id="9rF-1f-d0c"/>
+            </connections>
+            <point key="canvasLocation" x="378" y="143"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="inputStraw" width="200" height="200"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

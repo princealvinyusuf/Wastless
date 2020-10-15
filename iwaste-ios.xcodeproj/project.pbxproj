@@ -23,6 +23,8 @@
 		595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F92536A55D004D40CE /* AddNewWasteVC.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
 		9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC20D722536BA30007A828E /* CurrentWasteVC.swift */; };
+		9FD7230025382AA800E761AB /* HorizontalModalCurrentWaste.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */; };
+		9FD7230325382BFF00E761AB /* HorizontalModalCurrentWaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9FC20D722536BA30007A828E /* CurrentWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWasteVC.swift; sourceTree = "<group>"; };
+		9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
+		9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,8 @@
 				595F90F02536A50A004D40CE /* HorizontalModalListView.xib */,
 				595F90F42536A521004D40CE /* WasteViewCell.swift */,
 				595F90F52536A521004D40CE /* WasteViewCell.xib */,
+				9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */,
+				9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -240,6 +246,7 @@
 				5934E3402531FC4A0082D01D /* Assets.xcassets in Resources */,
 				5934E33B2531FC480082D01D /* Base.storyboard in Resources */,
 				595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */,
+				9FD7230025382AA800E761AB /* HorizontalModalCurrentWaste.xib in Resources */,
 				59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */,
 				595F90F22536A50A004D40CE /* HorizontalModalListView.xib in Resources */,
 			);
@@ -304,6 +311,7 @@
 				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
+				9FD7230325382BFF00E761AB /* HorizontalModalCurrentWaste.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,7 +480,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 72C5A4RQ56;
+				DEVELOPMENT_TEAM = KL6VLPSW8Q;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
