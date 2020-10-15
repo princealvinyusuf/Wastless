@@ -10,12 +10,23 @@ import LinearProgressView
 
 class CurrentWasteVC: UIViewController {
     
+    @IBOutlet weak var collectionPlasticWaste: UICollectionView!
+    @IBOutlet weak var collectionMetalWaste: UICollectionView!
+    @IBOutlet weak var collectionGlassWaste: UICollectionView!
+    @IBOutlet weak var collectionPaperWaste: UICollectionView!
+    @IBOutlet weak var collectionOrganicWaste: UICollectionView!
+    
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!
     @IBOutlet weak var linearProgressGlass: LinearProgressView!
     @IBOutlet weak var linearProgressPapers: LinearProgressView!
     @IBOutlet weak var linearProgressOrganic: LinearProgressView!
- 
+    
+    
+    @IBAction func btnCancel(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +52,8 @@ class CurrentWasteVC: UIViewController {
         
         updateLinearProgress()
         
+        delegateWaste()
+        
     }
     
     @objc
@@ -65,4 +78,43 @@ class CurrentWasteVC: UIViewController {
         linearProgressOrganic.barInset = CGFloat(4)
         linearProgressOrganic.isCornersRounded = true
     }
+    
+    func delegateWaste() {
+        collectionPlasticWaste.delegate = self
+        collectionPlasticWaste.dataSource = self
+        collectionPlasticWaste.register(UINib(nibName: "HorizontalModalCurrentWaste", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalCurrentWaste")
+        
+        collectionMetalWaste.delegate = self
+        collectionMetalWaste.dataSource = self
+        collectionMetalWaste.register(UINib(nibName: "HorizontalModalCurrentWaste", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalCurrentWaste")
+        
+        collectionGlassWaste.delegate = self
+        collectionGlassWaste.dataSource = self
+        collectionGlassWaste.register(UINib(nibName: "HorizontalModalCurrentWaste", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalCurrentWaste")
+   
+        collectionPaperWaste.delegate = self
+        collectionPaperWaste.dataSource = self
+        collectionPaperWaste.register(UINib(nibName: "HorizontalModalCurrentWaste", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalCurrentWaste")
+        
+        collectionOrganicWaste.delegate = self
+        collectionOrganicWaste.dataSource = self
+        collectionOrganicWaste.register(UINib(nibName: "HorizontalModalCurrentWaste", bundle: self.nibBundle), forCellWithReuseIdentifier: "horizontalModalCurrentWaste")
+    }
 }
+
+extension CurrentWasteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "horizontalModalCurrentWaste", for: indexPath) as? HorizontalModalCurrentWaste else {return UICollectionViewCell()}
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
+            return CGSize(width: view.frame.width/6, height: view.frame.height)
+    }
+}
+
