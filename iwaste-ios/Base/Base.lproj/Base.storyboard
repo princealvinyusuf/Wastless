@@ -173,7 +173,7 @@
                                             <constraint firstAttribute="width" constant="55" id="N08-if-rRz"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="plastic"/>
+                                        <color key="textColor" name="plasticLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ak2-sq-lNF">
@@ -182,7 +182,7 @@
                                             <constraint firstAttribute="width" constant="45" id="abZ-P2-zjj"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="plastic"/>
+                                        <color key="textColor" name="plasticLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-gN-AUE">
@@ -191,7 +191,7 @@
                                             <constraint firstAttribute="width" constant="55" id="PzO-Ng-PS1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="metal"/>
+                                        <color key="textColor" name="metalLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-ak-Pye">
@@ -200,7 +200,7 @@
                                             <constraint firstAttribute="width" constant="55" id="HZU-IF-Pnm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="glass"/>
+                                        <color key="textColor" name="glassLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-Zc-MFz">
@@ -209,7 +209,7 @@
                                             <constraint firstAttribute="width" constant="55" id="tUL-Iw-epa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="paper"/>
+                                        <color key="textColor" name="paperLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-xE-WME">
@@ -218,7 +218,7 @@
                                             <constraint firstAttribute="width" constant="55" id="Dsa-ME-gog"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="organic"/>
+                                        <color key="textColor" name="organicLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3 of 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-A7-Eyd">
@@ -227,7 +227,7 @@
                                             <constraint firstAttribute="width" constant="45" id="pus-eY-qXw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="metal"/>
+                                        <color key="textColor" name="metalLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="me3-4z-UeK">
@@ -236,7 +236,7 @@
                                             <constraint firstAttribute="width" constant="45" id="Bag-yN-6Sa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="glass"/>
+                                        <color key="textColor" name="glassLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 of 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8zT-ul-3cy">
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="width" constant="45" id="ikD-pP-9ng"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="paper"/>
+                                        <color key="textColor" name="paperLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 of 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mer-Pp-sAb">
@@ -254,11 +254,11 @@
                                             <constraint firstAttribute="width" constant="45" id="gzc-cb-rbJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="organic"/>
+                                        <color key="textColor" name="organicLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="subView"/>
                                 <constraints>
                                     <constraint firstItem="Mi0-Zc-MFz" firstAttribute="leading" secondItem="hot-VU-Gty" secondAttribute="leading" constant="26" id="4E1-Sy-h50"/>
                                     <constraint firstItem="vAb-Je-KUX" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="top" constant="12" id="63B-Kf-NUM"/>
@@ -557,7 +557,7 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="IzM-oT-SFM">
-                                <rect key="frame" x="102" y="434" width="210" height="210"/>
+                                <rect key="frame" x="102" y="429" width="210" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="a6V-pA-eZZ"/>
                                     <constraint firstAttribute="width" secondItem="IzM-oT-SFM" secondAttribute="height" multiplier="1:1" id="oFF-H9-ugX"/>
@@ -571,7 +571,7 @@
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="trailing" secondItem="hot-VU-Gty" secondAttribute="trailing" constant="16" id="2Bo-E5-nbH"/>
                             <constraint firstItem="IzM-oT-SFM" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="50v-JO-ZJd"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="9Ro-Aa-uZw"/>
-                            <constraint firstItem="IzM-oT-SFM" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="38" id="9ZU-On-PHg"/>
+                            <constraint firstItem="IzM-oT-SFM" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="33" id="9ZU-On-PHg"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="bottom" secondItem="9aR-I1-WJd" secondAttribute="bottom" constant="16" id="BXO-XW-9vL"/>
                             <constraint firstItem="9aR-I1-WJd" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="i1q-lk-XjO"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="top" secondItem="1I3-0y-xtv" secondAttribute="top" constant="16" id="lDp-ES-vrV"/>
@@ -674,8 +674,11 @@
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
-        <image name="wasteBasket" width="222" height="200"/>
+        <image name="wasteBasket" width="500" height="468"/>
         <namedColor name="glass">
+            <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="glassLabel">
             <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="glassSoft">
@@ -684,10 +687,16 @@
         <namedColor name="metal">
             <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="metalLabel">
+            <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="metalSoft">
             <color red="0.9649999737739563" green="0.47499999403953552" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="organic">
+            <color red="0.043000001460313797" green="0.5690000057220459" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="organicLabel">
             <color red="0.043000001460313797" green="0.5690000057220459" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="organicSoft">
@@ -696,14 +705,23 @@
         <namedColor name="paper">
             <color red="0.98000001907348633" green="0.69800001382827759" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="paperLabel">
+            <color red="0.98000001907348633" green="0.69800001382827759" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="paperSoft">
             <color red="1" green="0.83899998664855957" blue="0.45500001311302185" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="plastic">
             <color red="0.059000000357627869" green="0.49799999594688416" blue="0.68199998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="plasticLabel">
+            <color red="0.059000000357627869" green="0.49799999594688416" blue="0.68199998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="plasticSoft">
             <color red="0.46299999952316284" green="0.75300002098083496" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="subView">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

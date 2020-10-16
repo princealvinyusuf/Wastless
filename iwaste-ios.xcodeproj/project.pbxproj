@@ -38,8 +38,8 @@
 		591D069D2538059E0008098A /* ModelWasteAdded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWasteAdded.swift; sourceTree = "<group>"; };
 		591D06A125382CF80008098A /* AddNewWastePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWastePresenter.swift; sourceTree = "<group>"; };
 		591D06A825382FA00008098A /* Constans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
-		591D06D1253839880008098A /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalModalCurrentWaste.swift; path = ../../../../../HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
-		591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalModalCurrentWaste.xib; path = ../../../../../HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
+		591D06D1253839880008098A /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HorizontalModalCurrentWaste.swift; path = ../HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
+		591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalModalCurrentWaste.xib; path = ../HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
 		5934E3302531FC480082D01D /* iwaste-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iwaste-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934E3332531FC480082D01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5934E3352531FC480082D01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };

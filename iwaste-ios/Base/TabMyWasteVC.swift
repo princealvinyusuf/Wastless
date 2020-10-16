@@ -45,7 +45,7 @@ class TabMyWasteVC: UIViewController {
         updateLinearProgress()
         
         subView.layer.cornerRadius = 10
-        subView.layer.shadowColor = UIColor.label.cgColor
+        subView.layer.shadowColor = UIColor.systemBackground.cgColor
         subView.layer.shadowOpacity = 0.5
         subView.layer.shadowOffset = CGSize(width: 0, height: 0)
         subView.layer.shadowRadius = 25.0
