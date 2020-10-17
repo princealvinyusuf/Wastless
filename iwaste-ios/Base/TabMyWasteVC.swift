@@ -45,7 +45,7 @@ class TabMyWasteVC: UIViewController {
         updateLinearProgress()
         
         subView.layer.cornerRadius = 10
-        subView.layer.shadowColor = UIColor.systemBackground.cgColor
+        subView.layer.shadowColor = UIColor.black.cgColor
         subView.layer.shadowOpacity = 0.5
         subView.layer.shadowOffset = CGSize(width: 0, height: 0)
         subView.layer.shadowRadius = 25.0
@@ -55,6 +55,19 @@ class TabMyWasteVC: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         subView.addGestureRecognizer(tapGesture)
         subView.isUserInteractionEnabled = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if UserDefaults.standard.bool(forKey: "welcomeShown") == false{
+            UserDefaults.standard.set(true, forKey: "welcomeShown")
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
+            let welcomeVC = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
+            self.present(welcomeVC, animated:true, completion:nil)
+            return
+        }
+        
     }
     
     @objc

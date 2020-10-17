@@ -557,10 +557,9 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="IzM-oT-SFM">
-                                <rect key="frame" x="102" y="429" width="210" height="210"/>
+                                <rect key="frame" x="102" y="424" width="210" height="210"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="a6V-pA-eZZ"/>
-                                    <constraint firstAttribute="width" secondItem="IzM-oT-SFM" secondAttribute="height" multiplier="1:1" id="oFF-H9-ugX"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -569,10 +568,12 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9aR-I1-WJd" secondAttribute="trailing" constant="16" id="1ZR-CB-ABZ"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="trailing" secondItem="hot-VU-Gty" secondAttribute="trailing" constant="16" id="2Bo-E5-nbH"/>
+                            <constraint firstItem="IzM-oT-SFM" firstAttribute="width" secondItem="igu-Ka-FVP" secondAttribute="width" multiplier="0.507246" id="3sw-Mp-Y3c"/>
                             <constraint firstItem="IzM-oT-SFM" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="50v-JO-ZJd"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="9Ro-Aa-uZw"/>
-                            <constraint firstItem="IzM-oT-SFM" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="33" id="9ZU-On-PHg"/>
+                            <constraint firstItem="IzM-oT-SFM" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="28" id="9ZU-On-PHg"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="bottom" secondItem="9aR-I1-WJd" secondAttribute="bottom" constant="16" id="BXO-XW-9vL"/>
+                            <constraint firstItem="IzM-oT-SFM" firstAttribute="height" secondItem="igu-Ka-FVP" secondAttribute="height" multiplier="0.234375" id="daS-Dk-Cta"/>
                             <constraint firstItem="9aR-I1-WJd" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="i1q-lk-XjO"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="top" secondItem="1I3-0y-xtv" secondAttribute="top" constant="16" id="lDp-ES-vrV"/>
                         </constraints>
@@ -663,6 +664,99 @@
             </objects>
             <point key="canvasLocation" x="1051" y="1582"/>
         </scene>
+        <!--WelcomeVC-->
+        <scene sceneID="yn5-vj-VHW">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" modalPresentationStyle="fullScreen" id="8NP-Z1-cpa" customClass="WelcomeVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qaB-5o-lnZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dbj-Qh-uUu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ThJ-VD-HbE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="765"/>
+                            </scrollView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Nd7-eR-ZZv">
+                                <rect key="frame" x="182" y="829" width="50" height="10"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval" translatesAutoresizingMaskIntoConstraints="NO" id="psr-IQ-9wk">
+                                        <rect key="frame" x="0.0" y="0.0" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="DuN-on-Yaf"/>
+                                            <constraint firstAttribute="width" constant="10" id="oIv-nH-36f"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval_" translatesAutoresizingMaskIntoConstraints="NO" id="BmU-kk-SVY">
+                                        <rect key="frame" x="20" y="0.0" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="10" id="DAK-oD-Y0B"/>
+                                            <constraint firstAttribute="height" constant="10" id="FzB-JW-exA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="oval_" translatesAutoresizingMaskIntoConstraints="NO" id="9KV-Hl-q8N">
+                                        <rect key="frame" x="40" y="0.0" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="4Sj-FY-quH"/>
+                                            <constraint firstAttribute="width" constant="10" id="pZD-Zg-oJj"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBm-zD-g5s">
+                                <rect key="frame" x="69.5" y="747" width="275" height="54"/>
+                                <color key="backgroundColor" red="0.0039215686269999999" green="0.56862745100000001" blue="0.92549019610000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="54" id="I7y-m5-Fah"/>
+                                </constraints>
+                                <state key="normal" title="GET STARTED">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startTapped:" destination="8NP-Z1-cpa" eventType="touchUpInside" id="LD9-eO-vqy"/>
+                                    <segue destination="UQM-pN-v4v" kind="presentation" modalPresentationStyle="fullScreen" id="VcT-Vj-aiG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Tl-v3-URU"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QBm-zD-g5s" firstAttribute="centerX" secondItem="qaB-5o-lnZ" secondAttribute="centerX" id="0fx-Jw-4hf"/>
+                            <constraint firstItem="dbj-Qh-uUu" firstAttribute="leading" secondItem="2Tl-v3-URU" secondAttribute="leading" id="2JY-i7-vqV"/>
+                            <constraint firstItem="QBm-zD-g5s" firstAttribute="width" secondItem="qaB-5o-lnZ" secondAttribute="width" multiplier="0.665" id="5BN-8Z-GKd"/>
+                            <constraint firstItem="Nd7-eR-ZZv" firstAttribute="top" secondItem="QBm-zD-g5s" secondAttribute="bottom" constant="28" id="8bb-Zc-WdV"/>
+                            <constraint firstItem="dbj-Qh-uUu" firstAttribute="bottom" secondItem="qaB-5o-lnZ" secondAttribute="bottom" id="U5R-H8-pxB"/>
+                            <constraint firstItem="dbj-Qh-uUu" firstAttribute="top" secondItem="qaB-5o-lnZ" secondAttribute="top" id="WCf-5E-rv8"/>
+                            <constraint firstItem="dbj-Qh-uUu" firstAttribute="trailing" secondItem="2Tl-v3-URU" secondAttribute="trailing" id="Ww5-FX-LHw"/>
+                            <constraint firstItem="ThJ-VD-HbE" firstAttribute="leading" secondItem="2Tl-v3-URU" secondAttribute="leading" id="dMA-OW-jrO"/>
+                            <constraint firstItem="ThJ-VD-HbE" firstAttribute="trailing" secondItem="2Tl-v3-URU" secondAttribute="trailing" id="kD1-8p-ApO"/>
+                            <constraint firstItem="Nd7-eR-ZZv" firstAttribute="top" secondItem="ThJ-VD-HbE" secondAttribute="bottom" constant="20" id="lrP-At-MY1"/>
+                            <constraint firstItem="ThJ-VD-HbE" firstAttribute="height" secondItem="qaB-5o-lnZ" secondAttribute="height" multiplier="0.853795" id="mRh-IG-BpX"/>
+                            <constraint firstItem="Nd7-eR-ZZv" firstAttribute="centerX" secondItem="qaB-5o-lnZ" secondAttribute="centerX" id="mdW-9G-HMi"/>
+                            <constraint firstItem="ThJ-VD-HbE" firstAttribute="top" secondItem="2Tl-v3-URU" secondAttribute="top" id="tcz-52-f5L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Qdj-c2-05L"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="page1ImageView" destination="psr-IQ-9wk" id="lMB-U2-mfd"/>
+                        <outlet property="page2ImageView" destination="BmU-kk-SVY" id="fHe-De-8aM"/>
+                        <outlet property="page3ImageView" destination="9KV-Hl-q8N" id="ruM-3E-wUb"/>
+                        <outlet property="scrollView" destination="ThJ-VD-HbE" id="9GS-hp-U8J"/>
+                        <outlet property="startButton" destination="QBm-zD-g5s" id="TfV-tO-AUP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Chv-Xc-XE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1087" y="860"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
@@ -671,6 +765,8 @@
         <image name="inputOrganic" width="205" height="200"/>
         <image name="inputPaper" width="205" height="200"/>
         <image name="inputPlastic" width="205" height="200"/>
+        <image name="oval" width="10" height="10"/>
+        <image name="oval_" width="10" height="10"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>

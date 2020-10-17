@@ -27,6 +27,9 @@
 		595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F90F52536A521004D40CE /* WasteViewCell.xib */; };
 		595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F92536A55D004D40CE /* AddNewWasteVC.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
+		9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA32253A60DF00EB8056 /* SlideView.swift */; };
+		9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA38253A632F00EB8056 /* WelcomeVC.swift */; };
+		9F42AA3C253A68A800EB8056 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F42AA36253A621E00EB8056 /* Slide.xib */; };
 		9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC20D722536BA30007A828E /* CurrentWasteVC.swift */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +60,9 @@
 		59FBF2AC25362AAD00F940D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		9F42AA32253A60DF00EB8056 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
+		9F42AA36253A621E00EB8056 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
+		9F42AA38253A632F00EB8056 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		9FC20D722536BA30007A828E /* CurrentWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWasteVC.swift; sourceTree = "<group>"; };
 		9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
 		9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
@@ -180,6 +186,7 @@
 		59FBF2A5253629FE00F940D5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				9F42AA2E253A600600EB8056 /* Welcome */,
 				5934E3392531FC480082D01D /* Base.storyboard */,
 				5934E3372531FC480082D01D /* TabMyWasteVC.swift */,
 			);
@@ -218,6 +225,16 @@
 				591D06A825382FA00008098A /* Constans.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		9F42AA2E253A600600EB8056 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				9F42AA36253A621E00EB8056 /* Slide.xib */,
+				9F42AA32253A60DF00EB8056 /* SlideView.swift */,
+				9F42AA38253A632F00EB8056 /* WelcomeVC.swift */,
+			);
+			path = Welcome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F42AA3C253A68A800EB8056 /* Slide.xib in Resources */,
 				5934E3432531FC4A0082D01D /* LaunchScreen.storyboard in Resources */,
 				5934E3402531FC4A0082D01D /* Assets.xcassets in Resources */,
 				5934E33B2531FC480082D01D /* Base.storyboard in Resources */,
@@ -347,11 +365,13 @@
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
+				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
 				591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */,
 				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
+				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
