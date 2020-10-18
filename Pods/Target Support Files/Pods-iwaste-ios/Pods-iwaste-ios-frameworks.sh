@@ -198,9 +198,11 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/LinearProgressView/LinearProgressView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WaveAnimationView/WaveAnimationView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/LinearProgressView/LinearProgressView.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/WaveAnimationView/WaveAnimationView.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

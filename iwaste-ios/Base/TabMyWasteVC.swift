@@ -7,11 +7,16 @@
 
 import UIKit
 import LinearProgressView
+import WaveAnimationView
 
 class TabMyWasteVC: UIViewController {
 
     @IBOutlet weak var subView: UIView!
+    @IBOutlet weak var waveView: UIView!
     var tapGesture = UITapGestureRecognizer()
+    var wave: WaveAnimationView!
+    @IBOutlet weak var trashBinPercentage: UILabel!
+    
     
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!
@@ -55,6 +60,9 @@ class TabMyWasteVC: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         subView.addGestureRecognizer(tapGesture)
         subView.isUserInteractionEnabled = true
+        
+        waveConfigure()
+        waveColor()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -70,25 +78,43 @@ class TabMyWasteVC: UIViewController {
         
     }
     
+    func waveConfigure() {
+        wave = WaveAnimationView(frame: CGRect(origin: .zero, size: waveView.bounds.size), color: UIColor.blue.withAlphaComponent(0.5))
+        waveView.addSubview(wave)
+        wave.maskImage = UIImage(named: "wasteBasket")
+        wave.startAnimation()
+        
+        // Change the value of Trash bin Wave
+        wave.setProgress(0.65)
+        trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
+        print("waveProgress",wave.progress)
+    }
+    
+    func waveColor() {
+        wave.frontColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).withAlphaComponent(1)
+        wave.backColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).withAlphaComponent(0.3)
+        waveView.layer.borderColor = UIColor.gray.cgColor
+    }
+    
     @objc
     func updateLinearProgress() {
-        linearProgressPlastics.setProgress(20, animated: true)
+        linearProgressPlastics.setProgress(80, animated: true)
         linearProgressPlastics.barInset = CGFloat(4)
         linearProgressPlastics.isCornersRounded = true
         
-        linearProgressMetals.setProgress(40, animated: true)
+        linearProgressMetals.setProgress(100, animated: true)
         linearProgressMetals.barInset = CGFloat(4)
         linearProgressMetals.isCornersRounded = true
         
-        linearProgressGlass.setProgress(60, animated: true)
+        linearProgressGlass.setProgress(20, animated: true)
         linearProgressGlass.barInset = CGFloat(4)
         linearProgressGlass.isCornersRounded = true
         
-        linearProgressPapers.setProgress(35, animated: true)
+        linearProgressPapers.setProgress(40, animated: true)
         linearProgressPapers.barInset = CGFloat(4)
         linearProgressPapers.isCornersRounded = true
         
-        linearProgressOrganic.setProgress(85, animated: true)
+        linearProgressOrganic.setProgress(60, animated: true)
         linearProgressOrganic.barInset = CGFloat(4)
         linearProgressOrganic.isCornersRounded = true
     }

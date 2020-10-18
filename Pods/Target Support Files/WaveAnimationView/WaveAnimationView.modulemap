@@ -1,0 +1,6 @@
+framework module WaveAnimationView {
+  umbrella header "WaveAnimationView-umbrella.h"
+
+  export *
+  module * { export * }
+}

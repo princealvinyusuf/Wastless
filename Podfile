@@ -6,6 +6,7 @@ target 'iwaste-ios' do
   use_frameworks!
 
 pod 'LinearProgressView', '~> 2.0'
+pod "WaveAnimationView"
 
   # Pods for iwaste-ios
 
