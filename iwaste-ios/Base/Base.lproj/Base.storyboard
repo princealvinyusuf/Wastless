@@ -600,8 +600,13 @@
                             <constraint firstItem="Xyh-3p-Tqs" firstAttribute="height" secondItem="PwN-Yk-rlG" secondAttribute="height" multiplier="0.0854167" id="wRA-em-AXd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Waste up?" leftItemsSupplementBackButton="YES" id="puf-gI-jgn"/>
+                    <navigationItem key="navigationItem" title="Waste up?" leftItemsSupplementBackButton="YES" id="puf-gI-jgn">
+                        <barButtonItem key="leftBarButtonItem" title="Date" style="plain" id="Jiw-r0-5tf">
+                            <color key="tintColor" name="navigationBarModal"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="dateNavigationBar" destination="Jiw-r0-5tf" id="cwI-0C-h09"/>
                         <outlet property="linearProgressGlass" destination="WuT-ZH-OJA" id="5kC-Sn-1Qm"/>
                         <outlet property="linearProgressMetals" destination="y6y-Z9-Had" id="d8t-8M-2BI"/>
                         <outlet property="linearProgressOrganic" destination="2Ia-ou-4W0" id="XCb-sO-uZV"/>
@@ -812,6 +817,9 @@
         </namedColor>
         <namedColor name="metalSoft">
             <color red="0.9649999737739563" green="0.47499999403953552" blue="0.49000000953674316" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="navigationBarModal">
+            <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="organic">
             <color red="0.043000001460313797" green="0.5690000057220459" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

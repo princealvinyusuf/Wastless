@@ -1,17 +1,28 @@
 {
   "images" : [
     {
-      "filename" : "logo.png",
-      "idiom" : "universal",
-      "scale" : "1x"
+      "filename" : "logo_light.png",
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
-      "scale" : "2x"
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ],
+      "filename" : "logo_light-1.png",
+      "idiom" : "universal"
     },
     {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "logo_dark.png",
+      "idiom" : "universal"
     }
   ],
   "info" : {

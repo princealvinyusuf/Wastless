@@ -16,6 +16,7 @@ class TabMyWasteVC: UIViewController {
     var tapGesture = UITapGestureRecognizer()
     var wave: WaveAnimationView!
     @IBOutlet weak var trashBinPercentage: UILabel!
+    @IBOutlet weak var dateNavigationBar: UIBarButtonItem!
     
     
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
@@ -26,6 +27,8 @@ class TabMyWasteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        currentDate()
         
         linearProgressPlastics.animationDuration = 0.5
         linearProgressPlastics.barColor = K.Color.colorPlasticSoft
@@ -49,17 +52,7 @@ class TabMyWasteVC: UIViewController {
         
         updateLinearProgress()
         
-        subView.layer.cornerRadius = 10
-        subView.layer.shadowColor = UIColor.black.cgColor
-        subView.layer.shadowOpacity = 0.5
-        subView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        subView.layer.shadowRadius = 25.0
-        
-        tapGesture = UITapGestureRecognizer(target: self, action: #selector(TabMyWasteVC.subViewTapped(_:)))
-        tapGesture.numberOfTapsRequired = 1
-        tapGesture.numberOfTouchesRequired = 1
-        subView.addGestureRecognizer(tapGesture)
-        subView.isUserInteractionEnabled = true
+        subViewConfigure()
         
         waveConfigure()
         waveColor()
@@ -76,6 +69,29 @@ class TabMyWasteVC: UIViewController {
             return
         }
         
+    }
+    
+    func subViewConfigure() {
+        subView.layer.cornerRadius = 10
+        subView.layer.shadowColor = UIColor.black.cgColor
+        subView.layer.shadowOpacity = 0.5
+        subView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        subView.layer.shadowRadius = 25.0
+        
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(TabMyWasteVC.subViewTapped(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        tapGesture.numberOfTouchesRequired = 1
+        subView.addGestureRecognizer(tapGesture)
+        subView.isUserInteractionEnabled = true
+    }
+    
+    func currentDate() {
+        let userCalendar = Date()
+        let formatter = DateFormatter()
+        formatter.timeStyle = .none
+        formatter.dateStyle = .full
+        
+        dateNavigationBar.title = "\(formatter.string(from: userCalendar))"
     }
     
     func waveConfigure() {
