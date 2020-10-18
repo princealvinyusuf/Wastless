@@ -1,16 +1,20 @@
 PODS:
   - LinearProgressView (2.0.1)
+  - WaveAnimationView (1.0.2)
 
 DEPENDENCIES:
   - LinearProgressView (~> 2.0)
+  - WaveAnimationView
 
 SPEC REPOS:
   trunk:
     - LinearProgressView
+    - WaveAnimationView
 
 SPEC CHECKSUMS:
   LinearProgressView: 353d4d45dc599b83cc4b43f14e6c0336aa6f3834
+  WaveAnimationView: 1ffdf3184884eb3270f4b19cc2e69893fec16b9d
 
-PODFILE CHECKSUM: 807da8151927026098ee2c64932ec3981fc0800b
+PODFILE CHECKSUM: cd03e21801be5a57939134095bed07a528061c77
 
 COCOAPODS: 1.9.1

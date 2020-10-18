@@ -556,29 +556,41 @@
                                     <constraint firstAttribute="height" constant="115" id="jso-TS-fFH"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="IzM-oT-SFM">
-                                <rect key="frame" x="102" y="424" width="210" height="210"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwN-Yk-rlG" userLabel="Wave View">
+                                <rect key="frame" x="87" y="426" width="240" height="240"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-bg-ksZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="210" id="a6V-pA-eZZ"/>
+                                    <constraint firstItem="bFJ-bg-ksZ" firstAttribute="top" secondItem="PwN-Yk-rlG" secondAttribute="top" id="HAf-Zk-KmF"/>
+                                    <constraint firstAttribute="width" constant="240" id="NHD-Y4-aJy"/>
+                                    <constraint firstItem="bFJ-bg-ksZ" firstAttribute="centerX" secondItem="PwN-Yk-rlG" secondAttribute="centerX" id="WdB-mI-gyG"/>
+                                    <constraint firstAttribute="height" constant="240" id="Zfq-ha-5np"/>
+                                    <constraint firstAttribute="bottom" secondItem="bFJ-bg-ksZ" secondAttribute="bottom" id="axp-pb-FrC"/>
+                                    <constraint firstItem="bFJ-bg-ksZ" firstAttribute="leading" secondItem="PwN-Yk-rlG" secondAttribute="leading" id="yoN-6u-bCO"/>
                                 </constraints>
-                            </imageView>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1I3-0y-xtv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="9aR-I1-WJd" secondAttribute="trailing" constant="16" id="1ZR-CB-ABZ"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="trailing" secondItem="hot-VU-Gty" secondAttribute="trailing" constant="16" id="2Bo-E5-nbH"/>
-                            <constraint firstItem="IzM-oT-SFM" firstAttribute="width" secondItem="igu-Ka-FVP" secondAttribute="width" multiplier="0.507246" id="3sw-Mp-Y3c"/>
-                            <constraint firstItem="IzM-oT-SFM" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="50v-JO-ZJd"/>
+                            <constraint firstItem="PwN-Yk-rlG" firstAttribute="centerX" secondItem="hot-VU-Gty" secondAttribute="centerX" id="6fd-Jq-0kj"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="9Ro-Aa-uZw"/>
-                            <constraint firstItem="IzM-oT-SFM" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="28" id="9ZU-On-PHg"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="bottom" secondItem="9aR-I1-WJd" secondAttribute="bottom" constant="16" id="BXO-XW-9vL"/>
-                            <constraint firstItem="IzM-oT-SFM" firstAttribute="height" secondItem="igu-Ka-FVP" secondAttribute="height" multiplier="0.234375" id="daS-Dk-Cta"/>
                             <constraint firstItem="9aR-I1-WJd" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="i1q-lk-XjO"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="top" secondItem="1I3-0y-xtv" secondAttribute="top" constant="16" id="lDp-ES-vrV"/>
+                            <constraint firstItem="9aR-I1-WJd" firstAttribute="top" secondItem="PwN-Yk-rlG" secondAttribute="bottom" constant="16" id="mkK-vx-fGN"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Waste up?" id="puf-gI-jgn"/>
+                    <navigationItem key="navigationItem" title="Waste up?" leftItemsSupplementBackButton="YES" id="puf-gI-jgn"/>
                     <connections>
                         <outlet property="linearProgressGlass" destination="WuT-ZH-OJA" id="5kC-Sn-1Qm"/>
                         <outlet property="linearProgressMetals" destination="y6y-Z9-Had" id="d8t-8M-2BI"/>
@@ -586,6 +598,7 @@
                         <outlet property="linearProgressPapers" destination="SDj-EF-VHs" id="2yX-Zy-mRc"/>
                         <outlet property="linearProgressPlastics" destination="3MO-nA-lrd" id="XEs-HB-Idb"/>
                         <outlet property="subView" destination="hot-VU-Gty" id="cUa-FS-HJe"/>
+                        <outlet property="waveView" destination="PwN-Yk-rlG" id="KZh-6w-wTB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmn-Mo-Tt0" sceneMemberID="firstResponder"/>
