@@ -11,6 +11,18 @@ import WaveAnimationView
 
 class TabMyWasteVC: UIViewController {
 
+    
+    @IBOutlet weak var inputViewPlastic: UIView!
+    @IBOutlet weak var inputViewGlass: UIView!
+    @IBOutlet weak var inputViewPaper: UIView!
+    @IBOutlet weak var inputViewMetal: UIView!
+    @IBOutlet weak var inputViewOrganic: UIView!
+    @IBOutlet weak var setTargetImage: UIImageView!
+    @IBOutlet weak var setTargetOutlet: UIButton!
+    
+    @IBOutlet weak var textIntro: UILabel!
+    
+    
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var waveView: UIView!
     var tapGesture = UITapGestureRecognizer()
@@ -149,5 +161,34 @@ class TabMyWasteVC: UIViewController {
         let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
         self.present(currentWasteVC, animated: true, completion: nil)
     }
+    
+    @IBAction func setTarget(_ sender: UIButton) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let setTargetVC = storyboard.instantiateViewController(identifier: "SetTarget") as! SetTargetVC
+        show()
+        hidden()
+        self.present(setTargetVC, animated: true, completion: nil)
+        
+    }
+    
+    func hidden() {
+        setTargetImage.isHidden = true
+        setTargetOutlet.isHidden = true
+        textIntro.isHidden = true
+    }
+    
+    func show() {
+        subView.isHidden = false
+        inputViewPlastic.isHidden = false
+        inputViewGlass.isHidden = false
+        inputViewPaper.isHidden = false
+        inputViewMetal.isHidden = false
+        inputViewOrganic.isHidden = false
+        trashBinPercentage.isHidden = false
+        waveView.isHidden = false
+        
+    }
+    
+    
 }
 
