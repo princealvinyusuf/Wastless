@@ -9,14 +9,12 @@ import UIKit
 
 class HorizontalModalCurrentWaste: UICollectionViewCell {
 
-    
     @IBOutlet weak var imgCurrentWaste: UIImageView!
     @IBOutlet weak var txtCurrentWaste: UILabel!
     @IBOutlet weak var numberCurrentWaste: UILabel!
-    
-    
-    func configureCell(waste: Waste) {
-        imgCurrentWaste.image = waste.wasteImg
-        txtCurrentWaste.text = waste.wasteName
+        
+    func configureCell(wasteAdded: WasteAdded) {
+        imgCurrentWaste.image = wasteAdded.waste.wasteImg
+        txtCurrentWaste.text = wasteAdded.waste.wasteName
     }
 }

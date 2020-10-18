@@ -157,10 +157,10 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="57.589285714285708"/>
         </scene>
-        <!--Current WasteVC-->
+        <!--View Controller-->
         <scene sceneID="JwO-KB-dsY">
             <objects>
-                <viewController storyboardIdentifier="CurrentWasteVC" id="WYp-0M-62k" customClass="CurrentWasteVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WYp-0M-62k" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zkh-YQ-Ew9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -548,7 +548,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RX6-ug-7Rz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1010" y="51"/>
+            <point key="canvasLocation" x="1757" y="92"/>
+        </scene>
+        <!--Current WasteVC-->
+        <scene sceneID="wrx-zF-Tye">
+            <objects>
+                <viewController storyboardIdentifier="CurrentWasteVC" id="apd-JG-ISb" customClass="CurrentWasteVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Qhv-rz-chy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9d-ii-eRG">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="tintColor" name="navigationBarModal"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" name="navigationBarModal"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Current Waste" id="Yug-fc-sUX">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="D7k-ub-Wsg">
+                                            <connections>
+                                                <action selector="btnCancel:" destination="apd-JG-ISb" id="QFj-8G-Ak1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UHM-rl-UrV">
+                                <rect key="frame" x="20" y="96" width="374" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aC7-iW-DLV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aC7-iW-DLV" firstAttribute="trailing" secondItem="UHM-rl-UrV" secondAttribute="trailing" constant="20" id="BV7-rE-nmc"/>
+                            <constraint firstItem="H9d-ii-eRG" firstAttribute="top" secondItem="aC7-iW-DLV" secondAttribute="top" id="EY9-Ka-OgT"/>
+                            <constraint firstItem="H9d-ii-eRG" firstAttribute="trailing" secondItem="aC7-iW-DLV" secondAttribute="trailing" id="JIY-HW-Ncy"/>
+                            <constraint firstItem="H9d-ii-eRG" firstAttribute="leading" secondItem="aC7-iW-DLV" secondAttribute="leading" id="eBj-sr-MUZ"/>
+                            <constraint firstItem="UHM-rl-UrV" firstAttribute="leading" secondItem="aC7-iW-DLV" secondAttribute="leading" constant="20" id="egL-Oy-N7M"/>
+                            <constraint firstItem="UHM-rl-UrV" firstAttribute="top" secondItem="H9d-ii-eRG" secondAttribute="bottom" constant="8" id="t4k-Ze-wdg"/>
+                            <constraint firstItem="aC7-iW-DLV" firstAttribute="bottom" secondItem="UHM-rl-UrV" secondAttribute="bottom" constant="8" id="v0J-Qk-CrC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="UHM-rl-UrV" id="rGd-fs-cA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p36-Fm-29S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="953.62318840579712" y="57.589285714285708"/>
         </scene>
     </scenes>
     <resources>
