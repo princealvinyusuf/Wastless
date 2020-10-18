@@ -15,6 +15,7 @@ class TabMyWasteVC: UIViewController {
     @IBOutlet weak var waveView: UIView!
     var tapGesture = UITapGestureRecognizer()
     var wave: WaveAnimationView!
+    @IBOutlet weak var trashBinPercentage: UILabel!
     
     
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
@@ -85,6 +86,7 @@ class TabMyWasteVC: UIViewController {
         
         // Change the value of Trash bin Wave
         wave.setProgress(0.65)
+        trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
         print("waveProgress",wave.progress)
     }
     
