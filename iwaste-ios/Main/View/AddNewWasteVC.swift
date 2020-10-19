@@ -88,6 +88,12 @@ class AddNewWasteVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func btnDoneClicked(_ sender: Any) {
+        // TODO save data to core data here
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
 
 extension AddNewWasteVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

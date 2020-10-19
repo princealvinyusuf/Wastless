@@ -28,7 +28,11 @@
                                                 <action selector="btnCancelClicked:" destination="X0u-77-TX6" id="Y8C-2k-rw1"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="6gg-7z-70g"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Done" id="6gg-7z-70g">
+                                            <connections>
+                                                <action selector="btnDoneClicked:" destination="X0u-77-TX6" id="t2q-M1-oRc"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
