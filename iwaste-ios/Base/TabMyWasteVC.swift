@@ -10,7 +10,6 @@ import LinearProgressView
 import WaveAnimationView
 
 class TabMyWasteVC: UIViewController {
-
     
     @IBOutlet weak var inputViewPlastic: UIView!
     @IBOutlet weak var inputViewGlass: UIView!
@@ -21,7 +20,6 @@ class TabMyWasteVC: UIViewController {
     @IBOutlet weak var setTargetOutlet: UIButton!
     
     @IBOutlet weak var textIntro: UILabel!
-    
     
     @IBOutlet weak var subView: UIView!
     @IBOutlet weak var waveView: UIView!
@@ -69,6 +67,11 @@ class TabMyWasteVC: UIViewController {
         
         waveConfigure()
         waveColor()
+        
+        if udService.isTargetSet {
+            main(isHidden: false)
+            target(isHidden: true)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -166,27 +169,25 @@ class TabMyWasteVC: UIViewController {
     @IBAction func setTarget(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let setTargetVC = storyboard.instantiateViewController(identifier: "SetTarget") as! SetTargetVC
-        show()
-        hidden()
+        target(isHidden: true)
+        main(isHidden: false)
         self.present(setTargetVC, animated: true, completion: nil)
-        
     }
     
-    func hidden() {
-        setTargetImage.isHidden = true
-        setTargetOutlet.isHidden = true
-        textIntro.isHidden = true
+    func target(isHidden: Bool) {
+        setTargetImage.isHidden = isHidden
+        setTargetOutlet.isHidden = isHidden
+        textIntro.isHidden = isHidden
     }
     
-    func show() {
-        subView.isHidden = false
-        inputViewPlastic.isHidden = false
-        inputViewGlass.isHidden = false
-        inputViewPaper.isHidden = false
-        inputViewMetal.isHidden = false
-        inputViewOrganic.isHidden = false
-        trashBinPercentage.isHidden = false
-        waveView.isHidden = false
-        
+    func main(isHidden: Bool) {
+        subView.isHidden = isHidden
+        inputViewPlastic.isHidden = isHidden
+        inputViewGlass.isHidden = isHidden
+        inputViewPaper.isHidden = isHidden
+        inputViewMetal.isHidden = isHidden
+        inputViewOrganic.isHidden = isHidden
+        trashBinPercentage.isHidden = isHidden
+        waveView.isHidden = isHidden
     }
 }

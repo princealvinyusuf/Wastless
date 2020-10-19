@@ -15,7 +15,6 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var page3ImageView: UIImageView!
     @IBOutlet weak var startButton: UIButton!
     
-    
     let filledImage = UIImage(named: "oval")
     let unFilledImage = UIImage(named: "oval_")
     
@@ -27,7 +26,6 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
         let slides = createSlides()
         setupScrollView(slides)
     }
-    
     
     func createSlides() ->[SlideView]{
         

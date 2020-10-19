@@ -13,6 +13,7 @@ class UserDefaultService {
     private let def = UserDefaults.standard
     
     fileprivate let isFirstLaunchedKey = "welcomeShown"
+    fileprivate let isTargetSetKey = "isTargetSetKey"
     
     var isFirstLaunched: Bool {
         get {
@@ -20,6 +21,15 @@ class UserDefaultService {
         }
         set {
             def.set(newValue, forKey: isFirstLaunchedKey)
+        }
+    }
+    
+    var isTargetSet: Bool {
+        get {
+            return def.bool(forKey: isTargetSetKey)
+        }
+        set {
+            def.set(newValue, forKey: isTargetSetKey)
         }
     }
 }
