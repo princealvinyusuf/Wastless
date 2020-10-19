@@ -17,6 +17,8 @@
 		591D06DF253B02390008098A /* CurrentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06DD253B02390008098A /* CurrentViewCell.swift */; };
 		591D06E0253B02390008098A /* CurrentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591D06DE253B02390008098A /* CurrentViewCell.xib */; };
 		591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D077A253D4B0C0008098A /* UserDefaultService.swift */; };
+		591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D077F253DF1BB0008098A /* CardCategoryCell.swift */; };
+		591D0782253DF1BB0008098A /* CardCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591D0780253DF1BB0008098A /* CardCategoryCell.xib */; };
 		5934E3342531FC480082D01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3332531FC480082D01D /* AppDelegate.swift */; };
 		5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3352531FC480082D01D /* SceneDelegate.swift */; };
 		5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3372531FC480082D01D /* TabMyWasteVC.swift */; };
@@ -50,6 +52,8 @@
 		591D06DD253B02390008098A /* CurrentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewCell.swift; sourceTree = "<group>"; };
 		591D06DE253B02390008098A /* CurrentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentViewCell.xib; sourceTree = "<group>"; };
 		591D077A253D4B0C0008098A /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
+		591D077F253DF1BB0008098A /* CardCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategoryCell.swift; sourceTree = "<group>"; };
+		591D0780253DF1BB0008098A /* CardCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCategoryCell.xib; sourceTree = "<group>"; };
 		5934E3302531FC480082D01D /* iwaste-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iwaste-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934E3332531FC480082D01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5934E3352531FC480082D01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +151,25 @@
 			name = "Recovered References";
 			sourceTree = "<group>";
 		};
+		591D077D253DF1860008098A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				591D077E253DF1990008098A /* Cell */,
+				5934E3392531FC480082D01D /* Base.storyboard */,
+				5934E3372531FC480082D01D /* TabMyWasteVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		591D077E253DF1990008098A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				591D077F253DF1BB0008098A /* CardCategoryCell.swift */,
+				591D0780253DF1BB0008098A /* CardCategoryCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		5934E3272531FC480082D01D = {
 			isa = PBXGroup;
 			children = (
@@ -197,9 +220,8 @@
 		59FBF2A5253629FE00F940D5 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				591D077D253DF1860008098A /* View */,
 				9F42AA2E253A600600EB8056 /* Welcome */,
-				5934E3392531FC480082D01D /* Base.storyboard */,
-				5934E3372531FC480082D01D /* TabMyWasteVC.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -317,6 +339,7 @@
 				591D06E0253B02390008098A /* CurrentViewCell.xib in Resources */,
 				59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */,
 				595F90F22536A50A004D40CE /* HorizontalModalListView.xib in Resources */,
+				591D0782253DF1BB0008098A /* CardCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +409,7 @@
 				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
+				591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 			);
@@ -536,6 +560,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 72C5A4RQ56;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,6 +581,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 72C5A4RQ56;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

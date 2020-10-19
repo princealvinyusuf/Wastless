@@ -11,10 +11,9 @@ import WaveAnimationView
 
 class TabMyWasteVC: UIViewController {
     
-    @IBOutlet weak var stackAddWaste: UIStackView!
+    @IBOutlet weak var collectionCategory: UICollectionView!
     @IBOutlet weak var setTargetImage: UIImageView!
     @IBOutlet weak var setTargetOutlet: UIButton!
-    
     
     @IBOutlet weak var textIntro: UILabel!
     
@@ -69,6 +68,17 @@ class TabMyWasteVC: UIViewController {
             main(isHidden: false)
             target(isHidden: true)
         }
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.itemSize = CGSize(width: 72, height: 115)
+        flowLayout.minimumLineSpacing = 5.0
+        flowLayout.minimumInteritemSpacing = 5.0
+        self.collectionCategory.collectionViewLayout = flowLayout
+        
+        collectionCategory.delegate = self
+        collectionCategory.dataSource = self
+        collectionCategory.register(UINib(nibName: "CardCategoryCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "cardCategoryCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -148,15 +158,6 @@ class TabMyWasteVC: UIViewController {
         linearProgressOrganic.isCornersRounded = true
     }
     
-    @IBAction func btnAddNewWaste(_ sender: UIButton) {
-        let category = dataWaste[sender.tag]
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
-        addNewWasteVC.selectedCategory = category
-        self.present(addNewWasteVC, animated: true, completion: nil)
-    }
-    
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
@@ -179,8 +180,31 @@ class TabMyWasteVC: UIViewController {
     
     func main(isHidden: Bool) {
         subView.isHidden = isHidden
-        stackAddWaste.isHidden = isHidden
+        collectionCategory.isHidden = isHidden
         trashBinPercentage.isHidden = isHidden
         waveView.isHidden = isHidden
+    }
+}
+
+extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return dataWaste.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cardCategoryCell", for: indexPath) as? CardCategoryCell else {return UICollectionViewCell()}
+        
+        cell.configureCell(cat: dataWaste[indexPath.row], order: indexPath.row)
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let category = dataWaste[indexPath.row]
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
+        addNewWasteVC.selectedCategory = category
+        self.present(addNewWasteVC, animated: true, completion: nil)
     }
 }
