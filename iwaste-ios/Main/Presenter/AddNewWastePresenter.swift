@@ -22,7 +22,7 @@ class AddNewWastePresenter {
     
     func addWaste(selectedWaste: Waste, numOfWaste: Int) {
         let wasteAdded = WasteAdded(waste: selectedWaste, numOfWaste: numOfWaste)
-        listSelectedWaste.append(wasteAdded)
+        listSelectedWaste.insert(wasteAdded, at: 0)
         delegate.addWasteSuccess(wasteAdded: listSelectedWaste)
     }
 }

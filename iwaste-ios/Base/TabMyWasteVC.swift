@@ -11,13 +11,10 @@ import WaveAnimationView
 
 class TabMyWasteVC: UIViewController {
     
-    @IBOutlet weak var inputViewPlastic: UIView!
-    @IBOutlet weak var inputViewGlass: UIView!
-    @IBOutlet weak var inputViewPaper: UIView!
-    @IBOutlet weak var inputViewMetal: UIView!
-    @IBOutlet weak var inputViewOrganic: UIView!
+    @IBOutlet weak var stackAddWaste: UIStackView!
     @IBOutlet weak var setTargetImage: UIImageView!
     @IBOutlet weak var setTargetOutlet: UIButton!
+    
     
     @IBOutlet weak var textIntro: UILabel!
     
@@ -182,11 +179,7 @@ class TabMyWasteVC: UIViewController {
     
     func main(isHidden: Bool) {
         subView.isHidden = isHidden
-        inputViewPlastic.isHidden = isHidden
-        inputViewGlass.isHidden = isHidden
-        inputViewPaper.isHidden = isHidden
-        inputViewMetal.isHidden = isHidden
-        inputViewOrganic.isHidden = isHidden
+        stackAddWaste.isHidden = isHidden
         trashBinPercentage.isHidden = isHidden
         waveView.isHidden = isHidden
     }
