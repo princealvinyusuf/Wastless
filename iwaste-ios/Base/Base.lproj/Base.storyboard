@@ -668,7 +668,7 @@
         <!--My Waste-->
         <scene sceneID="rx9-Zq-RhL">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="p77-GB-W3N" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="p77-GB-W3N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="My Waste" image="trash.fill" catalog="system" id="mDH-oK-juu"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wdz-vx-jim"/>

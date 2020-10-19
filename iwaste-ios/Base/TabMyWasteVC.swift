@@ -30,12 +30,13 @@ class TabMyWasteVC: UIViewController {
     @IBOutlet weak var trashBinPercentage: UILabel!
     @IBOutlet weak var dateNavigationBar: UIBarButtonItem!
     
-    
     @IBOutlet weak var linearProgressPlastics: LinearProgressView!
     @IBOutlet weak var linearProgressMetals: LinearProgressView!
     @IBOutlet weak var linearProgressGlass: LinearProgressView!
     @IBOutlet weak var linearProgressPapers: LinearProgressView!
     @IBOutlet weak var linearProgressOrganic: LinearProgressView!
+    
+    let udService = UserDefaultService.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,8 +74,8 @@ class TabMyWasteVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        if UserDefaults.standard.bool(forKey: "welcomeShown") == false{
-            UserDefaults.standard.set(true, forKey: "welcomeShown")
+        if !udService.isFirstLaunched {
+            udService.isFirstLaunched = true
             let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
             let welcomeVC = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
             self.present(welcomeVC, animated:true, completion:nil)
@@ -188,7 +189,4 @@ class TabMyWasteVC: UIViewController {
         waveView.isHidden = false
         
     }
-    
-    
 }
-

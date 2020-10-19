@@ -16,6 +16,7 @@
 		591D06D4253839880008098A /* HorizontalModalCurrentWaste.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */; };
 		591D06DF253B02390008098A /* CurrentViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06DD253B02390008098A /* CurrentViewCell.swift */; };
 		591D06E0253B02390008098A /* CurrentViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591D06DE253B02390008098A /* CurrentViewCell.xib */; };
+		591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D077A253D4B0C0008098A /* UserDefaultService.swift */; };
 		5934E3342531FC480082D01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3332531FC480082D01D /* AppDelegate.swift */; };
 		5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3352531FC480082D01D /* SceneDelegate.swift */; };
 		5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3372531FC480082D01D /* TabMyWasteVC.swift */; };
@@ -48,6 +49,7 @@
 		591D06D2253839880008098A /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HorizontalModalCurrentWaste.xib; path = ../HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
 		591D06DD253B02390008098A /* CurrentViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentViewCell.swift; sourceTree = "<group>"; };
 		591D06DE253B02390008098A /* CurrentViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CurrentViewCell.xib; sourceTree = "<group>"; };
+		591D077A253D4B0C0008098A /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
 		5934E3302531FC480082D01D /* iwaste-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iwaste-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934E3332531FC480082D01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5934E3352531FC480082D01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -232,6 +234,7 @@
 			children = (
 				5934E33C2531FC480082D01D /* iwaste_ios.xcdatamodeld */,
 				591D06A825382FA00008098A /* Constans.swift */,
+				591D077A253D4B0C0008098A /* UserDefaultService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -375,6 +378,7 @@
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
+				591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */,
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
