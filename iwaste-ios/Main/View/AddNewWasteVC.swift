@@ -50,7 +50,7 @@ class AddNewWasteVC: UIViewController {
         
         btnAddWaste.layer.cornerRadius = 10
         btnAddWaste.backgroundColor = K.Color.primaryColor
-        btnAddWaste.titleLabel?.tintColor = UIColor.systemBackground
+        btnAddWaste.titleLabel?.tintColor = UIColor.white
         
         btnDone.tintColor = K.Color.primaryColor
         btnCancel.tintColor = K.Color.primaryColor
