@@ -12,7 +12,7 @@ class CardCategoryCell: UICollectionViewCell {
     @IBOutlet weak var viewParent: UIView!
     @IBOutlet weak var imgCategory: UIImageView!
     @IBOutlet weak var lblNameCategory: UILabel!
-    @IBOutlet weak var btnAdd: UIButton!
+    @IBOutlet weak var imgAdd: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -44,7 +44,7 @@ class CardCategoryCell: UICollectionViewCell {
             bgViewColor = K.Color.colorMetalSoft
         }
         
-        btnAdd.tintColor = bgButtonColor
+        imgAdd.tintColor = bgButtonColor
         viewParent.backgroundColor = bgViewColor
     }
 }

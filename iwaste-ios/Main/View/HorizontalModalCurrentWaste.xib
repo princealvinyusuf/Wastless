@@ -59,6 +59,7 @@
             <connections>
                 <outlet property="imgCurrentWaste" destination="cJY-a8-hPB" id="grq-4c-gLU"/>
                 <outlet property="numberCurrentWaste" destination="yh4-zM-B4r" id="dOt-ne-nqA"/>
+                <outlet property="txtCurrentWaste" destination="BtD-OQ-2Kw" id="ZUc-Fc-Bck"/>
             </connections>
             <point key="canvasLocation" x="415.94202898550731" y="155.35714285714286"/>
         </collectionViewCell>

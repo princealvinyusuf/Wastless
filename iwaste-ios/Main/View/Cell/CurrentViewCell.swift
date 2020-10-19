@@ -15,6 +15,7 @@ class CurrentViewCell: UITableViewCell {
     @IBOutlet weak var linearWasteProgress: LinearProgressView!
     @IBOutlet weak var collectionWaste: UICollectionView!
     
+    var listWaste = [Waste]()
     override func awakeFromNib() {
         
         let flowLayout = UICollectionViewFlowLayout()
@@ -27,17 +28,56 @@ class CurrentViewCell: UITableViewCell {
         self.collectionWaste.delegate = self
         self.collectionWaste.dataSource = self
         self.collectionWaste.register(UINib(nibName: "HorizontalModalCurrentWaste", bundle: nil), forCellWithReuseIdentifier: "horizontalModalCurrentWaste")
+        
     }
     
+    func configureCell(modelWaste: ModelWaste, _ order: Int) {
+        txtWasteName.text = modelWaste.categoryName
+        
+        listWaste = modelWaste.waste
+        
+        linearWasteProgress.animationDuration = 0.5
+        setProgressColor(order)
+        
+        linearWasteProgress.setProgress(55, animated: true)
+        linearWasteProgress.barInset = CGFloat(4)
+        linearWasteProgress.isCornersRounded = true
+    }
+    
+    private func setProgressColor(_ order: Int) {
+        
+        var progressTrackColor = K.Color.colorOrganic
+        var progressBarColor = K.Color.colorOrganicSoft
+        
+        if order == 0 {
+            progressTrackColor = K.Color.colorPlastic
+            progressBarColor = K.Color.colorPlasticSoft
+        } else if order == 1 {
+            progressTrackColor = K.Color.colorGlass
+            progressBarColor = K.Color.colorGlassSoft
+        } else if order == 2 {
+            progressTrackColor = K.Color.colorPaper
+            progressBarColor = K.Color.colorPaperSoft
+        } else if order == 3 {
+            progressTrackColor = K.Color.colorMetal
+            progressBarColor = K.Color.colorMetalSoft
+        }
+        
+        linearWasteProgress.barColor = progressBarColor
+        linearWasteProgress.trackColor = progressTrackColor
+    }
 }
 
 extension CurrentViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return listWaste.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "horizontalModalCurrentWaste", for: indexPath) as? HorizontalModalCurrentWaste else {return UICollectionViewCell()}
+        
+        let wasteAdded = WasteAdded(waste: listWaste[indexPath.row], numOfWaste: 10)
+        cell.configureCell(wasteAdded: wasteAdded)
         
         return cell
     }

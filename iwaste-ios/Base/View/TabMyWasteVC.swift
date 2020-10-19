@@ -64,9 +64,13 @@ class TabMyWasteVC: UIViewController {
         waveConfigure()
         waveColor()
         
+        print(udService.isTargetSet)
         if udService.isTargetSet {
             main(isHidden: false)
             target(isHidden: true)
+        } else {
+            main(isHidden: true)
+            target(isHidden: false)
         }
         
         let flowLayout = UICollectionViewFlowLayout()

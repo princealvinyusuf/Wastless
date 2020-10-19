@@ -34,24 +34,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ln-h4-stE">
-                                <rect key="frame" x="25.5" y="79" width="24" height="24"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="o8y-5R-81P">
+                                <rect key="frame" x="25.5" y="79.5" width="24" height="23"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="8ln-h4-stE" secondAttribute="height" multiplier="1:1" id="7Ux-cm-Lha"/>
-                                    <constraint firstAttribute="width" constant="24" id="C4o-6I-Nm1"/>
+                                    <constraint firstAttribute="width" constant="24" id="9rI-LZ-0u5"/>
+                                    <constraint firstAttribute="width" secondItem="o8y-5R-81P" secondAttribute="height" multiplier="1:1" id="hzY-Ly-THL"/>
                                 </constraints>
-                                <color key="tintColor" name="plastic"/>
-                                <state key="normal" image="plus.circle.fill" catalog="system"/>
-                            </button>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" name="plasticSoft"/>
                         <constraints>
-                            <constraint firstItem="8ln-h4-stE" firstAttribute="centerX" secondItem="FbR-ic-1Wa" secondAttribute="centerX" id="5tg-75-iDo"/>
+                            <constraint firstAttribute="bottom" secondItem="o8y-5R-81P" secondAttribute="bottom" constant="12" id="MhN-YS-7e0"/>
                             <constraint firstItem="IJM-Ng-jHM" firstAttribute="centerX" secondItem="FbR-ic-1Wa" secondAttribute="centerX" id="WOa-te-spH"/>
                             <constraint firstItem="IJM-Ng-jHM" firstAttribute="top" secondItem="FbR-ic-1Wa" secondAttribute="top" constant="11" id="cwL-FK-vnr"/>
                             <constraint firstItem="mSx-kE-x9f" firstAttribute="top" secondItem="IJM-Ng-jHM" secondAttribute="bottom" constant="5" id="igR-MT-iKH"/>
+                            <constraint firstItem="o8y-5R-81P" firstAttribute="centerX" secondItem="FbR-ic-1Wa" secondAttribute="centerX" id="r31-nA-Kai"/>
                             <constraint firstAttribute="trailing" secondItem="mSx-kE-x9f" secondAttribute="trailing" constant="5" id="sLx-5y-Ohz"/>
-                            <constraint firstAttribute="bottom" secondItem="8ln-h4-stE" secondAttribute="bottom" constant="12" id="tpM-gF-0uy"/>
                             <constraint firstItem="mSx-kE-x9f" firstAttribute="leading" secondItem="FbR-ic-1Wa" secondAttribute="leading" constant="5" id="zzK-S0-PFJ"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
@@ -70,20 +68,17 @@
                 <constraint firstItem="FbR-ic-1Wa" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ujK-CX-8j2"/>
             </constraints>
             <connections>
-                <outlet property="btnAdd" destination="8ln-h4-stE" id="Uxs-sk-XPm"/>
+                <outlet property="imgAdd" destination="o8y-5R-81P" id="F4I-5z-k0U"/>
                 <outlet property="imgCategory" destination="IJM-Ng-jHM" id="8Tg-2X-6pN"/>
                 <outlet property="lblNameCategory" destination="mSx-kE-x9f" id="R4s-aV-hgO"/>
                 <outlet property="viewParent" destination="FbR-ic-1Wa" id="xAb-2i-BqM"/>
             </connections>
-            <point key="canvasLocation" x="117" y="93"/>
+            <point key="canvasLocation" x="116.66666666666667" y="92.745535714285708"/>
         </collectionViewCell>
     </objects>
     <resources>
         <image name="inputPlastic" width="205" height="200"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
-        <namedColor name="plastic">
-            <color red="0.059000000357627869" green="0.49799999594688416" blue="0.68199998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="plasticSoft">
             <color red="0.46299999952316284" green="0.75300002098083496" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -161,10 +161,10 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="57.589285714285708"/>
         </scene>
-        <!--View Controller-->
+        <!--Current WasteVC-->
         <scene sceneID="wrx-zF-Tye">
             <objects>
-                <viewController id="apd-JG-ISb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CurrentWasteVC" id="apd-JG-ISb" customClass="CurrentWasteVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qhv-rz-chy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,7 @@
                                     <navigationItem title="Current Waste" id="Yug-fc-sUX">
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="D7k-ub-Wsg">
                                             <connections>
-                                                <action selector="btnCancel:" destination="apd-JG-ISb" id="QFj-8G-Ak1"/>
+                                                <action selector="btnCancel:" destination="apd-JG-ISb" id="Grf-dk-Vab"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -203,7 +203,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="tableView" destination="UHM-rl-UrV" id="rGd-fs-cA6"/>
+                        <outlet property="tableView" destination="UHM-rl-UrV" id="Xbr-5w-nLe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p36-Fm-29S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -427,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="108.69565217391305" y="797.54464285714278"/>
         </scene>
-        <!--Current WasteVC-->
+        <!--View Controller-->
         <scene sceneID="bbN-T9-hgZ">
             <objects>
-                <viewController storyboardIdentifier="CurrentWasteVC" id="p7V-fJ-wNC" customClass="CurrentWasteVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="p7V-fJ-wNC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CfR-eL-9rV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
