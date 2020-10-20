@@ -228,7 +228,7 @@
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="eeo-FE-z60">
                                             <color key="tintColor" name="navigationBarModal"/>
                                             <connections>
-                                                <action selector="btnDone:" destination="GZh-JI-1uT" id="UWe-KL-cVx"/>
+                                                <action selector="doneTappedButton:" destination="GZh-JI-1uT" id="6uc-df-EAa"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -422,6 +422,13 @@
                             <constraint firstItem="G6t-zv-qXR" firstAttribute="trailing" secondItem="hVo-wn-Rhk" secondAttribute="trailing" id="wDC-vV-SUi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="glassTF" destination="k3P-pb-VOA" id="zcS-xd-v8G"/>
+                        <outlet property="metalTF" destination="1G7-Wb-S8f" id="JEP-ya-w6k"/>
+                        <outlet property="organicTF" destination="epv-i8-06W" id="Zks-F7-DNm"/>
+                        <outlet property="paperTF" destination="tlb-pv-uSl" id="NvV-QP-cc2"/>
+                        <outlet property="plasticTF" destination="Ebm-QT-WYA" id="HYF-N1-a8E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPD-Vx-W87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
