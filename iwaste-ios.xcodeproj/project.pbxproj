@@ -32,6 +32,11 @@
 		595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F90F52536A521004D40CE /* WasteViewCell.xib */; };
 		595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F92536A55D004D40CE /* AddNewWasteVC.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
+		9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DA253E89F800870DE8 /* AchievementVC.swift */; };
+		9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */; };
+		9F1A43E1253E8C2200870DE8 /* SecondSegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */; };
+		9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E3253E8F3C00870DE8 /* TableCell.swift */; };
+		9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E7253E8FDA00870DE8 /* Challenge.swift */; };
 		9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */; };
 		9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA32253A60DF00EB8056 /* SlideView.swift */; };
 		9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA38253A632F00EB8056 /* WelcomeVC.swift */; };
@@ -71,6 +76,11 @@
 		59FBF2AC25362AAD00F940D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
+		9F1A43DA253E89F800870DE8 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
+		9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSegmentedVC.swift; sourceTree = "<group>"; };
+		9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentedVC.swift; sourceTree = "<group>"; };
+		9F1A43E3253E8F3C00870DE8 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
+		9F1A43E7253E8FDA00870DE8 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetVC.swift; sourceTree = "<group>"; };
 		9F42AA32253A60DF00EB8056 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		9F42AA36253A621E00EB8056 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
@@ -115,6 +125,7 @@
 				591D06972537E37A0008098A /* ModelWaste.swift */,
 				591D069A2537E3F00008098A /* DataCategory.swift */,
 				591D069D2538059E0008098A /* ModelWasteAdded.swift */,
+				9F1A43E7253E8FDA00870DE8 /* Challenge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +149,7 @@
 				595F90F52536A521004D40CE /* WasteViewCell.xib */,
 				591D06DD253B02390008098A /* CurrentViewCell.swift */,
 				591D06DE253B02390008098A /* CurrentViewCell.xib */,
+				9F1A43E3253E8F3C00870DE8 /* TableCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -157,6 +169,7 @@
 				591D077E253DF1990008098A /* Cell */,
 				5934E3392531FC480082D01D /* Base.storyboard */,
 				5934E3372531FC480082D01D /* TabMyWasteVC.swift */,
+				9F1A43DA253E89F800870DE8 /* AchievementVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +226,8 @@
 				595F90F92536A55D004D40CE /* AddNewWasteVC.swift */,
 				9FC20D722536BA30007A828E /* CurrentWasteVC.swift */,
 				9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */,
+				9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */,
+				9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -401,16 +416,21 @@
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
+				9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */,
+				9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */,
 				591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */,
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
+				9F1A43E1253E8C2200870DE8 /* SecondSegmentedVC.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
 				591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */,
+				9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */,
 				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
+				9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

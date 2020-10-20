@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p77-GB-W3N">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UQM-pN-v4v">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -457,22 +457,6 @@
             </objects>
             <point key="canvasLocation" x="1027.536231884058" y="122.54464285714285"/>
         </scene>
-        <!--Achievement-->
-        <scene sceneID="L7k-Ia-6Jc">
-            <objects>
-                <viewController id="Inf-Xo-30Z" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KNZ-IJ-ES4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Jhy-F2-uPI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Achievement" image="rosette" catalog="system" id="5Uy-dr-Mun"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOS-Qn-is2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1051" y="860"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hGU-gY-2PO">
             <objects>
@@ -485,8 +469,8 @@
                         <color key="selectedImageTintColor" name="metal"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Inf-Xo-30Z" kind="relationship" relationship="viewControllers" id="jiQ-hi-5UL"/>
-                        <segue destination="ygx-TZ-uGk" kind="relationship" relationship="viewControllers" id="63K-NQ-CUk"/>
+                        <segue destination="APz-4N-3bk" kind="relationship" relationship="viewControllers" id="NOJ-ZX-zts"/>
+                        <segue destination="ygx-TZ-uGk" kind="relationship" relationship="viewControllers" id="0Ly-0P-6bC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNS-cT-oS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -602,9 +586,133 @@
             </objects>
             <point key="canvasLocation" x="-1067" y="191"/>
         </scene>
+        <!--Achievement-->
+        <scene sceneID="Ozk-OG-2vz">
+            <objects>
+                <viewController storyboardIdentifier="SegmentedView" id="APz-4N-3bk" customClass="AchievementVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LKX-HB-7Xi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-F1-EQ2">
+                                <rect key="frame" x="167.5" y="56" width="79" height="79"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="79" id="Oak-rR-xVj"/>
+                                    <constraint firstAttribute="height" constant="79" id="hag-8Q-xzk"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="86" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7Z-wR-ruR">
+                                <rect key="frame" x="174.5" y="123" width="65" height="18"/>
+                                <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.72941176470000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="18" id="QlQ-lO-qcX"/>
+                                    <constraint firstAttribute="width" constant="65" id="m8x-3y-3ms"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                <color key="textColor" name="navigationBarModal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="LiU-CB-div">
+                                <rect key="frame" x="167.5" y="120" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="6Cd-Bf-Mff"/>
+                                    <constraint firstAttribute="height" constant="24" id="ssX-cp-U0Q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMf-Ww-64x">
+                                <rect key="frame" x="170.5" y="148" width="73.5" height="45"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" name="navigationBarModal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48r-7M-k1o" userLabel="Linear Progress Plastics" customClass="LinearProgressView" customModule="LinearProgressView">
+                                <rect key="frame" x="113" y="196" width="188" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="0FM-8n-y4C"/>
+                                    <constraint firstAttribute="width" constant="188" id="5zd-i0-VZG"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
+                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
+                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="STb-i1-BHU">
+                                <rect key="frame" x="126.5" y="228" width="161" height="32"/>
+                                <segments>
+                                    <segment title="Challenge"/>
+                                    <segment title="Badges"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" name="navigationBarModal"/>
+                                <connections>
+                                    <action selector="segmentedValueChanged:" destination="APz-4N-3bk" eventType="valueChanged" id="zkW-rk-0gM"/>
+                                </connections>
+                            </segmentedControl>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6M-7t-AJp">
+                                <rect key="frame" x="0.0" y="293" width="414" height="520"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="520" id="Usy-t1-plo"/>
+                                </constraints>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AER-fd-R9p"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rMf-Ww-64x" firstAttribute="top" secondItem="LiU-CB-div" secondAttribute="bottom" constant="4" id="4l3-Vl-ymn"/>
+                            <constraint firstItem="LiU-CB-div" firstAttribute="leading" secondItem="wOg-F1-EQ2" secondAttribute="leading" id="BZD-WO-GV7"/>
+                            <constraint firstItem="V6M-7t-AJp" firstAttribute="height" secondItem="LKX-HB-7Xi" secondAttribute="height" multiplier="0.580357" id="DZp-9R-7wV"/>
+                            <constraint firstItem="rMf-Ww-64x" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="EqG-QM-5AM"/>
+                            <constraint firstItem="STb-i1-BHU" firstAttribute="top" secondItem="48r-7M-k1o" secondAttribute="bottom" constant="12" id="GQ2-eP-RPI"/>
+                            <constraint firstItem="rMf-Ww-64x" firstAttribute="height" secondItem="LKX-HB-7Xi" secondAttribute="height" multiplier="0.0502232" id="GkN-y4-xiT"/>
+                            <constraint firstItem="STb-i1-BHU" firstAttribute="height" secondItem="LKX-HB-7Xi" secondAttribute="height" multiplier="0.0345982" id="N6C-yo-uWL"/>
+                            <constraint firstItem="x7Z-wR-ruR" firstAttribute="top" secondItem="wOg-F1-EQ2" secondAttribute="bottom" constant="-12" id="RSy-vl-Hwt"/>
+                            <constraint firstItem="48r-7M-k1o" firstAttribute="top" secondItem="rMf-Ww-64x" secondAttribute="bottom" constant="3" id="Z5h-k8-lzt"/>
+                            <constraint firstItem="V6M-7t-AJp" firstAttribute="width" secondItem="LKX-HB-7Xi" secondAttribute="width" id="cMn-gV-sdr"/>
+                            <constraint firstItem="48r-7M-k1o" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="ezB-X9-D6Z"/>
+                            <constraint firstItem="wOg-F1-EQ2" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="ha9-H7-8cj"/>
+                            <constraint firstItem="V6M-7t-AJp" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="kYe-eJ-VYl"/>
+                            <constraint firstItem="wOg-F1-EQ2" firstAttribute="top" secondItem="AER-fd-R9p" secondAttribute="top" constant="12" id="kqI-P8-B7n"/>
+                            <constraint firstItem="x7Z-wR-ruR" firstAttribute="centerX" secondItem="wOg-F1-EQ2" secondAttribute="centerX" id="qJ3-pR-JAd"/>
+                            <constraint firstItem="STb-i1-BHU" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="qTs-6g-kdC"/>
+                            <constraint firstItem="STb-i1-BHU" firstAttribute="width" secondItem="LKX-HB-7Xi" secondAttribute="width" multiplier="0.388889" id="tPu-nf-vMZ"/>
+                            <constraint firstItem="x7Z-wR-ruR" firstAttribute="centerY" secondItem="LiU-CB-div" secondAttribute="centerY" id="x4M-wU-Fr3"/>
+                            <constraint firstItem="AER-fd-R9p" firstAttribute="bottom" secondItem="V6M-7t-AJp" secondAttribute="bottom" id="xxl-WX-B5y"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Achievement" image="rosette" catalog="system" id="7cb-YT-Pw7"/>
+                    <connections>
+                        <outlet property="containerView" destination="V6M-7t-AJp" id="emi-uL-yZ0"/>
+                        <outlet property="linearProgressAchievement" destination="48r-7M-k1o" id="GBu-Ah-32l"/>
+                        <outlet property="segmentedControl" destination="STb-i1-BHU" id="GbY-yc-yDG"/>
+                        <outlet property="totalCoinLabel" destination="x7Z-wR-ruR" id="Mlr-th-duS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rfA-oq-yLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1028" y="860"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="avatar" width="80" height="80"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
+        <image name="coin" width="67" height="67"/>
         <image name="oval" width="10" height="10"/>
         <image name="oval_" width="10" height="10"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
