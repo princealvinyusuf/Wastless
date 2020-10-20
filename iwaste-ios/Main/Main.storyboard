@@ -1434,6 +1434,16 @@
                                                         <constraint firstAttribute="width" constant="24" id="nzB-hJ-jD5"/>
                                                     </constraints>
                                                 </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk7-6i-re0">
+                                                    <rect key="frame" x="356" y="40" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="UVa-NJ-QFw"/>
+                                                        <constraint firstAttribute="width" constant="30" id="dnR-q9-6Bj"/>
+                                                    </constraints>
+                                                    <connections>
+                                                        <action selector="btnCheckBoxTapped:" destination="Fyj-ro-RCu" eventType="touchUpInside" id="c0z-C1-2iQ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="9MO-aB-hpi" firstAttribute="leading" secondItem="EZc-Th-ZNz" secondAttribute="leading" constant="12" id="0pW-o4-qaz"/>
@@ -1445,14 +1455,17 @@
                                                 <constraint firstItem="PU2-7T-7UG" firstAttribute="leading" secondItem="fwk-3a-cOT" secondAttribute="leading" constant="15" id="Hl2-9d-Bki"/>
                                                 <constraint firstItem="ni2-Kb-gU2" firstAttribute="leading" secondItem="fwk-3a-cOT" secondAttribute="leading" constant="10" id="JFZ-yL-lxy"/>
                                                 <constraint firstItem="EZc-Th-ZNz" firstAttribute="leading" secondItem="PU2-7T-7UG" secondAttribute="trailing" constant="20" id="KSt-hJ-Fha"/>
+                                                <constraint firstItem="hk7-6i-re0" firstAttribute="centerY" secondItem="PU2-7T-7UG" secondAttribute="centerY" id="QSn-J7-uQd"/>
                                                 <constraint firstItem="K7f-vf-CWc" firstAttribute="top" secondItem="EZc-Th-ZNz" secondAttribute="bottom" constant="5" id="X8o-fS-1cM"/>
                                                 <constraint firstItem="EZc-Th-ZNz" firstAttribute="trailing" secondItem="fwk-3a-cOT" secondAttribute="trailingMargin" id="YLP-ZD-1Sf"/>
                                                 <constraint firstItem="EZc-Th-ZNz" firstAttribute="leading" secondItem="K7f-vf-CWc" secondAttribute="leading" id="b7W-cB-63w"/>
                                                 <constraint firstAttribute="trailing" secondItem="ni2-Kb-gU2" secondAttribute="trailing" constant="10" id="p9F-CI-bM6"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="hk7-6i-re0" secondAttribute="trailing" constant="8" id="smB-f2-XXQ"/>
                                                 <constraint firstItem="9MO-aB-hpi" firstAttribute="top" secondItem="EZc-Th-ZNz" secondAttribute="bottom" constant="8" symbolic="YES" id="zOg-nR-QxI"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnCheckBox" destination="hk7-6i-re0" id="elg-Ug-ieE"/>
                                             <outlet property="coinLabel" destination="9MO-aB-hpi" id="Y2W-dG-i40"/>
                                             <outlet property="iconImage" destination="PU2-7T-7UG" id="HYp-3Z-zgn"/>
                                             <outlet property="subView" destination="ni2-Kb-gU2" id="aPQ-yC-Ogb"/>

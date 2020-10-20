@@ -319,7 +319,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwN-Yk-rlG" userLabel="Wave View">
-                                <rect key="frame" x="87" y="475" width="240" height="240"/>
+                                <rect key="frame" x="87" y="426" width="240" height="240"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-bg-ksZ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
@@ -339,7 +339,7 @@
                                 </constraints>
                             </view>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="50%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-3p-Tqs">
-                                <rect key="frame" x="187.5" y="613" width="39.5" height="20.5"/>
+                                <rect key="frame" x="187.5" y="564" width="39.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -370,7 +370,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fs8-1C-JBx">
-                                <rect key="frame" x="16" y="731" width="382" height="115"/>
+                                <rect key="frame" x="16" y="682" width="382" height="115"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="115" id="gJD-tP-InH"/>
@@ -412,6 +412,7 @@
                             <constraint firstItem="Xyh-3p-Tqs" firstAttribute="height" secondItem="PwN-Yk-rlG" secondAttribute="height" multiplier="0.0854167" id="wRA-em-AXd"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="ea1-QV-kn1"/>
                     <navigationItem key="navigationItem" title="Waste up?" leftItemsSupplementBackButton="YES" id="puf-gI-jgn">
                         <barButtonItem key="leftBarButtonItem" title="Date" style="plain" id="Jiw-r0-5tf">
                             <color key="tintColor" name="navigationBarModal"/>
@@ -469,13 +470,14 @@
                         <color key="selectedImageTintColor" name="metal"/>
                     </tabBar>
                     <connections>
-                        <segue destination="APz-4N-3bk" kind="relationship" relationship="viewControllers" id="NOJ-ZX-zts"/>
-                        <segue destination="ygx-TZ-uGk" kind="relationship" relationship="viewControllers" id="0Ly-0P-6bC"/>
+                        <segue destination="p77-GB-W3N" kind="relationship" relationship="viewControllers" id="5fI-nl-gbi"/>
+                        <segue destination="APz-4N-3bk" kind="relationship" relationship="viewControllers" id="lFf-sX-ACw"/>
+                        <segue destination="ygx-TZ-uGk" kind="relationship" relationship="viewControllers" id="Sfd-WS-XdB"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RNS-cT-oS0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22" y="860"/>
+            <point key="canvasLocation" x="-3" y="123"/>
         </scene>
         <!--History-->
         <scene sceneID="FmJ-4h-Y7K">
@@ -550,7 +552,7 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="startTapped:" destination="8NP-Z1-cpa" eventType="touchUpInside" id="LD9-eO-vqy"/>
-                                    <segue destination="p77-GB-W3N" kind="show" id="d6l-Xv-uud"/>
+                                    <segue destination="UQM-pN-v4v" kind="presentation" modalPresentationStyle="fullScreen" id="yBv-lA-5Et"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -584,7 +586,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Chv-Xc-XE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1067" y="191"/>
+            <point key="canvasLocation" x="-1081" y="123"/>
         </scene>
         <!--Achievement-->
         <scene sceneID="Ozk-OG-2vz">
