@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import BonsaiController
 
-class SecondSegmentedVC: UIViewController {
+class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var subViewDay: UIView!
     @IBOutlet weak var subViewWeek: UIView!
@@ -57,9 +58,30 @@ class SecondSegmentedVC: UIViewController {
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let currentWasteVC = storyboard.instantiateViewController(identifier: "CurrentWasteVC") as! CurrentWasteVC
-        self.present(currentWasteVC, animated: true, completion: nil)
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
+        SecondSegmentedVC.globalVariable.medals = "DayMedals"
+        self.present(secondSegmentedVC, animated: true, completion: nil)
     }
 
+    struct globalVariable {
+        static var medals = String();
+    }
+    
+    
 
 }
+
+extension SecondSegmentedVC: BonsaiControllerDelegate {
+ 
+    func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
+        
+        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    
+        return BonsaiController(fromDirection: .bottom, backgroundColor: UIColor(white: 0, alpha: 0.5), presentedViewController: presented, delegate: self)
+        
+    }
+}
+

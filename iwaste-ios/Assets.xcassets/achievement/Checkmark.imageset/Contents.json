@@ -1,16 +1,17 @@
 {
   "images" : [
     {
+      "filename" : "challenge@60.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Checkmark@2x.png",
+      "filename" : "challenge@90.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Checkmark@3x.png",
+      "filename" : "challenge@1024.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -9,73 +9,105 @@
 /* Begin PBXBuildFile section */
 		12B5694DF8F6101FB0EE038C8604AA34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		17A2D6DA1A8363594602BCFC8E11B2DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		1C5CC357BE79D7FD7C936BBC0C26F987 /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1A2E748622C11DD813FB74000481B90 /* LinearProgressView.swift */; };
-		21281295C0A3EE7BB55F3E7DAB81C718 /* Pods-iwaste-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB6CB74C93BE474B12FE3E6346FD2EC2 /* Pods-iwaste-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2D19ECE701786F4301A46C223A07F05E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		5757B43B1DD701C2E4F9C849CAE6124C /* LinearProgressView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A8756E57627AE04A868A12C08FC9EE1C /* LinearProgressView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		614A953ED286F9C36A9A83613AED8B6F /* Pods-iwaste-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D06B4B36E84C446A0858E4FED2FD80C2 /* Pods-iwaste-ios-dummy.m */; };
-		9D3C702753B5A4DAEFE1AA22070226D1 /* LinearProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5104E9B8402BD573201353E9D2134CE0 /* LinearProgressView-dummy.m */; };
-		A002D914A3FA7D56B790DA17383A9F4F /* WaveAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA36F27E6560DB26366B38B00773DECE /* WaveAnimationView.swift */; };
-		A2450871FABB8A2953233A87A8B98104 /* WaveAnimationView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B045AFC4C88E221769DB4FF8D4CCB8A1 /* WaveAnimationView-dummy.m */; };
-		E41DA6420E1F81BE064C65E7CCB8A3E4 /* WaveAnimationView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0832C97FA0BABB4D3125E55A7087E52C /* WaveAnimationView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C5CC357BE79D7FD7C936BBC0C26F987 /* LinearProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B575C6FD60004FEAB6AD1932B7EBC14 /* LinearProgressView.swift */; };
+		29DE6DB6FCCAB675EDB8C9967EEBB8E3 /* SlideInTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ACF432263C7C5D4A0962624CFE4E44 /* SlideInTransition.swift */; };
+		457A03306324561C5BA23B19FCD2C01F /* Pods-iwaste-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FB6CB74C93BE474B12FE3E6346FD2EC2 /* Pods-iwaste-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C6DBBD7C07B0755496AF65AC183C266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		5757B43B1DD701C2E4F9C849CAE6124C /* LinearProgressView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1BCC6E4FA8CD254571E739D425CE731 /* LinearProgressView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C47FE02426E6E3466119932B34BBB3A /* Pods-iwaste-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D06B4B36E84C446A0858E4FED2FD80C2 /* Pods-iwaste-ios-dummy.m */; };
+		7FF4F77DE1C0BF3E5197CA742DDFD6FA /* BonsaiController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F2B411AE3223190E25E28D91856119D /* BonsaiController-dummy.m */; };
+		9D3C702753B5A4DAEFE1AA22070226D1 /* LinearProgressView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 874EAE8918B859CCD50A9AA60ADB37B8 /* LinearProgressView-dummy.m */; };
+		A002D914A3FA7D56B790DA17383A9F4F /* WaveAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF55EB88D0D551DEAE175FEDC8816283 /* WaveAnimationView.swift */; };
+		A2450871FABB8A2953233A87A8B98104 /* WaveAnimationView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7940C7369A5ABD72C41EA3D4C7C170F2 /* WaveAnimationView-dummy.m */; };
+		B20A89DA00AC4D69E039FAB653CC96D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		CB75C8E096148DC8CC2BDCE4662A0F68 /* BonsaiController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D572BDC1C7A701A1FF3B21370438ED26 /* BonsaiController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC0A43BF131B4A6C3A3C53F34CB2444E /* BonsaiController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28A49F142408D781857191409F58B4E4 /* BonsaiController.swift */; };
+		E41DA6420E1F81BE064C65E7CCB8A3E4 /* WaveAnimationView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FC47AB6CDC3854143AAFA4121BE6AD97 /* WaveAnimationView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA7C4E583BAD402C4D04F87AF5C6F2FB /* BubbleTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB0367BEB9DF33400B4674350CBF5AA /* BubbleTransition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		1C31E683F2B7564566043251DBBB2501 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 54AB102BD56121F4FB8F9FF3053F8767;
-			remoteInfo = LinearProgressView;
-		};
-		3E5D3D52CF7DE67519B6C254FA4B213B /* PBXContainerItemProxy */ = {
+		06276B2B38F939BE7F4F9F44786EAC31 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 2B8C327B97C2E109468CAF89F32D2A76;
 			remoteInfo = WaveAnimationView;
 		};
+		33AF0665E6CC48B501B7745D8303DA3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2FC272E5264771C98573AEA8FB92240D;
+			remoteInfo = BonsaiController;
+		};
+		5FC72755BA6F9520F1DD4AEF68844BA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54AB102BD56121F4FB8F9FF3053F8767;
+			remoteInfo = LinearProgressView;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07A1EDE92966986BCCFE8531259ED2AA /* LinearProgressView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LinearProgressView-Info.plist"; sourceTree = "<group>"; };
-		0832C97FA0BABB4D3125E55A7087E52C /* WaveAnimationView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WaveAnimationView-umbrella.h"; sourceTree = "<group>"; };
+		04993AEEF543C76203F9E07E987C1764 /* LinearProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LinearProgressView.release.xcconfig; sourceTree = "<group>"; };
+		05ACF432263C7C5D4A0962624CFE4E44 /* SlideInTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SlideInTransition.swift; path = BonsaiController/Classes/SlideInTransition.swift; sourceTree = "<group>"; };
+		07FC634023644EE2B77E023909E1D109 /* BonsaiController.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = BonsaiController.modulemap; sourceTree = "<group>"; };
 		12CEE01472252205636CDB872CCDE2A3 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		19390DA062B4A2CD46BE6ED718DFCE13 /* WaveAnimationView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WaveAnimationView.release.xcconfig; sourceTree = "<group>"; };
+		1CF254B9E9052BF892B4069BDD46BA60 /* WaveAnimationView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WaveAnimationView-Info.plist"; sourceTree = "<group>"; };
 		1E34F3526383D3485BBA7AAF81722AFC /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_iwaste_ios.framework; path = "Pods-iwaste-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		22764FD78698458FBCB7F754E3DE6119 /* LinearProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LinearProgressView-prefix.pch"; sourceTree = "<group>"; };
+		270D230AC7F8674CF72A00114D45CF4F /* BonsaiController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonsaiController.debug.xcconfig; sourceTree = "<group>"; };
+		27B91A616D3E3D080255C6C93A591F62 /* BonsaiController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BonsaiController.framework; path = BonsaiController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28A49F142408D781857191409F58B4E4 /* BonsaiController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BonsaiController.swift; path = BonsaiController/Classes/BonsaiController.swift; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		37F0653F08A97EC3A605FEF193292DB4 /* BonsaiController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BonsaiController.release.xcconfig; sourceTree = "<group>"; };
+		38B488A9A40DA91C7A1526067E897CF1 /* WaveAnimationView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WaveAnimationView-prefix.pch"; sourceTree = "<group>"; };
+		3BE4667B6C93A68BC5E937BF93EE1F4B /* LinearProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LinearProgressView.debug.xcconfig; sourceTree = "<group>"; };
 		44BDE666786E299753905F12877D4067 /* LinearProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LinearProgressView.framework; path = LinearProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E07733992C9DE025BBFA951049CDA9 /* Pods-iwaste-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-iwaste-ios.release.xcconfig"; sourceTree = "<group>"; };
-		4A7BAE5F75A819DDAB52CBDD8B9B53F4 /* LinearProgressView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LinearProgressView.release.xcconfig; sourceTree = "<group>"; };
-		5104E9B8402BD573201353E9D2134CE0 /* LinearProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LinearProgressView-dummy.m"; sourceTree = "<group>"; };
+		5B575C6FD60004FEAB6AD1932B7EBC14 /* LinearProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinearProgressView.swift; path = Source/LinearProgressView.swift; sourceTree = "<group>"; };
+		5F2B411AE3223190E25E28D91856119D /* BonsaiController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BonsaiController-dummy.m"; sourceTree = "<group>"; };
 		625AADFCBDAA793F00FF3C373A31F7FA /* Pods-iwaste-ios-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iwaste-ios-acknowledgements.plist"; sourceTree = "<group>"; };
-		70251A86AB70EBBE877F10CDA723CE5C /* WaveAnimationView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "WaveAnimationView-Info.plist"; sourceTree = "<group>"; };
-		776D414BB2A38CFB04D68084C214965D /* WaveAnimationView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WaveAnimationView.modulemap; sourceTree = "<group>"; };
+		6A4682B4559C2CB2D6EC9276EA6CB7F8 /* WaveAnimationView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = WaveAnimationView.modulemap; sourceTree = "<group>"; };
+		7940C7369A5ABD72C41EA3D4C7C170F2 /* WaveAnimationView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WaveAnimationView-dummy.m"; sourceTree = "<group>"; };
+		8043AB141C74D43E47DADD7E171AF0B6 /* LinearProgressView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LinearProgressView-Info.plist"; sourceTree = "<group>"; };
 		80B587C19E0049FA00705C4D20395B86 /* WaveAnimationView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = WaveAnimationView.framework; path = WaveAnimationView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		874EAE8918B859CCD50A9AA60ADB37B8 /* LinearProgressView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LinearProgressView-dummy.m"; sourceTree = "<group>"; };
 		87C648CB162DB9418D3267C315B452BA /* Pods-iwaste-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-iwaste-ios.modulemap"; sourceTree = "<group>"; };
 		9762CBA409617CF80FB1BE57D6B9F3F4 /* Pods-iwaste-ios-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-iwaste-ios-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9A491704E7CBB71ABD0142B9D9925629 /* LinearProgressView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LinearProgressView-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A8756E57627AE04A868A12C08FC9EE1C /* LinearProgressView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LinearProgressView-umbrella.h"; sourceTree = "<group>"; };
-		B045AFC4C88E221769DB4FF8D4CCB8A1 /* WaveAnimationView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "WaveAnimationView-dummy.m"; sourceTree = "<group>"; };
-		B1A2E748622C11DD813FB74000481B90 /* LinearProgressView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinearProgressView.swift; path = Source/LinearProgressView.swift; sourceTree = "<group>"; };
+		9E452857E31C2DAC4DE3D17F7C37E685 /* BonsaiController-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "BonsaiController-Info.plist"; sourceTree = "<group>"; };
+		9F8EA76AF8ADA45982EAE12385CECABD /* LinearProgressView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LinearProgressView.modulemap; sourceTree = "<group>"; };
+		AB197D22859BF3EC75B58A621799C553 /* WaveAnimationView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WaveAnimationView.debug.xcconfig; sourceTree = "<group>"; };
+		ABB0367BEB9DF33400B4674350CBF5AA /* BubbleTransition.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BubbleTransition.swift; path = BonsaiController/Classes/BubbleTransition.swift; sourceTree = "<group>"; };
+		B1E52479E9D4FAAFD72C739ACC3AE8D6 /* WaveAnimationView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WaveAnimationView.release.xcconfig; sourceTree = "<group>"; };
+		BF24D9E25D6E269580FA45FB9A7A6A97 /* BonsaiController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonsaiController-prefix.pch"; sourceTree = "<group>"; };
 		D06B4B36E84C446A0858E4FED2FD80C2 /* Pods-iwaste-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-iwaste-ios-dummy.m"; sourceTree = "<group>"; };
+		D1BCC6E4FA8CD254571E739D425CE731 /* LinearProgressView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LinearProgressView-umbrella.h"; sourceTree = "<group>"; };
+		D572BDC1C7A701A1FF3B21370438ED26 /* BonsaiController-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BonsaiController-umbrella.h"; sourceTree = "<group>"; };
 		D73338137EACB30FD2CA7E88A6BAEF86 /* Pods-iwaste-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-iwaste-ios-Info.plist"; sourceTree = "<group>"; };
-		D9AB363993C41EEB939934FACB05DC71 /* WaveAnimationView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = WaveAnimationView.debug.xcconfig; sourceTree = "<group>"; };
-		EA36F27E6560DB26366B38B00773DECE /* WaveAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WaveAnimationView.swift; path = WaveAnimationView/WaveAnimationView.swift; sourceTree = "<group>"; };
-		EA80AF0EDBECE4E44DBA7CACC9D11703 /* LinearProgressView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LinearProgressView.modulemap; sourceTree = "<group>"; };
-		EAFC01F44A6AEA1EDAB02F76CA78EAD8 /* WaveAnimationView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WaveAnimationView-prefix.pch"; sourceTree = "<group>"; };
-		EF475144B645954013B63306E3AF66AA /* LinearProgressView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LinearProgressView.debug.xcconfig; sourceTree = "<group>"; };
 		FB6CB74C93BE474B12FE3E6346FD2EC2 /* Pods-iwaste-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-iwaste-ios-umbrella.h"; sourceTree = "<group>"; };
+		FC47AB6CDC3854143AAFA4121BE6AD97 /* WaveAnimationView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "WaveAnimationView-umbrella.h"; sourceTree = "<group>"; };
 		FD781F001ED7B74FB0C96347D53D749C /* Pods-iwaste-ios-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-iwaste-ios-frameworks.sh"; sourceTree = "<group>"; };
+		FF55EB88D0D551DEAE175FEDC8816283 /* WaveAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WaveAnimationView.swift; path = WaveAnimationView/WaveAnimationView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		3790B610764F520F96FAA95F72B15F65 /* Frameworks */ = {
+		2A3B0E9CD3B61E9F924CC2CF8658714E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D19ECE701786F4301A46C223A07F05E /* Foundation.framework in Frameworks */,
+				B20A89DA00AC4D69E039FAB653CC96D0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2DEF6BCD4107C4366E9212730DA161B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C6DBBD7C07B0755496AF65AC183C266 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,45 +130,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1A2222D46468C844C7ECC9F256FEB574 /* Products */ = {
+		0C1CD5F678DBE313A42596F3F833CF59 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				44BDE666786E299753905F12877D4067 /* LinearProgressView.framework */,
-				1E34F3526383D3485BBA7AAF81722AFC /* Pods_iwaste_ios.framework */,
-				80B587C19E0049FA00705C4D20395B86 /* WaveAnimationView.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2813A9E150C767E18489CE01B8C8DEB8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				36D9B6B68C486F89975276B5D7482C30 /* LinearProgressView */,
-				6CF1835B2319F4DCCB907A583BE037AB /* WaveAnimationView */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		323292046E79AE6C57A1BE2F69F86447 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				776D414BB2A38CFB04D68084C214965D /* WaveAnimationView.modulemap */,
-				B045AFC4C88E221769DB4FF8D4CCB8A1 /* WaveAnimationView-dummy.m */,
-				70251A86AB70EBBE877F10CDA723CE5C /* WaveAnimationView-Info.plist */,
-				EAFC01F44A6AEA1EDAB02F76CA78EAD8 /* WaveAnimationView-prefix.pch */,
-				0832C97FA0BABB4D3125E55A7087E52C /* WaveAnimationView-umbrella.h */,
-				D9AB363993C41EEB939934FACB05DC71 /* WaveAnimationView.debug.xcconfig */,
-				19390DA062B4A2CD46BE6ED718DFCE13 /* WaveAnimationView.release.xcconfig */,
+				07FC634023644EE2B77E023909E1D109 /* BonsaiController.modulemap */,
+				5F2B411AE3223190E25E28D91856119D /* BonsaiController-dummy.m */,
+				9E452857E31C2DAC4DE3D17F7C37E685 /* BonsaiController-Info.plist */,
+				BF24D9E25D6E269580FA45FB9A7A6A97 /* BonsaiController-prefix.pch */,
+				D572BDC1C7A701A1FF3B21370438ED26 /* BonsaiController-umbrella.h */,
+				270D230AC7F8674CF72A00114D45CF4F /* BonsaiController.debug.xcconfig */,
+				37F0653F08A97EC3A605FEF193292DB4 /* BonsaiController.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/WaveAnimationView";
+			path = "../Target Support Files/BonsaiController";
 			sourceTree = "<group>";
 		};
-		36D9B6B68C486F89975276B5D7482C30 /* LinearProgressView */ = {
+		3E508446B0E182B4837880DE5B57EC98 /* LinearProgressView */ = {
 			isa = PBXGroup;
 			children = (
-				B1A2E748622C11DD813FB74000481B90 /* LinearProgressView.swift */,
-				71A3707E6F3AA882B29101BC28A2F6F7 /* Support Files */,
+				5B575C6FD60004FEAB6AD1932B7EBC14 /* LinearProgressView.swift */,
+				975EE4E3E107533C1DD69E73E9D86D5C /* Support Files */,
 			);
 			name = LinearProgressView;
 			path = LinearProgressView;
@@ -150,29 +163,29 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6CF1835B2319F4DCCB907A583BE037AB /* WaveAnimationView */ = {
+		6436926BA1BD872DEF9678AF0300585F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				EA36F27E6560DB26366B38B00773DECE /* WaveAnimationView.swift */,
-				323292046E79AE6C57A1BE2F69F86447 /* Support Files */,
+				D05F98E324EEE8B00F37C11E3F6F9C68 /* BonsaiController */,
+				3E508446B0E182B4837880DE5B57EC98 /* LinearProgressView */,
+				E2CDD5D08B950FF59CE9E4054A029DBE /* WaveAnimationView */,
 			);
-			name = WaveAnimationView;
-			path = WaveAnimationView;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		71A3707E6F3AA882B29101BC28A2F6F7 /* Support Files */ = {
+		68CC26517D84C101044218654752692A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA80AF0EDBECE4E44DBA7CACC9D11703 /* LinearProgressView.modulemap */,
-				5104E9B8402BD573201353E9D2134CE0 /* LinearProgressView-dummy.m */,
-				07A1EDE92966986BCCFE8531259ED2AA /* LinearProgressView-Info.plist */,
-				22764FD78698458FBCB7F754E3DE6119 /* LinearProgressView-prefix.pch */,
-				A8756E57627AE04A868A12C08FC9EE1C /* LinearProgressView-umbrella.h */,
-				EF475144B645954013B63306E3AF66AA /* LinearProgressView.debug.xcconfig */,
-				4A7BAE5F75A819DDAB52CBDD8B9B53F4 /* LinearProgressView.release.xcconfig */,
+				6A4682B4559C2CB2D6EC9276EA6CB7F8 /* WaveAnimationView.modulemap */,
+				7940C7369A5ABD72C41EA3D4C7C170F2 /* WaveAnimationView-dummy.m */,
+				1CF254B9E9052BF892B4069BDD46BA60 /* WaveAnimationView-Info.plist */,
+				38B488A9A40DA91C7A1526067E897CF1 /* WaveAnimationView-prefix.pch */,
+				FC47AB6CDC3854143AAFA4121BE6AD97 /* WaveAnimationView-umbrella.h */,
+				AB197D22859BF3EC75B58A621799C553 /* WaveAnimationView.debug.xcconfig */,
+				B1E52479E9D4FAAFD72C739ACC3AE8D6 /* WaveAnimationView.release.xcconfig */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/LinearProgressView";
+			path = "../Target Support Files/WaveAnimationView";
 			sourceTree = "<group>";
 		};
 		90C780A27FDFED67A99469CC438C32B9 /* Pods-iwaste-ios */ = {
@@ -192,6 +205,21 @@
 			path = "Target Support Files/Pods-iwaste-ios";
 			sourceTree = "<group>";
 		};
+		975EE4E3E107533C1DD69E73E9D86D5C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9F8EA76AF8ADA45982EAE12385CECABD /* LinearProgressView.modulemap */,
+				874EAE8918B859CCD50A9AA60ADB37B8 /* LinearProgressView-dummy.m */,
+				8043AB141C74D43E47DADD7E171AF0B6 /* LinearProgressView-Info.plist */,
+				9A491704E7CBB71ABD0142B9D9925629 /* LinearProgressView-prefix.pch */,
+				D1BCC6E4FA8CD254571E739D425CE731 /* LinearProgressView-umbrella.h */,
+				3BE4667B6C93A68BC5E937BF93EE1F4B /* LinearProgressView.debug.xcconfig */,
+				04993AEEF543C76203F9E07E987C1764 /* LinearProgressView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LinearProgressView";
+			sourceTree = "<group>";
+		};
 		C0834CEBB1379A84116EF29F93051C60 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,10 +233,22 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				2813A9E150C767E18489CE01B8C8DEB8 /* Pods */,
-				1A2222D46468C844C7ECC9F256FEB574 /* Products */,
+				6436926BA1BD872DEF9678AF0300585F /* Pods */,
+				EF5A9805E1B2C66980FAB9ADE571A742 /* Products */,
 				61226BB9FB9386EEA3BDF2A04683765B /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		D05F98E324EEE8B00F37C11E3F6F9C68 /* BonsaiController */ = {
+			isa = PBXGroup;
+			children = (
+				28A49F142408D781857191409F58B4E4 /* BonsaiController.swift */,
+				ABB0367BEB9DF33400B4674350CBF5AA /* BubbleTransition.swift */,
+				05ACF432263C7C5D4A0962624CFE4E44 /* SlideInTransition.swift */,
+				0C1CD5F678DBE313A42596F3F833CF59 /* Support Files */,
+			);
+			name = BonsaiController;
+			path = BonsaiController;
 			sourceTree = "<group>";
 		};
 		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
@@ -219,14 +259,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E2CDD5D08B950FF59CE9E4054A029DBE /* WaveAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				FF55EB88D0D551DEAE175FEDC8816283 /* WaveAnimationView.swift */,
+				68CC26517D84C101044218654752692A /* Support Files */,
+			);
+			name = WaveAnimationView;
+			path = WaveAnimationView;
+			sourceTree = "<group>";
+		};
+		EF5A9805E1B2C66980FAB9ADE571A742 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				27B91A616D3E3D080255C6C93A591F62 /* BonsaiController.framework */,
+				44BDE666786E299753905F12877D4067 /* LinearProgressView.framework */,
+				1E34F3526383D3485BBA7AAF81722AFC /* Pods_iwaste_ios.framework */,
+				80B587C19E0049FA00705C4D20395B86 /* WaveAnimationView.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		07EC00F55AEA174A5AE87CA2E2F666E3 /* Headers */ = {
+		16F3EAD4C89E2E4097C1CE797F0CB3D9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				21281295C0A3EE7BB55F3E7DAB81C718 /* Pods-iwaste-ios-umbrella.h in Headers */,
+				457A03306324561C5BA23B19FCD2C01F /* Pods-iwaste-ios-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +296,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E41DA6420E1F81BE064C65E7CCB8A3E4 /* WaveAnimationView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B45AC7DCD2B3AD633D2A9E79D681D7BB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB75C8E096148DC8CC2BDCE4662A0F68 /* BonsaiController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +336,24 @@
 			productReference = 80B587C19E0049FA00705C4D20395B86 /* WaveAnimationView.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		2FC272E5264771C98573AEA8FB92240D /* BonsaiController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 439B023EB0FA3E4012D3B860EEFD211C /* Build configuration list for PBXNativeTarget "BonsaiController" */;
+			buildPhases = (
+				B45AC7DCD2B3AD633D2A9E79D681D7BB /* Headers */,
+				9870520D6705E305D300E0FE04C59FB5 /* Sources */,
+				2A3B0E9CD3B61E9F924CC2CF8658714E /* Frameworks */,
+				E257465CB68D92F9EBEF0EA650815D16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BonsaiController;
+			productName = BonsaiController;
+			productReference = 27B91A616D3E3D080255C6C93A591F62 /* BonsaiController.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		54AB102BD56121F4FB8F9FF3053F8767 /* LinearProgressView */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 468713B033E03CCC7E0340CC0ACD60C8 /* Build configuration list for PBXNativeTarget "LinearProgressView" */;
@@ -287,18 +374,19 @@
 		};
 		BCC39BFEDADC02BC453992F0D8C7336F /* Pods-iwaste-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B608580BE666159664EE18ACF4A1D5E9 /* Build configuration list for PBXNativeTarget "Pods-iwaste-ios" */;
+			buildConfigurationList = 3225F07A587A199ADD91F5DD513DC874 /* Build configuration list for PBXNativeTarget "Pods-iwaste-ios" */;
 			buildPhases = (
-				07EC00F55AEA174A5AE87CA2E2F666E3 /* Headers */,
-				E42688F09C56105F598DEE85DE0DD623 /* Sources */,
-				3790B610764F520F96FAA95F72B15F65 /* Frameworks */,
-				9F081E71E681283EFC6BD1881E6F9B2C /* Resources */,
+				16F3EAD4C89E2E4097C1CE797F0CB3D9 /* Headers */,
+				87A57A58784A6AB10D3B1401F00110EC /* Sources */,
+				2DEF6BCD4107C4366E9212730DA161B3 /* Frameworks */,
+				596A516D66655BE9556F5EE70E79B30D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				5EEBD78C7CC52A7970E90113B6C13A39 /* PBXTargetDependency */,
-				B7C23B7E4A8231B295DD7B75AF8BB82D /* PBXTargetDependency */,
+				CD799F0E360C2BAD77E4915D098D518A /* PBXTargetDependency */,
+				6CC9F9ED13EB0AE6AB8B1B685F43802F /* PBXTargetDependency */,
+				29FBA0FE2693B564084C9649D13749B5 /* PBXTargetDependency */,
 			);
 			name = "Pods-iwaste-ios";
 			productName = "Pods-iwaste-ios";
@@ -323,10 +411,11 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 1A2222D46468C844C7ECC9F256FEB574 /* Products */;
+			productRefGroup = EF5A9805E1B2C66980FAB9ADE571A742 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				2FC272E5264771C98573AEA8FB92240D /* BonsaiController */,
 				54AB102BD56121F4FB8F9FF3053F8767 /* LinearProgressView */,
 				BCC39BFEDADC02BC453992F0D8C7336F /* Pods-iwaste-ios */,
 				2B8C327B97C2E109468CAF89F32D2A76 /* WaveAnimationView */,
@@ -342,7 +431,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9F081E71E681283EFC6BD1881E6F9B2C /* Resources */ = {
+		596A516D66655BE9556F5EE70E79B30D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -350,6 +439,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A59539DBB41D1FEBD50276CBC3F0F628 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E257465CB68D92F9EBEF0EA650815D16 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -368,6 +464,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		87A57A58784A6AB10D3B1401F00110EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7C47FE02426E6E3466119932B34BBB3A /* Pods-iwaste-ios-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9870520D6705E305D300E0FE04C59FB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FF4F77DE1C0BF3E5197CA742DDFD6FA /* BonsaiController-dummy.m in Sources */,
+				DC0A43BF131B4A6C3A3C53F34CB2444E /* BonsaiController.swift in Sources */,
+				EA7C4E583BAD402C4D04F87AF5C6F2FB /* BubbleTransition.swift in Sources */,
+				29DE6DB6FCCAB675EDB8C9967EEBB8E3 /* SlideInTransition.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6048004CB5DD3606FD74F00B365F9A6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -377,32 +492,65 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E42688F09C56105F598DEE85DE0DD623 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				614A953ED286F9C36A9A83613AED8B6F /* Pods-iwaste-ios-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		5EEBD78C7CC52A7970E90113B6C13A39 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LinearProgressView;
-			target = 54AB102BD56121F4FB8F9FF3053F8767 /* LinearProgressView */;
-			targetProxy = 1C31E683F2B7564566043251DBBB2501 /* PBXContainerItemProxy */;
-		};
-		B7C23B7E4A8231B295DD7B75AF8BB82D /* PBXTargetDependency */ = {
+		29FBA0FE2693B564084C9649D13749B5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = WaveAnimationView;
 			target = 2B8C327B97C2E109468CAF89F32D2A76 /* WaveAnimationView */;
-			targetProxy = 3E5D3D52CF7DE67519B6C254FA4B213B /* PBXContainerItemProxy */;
+			targetProxy = 06276B2B38F939BE7F4F9F44786EAC31 /* PBXContainerItemProxy */;
+		};
+		6CC9F9ED13EB0AE6AB8B1B685F43802F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LinearProgressView;
+			target = 54AB102BD56121F4FB8F9FF3053F8767 /* LinearProgressView */;
+			targetProxy = 5FC72755BA6F9520F1DD4AEF68844BA0 /* PBXContainerItemProxy */;
+		};
+		CD799F0E360C2BAD77E4915D098D518A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BonsaiController;
+			target = 2FC272E5264771C98573AEA8FB92240D /* BonsaiController */;
+			targetProxy = 33AF0665E6CC48B501B7745D8303DA3A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		10199B27233A7CFEB3BD39F9923309A4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270D230AC7F8674CF72A00114D45CF4F /* BonsaiController.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BonsaiController/BonsaiController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BonsaiController/BonsaiController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BonsaiController/BonsaiController.modulemap";
+				PRODUCT_MODULE_NAME = BonsaiController;
+				PRODUCT_NAME = BonsaiController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -465,7 +613,7 @@
 		};
 		199452C5AA4B6E427E4F0ABF74532C4B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4A7BAE5F75A819DDAB52CBDD8B9B53F4 /* LinearProgressView.release.xcconfig */;
+			baseConfigurationReference = 04993AEEF543C76203F9E07E987C1764 /* LinearProgressView.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -499,9 +647,86 @@
 			};
 			name = Release;
 		};
+		276EC4C8CE77916FCEBEE911865FF74C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12CEE01472252205636CDB872CCDE2A3 /* Pods-iwaste-ios.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		293EED97076230A41F61EB25110300DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 47E07733992C9DE025BBFA951049CDA9 /* Pods-iwaste-ios.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		394781B117D26ECE4212D837642DF923 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF475144B645954013B63306E3AF66AA /* LinearProgressView.debug.xcconfig */;
+			baseConfigurationReference = 3BE4667B6C93A68BC5E937BF93EE1F4B /* LinearProgressView.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -536,7 +761,7 @@
 		};
 		4270F51A498BE2A51C0C77F2424F6E86 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 19390DA062B4A2CD46BE6ED718DFCE13 /* WaveAnimationView.release.xcconfig */;
+			baseConfigurationReference = B1E52479E9D4FAAFD72C739ACC3AE8D6 /* WaveAnimationView.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -572,7 +797,7 @@
 		};
 		62C3AC242E610A04A55988FEB3039E50 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9AB363993C41EEB939934FACB05DC71 /* WaveAnimationView.debug.xcconfig */;
+			baseConfigurationReference = AB197D22859BF3EC75B58A621799C553 /* WaveAnimationView.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -604,6 +829,42 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		BAE32A248216A7B04B1267B424A41D10 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 37F0653F08A97EC3A605FEF193292DB4 /* BonsaiController.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BonsaiController/BonsaiController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BonsaiController/BonsaiController-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/BonsaiController/BonsaiController.modulemap";
+				PRODUCT_MODULE_NAME = BonsaiController;
+				PRODUCT_NAME = BonsaiController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -669,86 +930,27 @@
 			};
 			name = Debug;
 		};
-		F036DC439AAC0B286CEE868F6E29C0A3 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12CEE01472252205636CDB872CCDE2A3 /* Pods-iwaste-ios.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		F807620749A07A563B181819F1369B2E /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 47E07733992C9DE025BBFA951049CDA9 /* Pods-iwaste-ios.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3225F07A587A199ADD91F5DD513DC874 /* Build configuration list for PBXNativeTarget "Pods-iwaste-ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				276EC4C8CE77916FCEBEE911865FF74C /* Debug */,
+				293EED97076230A41F61EB25110300DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		439B023EB0FA3E4012D3B860EEFD211C /* Build configuration list for PBXNativeTarget "BonsaiController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				10199B27233A7CFEB3BD39F9923309A4 /* Debug */,
+				BAE32A248216A7B04B1267B424A41D10 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		468713B033E03CCC7E0340CC0ACD60C8 /* Build configuration list for PBXNativeTarget "LinearProgressView" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -763,15 +965,6 @@
 			buildConfigurations = (
 				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
 				1422B121EAEAEA11307496903FA623C6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B608580BE666159664EE18ACF4A1D5E9 /* Build configuration list for PBXNativeTarget "Pods-iwaste-ios" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F036DC439AAC0B286CEE868F6E29C0A3 /* Debug */,
-				F807620749A07A563B181819F1369B2E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

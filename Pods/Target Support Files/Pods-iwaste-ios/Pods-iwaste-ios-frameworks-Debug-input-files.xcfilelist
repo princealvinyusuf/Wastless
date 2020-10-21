@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios-frameworks.sh
+${BUILT_PRODUCTS_DIR}/BonsaiController/BonsaiController.framework
 ${BUILT_PRODUCTS_DIR}/LinearProgressView/LinearProgressView.framework
 ${BUILT_PRODUCTS_DIR}/WaveAnimationView/WaveAnimationView.framework

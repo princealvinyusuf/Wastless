@@ -20,6 +20,14 @@ class FirstSegmentedVC: UIViewController {
         tableView.dataSource = self
         tableView.reloadData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "DetailChallenge",
+            let indexPath = tableView?.indexPathForSelectedRow,
+            let destinationViewController: DetailChallengeVC = segue.destination as? DetailChallengeVC {
+            destinationViewController.challenge = challenge[indexPath.row]
+        }
+    }
 
 }
 
@@ -35,6 +43,10 @@ extension FirstSegmentedVC: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
+    
+//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//            print("not called")
+//        }   
     
     
 }

@@ -78,7 +78,7 @@
     </objects>
     <resources>
         <image name="inputPlastic" width="205" height="200"/>
-        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.circle.fill" catalog="system" width="32" height="32"/>
         <namedColor name="plasticSoft">
             <color red="0.46299999952316284" green="0.75300002098083496" blue="0.85100001096725464" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

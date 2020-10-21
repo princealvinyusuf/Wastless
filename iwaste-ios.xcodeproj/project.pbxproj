@@ -38,9 +38,11 @@
 		9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E3253E8F3C00870DE8 /* TableCell.swift */; };
 		9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E7253E8FDA00870DE8 /* Challenge.swift */; };
 		9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */; };
+		9F4143972540234500B738A0 /* MedalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4143962540234500B738A0 /* MedalsVC.swift */; };
 		9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA32253A60DF00EB8056 /* SlideView.swift */; };
 		9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA38253A632F00EB8056 /* WelcomeVC.swift */; };
 		9F42AA3C253A68A800EB8056 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F42AA36253A621E00EB8056 /* Slide.xib */; };
+		9FB82750254073670042E4C8 /* DetailChallengeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */; };
 		9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC20D722536BA30007A828E /* CurrentWasteVC.swift */; };
 		A8745200253FAD1500F03F79 /* TrashCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87451FC253FAD1500F03F79 /* TrashCD+CoreDataClass.swift */; };
 		A8745201253FAD1500F03F79 /* TrashCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87451FD253FAD1500F03F79 /* TrashCD+CoreDataProperties.swift */; };
@@ -86,9 +88,11 @@
 		9F1A43E3253E8F3C00870DE8 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		9F1A43E7253E8FDA00870DE8 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetVC.swift; sourceTree = "<group>"; };
+		9F4143962540234500B738A0 /* MedalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalsVC.swift; sourceTree = "<group>"; };
 		9F42AA32253A60DF00EB8056 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		9F42AA36253A621E00EB8056 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		9F42AA38253A632F00EB8056 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengeVC.swift; sourceTree = "<group>"; };
 		9FC20D722536BA30007A828E /* CurrentWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWasteVC.swift; sourceTree = "<group>"; };
 		9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
 		9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
@@ -236,6 +240,8 @@
 				9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */,
 				9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */,
 				9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */,
+				9F4143962540234500B738A0 /* MedalsVC.swift */,
+				9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -432,6 +438,7 @@
 				A8745202253FAD1500F03F79 /* CategoryCD+CoreDataClass.swift in Sources */,
 				595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */,
 				591D06DF253B02390008098A /* CurrentViewCell.swift in Sources */,
+				9FB82750254073670042E4C8 /* DetailChallengeVC.swift in Sources */,
 				595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */,
 				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
 				A8745203253FAD1500F03F79 /* CategoryCD+CoreDataProperties.swift in Sources */,
@@ -453,6 +460,7 @@
 				9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */,
+				9F4143972540234500B738A0 /* MedalsVC.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
 				9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
@@ -605,7 +613,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 72C5A4RQ56;
+				DEVELOPMENT_TEAM = KL6VLPSW8Q;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -626,7 +634,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 3;
-				DEVELOPMENT_TEAM = 72C5A4RQ56;
+				DEVELOPMENT_TEAM = KL6VLPSW8Q;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
