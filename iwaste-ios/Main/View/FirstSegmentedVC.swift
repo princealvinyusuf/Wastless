@@ -6,8 +6,9 @@
 //
 
 import UIKit
+import BonsaiController
 
-class FirstSegmentedVC: UIViewController {
+class FirstSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     let identifier: String = "tableCell"
@@ -26,6 +27,8 @@ class FirstSegmentedVC: UIViewController {
             let indexPath = tableView?.indexPathForSelectedRow,
             let destinationViewController: DetailChallengeVC = segue.destination as? DetailChallengeVC {
             destinationViewController.challenge = challenge[indexPath.row]
+            segue.destination.transitioningDelegate = self
+            segue.destination.modalPresentationStyle = .custom
         }
     }
 
@@ -44,10 +47,22 @@ extension FirstSegmentedVC: UITableViewDelegate, UITableViewDataSource {
         return UITableViewCell()
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//            print("not called")
-//        }   
-    
     
 }
+
+extension FirstSegmentedVC: BonsaiControllerDelegate {
+    
+    func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
+        
+        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 4), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
+    }
+    
+    func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {
+    
+       return BonsaiController(fromDirection: .bottom, backgroundColor: UIColor(white: 0, alpha: 0.5), presentedViewController: presented, delegate: self)
+        
+        
+    }
+}
+
 
