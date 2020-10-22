@@ -14,6 +14,9 @@ class DetailChallengeVC: UIViewController {
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var subView: UIView!
     
+    @IBAction func btnDone(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var challenge: Challenge?
 
@@ -25,15 +28,6 @@ class DetailChallengeVC: UIViewController {
             contentTextView.text = challenge.challengeDetail
         }
         
-        subViewConfigure()
-    }
-    
-    func subViewConfigure() {
         subView.layer.cornerRadius = 10
-        subView.layer.shadowColor = UIColor.black.cgColor
-        subView.layer.shadowOpacity = 0.5
-        subView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        subView.layer.shadowRadius = 25.0
     }
-
 }

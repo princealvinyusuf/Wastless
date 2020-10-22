@@ -47,7 +47,7 @@ class AchievementVC: UIViewController {
     }
     
     private lazy var summaryViewController: FirstSegmentedVC = {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "FirstSegmentedVC") as! FirstSegmentedVC
         self.add(asChildViewController: viewController)
         
@@ -56,7 +56,7 @@ class AchievementVC: UIViewController {
     
     private lazy var sessionsViewController: SecondSegmentedVC = {
         // Load Storyboard
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
         
         // Instantiate View Controller
         var viewController = storyboard.instantiateViewController(withIdentifier: "SecondSegmentedVC") as! SecondSegmentedVC

@@ -57,7 +57,7 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
     }
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
         let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
         SecondSegmentedVC.globalVariable.medals = "DayMedals"
         self.present(secondSegmentedVC, animated: true, completion: nil)
@@ -67,8 +67,6 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
         static var medals = String();
     }
     
-    
-
 }
 
 extension SecondSegmentedVC: BonsaiControllerDelegate {
