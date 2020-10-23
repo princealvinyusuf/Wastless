@@ -2,7 +2,7 @@
 //  TrashCD+CoreDataClass.swift
 //  iwaste-ios
 //
-//  Created by Muhammad Raihan on 21/10/20.
+//  Created by Muhammad Raihan on 24/10/20.
 //
 //
 

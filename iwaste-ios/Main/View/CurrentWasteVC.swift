@@ -98,7 +98,7 @@ extension CurrentWasteVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "currentViewCell") as? CurrentViewCell else {return UITableViewCell()}
         
-        cell.configureCell(modelWaste: dataWaste[indexPath.row], indexPath.row)
+        cell.configureCell(modelWaste: dataWaste[indexPath.row], indexPath.row, trashData: trashDataCD[indexPath.row])
         return cell
     }
 }

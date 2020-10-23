@@ -37,6 +37,7 @@ class SetTargetVC: UIViewController {
             print("Input The Data")
         }else{
             addData()
+            addDataTrash()
             UserDefaultService.instance.isTargetSet = true
             self.dismiss(animated: true, completion: nil)
         }
@@ -99,5 +100,25 @@ class SetTargetVC: UIViewController {
     
         }
     
-    
+    func addDataTrash(){
+            let trashEntity = NSEntityDescription.entity(forEntityName: "TrashCD", in: managedObjectContext!)
+            var count:Int = 0
+            
+            for i in 0...4{
+                for n in 0...5{
+                    let newTrash = NSManagedObject(entity: trashEntity!, insertInto: managedObjectContext!)
+                    
+                    newTrash.setValue(Date(), forKey: "date")
+                    newTrash.setValue(dataWaste[i].categoryName, forKey: "type")
+                    newTrash.setValue(dataWaste[i].waste[n].wasteName, forKey: "name")
+                    newTrash.setValue(count, forKey: "count")
+                    count = count + 1
+                    do{
+                        try  managedObjectContext?.save()
+                    }catch let error as NSError{
+                        print("Couldnt Save Core Data")
+                    }
+                }
+            }
+        }
 }

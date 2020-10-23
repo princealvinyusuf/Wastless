@@ -8,6 +8,7 @@
 import UIKit
 import LinearProgressView
 import WaveAnimationView
+import CoreData
 
 class TabMyWasteVC: UIViewController {
     
@@ -32,8 +33,17 @@ class TabMyWasteVC: UIViewController {
     
     let udService = UserDefaultService.instance
     
+    //Core Data
+    var category = [CategoryCD]()
+    var managedObjectContext: NSManagedObjectContext?
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //coredata
+        managedObjectContext = appDelegate?.persistentContainer.viewContext
+        loadDataCat()
+        loadDataTrash()
         
         currentDate()
         
@@ -187,6 +197,47 @@ class TabMyWasteVC: UIViewController {
         collectionCategory.isHidden = isHidden
         trashBinPercentage.isHidden = isHidden
         waveView.isHidden = isHidden
+    }
+    
+    //Core Data Function
+    func loadDataCat(){
+        let catRequest: NSFetchRequest<CategoryCD> = CategoryCD.fetchRequest()
+        catRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        do{
+            try category = managedObjectContext!.fetch(catRequest)
+        }catch{
+            print("Error Data couldnot be shown")
+        }
+    }
+    
+    func loadDataTrash(){
+        let trashPlasticRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+        let trashGlassRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+        let trashPaperRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+        let trashMetalRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+        let trashOrganicRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+        
+        trashPlasticRequest.predicate = NSPredicate(format: "type=%@", "Plastic")
+        trashGlassRequest.predicate = NSPredicate(format: "type=%@", "Glass")
+        trashPaperRequest.predicate = NSPredicate(format: "type=%@", "Paper")
+        trashMetalRequest.predicate = NSPredicate(format: "type=%@", "Metal")
+        trashOrganicRequest.predicate = NSPredicate(format: "type=%@", "Organic")
+        
+        trashPlasticRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+        trashGlassRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+        trashPaperRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+        trashMetalRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+        trashOrganicRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+        
+        do{
+            try trashPlastic = managedObjectContext!.fetch(trashPlasticRequest)
+            try trashGlass = managedObjectContext!.fetch(trashGlassRequest)
+            try trashPaper = managedObjectContext!.fetch(trashPaperRequest)
+            try trashMetal = managedObjectContext!.fetch(trashMetalRequest)
+            try trashOrganic = managedObjectContext!.fetch(trashOrganicRequest)
+        }catch{
+            print("Error Data couldnot be shown")
+        }
     }
 }
 

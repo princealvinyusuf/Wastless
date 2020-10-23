@@ -17,3 +17,8 @@ struct Waste {
     let wasteName: String
     let wasteImg: UIImage
 }
+
+struct TrashData{
+    var trashname: String
+    var trash: [TrashCD]
+}

@@ -16,5 +16,6 @@ class HorizontalModalCurrentWaste: UICollectionViewCell {
     func configureCell(wasteAdded: WasteAdded) {
         imgCurrentWaste.image = wasteAdded.waste.wasteImg
         txtCurrentWaste.text = wasteAdded.waste.wasteName
+        numberCurrentWaste.text = String(wasteAdded.numOfWaste)
     }
 }

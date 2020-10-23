@@ -16,6 +16,7 @@ class CurrentViewCell: UITableViewCell {
     @IBOutlet weak var collectionWaste: UICollectionView!
     
     var listWaste = [Waste]()
+    var listTrash = [TrashCD]()
     override func awakeFromNib() {
         
         let flowLayout = UICollectionViewFlowLayout()
@@ -31,11 +32,11 @@ class CurrentViewCell: UITableViewCell {
         
     }
     
-    func configureCell(modelWaste: ModelWaste, _ order: Int) {
+    func configureCell(modelWaste: ModelWaste, _ order: Int, trashData: TrashData) {
         txtWasteName.text = modelWaste.categoryName
         
         listWaste = modelWaste.waste
-        
+        listTrash = trashData.trash
         linearWasteProgress.animationDuration = 0.5
         setProgressColor(order)
         
@@ -75,8 +76,8 @@ extension CurrentViewCell: UICollectionViewDelegate, UICollectionViewDataSource 
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "horizontalModalCurrentWaste", for: indexPath) as? HorizontalModalCurrentWaste else {return UICollectionViewCell()}
-        
-        let wasteAdded = WasteAdded(waste: listWaste[indexPath.row], numOfWaste: 10)
+        let trashCount = Int(exactly: listTrash[indexPath.row].count)
+        let wasteAdded = WasteAdded(waste: listWaste[indexPath.row], numOfWaste: trashCount!)
         cell.configureCell(wasteAdded: wasteAdded)
         
         return cell
