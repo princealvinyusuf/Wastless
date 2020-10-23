@@ -57,35 +57,35 @@ class SetTargetVC: UIViewController {
         if let count = Int(plasticTF.text!){
             plasticCat.setValue(count, forKey: "target")
         }
-        plasticCat.setValue("Plastic", forKey: "name")
+        plasticCat.setValue("APlastic", forKey: "name")
         
         //Glass Category
         glassCat.setValue(Date(), forKey: "date")
         if let count = Int(glassTF.text!){
             glassCat.setValue(count, forKey: "target")
         }
-        glassCat.setValue("Glass", forKey: "name")
+        glassCat.setValue("BGlass", forKey: "name")
         
         //Paper Category
         paperCat.setValue(Date(), forKey: "date")
         if let count = Int(paperTF.text!){
             paperCat.setValue(count, forKey: "target")
         }
-        paperCat.setValue("Paper", forKey: "name")
+        paperCat.setValue("CPaper", forKey: "name")
         
         //Metal CAtegory
         metalCat.setValue(Date(), forKey: "date")
         if let count = Int(metalTF.text!){
             metalCat.setValue(count, forKey: "target")
         }
-        metalCat.setValue("Metal", forKey: "name")
+        metalCat.setValue("DMetal", forKey: "name")
         
         //Organic Category
         organicCat.setValue(Date(), forKey: "date")
         if let count = Int(organicTF.text!){
             organicCat.setValue(count, forKey: "target")
         }
-        organicCat.setValue("Organic", forKey: "name")
+        organicCat.setValue("EOrganic", forKey: "name")
         
         do {
             try managedObjectContext?.save()

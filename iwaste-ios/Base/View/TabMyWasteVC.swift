@@ -31,10 +31,16 @@ class TabMyWasteVC: UIViewController {
     @IBOutlet weak var linearProgressPapers: LinearProgressView!
     @IBOutlet weak var linearProgressOrganic: LinearProgressView!
     
+    @IBOutlet weak var plasticLabel: UILabel!
+    @IBOutlet weak var metalLabel: UILabel!
+    @IBOutlet weak var glassLabel: UILabel!
+    @IBOutlet weak var paperLabel: UILabel!
+    @IBOutlet weak var organicLabel: UILabel!
+    
+    
     let udService = UserDefaultService.instance
     
     //Core Data
-    var category = [CategoryCD]()
     var managedObjectContext: NSManagedObjectContext?
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
@@ -97,7 +103,9 @@ class TabMyWasteVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
+        loadDataCat()
+        loadDataTrash()
+        updateLinearProgress()
         if !udService.isFirstLaunched {
             udService.isFirstLaunched = true
             let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
@@ -151,25 +159,72 @@ class TabMyWasteVC: UIViewController {
     
     @objc
     func updateLinearProgress() {
-        linearProgressPlastics.setProgress(80, animated: true)
-        linearProgressPlastics.barInset = CGFloat(4)
-        linearProgressPlastics.isCornersRounded = true
+        if category.isEmpty{
+            
+        }else{
+            for i in 0...4{
+                let target = Int(exactly: category[i].target)
+                var count:Int = 0
+                for n in 0...5{
+                    if i == 0 {
+                        let data = Int(exactly: trashPlastic[n].count)
+                        count = count + data!
+                    }else if i == 1{
+                        let data = Int(exactly: trashGlass[n].count)
+                        count = count + data!
+                    }else if i == 2{
+                        let data = Int(exactly: trashPaper[n].count)
+                        count = count + data!
+                    }else if i == 3{
+                        let data = Int(exactly: trashMetal[n].count)
+                        count = count + data!
+                    }else if i == 4{
+                        let data = Int(exactly: trashOrganic[n].count)
+                        count = count + data!
+                    }else if i == 5{
+
+                    }
+                }
+                let progressBar: Float = Float(count)/Float(target!)*100
+                if i == 0 {
+                    linearProgressPlastics.setProgress(progressBar, animated: true)
+                    linearProgressPlastics.barInset = CGFloat(4)
+                    linearProgressPlastics.isCornersRounded = true
+                    let text = String(target!)
+                    let text2 = String(count)
+                    plasticLabel.text = "\(text2) of \(text)"
+                }else if i == 1{
+                    linearProgressGlass.setProgress(progressBar, animated: true)
+                    linearProgressGlass.barInset = CGFloat(4)
+                    linearProgressGlass.isCornersRounded = true
+                    let text = String(target!)
+                    let text2 = String(count)
+                    glassLabel.text = "\(text2) of \(text)"
+                }else if i == 2{
+                    linearProgressPapers.setProgress(progressBar, animated: true)
+                    linearProgressPapers.barInset = CGFloat(4)
+                    linearProgressPapers.isCornersRounded = true
+                    let text = String(target!)
+                    let text2 = String(count)
+                    paperLabel.text = "\(text2) of \(text)"
+                }else if i == 3{
+                    linearProgressMetals.setProgress(progressBar, animated: true)
+                    linearProgressMetals.barInset = CGFloat(4)
+                    linearProgressMetals.isCornersRounded = true
+                    let text = String(target!)
+                    let text2 = String(count)
+                    metalLabel.text = "\(text2) of \(text)"
+                }else if i == 4{
+                    linearProgressOrganic.setProgress(progressBar, animated: true)
+                    linearProgressOrganic.barInset = CGFloat(4)
+                    linearProgressOrganic.isCornersRounded = true
+                    let text = String(target!)
+                    let text2 = String(count)
+                    organicLabel.text = "\(text2) of \(text)"
+                }
+            }
+        }
         
-        linearProgressMetals.setProgress(100, animated: true)
-        linearProgressMetals.barInset = CGFloat(4)
-        linearProgressMetals.isCornersRounded = true
-        
-        linearProgressGlass.setProgress(20, animated: true)
-        linearProgressGlass.barInset = CGFloat(4)
-        linearProgressGlass.isCornersRounded = true
-        
-        linearProgressPapers.setProgress(40, animated: true)
-        linearProgressPapers.barInset = CGFloat(4)
-        linearProgressPapers.isCornersRounded = true
-        
-        linearProgressOrganic.setProgress(60, animated: true)
-        linearProgressOrganic.barInset = CGFloat(4)
-        linearProgressOrganic.isCornersRounded = true
     }
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {

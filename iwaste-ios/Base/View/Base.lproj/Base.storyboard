@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -421,11 +421,16 @@
                     <connections>
                         <outlet property="collectionCategory" destination="fs8-1C-JBx" id="u8a-X4-rB5"/>
                         <outlet property="dateNavigationBar" destination="Jiw-r0-5tf" id="cwI-0C-h09"/>
+                        <outlet property="glassLabel" destination="me3-4z-UeK" id="PGU-u7-aI4"/>
                         <outlet property="linearProgressGlass" destination="WuT-ZH-OJA" id="5kC-Sn-1Qm"/>
                         <outlet property="linearProgressMetals" destination="y6y-Z9-Had" id="d8t-8M-2BI"/>
                         <outlet property="linearProgressOrganic" destination="2Ia-ou-4W0" id="XCb-sO-uZV"/>
                         <outlet property="linearProgressPapers" destination="SDj-EF-VHs" id="2yX-Zy-mRc"/>
                         <outlet property="linearProgressPlastics" destination="3MO-nA-lrd" id="XEs-HB-Idb"/>
+                        <outlet property="metalLabel" destination="d2l-A7-Eyd" id="iPf-Lp-1tF"/>
+                        <outlet property="organicLabel" destination="mer-Pp-sAb" id="fC5-6M-IBA"/>
+                        <outlet property="paperLabel" destination="8zT-ul-3cy" id="ihV-ak-8MU"/>
+                        <outlet property="plasticLabel" destination="ak2-sq-lNF" id="4Q6-2t-SFC"/>
                         <outlet property="setTargetImage" destination="2FC-3R-UXh" id="Bcw-Yl-nnj"/>
                         <outlet property="setTargetOutlet" destination="WnY-q0-9u6" id="K4c-yu-jOr"/>
                         <outlet property="subView" destination="hot-VU-Gty" id="cUa-FS-HJe"/>

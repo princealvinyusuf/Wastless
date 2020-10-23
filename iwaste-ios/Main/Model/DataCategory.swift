@@ -55,6 +55,7 @@ let dataWaste: [ModelWaste] = [catPlastic, catGlass, catPaper, catMetal, catOrga
 
 
 
+var category = [CategoryCD]()
 
 var trashPlastic = [TrashCD]()
 var trashGlass = [TrashCD]()

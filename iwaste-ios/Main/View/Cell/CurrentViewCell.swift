@@ -40,9 +40,20 @@ class CurrentViewCell: UITableViewCell {
         linearWasteProgress.animationDuration = 0.5
         setProgressColor(order)
         
-        linearWasteProgress.setProgress(55, animated: true)
+        
+        let target = Int(exactly: category[order].target)
+        var count:Int = 0
+        for i in 0...5{
+            let data = Int(exactly: listTrash[i].count)
+            count = count + data!
+        }
+        let progressBar: Float = Float(count)/Float(target!)*100
+        linearWasteProgress.setProgress(progressBar, animated: true)
         linearWasteProgress.barInset = CGFloat(4)
         linearWasteProgress.isCornersRounded = true
+        let text = String(count)
+        let text2 = String(target!)
+        txtWasteTargetStatus.text = ("\(text) of \(text2)")
     }
     
     private func setProgressColor(_ order: Int) {
