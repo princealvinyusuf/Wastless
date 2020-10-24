@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -185,31 +185,31 @@
                                         <color key="textColor" name="plasticLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-gN-AUE">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-gN-AUE">
                                         <rect key="frame" x="26" y="100" width="55" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="PzO-Ng-PS1"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="metalLabel"/>
+                                        <color key="textColor" name="glass"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-ak-Pye">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-ak-Pye">
                                         <rect key="frame" x="26" y="133" width="55" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="HZU-IF-Pnm"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="glassLabel"/>
+                                        <color key="textColor" name="paper"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-Zc-MFz">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-Zc-MFz">
                                         <rect key="frame" x="26" y="166" width="55" height="18"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="55" id="tUL-Iw-epa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                        <color key="textColor" name="paperLabel"/>
+                                        <color key="textColor" name="metal"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-xE-WME">
@@ -227,7 +227,7 @@
                                             <constraint firstAttribute="width" constant="45" id="pus-eY-qXw"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="metalLabel"/>
+                                        <color key="textColor" name="glassLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 of 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="me3-4z-UeK">
@@ -236,7 +236,7 @@
                                             <constraint firstAttribute="width" constant="45" id="Bag-yN-6Sa"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="glassLabel"/>
+                                        <color key="textColor" name="paperLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13 of 25" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8zT-ul-3cy">
@@ -245,7 +245,7 @@
                                             <constraint firstAttribute="width" constant="45" id="ikD-pP-9ng"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                        <color key="textColor" name="paperLabel"/>
+                                        <color key="textColor" name="metalLabel"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2 of 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mer-Pp-sAb">
@@ -421,15 +421,15 @@
                     <connections>
                         <outlet property="collectionCategory" destination="fs8-1C-JBx" id="u8a-X4-rB5"/>
                         <outlet property="dateNavigationBar" destination="Jiw-r0-5tf" id="cwI-0C-h09"/>
-                        <outlet property="glassLabel" destination="me3-4z-UeK" id="PGU-u7-aI4"/>
-                        <outlet property="linearProgressGlass" destination="WuT-ZH-OJA" id="5kC-Sn-1Qm"/>
-                        <outlet property="linearProgressMetals" destination="y6y-Z9-Had" id="d8t-8M-2BI"/>
+                        <outlet property="glassLabel" destination="d2l-A7-Eyd" id="44o-8y-wy0"/>
+                        <outlet property="linearProgressGlass" destination="y6y-Z9-Had" id="8e8-1j-bie"/>
+                        <outlet property="linearProgressMetals" destination="SDj-EF-VHs" id="Elv-1p-jNV"/>
                         <outlet property="linearProgressOrganic" destination="2Ia-ou-4W0" id="XCb-sO-uZV"/>
-                        <outlet property="linearProgressPapers" destination="SDj-EF-VHs" id="2yX-Zy-mRc"/>
+                        <outlet property="linearProgressPapers" destination="WuT-ZH-OJA" id="Ibb-vs-6Wl"/>
                         <outlet property="linearProgressPlastics" destination="3MO-nA-lrd" id="XEs-HB-Idb"/>
-                        <outlet property="metalLabel" destination="d2l-A7-Eyd" id="iPf-Lp-1tF"/>
+                        <outlet property="metalLabel" destination="8zT-ul-3cy" id="4s1-2z-fcR"/>
                         <outlet property="organicLabel" destination="mer-Pp-sAb" id="fC5-6M-IBA"/>
-                        <outlet property="paperLabel" destination="8zT-ul-3cy" id="ihV-ak-8MU"/>
+                        <outlet property="paperLabel" destination="me3-4z-UeK" id="uEN-gY-MAs"/>
                         <outlet property="plasticLabel" destination="ak2-sq-lNF" id="4Q6-2t-SFC"/>
                         <outlet property="setTargetImage" destination="2FC-3R-UXh" id="Bcw-Yl-nnj"/>
                         <outlet property="setTargetOutlet" destination="WnY-q0-9u6" id="K4c-yu-jOr"/>
@@ -726,6 +726,9 @@
         <image name="setTarget" width="512" height="512"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="wasteBasket" width="500" height="468"/>
+        <namedColor name="glass">
+            <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="glassLabel">
             <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -743,6 +746,9 @@
         </namedColor>
         <namedColor name="organicLabel">
             <color red="0.043000001460313797" green="0.5690000057220459" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="paper">
+            <color red="0.98000001907348633" green="0.69800001382827759" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="paperLabel">
             <color red="0.98000001907348633" green="0.69800001382827759" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
