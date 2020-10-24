@@ -8,6 +8,7 @@ target 'iwaste-ios' do
 pod 'LinearProgressView', '~> 2.0'
 pod 'WaveAnimationView'
 pod 'BonsaiController'
+pod 'Charts'
 
   # Pods for iwaste-ios
 

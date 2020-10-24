@@ -198,11 +198,13 @@ fi
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BonsaiController/BonsaiController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LinearProgressView/LinearProgressView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WaveAnimationView/WaveAnimationView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BonsaiController/BonsaiController.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Charts/Charts.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LinearProgressView/LinearProgressView.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/WaveAnimationView/WaveAnimationView.framework"
 fi

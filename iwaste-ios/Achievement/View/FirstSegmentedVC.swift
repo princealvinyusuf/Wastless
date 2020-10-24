@@ -46,8 +46,6 @@ extension FirstSegmentedVC: UITableViewDelegate, UITableViewDataSource {
         }
         return UITableViewCell()
     }
-    
-    
 }
 
 extension FirstSegmentedVC: BonsaiControllerDelegate {

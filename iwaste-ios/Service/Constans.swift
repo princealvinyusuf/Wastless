@@ -10,7 +10,8 @@ import UIKit
 struct K {
     struct Color {
         static let primaryColor = UIColor(named: "navigationBarModal")!
-
+        static let primarySoft = UIColor(named: "navBarSoft")!
+        
         static let colorPlastic = UIColor(named: "plastic")!
         static let colorPlasticSoft = UIColor(named: "plasticSoft")!
 
