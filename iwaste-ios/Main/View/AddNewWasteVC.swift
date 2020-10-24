@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class AddNewWasteVC: UIViewController {
     
@@ -25,11 +26,16 @@ class AddNewWasteVC: UIViewController {
     var currentNum = 1
     var selectedWaste: Waste?
     
+    //coredata
+    var managedObjectContext: NSManagedObjectContext?
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
+    var trashData = [TrashCD]()
+    
     var presenter: AddNewWastePresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        managedObjectContext = appDelegate?.persistentContainer.viewContext
         presenter = AddNewWastePresenter(delegate: self)
         
         collectionWaste.delegate = self
@@ -90,8 +96,60 @@ class AddNewWasteVC: UIViewController {
     
     @IBAction func btnDoneClicked(_ sender: Any) {
         // TODO save data to core data here
-        
+        addData()
         self.dismiss(animated: true, completion: nil)
+        
+    }
+    
+    func addData(){
+        if(listWasteAdded.count>=1){
+            for i in 0...listWasteAdded.count-1{
+                //Putting Data in Array
+                let data = listWasteAdded[i]
+                print(data.waste.wasteName)
+                let dataRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+                dataRequest.predicate = NSPredicate(format: "name=%@", data.waste.wasteName)
+                do{
+                    try trashData = managedObjectContext!.fetch(dataRequest)
+                }catch{
+                    print("Error Data couldnot be shown")
+                }
+                //If Data is "Other"
+                if (trashData.count == 0){
+                    trashData.removeAll()
+                    print("other data is selected")
+                    let dataOtherRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+                    let selectedCat = String(selectedCategory!.categoryName)
+                    dataOtherRequest.predicate = NSPredicate(format: "type=%@ AND name =%@", selectedCat, "Other")
+                    do{
+                        try trashData = managedObjectContext!.fetch(dataOtherRequest)
+                    }catch{
+                        print("Error Data couldnot be shown")
+                    }
+                    let trash = trashData[0]
+                    let count = Int64(exactly: data.numOfWaste)
+                    trash.count = trash.count+count!
+                    do {
+                        try managedObjectContext?.save()
+                    }catch let error as NSError{
+                        print("Couldnot save \(error)")
+                    }
+                }
+                //if data is not other
+                else{
+                    let trash = trashData[0]
+                    let count = Int64(exactly: data.numOfWaste)
+                    trash.count = trash.count+count!
+                    do {
+                        try managedObjectContext?.save()
+                    }catch let error as NSError{
+                        print("Couldnot save \(error)")
+                    }
+                }
+            }
+        }else{
+            print("nodata")
+        }
     }
     
 }

@@ -103,6 +103,7 @@ class TabMyWasteVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("View did appear")
         loadDataCat()
         loadDataTrash()
         updateLinearProgress()

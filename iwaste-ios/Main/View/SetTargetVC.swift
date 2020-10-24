@@ -102,7 +102,6 @@ class SetTargetVC: UIViewController {
     
     func addDataTrash(){
             let trashEntity = NSEntityDescription.entity(forEntityName: "TrashCD", in: managedObjectContext!)
-            var count:Int = 0
             
             for i in 0...4{
                 for n in 0...5{
@@ -111,8 +110,7 @@ class SetTargetVC: UIViewController {
                     newTrash.setValue(Date(), forKey: "date")
                     newTrash.setValue(dataWaste[i].categoryName, forKey: "type")
                     newTrash.setValue(dataWaste[i].waste[n].wasteName, forKey: "name")
-                    newTrash.setValue(count, forKey: "count")
-                    count = count + 1
+                    newTrash.setValue(0, forKey: "count")
                     do{
                         try  managedObjectContext?.save()
                     }catch let error as NSError{
