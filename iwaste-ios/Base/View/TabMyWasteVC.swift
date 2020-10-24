@@ -10,6 +10,10 @@ import LinearProgressView
 import WaveAnimationView
 import CoreData
 
+protocol WasteTargetDelegate {
+    func updateUI()
+}
+
 class TabMyWasteVC: UIViewController {
     
     @IBOutlet weak var collectionCategory: UICollectionView!
@@ -48,8 +52,6 @@ class TabMyWasteVC: UIViewController {
         super.viewDidLoad()
         //coredata
         managedObjectContext = appDelegate?.persistentContainer.viewContext
-        loadDataCat()
-        loadDataTrash()
         
         currentDate()
         
@@ -73,7 +75,7 @@ class TabMyWasteVC: UIViewController {
         linearProgressOrganic.barColor = K.Color.colorOrganicSoft
         linearProgressOrganic.trackColor = K.Color.colorOrganic
         
-        updateLinearProgress()
+        self.updateUI()
         
         subViewConfigure()
         
@@ -103,10 +105,8 @@ class TabMyWasteVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("View did appear")
-        loadDataCat()
-        loadDataTrash()
-        updateLinearProgress()
+        self.updateUI()
+        
         if !udService.isFirstLaunched {
             udService.isFirstLaunched = true
             let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
@@ -161,7 +161,8 @@ class TabMyWasteVC: UIViewController {
     @objc
     func updateLinearProgress() {
         if category.isEmpty{
-            
+            print("Category Is Empty")
+
         }else{
             for i in 0...4{
                 let target = Int(exactly: category[i].target)
@@ -237,6 +238,7 @@ class TabMyWasteVC: UIViewController {
     @IBAction func setTarget(_ sender: UIButton) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let setTargetVC = storyboard.instantiateViewController(identifier: "SetTarget") as! SetTargetVC
+        setTargetVC.delegate = self
         target(isHidden: true)
         main(isHidden: false)
         self.present(setTargetVC, animated: true, completion: nil)
@@ -317,5 +319,13 @@ extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
         addNewWasteVC.selectedCategory = category
         self.present(addNewWasteVC, animated: true, completion: nil)
+    }
+}
+
+extension TabMyWasteVC: WasteTargetDelegate {
+    func updateUI() {
+        loadDataCat()
+        loadDataTrash()
+        updateLinearProgress()
     }
 }

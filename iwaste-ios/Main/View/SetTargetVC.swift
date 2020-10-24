@@ -23,6 +23,8 @@ class SetTargetVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     //CoreData
+    var delegate: WasteTargetDelegate?
+    
     var categoy = [CategoryCD]()
     var managedObjectContext: NSManagedObjectContext?
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -39,7 +41,10 @@ class SetTargetVC: UIViewController {
             addData()
             addDataTrash()
             UserDefaultService.instance.isTargetSet = true
-            self.dismiss(animated: true, completion: nil)
+            
+            self.dismiss(animated: true) {
+                self.delegate?.updateUI()
+            }
         }
         
     }
