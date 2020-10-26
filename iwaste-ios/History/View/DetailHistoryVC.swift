@@ -24,11 +24,11 @@ class DetailHistoryVC: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DetailHistoryCell", bundle: self.nibBundle), forCellReuseIdentifier: "detailHistoryCell")
         
-        imgPlastic.image = UIImage(named: "inputPlastic")
-        imgGlass.image = UIImage(named: "inputGlass")
-        imgPaper.image = UIImage(named: "inputPaper")
-        imgMetal.image = UIImage(named: "inputMetal")
-        imgOrganic.image = UIImage(named: "inputOrganic")
+        imgPlastic.image = UIImage(named: "trashbinplastic")
+        imgGlass.image = UIImage(named: "trashbinglass")
+        imgPaper.image = UIImage(named: "trashbinpaper")
+        imgMetal.image = UIImage(named: "trashbinmetal")
+        imgOrganic.image = UIImage(named: "trashbinorganic")
         
     }
     

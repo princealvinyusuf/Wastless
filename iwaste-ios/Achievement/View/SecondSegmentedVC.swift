@@ -16,6 +16,9 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
     @IBOutlet weak var subViewYear: UIView!
     
     var tapGesture = UITapGestureRecognizer()
+    var tapGesture2 = UITapGestureRecognizer()
+    var tapGesture3 = UITapGestureRecognizer()
+    var tapGesture4 = UITapGestureRecognizer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,43 +26,65 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
         subViewConfigure()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MedalsVC"{
+            segue.destination.transitioningDelegate = self
+            segue.destination.modalPresentationStyle = .custom
+        }
+    }
+    
 
     func subViewConfigure() {
-        subViewDay.layer.cornerRadius = 10
-        subViewDay.layer.shadowColor = UIColor.gray.cgColor
-        subViewDay.layer.shadowOpacity = 0.6
-        subViewDay.layer.shadowOffset = CGSize(width: -4, height: 6)
-        subViewDay.layer.shadowRadius = 10
-        
-        subViewMonth.layer.cornerRadius = 10
-        subViewMonth.layer.shadowColor = UIColor.gray.cgColor
-        subViewMonth.layer.shadowOpacity = 0.6
-        subViewMonth.layer.shadowOffset = CGSize(width: -4, height: 6)
-        subViewMonth.layer.shadowRadius = 10
-        
-        subViewWeek.layer.cornerRadius = 10
-        subViewWeek.layer.shadowColor = UIColor.gray.cgColor
-        subViewWeek.layer.shadowOpacity = 0.6
-        subViewWeek.layer.shadowOffset = CGSize(width: -4, height: 6)
-        subViewWeek.layer.shadowRadius = 10
-        
-        subViewYear.layer.cornerRadius = 10
-        subViewYear.layer.shadowColor = UIColor.gray.cgColor
-        subViewYear.layer.shadowOpacity = 0.6
-        subViewYear.layer.shadowOffset = CGSize(width: -4, height: 6)
-        subViewYear.layer.shadowRadius = 10
-        
         tapGesture = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
         subViewDay.addGestureRecognizer(tapGesture)
         subViewDay.isUserInteractionEnabled = true
+        
+        tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped2(_:)))
+        tapGesture2.numberOfTapsRequired = 1
+        tapGesture2.numberOfTouchesRequired = 1
+        subViewWeek.addGestureRecognizer(tapGesture2)
+        subViewWeek.isUserInteractionEnabled = true
+        
+        tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped3(_:)))
+        tapGesture3.numberOfTapsRequired = 1
+        tapGesture3.numberOfTouchesRequired = 1
+        subViewMonth.addGestureRecognizer(tapGesture3)
+        subViewMonth.isUserInteractionEnabled = true
+        
+        tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped4(_:)))
+        tapGesture4.numberOfTapsRequired = 1
+        tapGesture4.numberOfTouchesRequired = 1
+        subViewYear.addGestureRecognizer(tapGesture4)
+        subViewYear.isUserInteractionEnabled = true
     }
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
         let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
         SecondSegmentedVC.globalVariable.medals = "DayMedals"
+        self.present(secondSegmentedVC, animated: true, completion: nil)
+    }
+    
+    @objc func subViewTapped2(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
+        SecondSegmentedVC.globalVariable.medals = "WeekMedals"
+        self.present(secondSegmentedVC, animated: true, completion: nil)
+    }
+    
+    @objc func subViewTapped3(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
+        SecondSegmentedVC.globalVariable.medals = "MonthMedals"
+        self.present(secondSegmentedVC, animated: true, completion: nil)
+    }
+    
+    @objc func subViewTapped4(_ sender: UITapGestureRecognizer) {
+        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
+        SecondSegmentedVC.globalVariable.medals = "YearMedals"
         self.present(secondSegmentedVC, animated: true, completion: nil)
     }
 

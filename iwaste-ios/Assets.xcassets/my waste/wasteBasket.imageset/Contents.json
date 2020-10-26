@@ -1,7 +1,7 @@
 {
   "images" : [
     {
-      "filename" : "wastebinlight_2.pdf",
+      "filename" : "wastebin_light.pdf",
       "idiom" : "universal"
     },
     {
@@ -11,7 +11,7 @@
           "value" : "light"
         }
       ],
-      "filename" : "wastebinlight_2-1.pdf",
+      "filename" : "wastebin_light-1.pdf",
       "idiom" : "universal"
     },
     {
@@ -21,7 +21,7 @@
           "value" : "dark"
         }
       ],
-      "filename" : "wastebindark_2.pdf",
+      "filename" : "wastebin_dark.pdf",
       "idiom" : "universal"
     }
   ],

@@ -11,7 +11,6 @@ class MedalsVC: UIViewController {
     
     
     @IBOutlet weak var medalsImageView: UIImageView!
-    @IBOutlet weak var badgesName: UILabel!
     @IBOutlet weak var dateObtainedLabel: UILabel!
     @IBOutlet weak var requirementLabel: UILabel!
     
@@ -22,11 +21,30 @@ class MedalsVC: UIViewController {
         let medals = SecondSegmentedVC.globalVariable.medals
         
         if medals == "DayMedals" {
-            medalsImageView.image = UIImage(named: "inputStraw")
-            badgesName.text = "Perfect Day"
-            dateObtainedLabel.text = "18 December 2020"
-            requirementLabel.text = "Lorem Ipsum aque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo."
+            medalsImageView.image = UIImage(named: "badges1")
+            dateObtainedLabel.text = "15 December 2020"
+            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
         }
+        
+        if medals == "WeekMedals" {
+            medalsImageView.image = UIImage(named: "badges2")
+            dateObtainedLabel.text = "16 December 2020"
+            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
+        }
+        
+        if medals == "MonthMedals" {
+            medalsImageView.image = UIImage(named: "badges3")
+            dateObtainedLabel.text = "17 December 2020"
+            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
+        }
+        
+        if medals == "YearMedals" {
+            medalsImageView.image = UIImage(named: "badges4")
+            dateObtainedLabel.text = "18 December 2020"
+            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
+        }
+        
+        
     }
 
 }
