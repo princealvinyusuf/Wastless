@@ -37,6 +37,7 @@
 		59AA9E0125448BE20074644A /* DetailHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59AA9DFF25448BE20074644A /* DetailHistoryCell.xib */; };
 		59AA9E0425448D6B0074644A /* DetailHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9E0325448D6B0074644A /* DetailHistoryVC.swift */; };
 		59AA9E06254499770074644A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5934E33F2531FC4A0082D01D /* Assets.xcassets */; };
+		59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
 		9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DA253E89F800870DE8 /* AchievementVC.swift */; };
 		9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */; };
@@ -92,6 +93,7 @@
 		59AA9DFE25448BE20074644A /* DetailHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHistoryCell.swift; sourceTree = "<group>"; };
 		59AA9DFF25448BE20074644A /* DetailHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHistoryCell.xib; sourceTree = "<group>"; };
 		59AA9E0325448D6B0074644A /* DetailHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHistoryVC.swift; sourceTree = "<group>"; };
+		59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWastePresenter.swift; sourceTree = "<group>"; };
 		59FBF2AC25362AAD00F940D5 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
@@ -290,11 +292,28 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
-		59FBF2A5253629FE00F940D5 /* Base */ = {
+		59B2F62E25471A9C0010DCA4 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
 				591D077D253DF1860008098A /* View */,
+				59B2F62F25471AB00010DCA4 /* Presenter */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		59B2F62F25471AB00010DCA4 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		59FBF2A5253629FE00F940D5 /* Base */ = {
+			isa = PBXGroup;
+			children = (
 				9F42AA2E253A600600EB8056 /* Welcome */,
+				59B2F62E25471A9C0010DCA4 /* TabBar */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -512,6 +531,7 @@
 				9FB82750254073670042E4C8 /* DetailChallengeVC.swift in Sources */,
 				595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */,
 				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
+				59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */,
 				591D06982537E37A0008098A /* ModelWaste.swift in Sources */,
 				A8B29B862543627B0059AAC5 /* CategoryCD+CoreDataProperties.swift in Sources */,
 				A8B29B832543627B0059AAC5 /* TrashCD+CoreDataClass.swift in Sources */,

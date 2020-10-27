@@ -29,3 +29,10 @@ struct K {
     }
 }
 
+enum WasteType: String {
+    case plastic = "Plastic"
+    case glass = "Glass"
+    case paper = "Paper"
+    case metal = "Metal"
+    case organic = "Organic"
+}

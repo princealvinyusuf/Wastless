@@ -8,7 +8,6 @@
 import UIKit
 import LinearProgressView
 import WaveAnimationView
-import CoreData
 
 protocol WasteTargetDelegate {
     func updateUI()
@@ -41,39 +40,43 @@ class TabMyWasteVC: UIViewController {
     @IBOutlet weak var paperLabel: UILabel!
     @IBOutlet weak var organicLabel: UILabel!
     
-    
     let udService = UserDefaultService.instance
-    
-    //Core Data
-    var managedObjectContext: NSManagedObjectContext?
-    let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    
+    var presenter: MyWastePresenter?
+    var categories: [CategoryCD]?
     override func viewDidLoad() {
         super.viewDidLoad()
-        //coredata
-        managedObjectContext = appDelegate?.persistentContainer.viewContext
         
-        currentDate()
+        presenter = MyWastePresenter(delegate: self)
         
         linearProgressPlastics.animationDuration = 0.5
         linearProgressPlastics.barColor = K.Color.colorPlasticSoft
         linearProgressPlastics.trackColor = K.Color.colorPlastic
+        linearProgressPlastics.barInset = CGFloat(4)
+        linearProgressPlastics.isCornersRounded = true
         
         linearProgressMetals.animationDuration = 0.5
         linearProgressMetals.barColor = K.Color.colorMetalSoft
         linearProgressMetals.trackColor = K.Color.colorMetal
+        linearProgressMetals.barInset = CGFloat(4)
+        linearProgressMetals.isCornersRounded = true
         
         linearProgressGlass.animationDuration = 0.5
         linearProgressGlass.barColor = K.Color.colorGlassSoft
         linearProgressGlass.trackColor = K.Color.colorGlass
+        linearProgressGlass.barInset = CGFloat(4)
+        linearProgressGlass.isCornersRounded = true
         
         linearProgressPapers.animationDuration = 0.5
         linearProgressPapers.barColor = K.Color.colorPaperSoft
         linearProgressPapers.trackColor = K.Color.colorPaper
+        linearProgressPapers.barInset = CGFloat(4)
+        linearProgressPapers.isCornersRounded = true
         
         linearProgressOrganic.animationDuration = 0.5
         linearProgressOrganic.barColor = K.Color.colorOrganicSoft
         linearProgressOrganic.trackColor = K.Color.colorOrganic
+        linearProgressOrganic.barInset = CGFloat(4)
+        linearProgressOrganic.isCornersRounded = true
         
         self.updateUI()
         
@@ -91,6 +94,7 @@ class TabMyWasteVC: UIViewController {
             target(isHidden: false)
         }
         
+        // Collection View
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .horizontal
         flowLayout.itemSize = CGSize(width: 72, height: 115)
@@ -101,12 +105,14 @@ class TabMyWasteVC: UIViewController {
         collectionCategory.delegate = self
         collectionCategory.dataSource = self
         collectionCategory.register(UINib(nibName: "CardCategoryCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "cardCategoryCell")
+        
+        presenter?.getTodayDate(completion: { (date) in
+            self.dateNavigationBar.title = "\(date)"
+        })
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        self.updateUI()
-        
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if !udService.isFirstLaunched {
             udService.isFirstLaunched = true
             let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
@@ -114,7 +120,6 @@ class TabMyWasteVC: UIViewController {
             self.present(welcomeVC, animated:true, completion:nil)
             return
         }
-        
     }
     
     func subViewConfigure() {
@@ -129,15 +134,6 @@ class TabMyWasteVC: UIViewController {
         tapGesture.numberOfTouchesRequired = 1
         subView.addGestureRecognizer(tapGesture)
         subView.isUserInteractionEnabled = true
-    }
-    
-    func currentDate() {
-        let userCalendar = Date()
-        let formatter = DateFormatter()
-        formatter.timeStyle = .none
-        formatter.dateStyle = .full
-        
-        dateNavigationBar.title = "\(formatter.string(from: userCalendar))"
     }
     
     func waveConfigure() {
@@ -156,77 +152,6 @@ class TabMyWasteVC: UIViewController {
         wave.frontColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).withAlphaComponent(1)
         wave.backColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).withAlphaComponent(0.3)
         waveView.layer.borderColor = UIColor.gray.cgColor
-    }
-    
-    @objc
-    func updateLinearProgress() {
-        if category.isEmpty{
-            print("Category Is Empty")
-
-        }else{
-            for i in 0...4{
-                let target = Int(exactly: category[i].target)
-                var count:Int = 0
-                for n in 0...5{
-                    if i == 0 {
-                        let data = Int(exactly: trashPlastic[n].count)
-                        count = count + data!
-                    }else if i == 1{
-                        let data = Int(exactly: trashGlass[n].count)
-                        count = count + data!
-                    }else if i == 2{
-                        let data = Int(exactly: trashPaper[n].count)
-                        count = count + data!
-                    }else if i == 3{
-                        let data = Int(exactly: trashMetal[n].count)
-                        count = count + data!
-                    }else if i == 4{
-                        let data = Int(exactly: trashOrganic[n].count)
-                        count = count + data!
-                    }else if i == 5{
-
-                    }
-                }
-                let progressBar: Float = Float(count)/Float(target!)*100
-                if i == 0 {
-                    linearProgressPlastics.setProgress(progressBar, animated: true)
-                    linearProgressPlastics.barInset = CGFloat(4)
-                    linearProgressPlastics.isCornersRounded = true
-                    let text = String(target!)
-                    let text2 = String(count)
-                    plasticLabel.text = "\(text2) of \(text)"
-                }else if i == 1{
-                    linearProgressGlass.setProgress(progressBar, animated: true)
-                    linearProgressGlass.barInset = CGFloat(4)
-                    linearProgressGlass.isCornersRounded = true
-                    let text = String(target!)
-                    let text2 = String(count)
-                    glassLabel.text = "\(text2) of \(text)"
-                }else if i == 2{
-                    linearProgressPapers.setProgress(progressBar, animated: true)
-                    linearProgressPapers.barInset = CGFloat(4)
-                    linearProgressPapers.isCornersRounded = true
-                    let text = String(target!)
-                    let text2 = String(count)
-                    paperLabel.text = "\(text2) of \(text)"
-                }else if i == 3{
-                    linearProgressMetals.setProgress(progressBar, animated: true)
-                    linearProgressMetals.barInset = CGFloat(4)
-                    linearProgressMetals.isCornersRounded = true
-                    let text = String(target!)
-                    let text2 = String(count)
-                    metalLabel.text = "\(text2) of \(text)"
-                }else if i == 4{
-                    linearProgressOrganic.setProgress(progressBar, animated: true)
-                    linearProgressOrganic.barInset = CGFloat(4)
-                    linearProgressOrganic.isCornersRounded = true
-                    let text = String(target!)
-                    let text2 = String(count)
-                    organicLabel.text = "\(text2) of \(text)"
-                }
-            }
-        }
-        
     }
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
@@ -256,47 +181,6 @@ class TabMyWasteVC: UIViewController {
         trashBinPercentage.isHidden = isHidden
         waveView.isHidden = isHidden
     }
-    
-    //Core Data Function
-    func loadDataCat(){
-        let catRequest: NSFetchRequest<CategoryCD> = CategoryCD.fetchRequest()
-        catRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        do{
-            try category = managedObjectContext!.fetch(catRequest)
-        }catch{
-            print("Error Data couldnot be shown")
-        }
-    }
-    
-    func loadDataTrash(){
-        let trashPlasticRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-        let trashGlassRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-        let trashPaperRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-        let trashMetalRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-        let trashOrganicRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-        
-        trashPlasticRequest.predicate = NSPredicate(format: "type=%@", "Plastic")
-        trashGlassRequest.predicate = NSPredicate(format: "type=%@", "Glass")
-        trashPaperRequest.predicate = NSPredicate(format: "type=%@", "Paper")
-        trashMetalRequest.predicate = NSPredicate(format: "type=%@", "Metal")
-        trashOrganicRequest.predicate = NSPredicate(format: "type=%@", "Organic")
-        
-        trashPlasticRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
-        trashGlassRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
-        trashPaperRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
-        trashMetalRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
-        trashOrganicRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
-        
-        do{
-            try trashPlastic = managedObjectContext!.fetch(trashPlasticRequest)
-            try trashGlass = managedObjectContext!.fetch(trashGlassRequest)
-            try trashPaper = managedObjectContext!.fetch(trashPaperRequest)
-            try trashMetal = managedObjectContext!.fetch(trashMetalRequest)
-            try trashOrganic = managedObjectContext!.fetch(trashOrganicRequest)
-        }catch{
-            print("Error Data couldnot be shown")
-        }
-    }
 }
 
 extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -314,7 +198,7 @@ extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let category = dataWaste[indexPath.row]
-
+        
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
         addNewWasteVC.selectedCategory = category
@@ -324,8 +208,48 @@ extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
 extension TabMyWasteVC: WasteTargetDelegate {
     func updateUI() {
-        loadDataCat()
-        loadDataTrash()
-        updateLinearProgress()
+        presenter?.loadCategory()
+        if categories!.count > 0{
+            // Plastic
+            presenter?.loadDataTrash(categories: categories, type: .plastic) { (wasteCount, target, progress) in
+                self.linearProgressPlastics.setProgress(progress, animated: true)
+                self.plasticLabel.text = "\(wasteCount) of \(target)"
+            }
+            
+            // Glass
+            presenter?.loadDataTrash(categories: categories, type: .glass) { (wasteCount, target, progress) in
+                self.linearProgressGlass.setProgress(progress, animated: true)
+                self.glassLabel.text = "\(wasteCount) of \(target)"
+            }
+            
+            // Papers
+            presenter?.loadDataTrash(categories: categories, type: .paper) { (wasteCount, target, progress) in
+                self.linearProgressPapers.setProgress(progress, animated: true)
+                self.paperLabel.text = "\(wasteCount) of \(target)"
+            }
+            
+            // Metals
+            presenter?.loadDataTrash(categories: categories, type: .metal) { (wasteCount, target, progress) in
+                self.linearProgressMetals.setProgress(progress, animated: true)
+                self.metalLabel.text = "\(wasteCount) of \(target)"
+            }
+            
+            // Organics
+            presenter?.loadDataTrash(categories: categories, type: .organic) { (wasteCount, target, progress) in
+                self.linearProgressOrganic.setProgress(progress, animated: true)
+                self.organicLabel.text = "\(wasteCount) of \(target)"
+            }
+        }
+    }
+}
+
+extension TabMyWasteVC: MyWasteDelegate {
+    func dataCategoriesSuccess(categories: [CategoryCD]) {
+        self.categories?.removeAll()
+        self.categories = categories
+    }
+    
+    func dataCategoriesFail(error: Error) {
+        print("error data categories: ", error.localizedDescription)
     }
 }
