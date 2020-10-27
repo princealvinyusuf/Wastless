@@ -113,6 +113,7 @@ class TabMyWasteVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.updateUI()
         if !udService.isFirstLaunched {
             udService.isFirstLaunched = true
             let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
@@ -202,6 +203,7 @@ extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let addNewWasteVC = storyboard.instantiateViewController(identifier: "AddNewWasteVC") as! AddNewWasteVC
         addNewWasteVC.selectedCategory = category
+        addNewWasteVC.delegate = self
         self.present(addNewWasteVC, animated: true, completion: nil)
     }
 }

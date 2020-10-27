@@ -32,27 +32,25 @@ class CurrentViewCell: UITableViewCell {
         
     }
     
-    func configureCell(modelWaste: ModelWaste, _ order: Int, trashData: TrashData) {
+    func configureCell(modelWaste: ModelWaste, target: Int, _ order: Int, trashData: TrashData) {
         txtWasteName.text = modelWaste.categoryName
         
         listWaste = modelWaste.waste
         listTrash = trashData.trash
         linearWasteProgress.animationDuration = 0.5
         setProgressColor(order)
-        
-        
-        let target = Int(exactly: category[order].target)
+                
         var count:Int = 0
         for i in 0...5{
             let data = Int(exactly: listTrash[i].count)
             count = count + data!
         }
-        let progressBar: Float = Float(count)/Float(target!)*100
+        let progressBar: Float = Float(count)/Float(target)*100
         linearWasteProgress.setProgress(progressBar, animated: true)
         linearWasteProgress.barInset = CGFloat(4)
         linearWasteProgress.isCornersRounded = true
         let text = String(count)
-        let text2 = String(target!)
+        let text2 = String(target)
         txtWasteTargetStatus.text = ("\(text) of \(text2)")
     }
     

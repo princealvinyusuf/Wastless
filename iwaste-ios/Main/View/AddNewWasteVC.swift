@@ -26,6 +26,8 @@ class AddNewWasteVC: UIViewController {
     var currentNum = 1
     var selectedWaste: Waste?
     
+    var delegate: WasteTargetDelegate?
+    
     //coredata
     var managedObjectContext: NSManagedObjectContext?
     let appDelegate = UIApplication.shared.delegate as? AppDelegate
@@ -97,6 +99,7 @@ class AddNewWasteVC: UIViewController {
     @IBAction func btnDoneClicked(_ sender: Any) {
         // TODO save data to core data here
         addData()
+        delegate?.updateUI()
         self.dismiss(animated: true, completion: nil)
         
     }

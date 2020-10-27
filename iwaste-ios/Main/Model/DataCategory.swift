@@ -53,22 +53,3 @@ let others = ModelWaste(categoryName: "Others", categoryImg: UIImage(named: "inp
 
 
 let dataWaste: [ModelWaste] = [catPlastic, catGlass, catPaper, catMetal, catOrganic]
-
-
-
-var category = [CategoryCD]()
-
-var trashPlastic = [TrashCD]()
-var trashGlass = [TrashCD]()
-var trashPaper = [TrashCD]()
-var trashMetal = [TrashCD]()
-var trashOrganic = [TrashCD]()
-
-var plasticDataCD = TrashData(trashname: "Plastic", trash: trashPlastic)
-var glassDataCD = TrashData(trashname: "Glass", trash: trashGlass)
-var paperDataCD = TrashData(trashname: "Paper", trash: trashPaper)
-var metalDataCD = TrashData(trashname: "Metal", trash: trashMetal)
-var organicDataCD = TrashData(trashname: "Organic", trash: trashOrganic)
-
-
-var trashDataCD: [TrashData] = [plasticDataCD, glassDataCD, paperDataCD, metalDataCD, organicDataCD]
