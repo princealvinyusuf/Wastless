@@ -144,7 +144,7 @@ class TabMyWasteVC: UIViewController {
         wave.startAnimation()
         
         // Change the value of Trash bin Wave
-        wave.setProgress(0.65)
+        wave.setProgress(0)
         trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
         print("waveProgress",wave.progress)
     }
@@ -211,6 +211,8 @@ extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
 extension TabMyWasteVC: WasteTargetDelegate {
     func updateUI() {
         presenter?.loadCategory()
+        
+        //Change UI for Linear Progress
         if categories!.count > 0{
             // Plastic
             presenter?.loadDataTrash(categories: categories, type: .plastic) { (wasteCount, target, progress) in
@@ -242,6 +244,21 @@ extension TabMyWasteVC: WasteTargetDelegate {
                 self.organicLabel.text = "\(wasteCount) of \(target)"
             }
         }
+    
+        // Change the value of Trash bin Wave
+        wave = WaveAnimationView(frame: CGRect(origin: .zero, size: waveView.bounds.size), color: UIColor.blue.withAlphaComponent(0.5))
+        waveView.addSubview(wave)
+        wave.maskImage = UIImage(named: "wasteBasket")
+        wave.startAnimation()
+        presenter?.totalTrashUsage(categories: categories){ (progress) in
+            self.wave.setProgress(progress)
+            
+        }
+        trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
+        print("waveProgress",wave.progress)
+        wave.frontColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).withAlphaComponent(1)
+        wave.backColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).withAlphaComponent(0.3)
+        waveView.layer.borderColor = UIColor.gray.cgColor
     }
 }
 

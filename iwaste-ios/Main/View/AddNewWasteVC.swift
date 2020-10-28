@@ -83,7 +83,17 @@ class AddNewWasteVC: UIViewController {
         inputWasteField.resignFirstResponder()
         if currentNum > 0 {
             if inputWasteField.text != "" {
-                selectedWaste = Waste(wasteName: inputWasteField.text!, wasteImg: UIImage(named: "inputStraw")!)
+                if selectedCategory?.categoryName == "Plastic"{
+                    selectedWaste = Waste(wasteName: "Other", wasteImg: UIImage(named: "otherPlastic")!)
+                }else if selectedCategory?.categoryName == "Glass"{
+                    selectedWaste = Waste(wasteName: "Other", wasteImg: UIImage(named: "otherGlass")!)
+                }else if selectedCategory?.categoryName == "Paper"{
+                    selectedWaste = Waste(wasteName: "Other", wasteImg: UIImage(named: "otherPaper")!)
+                }else if selectedCategory?.categoryName == "Metal"{
+                    selectedWaste = Waste(wasteName: "Other", wasteImg: UIImage(named: "otherMetal")!)
+                }else if selectedCategory?.categoryName == "Organic"{
+                    selectedWaste = Waste(wasteName: "Other", wasteImg: UIImage(named: "otherOrganic")!)
+                }
             }
             
             if let wasteSelected = selectedWaste {
@@ -106,48 +116,23 @@ class AddNewWasteVC: UIViewController {
     
     func addData(){
         if(listWasteAdded.count>=1){
-            for i in 0...listWasteAdded.count-1{
+            for data in listWasteAdded{
                 //Putting Data in Array
-                let data = listWasteAdded[i]
-                print(data.waste.wasteName)
                 let dataRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-                dataRequest.predicate = NSPredicate(format: "name=%@", data.waste.wasteName)
+                dataRequest.predicate = NSPredicate(format: "name=%@ AND type=%@", data.waste.wasteName, selectedCategory!.categoryName)
                 do{
                     try trashData = managedObjectContext!.fetch(dataRequest)
                 }catch{
                     print("Error Data couldnot be shown")
                 }
-                //If Data is "Other"
-                if (trashData.count == 0){
-                    trashData.removeAll()
-                    print("other data is selected")
-                    let dataOtherRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-                    let selectedCat = String(selectedCategory!.categoryName)
-                    dataOtherRequest.predicate = NSPredicate(format: "type=%@ AND name =%@", selectedCat, "Other")
-                    do{
-                        try trashData = managedObjectContext!.fetch(dataOtherRequest)
-                    }catch{
-                        print("Error Data couldnot be shown")
-                    }
-                    let trash = trashData[0]
-                    let count = Int64(exactly: data.numOfWaste)
-                    trash.count = trash.count+count!
-                    do {
-                        try managedObjectContext?.save()
-                    }catch let error as NSError{
-                        print("Couldnot save \(error)")
-                    }
-                }
-                //if data is not other
-                else{
-                    let trash = trashData[0]
-                    let count = Int64(exactly: data.numOfWaste)
-                    trash.count = trash.count+count!
-                    do {
-                        try managedObjectContext?.save()
-                    }catch let error as NSError{
-                        print("Couldnot save \(error)")
-                    }
+                print("Not OTher DAta")
+                let trash = trashData[0]
+                let count = Int64(exactly: data.numOfWaste)
+                trash.count = trash.count+count!
+                do {
+                    try managedObjectContext?.save()
+                }catch let error as NSError{
+                    print("Couldnot save \(error)")
                 }
             }
         }else{

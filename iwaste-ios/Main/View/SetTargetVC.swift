@@ -24,6 +24,7 @@ class SetTargetVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.isModalInPresentation = true
         presenter = SetTargetPresenter()
     }
     

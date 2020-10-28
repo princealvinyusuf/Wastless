@@ -78,6 +78,37 @@ class MyWastePresenter {
         completion(countOfWaste, targetOfCategory, progress)
     }
     
+    func totalTrashUsage(categories: [CategoryCD]?, completion: @escaping (_ progress: Float) -> ()){
+        var trashes = [TrashCD]()
+        if let appDelegate = appDelegate {
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+            trashRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+            do {
+                try trashes = managedContext.fetch(trashRequest)
+            } catch {
+                print("Error Data could not be shown")
+            }
+        }
+        
+        //get data of waste on each type of waste
+        var countOfWaste = 0
+        for trash in trashes {
+            countOfWaste += Int(truncatingIfNeeded: trash.count)
+        }
+        
+        // Get data of total Target
+        var targetOfCategory = 0
+        for cat in categories!{
+            targetOfCategory += Int(truncatingIfNeeded: cat.target)
+        }
+        
+        //Calculate PRogress for displayed in Wave
+        let progress = Float(countOfWaste)/Float(targetOfCategory)
+        
+        completion(progress)
+    }
+    
     func getTodayDate(completion: @escaping (_ strDate: String) -> ()) {
         let userCalendar = Date()
         let formatter = DateFormatter()
