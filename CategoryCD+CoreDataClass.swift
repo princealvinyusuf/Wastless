@@ -2,7 +2,7 @@
 //  CategoryCD+CoreDataClass.swift
 //  iwaste-ios
 //
-//  Created by Muhammad Raihan on 24/10/20.
+//  Created by Muhammad Raihan on 01/11/20.
 //
 //
 

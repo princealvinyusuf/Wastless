@@ -54,10 +54,12 @@
 		9F42AA3C253A68A800EB8056 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F42AA36253A621E00EB8056 /* Slide.xib */; };
 		9FB82750254073670042E4C8 /* DetailChallengeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */; };
 		9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FC20D722536BA30007A828E /* CurrentWasteVC.swift */; };
-		A8B29B832543627B0059AAC5 /* TrashCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B29B7F2543627B0059AAC5 /* TrashCD+CoreDataClass.swift */; };
-		A8B29B842543627B0059AAC5 /* TrashCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B29B802543627B0059AAC5 /* TrashCD+CoreDataProperties.swift */; };
-		A8B29B852543627B0059AAC5 /* CategoryCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B29B812543627B0059AAC5 /* CategoryCD+CoreDataClass.swift */; };
-		A8B29B862543627B0059AAC5 /* CategoryCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B29B822543627B0059AAC5 /* CategoryCD+CoreDataProperties.swift */; };
+		A824EB97254DDDAF0096975E /* CategoryCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EB93254DDDAF0096975E /* CategoryCD+CoreDataClass.swift */; };
+		A824EB98254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EB94254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift */; };
+		A824EB99254DDDAF0096975E /* TrashCD+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EB95254DDDAF0096975E /* TrashCD+CoreDataClass.swift */; };
+		A824EB9A254DDDAF0096975E /* TrashCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */; };
+		A824EBA2254DDF9D0096975E /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */; };
+		A824EBA5254E13D10096975E /* DetailHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -116,10 +118,12 @@
 		9FC20D722536BA30007A828E /* CurrentWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWasteVC.swift; sourceTree = "<group>"; };
 		9FD722FF25382AA800E761AB /* HorizontalModalCurrentWaste.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalModalCurrentWaste.xib; sourceTree = "<group>"; };
 		9FD7230225382BFF00E761AB /* HorizontalModalCurrentWaste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModalCurrentWaste.swift; sourceTree = "<group>"; };
-		A8B29B7F2543627B0059AAC5 /* TrashCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrashCD+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		A8B29B802543627B0059AAC5 /* TrashCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrashCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		A8B29B812543627B0059AAC5 /* CategoryCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCD+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		A8B29B822543627B0059AAC5 /* CategoryCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		A824EB93254DDDAF0096975E /* CategoryCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCD+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		A824EB94254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CategoryCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		A824EB95254DDDAF0096975E /* TrashCD+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrashCD+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrashCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
+		A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailHistoryPresenter.swift; path = "iwaste-ios/Base/TabBar/Presenter/DetailHistoryPresenter.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -285,6 +289,7 @@
 		59AA9DE72543EB850074644A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */,
+				A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -397,10 +403,10 @@
 		A87451FB253FACF200F03F79 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				A8B29B7F2543627B0059AAC5 /* TrashCD+CoreDataClass.swift */,
-				A8B29B802543627B0059AAC5 /* TrashCD+CoreDataProperties.swift */,
-				A8B29B812543627B0059AAC5 /* CategoryCD+CoreDataClass.swift */,
-				A8B29B822543627B0059AAC5 /* CategoryCD+CoreDataProperties.swift */,
+				A824EB93254DDDAF0096975E /* CategoryCD+CoreDataClass.swift */,
+				A824EB94254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift */,
+				A824EB95254DDDAF0096975E /* TrashCD+CoreDataClass.swift */,
+				A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */,
 				5934E33C2531FC480082D01D /* iwaste_ios.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -531,6 +537,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				591D06A225382CF80008098A /* AddNewWastePresenter.swift in Sources */,
+				A824EB99254DDDAF0096975E /* TrashCD+CoreDataClass.swift in Sources */,
 				595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */,
 				591D06DF253B02390008098A /* CurrentViewCell.swift in Sources */,
 				59AA9E0425448D6B0074644A /* DetailHistoryVC.swift in Sources */,
@@ -539,34 +546,35 @@
 				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
 				59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */,
 				591D06982537E37A0008098A /* ModelWaste.swift in Sources */,
-				A8B29B862543627B0059AAC5 /* CategoryCD+CoreDataProperties.swift in Sources */,
-				A8B29B832543627B0059AAC5 /* TrashCD+CoreDataClass.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
 				59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */,
 				9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */,
 				9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */,
+				A824EBA2254DDF9D0096975E /* HistoryPresenter.swift in Sources */,
+				A824EB9A254DDDAF0096975E /* TrashCD+CoreDataProperties.swift in Sources */,
 				591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */,
+				A824EB97254DDDAF0096975E /* CategoryCD+CoreDataClass.swift in Sources */,
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
-				A8B29B852543627B0059AAC5 /* CategoryCD+CoreDataClass.swift in Sources */,
 				9F1A43E1253E8C2200870DE8 /* SecondSegmentedVC.swift in Sources */,
 				59D2EFF12547CA9600EE1B8B /* CurrentWastePresenter.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
 				591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */,
 				59AA9DEA2544413B0074644A /* HistoryVC.swift in Sources */,
 				9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */,
+				A824EBA5254E13D10096975E /* DetailHistoryPresenter.swift in Sources */,
 				591D069B2537E3F00008098A /* DataCategory.swift in Sources */,
 				9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */,
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
-				A8B29B842543627B0059AAC5 /* TrashCD+CoreDataProperties.swift in Sources */,
 				59AA9E0025448BE20074644A /* DetailHistoryCell.swift in Sources */,
 				591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */,
 				9F4143972540234500B738A0 /* MedalsVC.swift in Sources */,
 				59AA9DF3254473060074644A /* ChartService.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
 				9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */,
+				A824EB98254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -544,6 +544,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="chevron.left" catalog="system"/>
+                                        <connections>
+                                            <action selector="prevDayButton:" destination="ygx-TZ-uGk" eventType="touchUpInside" id="UqG-i3-HMr"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday, Oct 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ex7-Cg-NVd">
                                         <rect key="frame" x="36" y="17.5" width="132" height="21"/>
@@ -559,6 +562,9 @@
                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" image="chevron.right" catalog="system"/>
+                                        <connections>
+                                            <action selector="nextDayBtnPressed:" destination="ygx-TZ-uGk" eventType="touchUpInside" id="neH-tb-NuE"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" name="subView"/>
@@ -646,6 +652,11 @@
                     <navigationItem key="navigationItem" title="History" id="6Jr-Tg-awH"/>
                     <connections>
                         <outlet property="lblChartDate" destination="ex7-Cg-NVd" id="PCJ-gw-eM0"/>
+                        <outlet property="lblDetailDate" destination="iNk-6v-3l5" id="0Cx-KC-xdU"/>
+                        <outlet property="lblDetailDay" destination="OmO-cg-aYM" id="PYB-0d-Ddu"/>
+                        <outlet property="lblDetailTotal" destination="f9P-E8-Zsh" id="LQS-AU-irk"/>
+                        <outlet property="nextDayButton" destination="FUA-mY-kzi" id="OIV-Ac-I4X"/>
+                        <outlet property="prevDayButton" destination="Lbh-Mp-HCC" id="ZPq-vy-shU"/>
                         <outlet property="segmentedController" destination="Tz1-V0-I1F" id="PEO-XJ-aXB"/>
                         <outlet property="viewChart" destination="kqv-0i-T7a" id="4FK-5B-RTW"/>
                         <outlet property="viewDetail" destination="Sjv-XS-1aN" id="fLj-5d-LdL"/>

@@ -2,7 +2,7 @@
 //  CategoryCD+CoreDataProperties.swift
 //  iwaste-ios
 //
-//  Created by Muhammad Raihan on 24/10/20.
+//  Created by Muhammad Raihan on 01/11/20.
 //
 //
 
@@ -16,7 +16,7 @@ extension CategoryCD {
         return NSFetchRequest<CategoryCD>(entityName: "CategoryCD")
     }
 
-    @NSManaged public var date: Date?
+    @NSManaged public var date: String?
     @NSManaged public var name: String?
     @NSManaged public var target: Int64
 

@@ -17,6 +17,8 @@ class DetailHistoryVC: UIViewController {
     @IBOutlet weak var imgMetal: UIImageView!
     @IBOutlet weak var imgOrganic: UIImageView!
     
+    var pickedDate = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

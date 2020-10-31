@@ -14,12 +14,15 @@ class SetTargetPresenter {
     func addCategoryTarget(name: String, target: Int) {
         if let appDelegate = appDelegate {
             let managedContext = appDelegate.persistentContainer.viewContext
-            
             let catEntity = NSEntityDescription.entity(forEntityName: "CategoryCD", in: managedContext)
-            
             let trashCategory = NSManagedObject(entity: catEntity!, insertInto: managedContext)
             
-            trashCategory.setValue(Date(), forKey: "date")
+            let date = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let dateGetter = dateFormatter.string(from: date)
+            
+            trashCategory.setValue(dateGetter, forKey: "date")
             trashCategory.setValue(target, forKey: "target")
             trashCategory.setValue(name, forKey: "name")
             
@@ -42,7 +45,12 @@ class SetTargetPresenter {
                 for n in 0...waste.count-1 {
                     let newTrash = NSManagedObject(entity: trashEntity!, insertInto: managedContext)
                     
-                    newTrash.setValue(Date(), forKey: "date")
+                    let date = Date()
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "dd/MM/yyyy"
+                    let dateGetter = dateFormatter.string(from: date)
+                    
+                    newTrash.setValue(dateGetter, forKey: "date")
                     newTrash.setValue(singleWaste.categoryName, forKey: "type")
                     newTrash.setValue(waste[n].wasteName, forKey: "name")
                     

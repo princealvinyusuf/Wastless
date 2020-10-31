@@ -16,8 +16,19 @@ class HistoryVC: UIViewController {
     @IBOutlet weak var viewDetail: UIView!
     @IBOutlet weak var lblChartDate: UILabel!
     
+    @IBOutlet weak var nextDayButton: UIButton!
+    @IBOutlet weak var prevDayButton: UIButton!
+    
+    @IBOutlet weak var lblDetailTotal: UILabel!
+    @IBOutlet weak var lblDetailDay: UILabel!
+    @IBOutlet weak var lblDetailDate: UILabel!
+    var presenter: HistoryPresenter?
+    var pickedDate = Date()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        presenter = HistoryPresenter()
+        updateDate()
 
         viewSummary.layer.cornerRadius = 15
         viewChart.layer.cornerRadius = 15
@@ -38,8 +49,10 @@ class HistoryVC: UIViewController {
 //        viewSummary.layer.shadowOpacity = 0.04
 //        viewChart.layer.shadowOpacity = 0.04
         
-        setupChart()
-        setDataChart()
+//        presenter?.getTrashData(date: "01/11/2020"){(totalTrash, totalTargetCategory) in
+//            self.setDataChart(countWaste: totalTrash, targetWaste: totalTargetCategory)
+//        }
+//        setupChart()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(detailPressed))
         viewDetail.addGestureRecognizer(tap)
@@ -50,6 +63,7 @@ class HistoryVC: UIViewController {
         let detailHistoryVC = storyboard.instantiateViewController(identifier: "DetailHistoryVC") as! DetailHistoryVC
         detailHistoryVC.transitioningDelegate = self
         detailHistoryVC.modalPresentationStyle = .custom
+        detailHistoryVC.pickedDate = pickedDate
         
         present(detailHistoryVC, animated: true, completion: nil)
     }
@@ -87,6 +101,43 @@ class HistoryVC: UIViewController {
         barChart.leadingAnchor.constraint(equalTo: viewChart.leadingAnchor, constant: 16).isActive = true
         barChart.trailingAnchor.constraint(equalTo: viewChart.trailingAnchor, constant: -16).isActive = true
     }
+    @IBAction func nextDayBtnPressed(_ sender: Any) {
+        pickedDate = Calendar.current.date(byAdding: .day , value: 1, to: pickedDate)!
+        updateDate()
+    }
+    @IBAction func prevDayButton(_ sender: Any) {
+        pickedDate = Calendar.current.date(byAdding: .day , value: -1, to: pickedDate)!
+        updateDate()
+    }
+    
+    func updateDate(){
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, MMM d"
+        
+        let dateFormatter2 = DateFormatter()
+        dateFormatter2.dateFormat = "dd/MM/yyyy"
+        
+        let dateFormatter3 = DateFormatter()
+        dateFormatter3.dateFormat = "EEEE"
+        
+        let dateFormatter4 = DateFormatter()
+        dateFormatter4.dateFormat = "d MMMM yyyy"
+        
+        let date = dateFormatter2.string(from: pickedDate)
+        
+        presenter?.getTrashData(date: date){(totalTrash, totalTargetCategory) in
+            self.setDataChart(countWaste: totalTrash, targetWaste: totalTargetCategory)
+        }
+        setupChart()
+        
+        lblChartDate.text = dateFormatter.string(from: pickedDate)
+        lblDetailDay.text = dateFormatter3.string(from: pickedDate)
+        lblDetailDate.text = dateFormatter4.string(from: pickedDate)
+        presenter?.getTotalWaste(date: date){(totalWaste) in
+            self.lblDetailTotal.text = String(totalWaste)
+            
+        }
+    }
 }
 
 extension HistoryVC: UIViewControllerTransitioningDelegate, BonsaiControllerDelegate {
@@ -99,3 +150,7 @@ extension HistoryVC: UIViewControllerTransitioningDelegate, BonsaiControllerDele
         return BonsaiController(fromDirection: .bottom, backgroundColor: UIColor(white: 0, alpha: 0.7), presentedViewController: presented, delegate: self)
     }
 }
+
+//extension HistoryVC: AppDelegate{
+//    
+//}
