@@ -120,7 +120,7 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" image="xmark.circle.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="btnCloseTapped:" destination="zXf-cQ-Oab" eventType="touchUpInside" id="wND-NE-tOQ"/>
+                                    <action selector="btnCloseTapped:" destination="zXf-cQ-Oab" eventType="touchUpInside" id="wpc-wQ-1dt"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="econovice" translatesAutoresizingMaskIntoConstraints="NO" id="sck-4C-cnL">
@@ -152,8 +152,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="315" height="400"/>
                     <connections>
-                        <outlet property="imgLevelUp" destination="sck-4C-cnL" id="C43-5m-SmD"/>
-                        <outlet property="lblLevelUp" destination="qbZ-nS-c9C" id="XeM-AA-1dn"/>
+                        <outlet property="imgLevelUp" destination="sck-4C-cnL" id="IMX-cj-tDu"/>
+                        <outlet property="lblLevelUp" destination="qbZ-nS-c9C" id="WQK-rk-hnr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CbV-oA-MZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

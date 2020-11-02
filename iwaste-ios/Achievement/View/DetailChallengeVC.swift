@@ -33,7 +33,7 @@ class DetailChallengeVC: UIViewController {
         }
         
         subView.layer.cornerRadius = 10
-        
+        btnDoneTheChallenge.layer.cornerRadius = 10
         for ach in udService.achievementArray {
             if ach == position {
                 btnDoneTheChallenge.isHidden = true

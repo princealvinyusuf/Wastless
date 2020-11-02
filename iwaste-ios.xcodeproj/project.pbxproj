@@ -19,9 +19,9 @@
 		591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D077A253D4B0C0008098A /* UserDefaultService.swift */; };
 		591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D077F253DF1BB0008098A /* CardCategoryCell.swift */; };
 		591D0782253DF1BB0008098A /* CardCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 591D0780253DF1BB0008098A /* CardCategoryCell.xib */; };
-		5928C90C25506B00003489C5 /* AlertLevelUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5928C90B25506B00003489C5 /* AlertLevelUpVC.swift */; };
 		5928C91025506BAA003489C5 /* AlertDoneChallengeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5928C90F25506BAA003489C5 /* AlertDoneChallengeVC.swift */; };
 		5928C91325506BB7003489C5 /* AlertUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5928C91225506BB7003489C5 /* AlertUtil.swift */; };
+		5928C916255074BA003489C5 /* AlertLevelUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5928C915255074BA003489C5 /* AlertLevelUpVC.swift */; };
 		5934E3342531FC480082D01D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3332531FC480082D01D /* AppDelegate.swift */; };
 		5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3352531FC480082D01D /* SceneDelegate.swift */; };
 		5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5934E3372531FC480082D01D /* TabMyWasteVC.swift */; };
@@ -84,9 +84,9 @@
 		591D077A253D4B0C0008098A /* UserDefaultService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultService.swift; sourceTree = "<group>"; };
 		591D077F253DF1BB0008098A /* CardCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCategoryCell.swift; sourceTree = "<group>"; };
 		591D0780253DF1BB0008098A /* CardCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CardCategoryCell.xib; sourceTree = "<group>"; };
-		5928C90B25506B00003489C5 /* AlertLevelUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLevelUpVC.swift; sourceTree = "<group>"; };
 		5928C90F25506BAA003489C5 /* AlertDoneChallengeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertDoneChallengeVC.swift; sourceTree = "<group>"; };
 		5928C91225506BB7003489C5 /* AlertUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertUtil.swift; sourceTree = "<group>"; };
+		5928C915255074BA003489C5 /* AlertLevelUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertLevelUpVC.swift; sourceTree = "<group>"; };
 		5934E3302531FC480082D01D /* iwaste-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iwaste-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5934E3332531FC480082D01D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5934E3352531FC480082D01D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -348,9 +348,9 @@
 			isa = PBXGroup;
 			children = (
 				59D26EE6255065D900E46F4E /* Alert.storyboard */,
-				5928C90B25506B00003489C5 /* AlertLevelUpVC.swift */,
 				5928C90F25506BAA003489C5 /* AlertDoneChallengeVC.swift */,
 				5928C91225506BB7003489C5 /* AlertUtil.swift */,
+				5928C915255074BA003489C5 /* AlertLevelUpVC.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -583,7 +583,6 @@
 				9FB82750254073670042E4C8 /* DetailChallengeVC.swift in Sources */,
 				595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */,
 				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
-				5928C90C25506B00003489C5 /* AlertLevelUpVC.swift in Sources */,
 				59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */,
 				591D06982537E37A0008098A /* ModelWaste.swift in Sources */,
 				59450D38254F0D46000357C2 /* ModelLevel.swift in Sources */,
@@ -604,6 +603,7 @@
 				9F1A43E1253E8C2200870DE8 /* BadgesVC.swift in Sources */,
 				59D2EFF12547CA9600EE1B8B /* CurrentWastePresenter.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
+				5928C916255074BA003489C5 /* AlertLevelUpVC.swift in Sources */,
 				591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */,
 				59AA9DEA2544413B0074644A /* HistoryVC.swift in Sources */,
 				9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */,

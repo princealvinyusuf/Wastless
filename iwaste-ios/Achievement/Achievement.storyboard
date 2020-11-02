@@ -182,10 +182,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mYH-dh-9r3">
-                                <rect key="frame" x="16" y="301.5" width="382" height="236"/>
+                                <rect key="frame" x="16" y="301.5" width="382" height="436.5"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lzp-tN-HlD">
-                                        <rect key="frame" x="8" y="3" width="366" height="230"/>
+                                        <rect key="frame" x="8" y="3" width="366" height="430.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Bring your own drink bottle is great for you and the environment. Here are some key reasons:
 
@@ -210,13 +210,13 @@
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTr-Po-4nW">
                                 <rect key="frame" x="20" y="758" width="374" height="50"/>
-                                <color key="backgroundColor" name="metalLabel"/>
+                                <color key="backgroundColor" name="navigationBarModal"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="cfn-FW-bQ9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
-                                <state key="normal" title="DONE THE CHALLENGE">
-                                    <color key="titleColor" name="navigationBarModal"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <state key="normal" title="Done the challenge">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="btnDoneTheChallengeTapped:" destination="mwR-Zw-rg3" eventType="touchUpInside" id="Nup-sH-MOL"/>
@@ -234,12 +234,12 @@
                             <constraint firstItem="OTr-Po-4nW" firstAttribute="leading" secondItem="DJl-5D-glQ" secondAttribute="leading" constant="20" id="FFD-mc-tsp"/>
                             <constraint firstItem="kGL-r1-hQ7" firstAttribute="leading" secondItem="DJl-5D-glQ" secondAttribute="leading" constant="24" id="PkN-8r-1qg"/>
                             <constraint firstItem="kGL-r1-hQ7" firstAttribute="top" secondItem="Bdn-cH-qa6" secondAttribute="bottom" constant="12" id="Q8E-et-whF"/>
+                            <constraint firstItem="OTr-Po-4nW" firstAttribute="top" secondItem="mYH-dh-9r3" secondAttribute="bottom" constant="20" id="Uc9-gv-0e8"/>
                             <constraint firstItem="mYH-dh-9r3" firstAttribute="width" secondItem="IPi-kD-UfG" secondAttribute="width" multiplier="0.922705" id="WAA-ge-tYl"/>
                             <constraint firstItem="vEV-6Q-Ll1" firstAttribute="trailing" secondItem="DJl-5D-glQ" secondAttribute="trailing" id="arY-m9-gw8"/>
                             <constraint firstItem="vEV-6Q-Ll1" firstAttribute="top" secondItem="DJl-5D-glQ" secondAttribute="top" id="gIS-ET-uhc"/>
                             <constraint firstItem="mYH-dh-9r3" firstAttribute="top" secondItem="kGL-r1-hQ7" secondAttribute="bottom" constant="18" id="gaL-In-xBA"/>
                             <constraint firstItem="vEV-6Q-Ll1" firstAttribute="leading" secondItem="DJl-5D-glQ" secondAttribute="leading" id="hc4-un-wKS"/>
-                            <constraint firstItem="mYH-dh-9r3" firstAttribute="height" secondItem="IPi-kD-UfG" secondAttribute="height" multiplier="0.280285" id="lit-QK-AeN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Nsm-Vr-3RY"/>
@@ -15163,9 +15163,6 @@ AA1PhgANT4gADU+KAA1PjAANT44ADWD6AA1g/wANYQwADWEPAA1hHAANYSEADWEpAA1hLAANYTEADWE5
 AAAAAAAABAEAAAAAAAAAVQAAAAAAAAAAAAAAAAANYTw
 </mutableData>
         </image>
-        <namedColor name="metalLabel">
-            <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="navigationBarModal">
             <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
