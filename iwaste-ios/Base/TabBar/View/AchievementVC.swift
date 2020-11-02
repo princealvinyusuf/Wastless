@@ -131,11 +131,17 @@ extension AchievementVC: AchievementDelegate {
         presenter?.loadDataLevel(completion: { (dataLevel, progress) in
             self.imgLevel.image = dataLevel.image
             self.lblLevelName.text = dataLevel.name
-            self.lblProgress.text = "\(progress)/\(dataLevel.maxPoint)"
             
             let floatProgress = Float(progress)/Float(dataLevel.maxPoint)
             print("ffll: ", floatProgress)
-            self.linearProgressAchievement.setProgress(floatProgress, animated: true)
+            
+            if UserDefaultService.instance.level == Level.ecoMaster.rawValue {
+                self.linearProgressAchievement.setProgress(1, animated: true)
+                self.lblProgress.text = "MAX"
+            } else {
+                self.lblProgress.text = "\(progress)/\(dataLevel.maxPoint)"
+                self.linearProgressAchievement.setProgress(floatProgress, animated: true)
+            }
         })
     }
 }

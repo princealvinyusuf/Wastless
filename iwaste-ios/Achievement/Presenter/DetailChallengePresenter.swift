@@ -25,8 +25,8 @@ class DetailChallengePresenter {
         let level = Level(rawValue: udService.level)
         
         if position < arrayChallenge.count-1 {
-            let selectedChallenge = arrayChallenge[position]
-            let nextChallenge = arrayChallenge[position+1]
+            _ = arrayChallenge[position]
+            _ = arrayChallenge[position+1]
             
             udService.achievementArray.append(position)
             

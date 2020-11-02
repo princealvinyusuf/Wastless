@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "eco_novice.pdf",
+      "idiom" : "universal",
+      "locale" : "C1"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

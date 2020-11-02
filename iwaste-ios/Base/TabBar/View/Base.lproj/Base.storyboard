@@ -768,7 +768,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-F1-EQ2">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="econovice" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-F1-EQ2">
                                 <rect key="frame" x="167.5" y="56" width="79" height="79"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="79" id="Oak-rR-xVj"/>
@@ -828,7 +828,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6M-7t-AJp">
                                 <rect key="frame" x="0.0" y="312.5" width="414" height="500.5"/>
                             </containerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="uEI-b3-t0n">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="uEI-b3-t0n">
                                 <rect key="frame" x="84" y="169.5" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="J8W-gt-qJI"/>
@@ -898,15 +898,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="avatar" width="80" height="80"/>
         <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="coin" width="67" height="67"/>
+        <image name="econovice" width="500" height="500"/>
         <image name="oval" width="10" height="10"/>
         <image name="oval_" width="10" height="10"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <image name="setTarget" width="512" height="512"/>
+        <image name="star" width="500" height="462"/>
         <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="wasteBasket" width="500" height="468"/>
         <namedColor name="glass">

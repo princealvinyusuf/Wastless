@@ -46,9 +46,12 @@ class DetailChallengeVC: UIViewController {
     }
     
     @IBAction func btnDoneTheChallengeTapped(_ sender: UIButton) {
-        let alert = UIAlertController(title: "DONE THE CHALLENGE?", message: "Are you sure done the challenge", preferredStyle: .alert)
+        let alert = UIAlertController(
+            title: "Are you sure to finish this challenge ?",
+            message: "If your level has gone up, this challenge will be locked.",
+            preferredStyle: .alert)
         
-        let okAction = UIAlertAction(title: "OK", style: .default) { (action) in
+        let okAction = UIAlertAction(title: "Yes, I’m sure", style: .default) { (action) in
             self.presenter?.doneChallenge(at: self.position!)
         }
         alert.addAction(okAction)
@@ -69,4 +72,12 @@ extension DetailChallengeVC: DetailChallengeDelegate {
         delegate?.refreshView()
         self.dismiss(animated: true, completion: nil)
     }
+}
+
+extension DetailChallengeVC: AlertDoneDelegate {
+    func doneChallenge() {
+        self.presenter?.doneChallenge(at: self.position!)
+    }
+    
+    
 }

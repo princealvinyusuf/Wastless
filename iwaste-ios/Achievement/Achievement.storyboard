@@ -65,7 +65,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coin" translatesAutoresizingMaskIntoConstraints="NO" id="jgs-is-esJ">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="jgs-is-esJ">
                                                     <rect key="frame" x="105" y="58" width="24" height="24"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="24" id="AxE-nl-dC1"/>
@@ -534,10 +534,10 @@
         <image name="badges2" width="152" height="191"/>
         <image name="badges3" width="153" height="191"/>
         <image name="badges4" width="153" height="190"/>
-        <image name="coin" width="67" height="67"/>
         <image name="inputBattery" width="500" height="500"/>
-        <image name="lock" width="512" height="512"/>
         <image name="lock" catalog="system" width="128" height="128"/>
+        <image name="lock" width="512" height="512"/>
+        <image name="star" width="500" height="462"/>
         <image name="tabBarItem:lDw-oI-3XJ:image" width="106" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T

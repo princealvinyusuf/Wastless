@@ -104,10 +104,8 @@ extension ChallengesVC: ChallengesDelegate {
         refreshView()
         
         DispatchQueue.main.async {
-            let alert = UIAlertController(title: "Congratulations!", message: "Your level is up", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-            
+            let util = AlertUtil()
+            util.showAlertLevelUp(parentVC: self)
         }
         
     }

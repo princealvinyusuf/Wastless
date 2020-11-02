@@ -1,0 +1,13 @@
+{
+  "images" : [
+    {
+      "filename" : "star.pdf",
+      "idiom" : "universal",
+      "locale" : "C1"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
