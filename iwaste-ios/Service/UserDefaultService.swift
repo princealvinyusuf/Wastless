@@ -15,6 +15,10 @@ class UserDefaultService {
     fileprivate let isFirstLaunchedKey = "welcomeShown"
     fileprivate let isTargetSetKey = "isTargetSetKey"
     
+    fileprivate let levelKey = "levelKey"
+    fileprivate let achievementArrayKey = "achievementArrayKey"
+    fileprivate let coinKey = "coinKey"
+    
     var isFirstLaunched: Bool {
         get {
             return def.bool(forKey: isFirstLaunchedKey)
@@ -32,4 +36,32 @@ class UserDefaultService {
             def.set(newValue, forKey: isTargetSetKey)
         }
     }
+    
+    //MARK: - Achievement Section
+    var level: String {
+        get {
+            return def.string(forKey: levelKey) ?? ""
+        }
+        set {
+            def.set(newValue, forKey: levelKey)
+        }
+    }
+    
+    var achievementArray: [Int] {
+        get {
+            return def.array(forKey: achievementArrayKey) as? [Int] ?? [Int]()
+        }
+        set {
+            def.set(newValue, forKey: achievementArrayKey)
+        }
+    }
+    
+//    var coin: Int {
+//        get {
+//            return def.integer(forKey: coinKey)
+//        }
+//        set {
+//            def.set(newValue, forKey: coinKey)
+//        }
+//    }
 }

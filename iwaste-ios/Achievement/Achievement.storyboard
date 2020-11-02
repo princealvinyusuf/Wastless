@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
@@ -13,7 +13,7 @@
         <!--First Segmented-->
         <scene sceneID="Cni-Nu-agS">
             <objects>
-                <viewController storyboardIdentifier="FirstSegmentedVC" id="9ao-eG-A7j" userLabel="First Segmented" customClass="FirstSegmentedVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChallengesVC" id="9ao-eG-A7j" userLabel="First Segmented" customClass="ChallengesVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X0s-4J-MCc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,7 +72,7 @@
                                                         <constraint firstAttribute="width" constant="24" id="CRr-rc-FYK"/>
                                                     </constraints>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTt-yH-P94">
+                                                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTt-yH-P94">
                                                     <rect key="frame" x="356" y="40" width="30" height="30"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="30" id="eG7-fd-dLw"/>
@@ -82,11 +82,21 @@
                                                         <action selector="btnCheckBoxTapped:" destination="pAN-FQ-zkW" eventType="touchUpInside" id="gNd-4c-xfp"/>
                                                     </connections>
                                                 </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jhs-Or-CSr">
+                                                    <rect key="frame" x="375" y="15.5" width="24" height="22.5"/>
+                                                    <color key="tintColor" systemColor="labelColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="24" id="1ML-Ty-DeZ"/>
+                                                        <constraint firstAttribute="width" secondItem="jhs-Or-CSr" secondAttribute="height" multiplier="1:1" id="1rs-88-tEZ"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="7iF-Ud-LlB" firstAttribute="leading" secondItem="jgs-is-esJ" secondAttribute="leading" id="2VJ-t5-NKh"/>
+                                                <constraint firstItem="jhs-Or-CSr" firstAttribute="top" secondItem="G5U-vl-LjW" secondAttribute="topMargin" constant="4" id="4P7-wr-VSM"/>
                                                 <constraint firstItem="7iF-Ud-LlB" firstAttribute="top" secondItem="zKR-Vk-FGr" secondAttribute="top" id="7ka-TS-aiS"/>
                                                 <constraint firstItem="5Zo-KE-t4X" firstAttribute="top" secondItem="G5U-vl-LjW" secondAttribute="top" constant="8" id="9HK-bM-zIf"/>
+                                                <constraint firstItem="jhs-Or-CSr" firstAttribute="trailing" secondItem="G5U-vl-LjW" secondAttribute="trailingMargin" constant="5" id="Br1-v2-AyK"/>
                                                 <constraint firstItem="7iF-Ud-LlB" firstAttribute="trailing" secondItem="G5U-vl-LjW" secondAttribute="trailingMargin" id="Has-PB-jQ1"/>
                                                 <constraint firstItem="zKR-Vk-FGr" firstAttribute="leading" secondItem="G5U-vl-LjW" secondAttribute="leading" constant="15" id="KIl-QM-5em"/>
                                                 <constraint firstAttribute="bottom" secondItem="5Zo-KE-t4X" secondAttribute="bottom" constant="8" id="Mx0-Iy-pTQ"/>
@@ -106,6 +116,7 @@
                                             <outlet property="btnCheckBox" destination="KTt-yH-P94" id="ehq-qz-YAD"/>
                                             <outlet property="coinLabel" destination="qwy-i4-snK" id="jeW-8D-FNN"/>
                                             <outlet property="iconImage" destination="zKR-Vk-FGr" id="rrH-6d-1Va"/>
+                                            <outlet property="imgLock" destination="jhs-Or-CSr" id="tpx-Nh-Cuq"/>
                                             <outlet property="subView" destination="5Zo-KE-t4X" id="BqE-cW-Zzg"/>
                                             <outlet property="titleLabel" destination="7iF-Ud-LlB" id="eKL-2O-9wK"/>
                                             <segue destination="mwR-Zw-rg3" kind="show" identifier="DetailChallenge" id="hnA-S6-soj"/>
@@ -131,7 +142,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MF1-0a-AOf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="954" y="798"/>
+            <point key="canvasLocation" x="953.62318840579712" y="797.54464285714278"/>
         </scene>
         <!--Detail ChallengeVC-->
         <scene sceneID="yF5-3p-5C9">
@@ -148,7 +159,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Challenge" id="Kdy-se-KU7">
-                                        <barButtonItem key="rightBarButtonItem" title="Done" id="Fua-k0-zrW">
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="Fua-k0-zrW">
                                             <color key="tintColor" name="navigationBarModal"/>
                                             <connections>
                                                 <action selector="btnDone:" destination="mwR-Zw-rg3" id="3VH-Au-N6t"/>
@@ -197,13 +208,30 @@
                                     <constraint firstItem="Lzp-tN-HlD" firstAttribute="leading" secondItem="mYH-dh-9r3" secondAttribute="leading" constant="8" id="uyZ-LJ-O6K"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OTr-Po-4nW">
+                                <rect key="frame" x="20" y="758" width="374" height="50"/>
+                                <color key="backgroundColor" name="metalLabel"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cfn-FW-bQ9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                                <state key="normal" title="DONE THE CHALLENGE">
+                                    <color key="titleColor" name="navigationBarModal"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDoneTheChallengeTapped:" destination="mwR-Zw-rg3" eventType="touchUpInside" id="Nup-sH-MOL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DJl-5D-glQ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="DJl-5D-glQ" firstAttribute="bottom" secondItem="OTr-Po-4nW" secondAttribute="bottom" id="34o-RQ-jqx"/>
                             <constraint firstItem="mYH-dh-9r3" firstAttribute="centerX" secondItem="DJl-5D-glQ" secondAttribute="centerX" id="41n-b2-x5N"/>
+                            <constraint firstItem="DJl-5D-glQ" firstAttribute="trailing" secondItem="OTr-Po-4nW" secondAttribute="trailing" constant="20" id="6qo-tE-9B4"/>
                             <constraint firstItem="Bdn-cH-qa6" firstAttribute="top" secondItem="vEV-6Q-Ll1" secondAttribute="bottom" constant="25" id="Dli-ph-GQD"/>
                             <constraint firstItem="Bdn-cH-qa6" firstAttribute="centerX" secondItem="IPi-kD-UfG" secondAttribute="centerX" id="EI9-zX-EcE"/>
+                            <constraint firstItem="OTr-Po-4nW" firstAttribute="leading" secondItem="DJl-5D-glQ" secondAttribute="leading" constant="20" id="FFD-mc-tsp"/>
                             <constraint firstItem="kGL-r1-hQ7" firstAttribute="leading" secondItem="DJl-5D-glQ" secondAttribute="leading" constant="24" id="PkN-8r-1qg"/>
                             <constraint firstItem="kGL-r1-hQ7" firstAttribute="top" secondItem="Bdn-cH-qa6" secondAttribute="bottom" constant="12" id="Q8E-et-whF"/>
                             <constraint firstItem="mYH-dh-9r3" firstAttribute="width" secondItem="IPi-kD-UfG" secondAttribute="width" multiplier="0.922705" id="WAA-ge-tYl"/>
@@ -216,6 +244,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Nsm-Vr-3RY"/>
                     <connections>
+                        <outlet property="btnDoneTheChallenge" destination="OTr-Po-4nW" id="vyU-vH-wFb"/>
                         <outlet property="challengeImageView" destination="Bdn-cH-qa6" id="A72-RP-3Ca"/>
                         <outlet property="contentTextView" destination="Lzp-tN-HlD" id="VF9-MJ-Vn7"/>
                         <outlet property="subView" destination="mYH-dh-9r3" id="dt4-FX-So0"/>
@@ -226,10 +255,10 @@
             </objects>
             <point key="canvasLocation" x="1827.5362318840582" y="797.54464285714278"/>
         </scene>
-        <!--Second SegmentedVC-->
+        <!--BadgesVC-->
         <scene sceneID="nVK-c3-gKy">
             <objects>
-                <viewController storyboardIdentifier="SecondSegmentedVC" id="88t-Ve-7Bx" customClass="SecondSegmentedVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="BadgesVC" id="88t-Ve-7Bx" customClass="BadgesVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AOf-B4-qpT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -432,10 +461,10 @@
             </objects>
             <point key="canvasLocation" x="2669.5652173913045" y="831.69642857142856"/>
         </scene>
-        <!--MedalsVC-->
+        <!--Detail BadgesVC-->
         <scene sceneID="f4B-VQ-wpZ">
             <objects>
-                <viewController storyboardIdentifier="MedalsVC" id="B0l-3l-8Zz" customClass="MedalsVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedalsVC" id="B0l-3l-8Zz" customClass="DetailBadgesVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vPo-Hs-Sk5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -508,6 +537,7 @@
         <image name="coin" width="67" height="67"/>
         <image name="inputBattery" width="500" height="500"/>
         <image name="lock" width="512" height="512"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
         <image name="tabBarItem:lDw-oI-3XJ:image" width="106" height="128">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
@@ -15133,6 +15163,9 @@ AA1PhgANT4gADU+KAA1PjAANT44ADWD6AA1g/wANYQwADWEPAA1hHAANYSEADWEpAA1hLAANYTEADWE5
 AAAAAAAABAEAAAAAAAAAVQAAAAAAAAAAAAAAAAANYTw
 </mutableData>
         </image>
+        <namedColor name="metalLabel">
+            <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="navigationBarModal">
             <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

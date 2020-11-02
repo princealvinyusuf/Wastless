@@ -1,5 +1,5 @@
 //
-//  SecondSegmentedVC.swift
+//  BadgesVC.swift
 //  iwaste-ios
 //
 //  Created by Prince Alvin Yusuf on 20/10/20.
@@ -8,7 +8,7 @@
 import UIKit
 import BonsaiController
 
-class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate {
+class BadgesVC: UIViewController, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var subViewDay: UIView!
     @IBOutlet weak var subViewWeek: UIView!
@@ -35,25 +35,25 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
     
 
     func subViewConfigure() {
-        tapGesture = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped(_:)))
+        tapGesture = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped(_:)))
         tapGesture.numberOfTapsRequired = 1
         tapGesture.numberOfTouchesRequired = 1
         subViewDay.addGestureRecognizer(tapGesture)
         subViewDay.isUserInteractionEnabled = true
         
-        tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped2(_:)))
+        tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped2(_:)))
         tapGesture2.numberOfTapsRequired = 1
         tapGesture2.numberOfTouchesRequired = 1
         subViewWeek.addGestureRecognizer(tapGesture2)
         subViewWeek.isUserInteractionEnabled = true
         
-        tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped3(_:)))
+        tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped3(_:)))
         tapGesture3.numberOfTapsRequired = 1
         tapGesture3.numberOfTouchesRequired = 1
         subViewMonth.addGestureRecognizer(tapGesture3)
         subViewMonth.isUserInteractionEnabled = true
         
-        tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(SecondSegmentedVC.subViewTapped4(_:)))
+        tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped4(_:)))
         tapGesture4.numberOfTapsRequired = 1
         tapGesture4.numberOfTouchesRequired = 1
         subViewYear.addGestureRecognizer(tapGesture4)
@@ -62,29 +62,29 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
     
     @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
-        SecondSegmentedVC.globalVariable.medals = "DayMedals"
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
+        BadgesVC.globalVariable.medals = "DayMedals"
         self.present(secondSegmentedVC, animated: true, completion: nil)
     }
     
     @objc func subViewTapped2(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
-        SecondSegmentedVC.globalVariable.medals = "WeekMedals"
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
+        BadgesVC.globalVariable.medals = "WeekMedals"
         self.present(secondSegmentedVC, animated: true, completion: nil)
     }
     
     @objc func subViewTapped3(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
-        SecondSegmentedVC.globalVariable.medals = "MonthMedals"
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
+        BadgesVC.globalVariable.medals = "MonthMedals"
         self.present(secondSegmentedVC, animated: true, completion: nil)
     }
     
     @objc func subViewTapped4(_ sender: UITapGestureRecognizer) {
         let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! MedalsVC
-        SecondSegmentedVC.globalVariable.medals = "YearMedals"
+        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
+        BadgesVC.globalVariable.medals = "YearMedals"
         self.present(secondSegmentedVC, animated: true, completion: nil)
     }
 
@@ -94,7 +94,7 @@ class SecondSegmentedVC: UIViewController, UIViewControllerTransitioningDelegate
     
 }
 
-extension SecondSegmentedVC: BonsaiControllerDelegate {
+extension BadgesVC: BonsaiControllerDelegate {
  
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         

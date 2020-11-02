@@ -25,6 +25,8 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         let slides = createSlides()
         setupScrollView(slides)
+        
+        UserDefaultService.instance.level = Level.novice.rawValue
     }
     
     func createSlides() ->[SlideView]{

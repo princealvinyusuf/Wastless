@@ -8,24 +8,27 @@
 import UIKit
 import LinearProgressView
 
-class AchievementVC: UIViewController {
+protocol AchievementDelegate {
+    func refreshView()
+    func upgradeLevel()
+}
 
+class AchievementVC: UIViewController {
     
     @IBOutlet weak var linearProgressAchievement: LinearProgressView!
-    @IBOutlet weak var totalCoinLabel: UILabel!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var imgLevel: UIImageView!
+    @IBOutlet weak var lblLevelName: UILabel!
+    @IBOutlet weak var lblProgress: UILabel!
     
-    
+    var presenter: AchievementPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        totalCoinLabel.layer.cornerRadius = 8
-        totalCoinLabel.layer.masksToBounds = true
+        presenter = AchievementPresenter()
         
         segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
 
-        
         linearProgressAchievement.animationDuration = 0.5
         linearProgressAchievement.barColor = #colorLiteral(red: 1, green: 0.7568627451, blue: 0.7294117647, alpha: 1)
         linearProgressAchievement.trackColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
@@ -33,6 +36,8 @@ class AchievementVC: UIViewController {
         updateLinearProgress()
         
         self.setupView()
+        
+        refreshView()
     }
     
     @objc
@@ -45,21 +50,22 @@ class AchievementVC: UIViewController {
     func setupView() {
         updateView()
     }
-    
-    private lazy var summaryViewController: FirstSegmentedVC = {
+
+    private lazy var summaryViewController: ChallengesVC = {
         let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "FirstSegmentedVC") as! FirstSegmentedVC
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ChallengesVC") as! ChallengesVC
+        viewController.delegate = self
         self.add(asChildViewController: viewController)
         
         return viewController
     }()
     
-    private lazy var sessionsViewController: SecondSegmentedVC = {
+    private lazy var sessionsViewController: BadgesVC = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
         
         // Instantiate View Controller
-        var viewController = storyboard.instantiateViewController(withIdentifier: "SecondSegmentedVC") as! SecondSegmentedVC
+        var viewController = storyboard.instantiateViewController(withIdentifier: "BadgesVC") as! BadgesVC
         
         // Add View Controller as Child View Controller
         self.add(asChildViewController: viewController)
@@ -113,12 +119,23 @@ class AchievementVC: UIViewController {
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+}
+
+extension AchievementVC: AchievementDelegate {
+    func upgradeLevel() {
+        
+        refreshView()
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
+    func refreshView() {
+        presenter?.loadDataLevel(completion: { (dataLevel, progress) in
+            self.imgLevel.image = dataLevel.image
+            self.lblLevelName.text = dataLevel.name
+            self.lblProgress.text = "\(progress)/\(dataLevel.maxPoint)"
+            
+            let floatProgress = Float(progress)/Float(dataLevel.maxPoint)
+            print("ffll: ", floatProgress)
+            self.linearProgressAchievement.setProgress(floatProgress, animated: true)
+        })
     }
-    
 }

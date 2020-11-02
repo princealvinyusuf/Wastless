@@ -25,6 +25,9 @@
 		5934E33B2531FC480082D01D /* Base.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5934E3392531FC480082D01D /* Base.storyboard */; };
 		5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5934E33C2531FC480082D01D /* iwaste_ios.xcdatamodeld */; };
 		5934E3432531FC4A0082D01D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5934E3412531FC4A0082D01D /* LaunchScreen.storyboard */; };
+		59450D38254F0D46000357C2 /* ModelLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450D37254F0D46000357C2 /* ModelLevel.swift */; };
+		59450D3D254F14E0000357C2 /* AchievementPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450D3C254F14E0000357C2 /* AchievementPresenter.swift */; };
+		59450D44254F8280000357C2 /* DetailChallengePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59450D43254F8280000357C2 /* DetailChallengePresenter.swift */; };
 		595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90EF2536A50A004D40CE /* HorizontalModalListView.swift */; };
 		595F90F22536A50A004D40CE /* HorizontalModalListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F90F02536A50A004D40CE /* HorizontalModalListView.xib */; };
 		595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F42536A521004D40CE /* WasteViewCell.swift */; };
@@ -42,13 +45,13 @@
 		59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFF32547D81500EE1B8B /* SetTargetPresenter.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
 		9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DA253E89F800870DE8 /* AchievementVC.swift */; };
-		9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */; };
-		9F1A43E1253E8C2200870DE8 /* SecondSegmentedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */; };
+		9F1A43DE253E8BCA00870DE8 /* ChallengesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DD253E8BCA00870DE8 /* ChallengesVC.swift */; };
+		9F1A43E1253E8C2200870DE8 /* BadgesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E0253E8C2200870DE8 /* BadgesVC.swift */; };
 		9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E3253E8F3C00870DE8 /* TableCell.swift */; };
 		9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E7253E8FDA00870DE8 /* Challenge.swift */; };
 		9F1E14ED25412E9800946F71 /* Achievement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F1E14EC25412E9800946F71 /* Achievement.storyboard */; };
 		9F38E9B0253C203B00B13E7A /* SetTargetVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */; };
-		9F4143972540234500B738A0 /* MedalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4143962540234500B738A0 /* MedalsVC.swift */; };
+		9F4143972540234500B738A0 /* DetailBadgesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4143962540234500B738A0 /* DetailBadgesVC.swift */; };
 		9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA32253A60DF00EB8056 /* SlideView.swift */; };
 		9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F42AA38253A632F00EB8056 /* WelcomeVC.swift */; };
 		9F42AA3C253A68A800EB8056 /* Slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9F42AA36253A621E00EB8056 /* Slide.xib */; };
@@ -86,6 +89,9 @@
 		5934E33F2531FC4A0082D01D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5934E3422531FC4A0082D01D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5934E3442531FC4A0082D01D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		59450D37254F0D46000357C2 /* ModelLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelLevel.swift; sourceTree = "<group>"; };
+		59450D3C254F14E0000357C2 /* AchievementPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementPresenter.swift; sourceTree = "<group>"; };
+		59450D43254F8280000357C2 /* DetailChallengePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailChallengePresenter.swift; sourceTree = "<group>"; };
 		595F90EF2536A50A004D40CE /* HorizontalModalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalModalListView.swift; sourceTree = "<group>"; };
 		595F90F02536A50A004D40CE /* HorizontalModalListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HorizontalModalListView.xib; sourceTree = "<group>"; };
 		595F90F42536A521004D40CE /* WasteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteViewCell.swift; sourceTree = "<group>"; };
@@ -104,13 +110,13 @@
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9F1A43DA253E89F800870DE8 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
-		9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstSegmentedVC.swift; sourceTree = "<group>"; };
-		9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondSegmentedVC.swift; sourceTree = "<group>"; };
+		9F1A43DD253E8BCA00870DE8 /* ChallengesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesVC.swift; sourceTree = "<group>"; };
+		9F1A43E0253E8C2200870DE8 /* BadgesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesVC.swift; sourceTree = "<group>"; };
 		9F1A43E3253E8F3C00870DE8 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		9F1A43E7253E8FDA00870DE8 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
 		9F1E14EC25412E9800946F71 /* Achievement.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Achievement.storyboard; sourceTree = "<group>"; };
 		9F38E9AF253C203B00B13E7A /* SetTargetVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetVC.swift; sourceTree = "<group>"; };
-		9F4143962540234500B738A0 /* MedalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalsVC.swift; sourceTree = "<group>"; };
+		9F4143962540234500B738A0 /* DetailBadgesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBadgesVC.swift; sourceTree = "<group>"; };
 		9F42AA32253A60DF00EB8056 /* SlideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideView.swift; sourceTree = "<group>"; };
 		9F42AA36253A621E00EB8056 /* Slide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Slide.xib; sourceTree = "<group>"; };
 		9F42AA38253A632F00EB8056 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
@@ -256,6 +262,14 @@
 			path = "iwaste-ios";
 			sourceTree = "<group>";
 		};
+		59450D3A254F1496000357C2 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				59450D43254F8280000357C2 /* DetailChallengePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
 		595F90EE2536A4C2004D40CE /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -317,6 +331,7 @@
 			children = (
 				59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */,
 				A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */,
+				59450D3C254F14E0000357C2 /* AchievementPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -357,6 +372,7 @@
 			children = (
 				9F1E14E825412E2F00946F71 /* Model */,
 				9F1E14E925412E4500946F71 /* View */,
+				59450D3A254F1496000357C2 /* Presenter */,
 				9F1E14EC25412E9800946F71 /* Achievement.storyboard */,
 			);
 			path = Achievement;
@@ -366,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				9F1A43E7253E8FDA00870DE8 /* Challenge.swift */,
+				59450D37254F0D46000357C2 /* ModelLevel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,10 +391,10 @@
 			isa = PBXGroup;
 			children = (
 				9F1E14EA25412E6F00946F71 /* Cell */,
-				9F1A43DD253E8BCA00870DE8 /* FirstSegmentedVC.swift */,
-				9F1A43E0253E8C2200870DE8 /* SecondSegmentedVC.swift */,
-				9F4143962540234500B738A0 /* MedalsVC.swift */,
+				9F1A43DD253E8BCA00870DE8 /* ChallengesVC.swift */,
 				9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */,
+				9F1A43E0253E8C2200870DE8 /* BadgesVC.swift */,
+				9F4143962540234500B738A0 /* DetailBadgesVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -540,12 +557,14 @@
 				A824EB99254DDDAF0096975E /* TrashCD+CoreDataClass.swift in Sources */,
 				595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */,
 				591D06DF253B02390008098A /* CurrentViewCell.swift in Sources */,
+				59450D3D254F14E0000357C2 /* AchievementPresenter.swift in Sources */,
 				59AA9E0425448D6B0074644A /* DetailHistoryVC.swift in Sources */,
 				9FB82750254073670042E4C8 /* DetailChallengeVC.swift in Sources */,
 				595F90F12536A50A004D40CE /* HorizontalModalListView.swift in Sources */,
 				595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */,
 				59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */,
 				591D06982537E37A0008098A /* ModelWaste.swift in Sources */,
+				59450D38254F0D46000357C2 /* ModelLevel.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
@@ -558,7 +577,7 @@
 				A824EB97254DDDAF0096975E /* CategoryCD+CoreDataClass.swift in Sources */,
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
-				9F1A43E1253E8C2200870DE8 /* SecondSegmentedVC.swift in Sources */,
+				9F1A43E1253E8C2200870DE8 /* BadgesVC.swift in Sources */,
 				59D2EFF12547CA9600EE1B8B /* CurrentWastePresenter.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
 				591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */,
@@ -570,10 +589,11 @@
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				59AA9E0025448BE20074644A /* DetailHistoryCell.swift in Sources */,
 				591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */,
-				9F4143972540234500B738A0 /* MedalsVC.swift in Sources */,
+				9F4143972540234500B738A0 /* DetailBadgesVC.swift in Sources */,
 				59AA9DF3254473060074644A /* ChartService.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
-				9F1A43DE253E8BCA00870DE8 /* FirstSegmentedVC.swift in Sources */,
+				9F1A43DE253E8BCA00870DE8 /* ChallengesVC.swift in Sources */,
+				59450D44254F8280000357C2 /* DetailChallengePresenter.swift in Sources */,
 				A824EB98254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 			);

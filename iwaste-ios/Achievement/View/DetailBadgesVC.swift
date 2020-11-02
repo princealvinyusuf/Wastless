@@ -1,5 +1,5 @@
 //
-//  MedalsVC.swift
+//  DetailBadgesVC.swift
 //  iwaste-ios
 //
 //  Created by Prince Alvin Yusuf on 21/10/20.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MedalsVC: UIViewController {
+class DetailBadgesVC: UIViewController {
     
     
     @IBOutlet weak var medalsImageView: UIImageView!
@@ -18,7 +18,7 @@ class MedalsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let medals = SecondSegmentedVC.globalVariable.medals
+        let medals = BadgesVC.globalVariable.medals
         
         if medals == "DayMedals" {
             medalsImageView.image = UIImage(named: "badges1")
