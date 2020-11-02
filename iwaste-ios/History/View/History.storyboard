@@ -3,7 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -250,7 +250,13 @@
                         <outlet property="imgOrganic" destination="WjT-Ml-89N" id="c0e-QI-a8S"/>
                         <outlet property="imgPaper" destination="YqL-pp-qY5" id="Njd-Mz-0ZZ"/>
                         <outlet property="imgPlastic" destination="EqO-0v-jRr" id="LiS-p3-5fe"/>
+                        <outlet property="lblGlassCount" destination="RhM-JJ-HLb" id="I9e-CZ-lxo"/>
+                        <outlet property="lblMetalCount" destination="wYl-oB-uUt" id="X6g-en-rGk"/>
+                        <outlet property="lblOrganicCount" destination="DZs-tH-2Bq" id="2QV-Zs-7JU"/>
+                        <outlet property="lblPaperCount" destination="CFq-VY-n4F" id="dmd-ac-Wu3"/>
+                        <outlet property="lblPlasticCount" destination="xdo-sS-p55" id="abO-dB-y1t"/>
                         <outlet property="tableView" destination="Swg-Pc-5HK" id="drE-Qb-OBT"/>
+                        <outlet property="txtTitle" destination="ZRC-yK-GWS" id="bPV-JC-ObA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJu-mO-CVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

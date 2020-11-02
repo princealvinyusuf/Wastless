@@ -22,6 +22,16 @@ class MyWastePresenter {
         self.delegate = delegate
     }
     
+    func getDate() -> String{
+        //Check today date
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = ("dd/MM/yyyy")
+        let datenow = dateFormatter.string(from: date)
+        
+        return datenow
+    }
+    
     func loadCategory() {
         var categories: [CategoryCD]?
         if let appDelegate = appDelegate {
@@ -46,7 +56,13 @@ class MyWastePresenter {
         if let appDelegate = appDelegate {
             let managedContext = appDelegate.persistentContainer.viewContext
             let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-            trashRequest.predicate = NSPredicate(format: "type=%@", type.rawValue)
+            
+            
+            //trashRequest.predicate = NSPredicate(format: "type=%@", type.rawValue)
+            let datePredicate = NSPredicate(format: "date=%@", getDate())
+            let typePredicate = NSPredicate(format: "type=%@", type.rawValue)
+            trashRequest.predicate = NSCompoundPredicate(type: .and, subpredicates: [datePredicate, typePredicate])
+            
             trashRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
             do {
                 try trashes = managedContext.fetch(trashRequest)
@@ -83,6 +99,7 @@ class MyWastePresenter {
         if let appDelegate = appDelegate {
             let managedContext = appDelegate.persistentContainer.viewContext
             let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+            trashRequest.predicate = NSPredicate(format: "date=%@", self.getDate())
             trashRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
             do {
                 try trashes = managedContext.fetch(trashRequest)
@@ -116,5 +133,33 @@ class MyWastePresenter {
         formatter.dateStyle = .full
         
         completion(formatter.string(from: userCalendar))
+    }
+    
+    func checkTodayData() -> Bool{
+        
+        var isempty:Bool = true
+        
+        //check core data
+        var trashes = [TrashCD]()
+        if let appDelegate = appDelegate {
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+            trashRequest.predicate = NSPredicate(format: "date=%@", self.getDate())
+            trashRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
+            do {
+                try trashes = managedContext.fetch(trashRequest)
+            } catch {
+                print("Error Data could not be shown")
+            }
+            
+            //Check if coredata empty or no
+            if(trashes.isEmpty){
+                isempty = false
+
+            }else{
+                isempty = true
+            }
+        }
+        return isempty
     }
 }
