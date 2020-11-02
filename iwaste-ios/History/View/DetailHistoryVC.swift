@@ -17,11 +17,24 @@ class DetailHistoryVC: UIViewController {
     @IBOutlet weak var imgMetal: UIImageView!
     @IBOutlet weak var imgOrganic: UIImageView!
     
+
+    @IBOutlet weak var lblPlasticCount: UILabel!
+    @IBOutlet weak var lblGlassCount: UILabel!
+    @IBOutlet weak var lblPaperCount: UILabel!
+    @IBOutlet weak var lblMetalCount: UILabel!
+    @IBOutlet weak var lblOrganicCount: UILabel!
+    
+    
+    @IBOutlet weak var txtTitle: UINavigationItem!
+    
+    
     var pickedDate = Date()
+    var presenter: DetailHistoryPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        presenter = DetailHistoryPresenter()
+        updateUI()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "DetailHistoryCell", bundle: self.nibBundle), forCellReuseIdentifier: "detailHistoryCell")
@@ -31,11 +44,31 @@ class DetailHistoryVC: UIViewController {
         imgPaper.image = UIImage(named: "trashbinpaper")
         imgMetal.image = UIImage(named: "trashbinmetal")
         imgOrganic.image = UIImage(named: "trashbinorganic")
+//        
+//        presenter?.dateChecker(date: pickedDate){(date) in
+//            self.txtTitle.title = date
+//        }
+        
         
     }
     
     @IBAction func btnCancelPressed(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    func updateUI(){
+        presenter?.dateChecker(date: pickedDate){(date, dateCD)in
+            self.txtTitle.title = date
+            self.presenter?.loadTrashData(date: dateCD){(trashCount)in
+                self.lblPlasticCount.text = String(trashCount[0])
+                self.lblGlassCount.text = String(trashCount[1])
+                self.lblPaperCount.text = String(trashCount[2])
+                self.lblMetalCount.text = String(trashCount[3])
+                self.lblOrganicCount.text = String(trashCount[4])
+                
+            }
+            
+        }
     }
 }
 

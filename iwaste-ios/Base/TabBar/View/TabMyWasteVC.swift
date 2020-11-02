@@ -47,6 +47,7 @@ class TabMyWasteVC: UIViewController {
         super.viewDidLoad()
         
         presenter = MyWastePresenter(delegate: self)
+        let isEmpty = presenter?.checkTodayData()
         
         linearProgressPlastics.animationDuration = 0.5
         linearProgressPlastics.barColor = K.Color.colorPlasticSoft
@@ -90,6 +91,14 @@ class TabMyWasteVC: UIViewController {
             main(isHidden: false)
             target(isHidden: true)
         } else {
+            main(isHidden: true)
+            target(isHidden: false)
+        }
+        
+        if isEmpty!{
+            main(isHidden: false)
+            target(isHidden: true)
+        }else{
             main(isHidden: true)
             target(isHidden: false)
         }
