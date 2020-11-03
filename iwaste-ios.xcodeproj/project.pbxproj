@@ -44,6 +44,9 @@
 		59AA9E0125448BE20074644A /* DetailHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59AA9DFF25448BE20074644A /* DetailHistoryCell.xib */; };
 		59AA9E0425448D6B0074644A /* DetailHistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9E0325448D6B0074644A /* DetailHistoryVC.swift */; };
 		59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */; };
+		59C8D2D72550DD9F00E55CF2 /* BadgeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8D2D52550DD9F00E55CF2 /* BadgeViewCell.swift */; };
+		59C8D2D82550DD9F00E55CF2 /* BadgeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8D2D62550DD9F00E55CF2 /* BadgeViewCell.xib */; };
+		59C8D2DB2550E08800E55CF2 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8D2DA2550E08800E55CF2 /* Badges.swift */; };
 		59D26EE7255065D900E46F4E /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D26EE6255065D900E46F4E /* Alert.storyboard */; };
 		59D2EFF12547CA9600EE1B8B /* CurrentWastePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFF02547CA9600EE1B8B /* CurrentWastePresenter.swift */; };
 		59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFF32547D81500EE1B8B /* SetTargetPresenter.swift */; };
@@ -111,6 +114,9 @@
 		59AA9DFF25448BE20074644A /* DetailHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailHistoryCell.xib; sourceTree = "<group>"; };
 		59AA9E0325448D6B0074644A /* DetailHistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHistoryVC.swift; sourceTree = "<group>"; };
 		59B2F63025471AE80010DCA4 /* MyWastePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWastePresenter.swift; sourceTree = "<group>"; };
+		59C8D2D52550DD9F00E55CF2 /* BadgeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewCell.swift; sourceTree = "<group>"; };
+		59C8D2D62550DD9F00E55CF2 /* BadgeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeViewCell.xib; sourceTree = "<group>"; };
+		59C8D2DA2550E08800E55CF2 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
 		59D26EE6255065D900E46F4E /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		59D2EFF02547CA9600EE1B8B /* CurrentWastePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWastePresenter.swift; sourceTree = "<group>"; };
 		59D2EFF32547D81500EE1B8B /* SetTargetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetPresenter.swift; sourceTree = "<group>"; };
@@ -402,6 +408,7 @@
 			children = (
 				9F1A43E7253E8FDA00870DE8 /* Challenge.swift */,
 				59450D37254F0D46000357C2 /* ModelLevel.swift */,
+				59C8D2DA2550E08800E55CF2 /* Badges.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -423,6 +430,8 @@
 			isa = PBXGroup;
 			children = (
 				9F1A43E3253E8F3C00870DE8 /* TableCell.swift */,
+				59C8D2D52550DD9F00E55CF2 /* BadgeViewCell.swift */,
+				59C8D2D62550DD9F00E55CF2 /* BadgeViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -513,6 +522,7 @@
 				5934E33B2531FC480082D01D /* Base.storyboard in Resources */,
 				595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */,
 				591D06D4253839880008098A /* HorizontalModalCurrentWaste.xib in Resources */,
+				59C8D2D82550DD9F00E55CF2 /* BadgeViewCell.xib in Resources */,
 				59D26EE7255065D900E46F4E /* Alert.storyboard in Resources */,
 				9F1E14ED25412E9800946F71 /* Achievement.storyboard in Resources */,
 				59450D4E25506328000357C2 /* Assets.xcassets in Resources */,
@@ -588,6 +598,7 @@
 				59450D38254F0D46000357C2 /* ModelLevel.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				5928C91325506BB7003489C5 /* AlertUtil.swift in Sources */,
+				59C8D2D72550DD9F00E55CF2 /* BadgeViewCell.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
 				59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */,
@@ -618,6 +629,7 @@
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
 				9F1A43DE253E8BCA00870DE8 /* ChallengesVC.swift in Sources */,
 				59450D44254F8280000357C2 /* DetailChallengePresenter.swift in Sources */,
+				59C8D2DB2550E08800E55CF2 /* Badges.swift in Sources */,
 				A824EB98254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 			);

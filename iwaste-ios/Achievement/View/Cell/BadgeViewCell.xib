@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="badgeViewCell" id="gTV-IL-0wX" customClass="BadgeViewCell" customModule="iwaste_ios" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bRT-WJ-asp">
+                        <rect key="frame" x="0.0" y="0.0" width="170" height="180"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blankBadges" translatesAutoresizingMaskIntoConstraints="NO" id="SCj-wY-GR4">
+                                <rect key="frame" x="10" y="0.0" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SCj-wY-GR4" secondAttribute="height" multiplier="1:1" id="44P-sT-uPG"/>
+                                    <constraint firstAttribute="width" constant="150" id="msY-IU-BWb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trash Picker" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BN9-gN-T6Y">
+                                <rect key="frame" x="44" y="142" width="82" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BN9-gN-T6Y" firstAttribute="centerX" secondItem="bRT-WJ-asp" secondAttribute="centerX" id="3ph-nd-Fms"/>
+                            <constraint firstItem="BN9-gN-T6Y" firstAttribute="top" secondItem="SCj-wY-GR4" secondAttribute="bottom" constant="-8" id="EA0-kp-Axv"/>
+                            <constraint firstItem="SCj-wY-GR4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bRT-WJ-asp" secondAttribute="leading" id="Knh-Rl-RqT"/>
+                            <constraint firstItem="SCj-wY-GR4" firstAttribute="centerX" secondItem="bRT-WJ-asp" secondAttribute="centerX" id="fPR-bB-AGD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SCj-wY-GR4" secondAttribute="trailing" id="vVT-Tr-GDm"/>
+                            <constraint firstItem="SCj-wY-GR4" firstAttribute="top" secondItem="bRT-WJ-asp" secondAttribute="top" id="zKc-oO-INx"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="bRT-WJ-asp" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="590-Sq-EaS"/>
+                <constraint firstItem="bRT-WJ-asp" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="8E7-oT-c1I"/>
+                <constraint firstAttribute="bottom" secondItem="bRT-WJ-asp" secondAttribute="bottom" id="Lw6-E8-Axv"/>
+                <constraint firstAttribute="trailing" secondItem="bRT-WJ-asp" secondAttribute="trailing" id="poq-Dq-Bbt"/>
+            </constraints>
+            <connections>
+                <outlet property="imgBadge" destination="SCj-wY-GR4" id="uua-lA-O9C"/>
+                <outlet property="lblTitleBadge" destination="BN9-gN-T6Y" id="jSn-Bf-O4Z"/>
+            </connections>
+            <point key="canvasLocation" x="121.73913043478262" y="86.383928571428569"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="blankBadges" width="500" height="589"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,87 +10,44 @@ import BonsaiController
 
 class BadgesVC: UIViewController, UIViewControllerTransitioningDelegate {
 
-    @IBOutlet weak var subViewDay: UIView!
-    @IBOutlet weak var subViewWeek: UIView!
-    @IBOutlet weak var subViewMonth: UIView!
-    @IBOutlet weak var subViewYear: UIView!
+    @IBOutlet weak var collectionBadges: UICollectionView!
     
-    var tapGesture = UITapGestureRecognizer()
-    var tapGesture2 = UITapGestureRecognizer()
-    var tapGesture3 = UITapGestureRecognizer()
-    var tapGesture4 = UITapGestureRecognizer()
+    let arrayBadges = Badges.createBadges()
+    var udService = UserDefaultService.instance
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        subViewConfigure()
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "MedalsVC"{
-            segue.destination.transitioningDelegate = self
-            segue.destination.modalPresentationStyle = .custom
-        }
-    }
-    
-
-    func subViewConfigure() {
-        tapGesture = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped(_:)))
-        tapGesture.numberOfTapsRequired = 1
-        tapGesture.numberOfTouchesRequired = 1
-        subViewDay.addGestureRecognizer(tapGesture)
-        subViewDay.isUserInteractionEnabled = true
         
-        tapGesture2 = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped2(_:)))
-        tapGesture2.numberOfTapsRequired = 1
-        tapGesture2.numberOfTouchesRequired = 1
-        subViewWeek.addGestureRecognizer(tapGesture2)
-        subViewWeek.isUserInteractionEnabled = true
+        collectionBadges.delegate = self
+        collectionBadges.dataSource = self
+        collectionBadges.register(UINib(nibName: "BadgeViewCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "badgeViewCell")
         
-        tapGesture3 = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped3(_:)))
-        tapGesture3.numberOfTapsRequired = 1
-        tapGesture3.numberOfTouchesRequired = 1
-        subViewMonth.addGestureRecognizer(tapGesture3)
-        subViewMonth.isUserInteractionEnabled = true
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.itemSize = CGSize(width: 170, height: 180)
+        flowLayout.minimumLineSpacing = 2.0
+        flowLayout.minimumInteritemSpacing = 5.0
+        collectionBadges.collectionViewLayout = flowLayout
         
-        tapGesture4 = UITapGestureRecognizer(target: self, action: #selector(BadgesVC.subViewTapped4(_:)))
-        tapGesture4.numberOfTapsRequired = 1
-        tapGesture4.numberOfTouchesRequired = 1
-        subViewYear.addGestureRecognizer(tapGesture4)
-        subViewYear.isUserInteractionEnabled = true
     }
     
-    @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
-        BadgesVC.globalVariable.medals = "DayMedals"
-        self.present(secondSegmentedVC, animated: true, completion: nil)
-    }
-    
-    @objc func subViewTapped2(_ sender: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
-        BadgesVC.globalVariable.medals = "WeekMedals"
-        self.present(secondSegmentedVC, animated: true, completion: nil)
-    }
-    
-    @objc func subViewTapped3(_ sender: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
-        BadgesVC.globalVariable.medals = "MonthMedals"
-        self.present(secondSegmentedVC, animated: true, completion: nil)
-    }
-    
-    @objc func subViewTapped4(_ sender: UITapGestureRecognizer) {
-        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
-        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
-        BadgesVC.globalVariable.medals = "YearMedals"
-        self.present(secondSegmentedVC, animated: true, completion: nil)
-    }
-
-    struct globalVariable {
-        static var medals = String();
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "MedalsVC"{
+//            segue.destination.transitioningDelegate = self
+//            segue.destination.modalPresentationStyle = .custom
+//        }
+//    }
+//
+//    @objc func subViewTapped(_ sender: UITapGestureRecognizer) {
+//        let storyboard = UIStoryboard(name: "Achievement", bundle: nil)
+//        let secondSegmentedVC = storyboard.instantiateViewController(identifier: "MedalsVC") as! DetailBadgesVC
+//        BadgesVC.globalVariable.medals = "DayMedals"
+//        self.present(secondSegmentedVC, animated: true, completion: nil)
+//    }
+//
+//    struct globalVariable {
+//        static var medals = String();
+//    }
     
 }
 
@@ -108,3 +65,23 @@ extension BadgesVC: BonsaiControllerDelegate {
     }
 }
 
+extension BadgesVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return arrayBadges.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "badgeViewCell", for: indexPath) as? BadgeViewCell else {return UICollectionViewCell()}
+        let badge = arrayBadges[indexPath.row]
+        cell.configureCell(badge: badge)
+         
+        let arrayDate = udService.badgeObtainedDateArray
+        for _ in 0...arrayDate.count {
+            cell.imgBadge.image = UIImage(named: "blankBadges")!
+        }
+        
+        return cell
+    }
+    
+    
+}

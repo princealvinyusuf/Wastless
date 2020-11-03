@@ -43,7 +43,7 @@ extension Challenge {
                 title: "Bring Your Cutleries",
                 image: "cutleries",
                 point: 200,
-                challengeDetail: "If you are using disposable utensils, you are wasting oil, cutting trees, burning waste and causing global warming. You can stop this today. here are some key reason :\n \n1. Bringing Your Own Cutlery Can Help the Plastic Problem \n2. Zero disposable utensils means zero extra waste \n3. Reusable \n4. saving money \n5. Save The environment",
+                challengeDetail: "If you are using disposable utensils, you are wasting oil, cutting trees, bur{ning waste and causing global warming. You can stop this today. here are some key reason :\n \n1. Bringing Your Own Cutlery Can Help the Plastic Problem \n2. Zero disposable utensils means zero extra waste \n3. Reusable \n4. saving money \n5. Save The environment",
                 level: .ecoStarter),
             
             Challenge(

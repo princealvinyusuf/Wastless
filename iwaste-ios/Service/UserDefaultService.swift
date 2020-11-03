@@ -18,6 +18,7 @@ class UserDefaultService {
     fileprivate let levelKey = "levelKey"
     fileprivate let achievementArrayKey = "achievementArrayKey"
     fileprivate let coinKey = "coinKey"
+    fileprivate let badgeObtainedDateArrayKey = "badgeObtainedDateArrayKey"
     
     var isFirstLaunched: Bool {
         get {
@@ -53,6 +54,15 @@ class UserDefaultService {
         }
         set {
             def.set(newValue, forKey: achievementArrayKey)
+        }
+    }
+    
+    var badgeObtainedDateArray: [Date] {
+        get {
+            return def.array(forKey: badgeObtainedDateArrayKey) as? [Date] ?? [Date]()
+        }
+        set {
+            def.set(newValue, forKey: badgeObtainedDateArrayKey)
         }
     }
     

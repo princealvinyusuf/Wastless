@@ -2,8 +2,7 @@
   "images" : [
     {
       "filename" : "star.pdf",
-      "idiom" : "universal",
-      "locale" : "C1"
+      "idiom" : "universal"
     }
   ],
   "info" : {

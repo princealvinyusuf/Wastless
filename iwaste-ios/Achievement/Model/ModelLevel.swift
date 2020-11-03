@@ -26,7 +26,7 @@ func getDataLevel(level: Level) -> ModelLevel {
     
     switch level {
     case .novice:
-        model = ModelLevel(name: "Novice", image: UIImage(named: "ecostarter")!, minPoint: 0, maxPoint: 100)
+        model = ModelLevel(name: "Novice", image: UIImage(named: "econovice")!, minPoint: 0, maxPoint: 100)
     case .ecoStarter:
         model = ModelLevel(name: "Eco Starter", image: UIImage(named: "ecostarter")!, minPoint: 100, maxPoint: 300)
     case .ecoFriendly:
