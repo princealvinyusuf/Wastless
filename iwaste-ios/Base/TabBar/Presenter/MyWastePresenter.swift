@@ -58,7 +58,7 @@ class MyWastePresenter {
             let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
             
             
-            //trashRequest.predicate = NSPredicate(format: "type=%@", type.rawValue)
+           //PREDICATE
             let datePredicate = NSPredicate(format: "date=%@", getDate())
             let typePredicate = NSPredicate(format: "type=%@", type.rawValue)
             trashRequest.predicate = NSCompoundPredicate(type: .and, subpredicates: [datePredicate, typePredicate])

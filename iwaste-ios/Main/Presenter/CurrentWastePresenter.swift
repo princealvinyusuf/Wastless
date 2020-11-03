@@ -22,12 +22,22 @@ class CurrentWastePresenter {
     init(delegate: CurrentWasteDelegate) {
         self.delegate = delegate
     }
+    func getDate() -> String{
+        //Check today date
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = ("dd/MM/yyyy")
+        let datenow = dateFormatter.string(from: date)
+        
+        return datenow
+    }
     
     func loadCategories() {
         var categories: [CategoryCD]?
         if let appDelegate = appDelegate {
             let managedContext = appDelegate.persistentContainer.viewContext
             let catRequest: NSFetchRequest<CategoryCD> = CategoryCD.fetchRequest()
+            catRequest.predicate = NSPredicate(format: "date=%@", getDate())
             catRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
             do {
                 try categories = managedContext.fetch(catRequest)
@@ -45,7 +55,10 @@ class CurrentWastePresenter {
         if let appDelegate = appDelegate {
             let managedContext = appDelegate.persistentContainer.viewContext
             let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-            trashRequest.predicate = NSPredicate(format: "type=%@", type.rawValue)
+            
+            let datePredicate = NSPredicate(format: "date=%@", getDate())
+            let typePredicate = NSPredicate(format: "type=%@", type.rawValue)
+            trashRequest.predicate = NSCompoundPredicate(type: .and, subpredicates: [datePredicate, typePredicate])
             trashRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
             
             do {
