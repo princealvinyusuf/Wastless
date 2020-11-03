@@ -64,4 +64,12 @@ class SetTargetPresenter {
             
         }
     }
+    func showDate(completion: @escaping (_ date: String)->()){
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "EEEE, d MMMM yyyy"
+        let todaydate = dateFormatter.string(from: date)
+        
+        completion(todaydate)
+    }
 }

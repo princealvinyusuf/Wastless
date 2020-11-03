@@ -16,6 +16,7 @@ class SetTargetVC: UIViewController {
     @IBOutlet weak var paperTF: UITextField!
     @IBOutlet weak var metalTF: UITextField!
     @IBOutlet weak var organicTF: UITextField!
+    @IBOutlet weak var txtDate: UILabel!
     
     var presenter: SetTargetPresenter?
     var delegate: WasteTargetDelegate?
@@ -26,6 +27,9 @@ class SetTargetVC: UIViewController {
         super.viewDidLoad()
         self.isModalInPresentation = true
         presenter = SetTargetPresenter()
+        presenter?.showDate(){(date) in
+            self.txtDate.text = date
+        }
     }
     
     @IBAction func doneTappedButton(_ sender: Any) {

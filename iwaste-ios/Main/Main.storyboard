@@ -428,6 +428,7 @@
                         <outlet property="organicTF" destination="epv-i8-06W" id="Zks-F7-DNm"/>
                         <outlet property="paperTF" destination="tlb-pv-uSl" id="NvV-QP-cc2"/>
                         <outlet property="plasticTF" destination="Ebm-QT-WYA" id="HYF-N1-a8E"/>
+                        <outlet property="txtDate" destination="kKx-6h-TcK" id="VfL-Gc-buk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QPD-Vx-W87" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
