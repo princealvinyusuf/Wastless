@@ -116,10 +116,15 @@ class AddNewWasteVC: UIViewController {
     
     func addData(){
         if(listWasteAdded.count>=1){
+            let todayDate = Date()
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy"
+            let date = dateFormatter.string(from: todayDate)
+            
             for data in listWasteAdded{
                 //Putting Data in Array
                 let dataRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-                dataRequest.predicate = NSPredicate(format: "name=%@ AND type=%@", data.waste.wasteName, selectedCategory!.categoryName)
+                dataRequest.predicate = NSPredicate(format: "name=%@ AND type=%@ AND date=%@", data.waste.wasteName, selectedCategory!.categoryName, date)
                 do{
                     try trashData = managedObjectContext!.fetch(dataRequest)
                 }catch{

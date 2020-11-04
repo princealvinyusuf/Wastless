@@ -70,6 +70,7 @@
 		A824EB9A254DDDAF0096975E /* TrashCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */; };
 		A824EBA2254DDF9D0096975E /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */; };
 		A824EBA5254E13D10096975E /* DetailHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */; };
+		A8AF7E192558CE2D00BF5FD1 /* ModelWasteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF7E182558CE2D00BF5FD1 /* ModelWasteHistory.swift */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
 
@@ -144,6 +145,7 @@
 		A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrashCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailHistoryPresenter.swift; path = "iwaste-ios/Base/TabBar/Presenter/DetailHistoryPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		A8AF7E182558CE2D00BF5FD1 /* ModelWasteHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWasteHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -298,6 +300,7 @@
 		59AA9DE52543EB590074644A /* History */ = {
 			isa = PBXGroup;
 			children = (
+				A8AF7E162558CC8700BF5FD1 /* Model */,
 				59AA9DE62543EB7E0074644A /* View */,
 				59AA9DE72543EB850074644A /* Presenter */,
 			);
@@ -458,6 +461,14 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
+		A8AF7E162558CC8700BF5FD1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A8AF7E182558CE2D00BF5FD1 /* ModelWasteHistory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -609,6 +620,7 @@
 				A824EB9A254DDDAF0096975E /* TrashCD+CoreDataProperties.swift in Sources */,
 				591D077B253D4B0D0008098A /* UserDefaultService.swift in Sources */,
 				A824EB97254DDDAF0096975E /* CategoryCD+CoreDataClass.swift in Sources */,
+				A8AF7E192558CE2D00BF5FD1 /* ModelWasteHistory.swift in Sources */,
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
 				9F1A43E1253E8C2200870DE8 /* BadgesVC.swift in Sources */,

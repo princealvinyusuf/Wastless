@@ -12,7 +12,7 @@ let barChart = BarChartView()
 
 extension HistoryVC: ChartViewDelegate {
     
-    func setDataChart(countWaste: [Int], targetWaste: [Int]) {
+    func setDataChart(countWaste: [Int], targetWaste: [Int], selectedHistory: String) {
         //let countWaste: [Int] = [17, 43, 9, 26, 55]
         //let targetWaste: [Int] = [20, 24, 28, 32, 66]
         
@@ -58,7 +58,14 @@ extension HistoryVC: ChartViewDelegate {
         
         let groupSpaces = groupChartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
         
-        barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Plastics", "Glass", "Papers", "Metals", "Organics"])
+        
+        //If Daily Or Weekly
+        if selectedHistory == "daily" {
+            barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Plastics", "Glass", "Papers", "Metals", "Organics"])
+        }else if selectedHistory == "weekly"{
+            barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Week 1", "Week 2", "Week 3", "Week 4"])
+        }
+        
         barChart.xAxis.axisMinimum = 0
         barChart.xAxis.axisMaximum = groupSpaces * 5 / 2
         barChart.xAxis.centerAxisLabelsEnabled = true
