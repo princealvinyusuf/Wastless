@@ -258,7 +258,7 @@
         <!--Detail BadgesVC-->
         <scene sceneID="f4B-VQ-wpZ">
             <objects>
-                <viewController storyboardIdentifier="MedalsVC" id="B0l-3l-8Zz" customClass="DetailBadgesVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailBadgesVC" id="B0l-3l-8Zz" customClass="DetailBadgesVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vPo-Hs-Sk5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -272,25 +272,28 @@
                                     <navigationItem title="Badges" id="5Th-aJ-zt7">
                                         <barButtonItem key="rightBarButtonItem" title="Done" id="1g9-cl-D0L">
                                             <color key="tintColor" name="navigationBarModal"/>
+                                            <connections>
+                                                <action selector="btnDoneTapped:" destination="B0l-3l-8Zz" id="v8T-Bk-sBR"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WdX-6E-4B8">
-                                <rect key="frame" x="122" y="113" width="170" height="179"/>
+                                <rect key="frame" x="82" y="113" width="250" height="300"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="179" id="I59-oV-7HD"/>
-                                    <constraint firstAttribute="width" constant="170" id="UnX-7A-CYr"/>
+                                    <constraint firstAttribute="width" constant="250" id="UnX-7A-CYr"/>
+                                    <constraint firstAttribute="width" secondItem="WdX-6E-4B8" secondAttribute="height" multiplier="5:6" id="oSj-eQ-c1j"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20 October 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t21-ng-hMs">
-                                <rect key="frame" x="141" y="310" width="132" height="21"/>
+                                <rect key="frame" x="141" y="431" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" name="navigationBarModal"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You will earn this medal if you keep your trash bin lower than 50 trash in a week. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="flB-2x-GzU">
-                                <rect key="frame" x="52" y="339" width="310" height="33.5"/>
+                                <rect key="frame" x="52" y="460" width="310" height="33.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

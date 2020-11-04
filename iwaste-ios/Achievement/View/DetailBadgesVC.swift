@@ -16,36 +16,42 @@ class DetailBadgesVC: UIViewController {
     var pos: Int?
     var badge: Badges?
     
+    let udService = UserDefaultService.instance
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        let medals = BadgesVC.globalVariable.medals
-//
-//        if medals == "DayMedals" {
-//            medalsImageView.image = UIImage(named: "badges1")
-//            dateObtainedLabel.text = "15 December 2020"
-//            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
-//        }
-//
-//        if medals == "WeekMedals" {
-//            medalsImageView.image = UIImage(named: "badges2")
-//            dateObtainedLabel.text = "16 December 2020"
-//            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
-//        }
-//
-//        if medals == "MonthMedals" {
-//            medalsImageView.image = UIImage(named: "badges3")
-//            dateObtainedLabel.text = "17 December 2020"
-//            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
-//        }
-//
-//        if medals == "YearMedals" {
-//            medalsImageView.image = UIImage(named: "badges4")
-//            dateObtainedLabel.text = "18 December 2020"
-//            requirementLabel.text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week."
-//        }
-//
+        let arrayDateObtained = udService.badgeObtainedDateArray
+        
+        if pos! <= arrayDateObtained.count-1 {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd MMMM yyyy"
+            let stringDate = dateFormatter.string(from: arrayDateObtained[pos!])
+            dateObtainedLabel.text = stringDate
+            
+            medalsImageView.image = badge?.image
+        } else {
+            dateObtainedLabel.text = badge?.title
+            medalsImageView.image = UIImage(named: "blankBadges")!
+        }
+        
+        requirementLabel.text = badge?.title
+        
+        let header = "You will earn this medal if you keep your trash bin lower than \(String(describing: badge!.missionBin))"
+        var center = " and finish challenge "
+        let footer = " in a week."
+        
+        if !(badge?.missionChallenge.isEmpty)! {
+            center = center + "\(String(describing: badge!.missionChallenge.map{"\($0+1)"}.joined(separator: " and ")))"
+            
+            requirementLabel.text = header + center + footer
+        } else {
+            requirementLabel.text = header + footer
+        }
         
     }
-
+    
+    @IBAction func btnDoneTapped(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
 }
