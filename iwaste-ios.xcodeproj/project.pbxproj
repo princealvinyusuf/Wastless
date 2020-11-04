@@ -70,6 +70,7 @@
 		A824EB9A254DDDAF0096975E /* TrashCD+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */; };
 		A824EBA2254DDF9D0096975E /* HistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */; };
 		A824EBA5254E13D10096975E /* DetailHistoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */; };
+		A860DC432552BE3D0094A4C6 /* ModalSummary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A860DC422552BE3D0094A4C6 /* ModalSummary.swift */; };
 		A8AF7E192558CE2D00BF5FD1 /* ModelWasteHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8AF7E182558CE2D00BF5FD1 /* ModelWasteHistory.swift */; };
 		B4B3B194540C520EED42AE48 /* Pods_iwaste_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */; };
 /* End PBXBuildFile section */
@@ -145,6 +146,7 @@
 		A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrashCD+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		A824EBA1254DDF9D0096975E /* HistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryPresenter.swift; sourceTree = "<group>"; };
 		A824EBA4254E13D10096975E /* DetailHistoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailHistoryPresenter.swift; path = "iwaste-ios/Base/TabBar/Presenter/DetailHistoryPresenter.swift"; sourceTree = SOURCE_ROOT; };
+		A860DC422552BE3D0094A4C6 /* ModalSummary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalSummary.swift; sourceTree = "<group>"; };
 		A8AF7E182558CE2D00BF5FD1 /* ModelWasteHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWasteHistory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,6 +339,7 @@
 		59B2F62E25471A9C0010DCA4 /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
+				A860DC412552BE2E0094A4C6 /* Modal */,
 				591D077D253DF1860008098A /* View */,
 				59B2F62F25471AB00010DCA4 /* Presenter */,
 			);
@@ -447,6 +450,14 @@
 				9F42AA38253A632F00EB8056 /* WelcomeVC.swift */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A860DC412552BE2E0094A4C6 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				A860DC422552BE3D0094A4C6 /* ModalSummary.swift */,
+			);
+			path = Modal;
 			sourceTree = "<group>";
 		};
 		A87451FB253FACF200F03F79 /* CoreData */ = {
@@ -609,6 +620,7 @@
 				59450D38254F0D46000357C2 /* ModelLevel.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				5928C91325506BB7003489C5 /* AlertUtil.swift in Sources */,
+				A860DC432552BE3D0094A4C6 /* ModalSummary.swift in Sources */,
 				59C8D2D72550DD9F00E55CF2 /* BadgeViewCell.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,

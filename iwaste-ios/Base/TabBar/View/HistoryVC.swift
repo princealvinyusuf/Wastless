@@ -22,6 +22,10 @@ class HistoryVC: UIViewController {
     @IBOutlet weak var lblDetailTotal: UILabel!
     @IBOutlet weak var lblDetailDay: UILabel!
     @IBOutlet weak var lblDetailDate: UILabel!
+    
+    @IBOutlet weak var lblSummary: UILabel!
+    @IBOutlet weak var lblSummaryDetail: UILabel!
+    
     var presenter: HistoryPresenter?
     var pickedDate = Date()
     var selectedHistory: String = "daily"
@@ -35,20 +39,26 @@ class HistoryVC: UIViewController {
         viewChart.layer.cornerRadius = 15
         viewDetail.layer.cornerRadius = 11
         
-        viewSummary.backgroundColor = UIColor.darkGray
-        viewChart.backgroundColor = UIColor.darkGray
+        //viewSummary.layer.cornerRadius = 10
+//        viewSummary.layer.shadowColor = UIColor.black.cgColor
+//        viewSummary.layer.shadowOpacity = 0.5
+//        viewSummary.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        viewSummary.layer.shadowRadius = 25.0
         
-//        viewSummary.layer.shadowColor = UIColor.white.cgColor
-//        viewChart.layer.shadowColor = UIColor.white.cgColor
-//        
-//        viewSummary.layer.shadowRadius = 5
-//        viewChart.layer.shadowRadius = 5
-//        
-//        viewSummary.layer.shadowOffset = CGSize(width: 0, height: 2)
-//        viewChart.layer.shadowOffset = CGSize(width: 0, height: 2)
-//        
-//        viewSummary.layer.shadowOpacity = 0.04
-//        viewChart.layer.shadowOpacity = 0.04
+//        viewSummary.backgroundColor = UIColor.darkGray
+//        viewChart.backgroundColor = UIColor.darkGray
+        
+        viewSummary.layer.shadowColor = UIColor.black.cgColor
+        viewChart.layer.shadowColor = UIColor.black.cgColor
+
+        viewSummary.layer.shadowRadius = 5
+        viewChart.layer.shadowRadius = 5
+
+        viewSummary.layer.shadowOffset = CGSize(width: 0, height: 2)
+        viewChart.layer.shadowOffset = CGSize(width: 0, height: 2)
+
+        viewSummary.layer.shadowOpacity = 0.3
+        viewChart.layer.shadowOpacity = 0.3
         
 //        presenter?.getTrashData(date: "01/11/2020"){(totalTrash, totalTargetCategory) in
 //            self.setDataChart(countWaste: totalTrash, targetWaste: totalTargetCategory)
@@ -171,21 +181,43 @@ class HistoryVC: UIViewController {
         case "daily":
             presenter?.getTrashData(date: date){(totalTrash, totalTarget) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
+                
+                //Function to show Summary
+                let totalData = totalTrash.reduce(0, +)
+                if totalData == 0{
+                    self.lblSummaryDetail.text = dailySummary[5]
+                }else{
+                    let highestTrashCount = totalTrash.max()
+                    let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
+                    self.lblSummaryDetail.text = dailySummary[indexofTrash!]
+                }
             }
             lblChartDate.text = dateFormatter.string(from: pickedDate)
             lblDetailDay.text = dateFormatter3.string(from: pickedDate)
             lblDetailDate.text = dateFormatter4.string(from: pickedDate)
+            lblSummary.text = "Daily Summary"
         case "weekly":
             presenter?.getTotalWasteWeekly(date:pickedDate){(totalTrash, totalTarget) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
+                
+                //Function to show Summary
+                let totalData = totalTrash.reduce(0, +)
+                if totalData == 0{
+                    self.lblSummaryDetail.text = weeklySummary[5]
+                }else{
+                    let highestTrashCount = totalTrash.max()
+                    let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
+                    self.lblSummaryDetail.text = weeklySummary[indexofTrash!]
+                }
             }
             lblChartDate.text = dateFormatter5.string(from: pickedDate)
             lblDetailDay.text = dateFormatter6.string(from: pickedDate)
             lblDetailDate.text = dateFormatter7.string(from: pickedDate)
+            lblSummary.text = "Weekly Summary"
         case "monthly":
-            print("test3")
+            print("Monthly")
         default:
-            print("hehe")
+            print("Default")
         }
         
         setupChart()
