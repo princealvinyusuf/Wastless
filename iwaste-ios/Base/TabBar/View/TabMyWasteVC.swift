@@ -8,6 +8,7 @@
 import UIKit
 import LinearProgressView
 import WaveAnimationView
+import UserNotifications
 
 protocol WasteTargetDelegate {
     func updateUI()
@@ -118,6 +119,13 @@ class TabMyWasteVC: UIViewController {
         presenter?.getTodayDate(completion: { (date) in
             self.dateNavigationBar.title = "\(date)"
         })
+        
+        UNUserNotificationCenter.current().delegate = self
+        
+        let isBadgeComplete = BadgeService.isBadgeComplete()
+        if isBadgeComplete {
+            NotificationService.instance.scheduleNotification()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -130,6 +138,10 @@ class TabMyWasteVC: UIViewController {
             self.present(welcomeVC, animated:true, completion:nil)
             return
         }
+    }
+    
+    @IBAction func dateTappedForNotifTest(_ sender: Any) {
+        NotificationService.instance.scheduleNotification()
     }
     
     func subViewConfigure() {
@@ -280,4 +292,12 @@ extension TabMyWasteVC: MyWasteDelegate {
     func dataCategoriesFail(error: Error) {
         print("error data categories: ", error.localizedDescription)
     }
+}
+
+extension TabMyWasteVC: UNUserNotificationCenterDelegate {
+
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        completionHandler([.alert])
+    }
+    
 }

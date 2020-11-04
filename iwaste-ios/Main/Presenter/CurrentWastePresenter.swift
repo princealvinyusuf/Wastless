@@ -22,6 +22,7 @@ class CurrentWastePresenter {
     init(delegate: CurrentWasteDelegate) {
         self.delegate = delegate
     }
+    
     func getDate() -> String{
         //Check today date
         let date = Date()
@@ -47,6 +48,7 @@ class CurrentWastePresenter {
         }
         
         delegate?.loadCategoriesSuccess(cat: categories!)
+        print("ccat: ", categories)
     }
     
     private func loadDataTrash(type: WasteType) -> TrashData {
@@ -69,6 +71,16 @@ class CurrentWastePresenter {
         }
         
         let trashData = TrashData(trashname: type.rawValue, trash: trashes)
+        
+        print("ttrashh: ", trashes)
+        
+        let dateFormat = "dd/MM/yyyy"
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = dateFormat
+        for trash in trashes {
+            let datee = dateFormatter.date(from: trash.date!)
+            print("weekNum: ", datee!.weekOfMonth)
+        }
         return trashData
     }
     

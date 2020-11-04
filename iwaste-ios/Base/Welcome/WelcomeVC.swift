@@ -27,6 +27,18 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
         setupScrollView(slides)
         
         UserDefaultService.instance.level = Level.novice.rawValue
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { (granted, err) in
+            guard err == nil else {
+                print(err!)
+                return
+            }
+            
+            if granted {
+                print("Access granted")
+            } else {
+                print("Not granted")
+            }
+        }
     }
     
     func createSlides() ->[SlideView]{
