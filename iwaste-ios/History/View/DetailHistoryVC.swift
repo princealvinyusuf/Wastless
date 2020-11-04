@@ -69,7 +69,7 @@ class DetailHistoryVC: UIViewController {
                 self.lblOrganicCount.text = String(trashCount[4])
                 self.listWasteHistory = listWaste
                 self.tableView.reloadData()
-                
+                 
             }
             
         }

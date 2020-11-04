@@ -62,7 +62,6 @@ class DetailHistoryPresenter{
                 
                 
             }
-            print(listSelectedWaste)
             completion(totalTrashCount, listSelectedWaste)
         }
     }
