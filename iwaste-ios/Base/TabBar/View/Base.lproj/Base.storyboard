@@ -461,7 +461,7 @@
         <scene sceneID="rx9-Zq-RhL">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="p77-GB-W3N" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My Waste" image="trash.fill" catalog="system" id="mDH-oK-juu"/>
+                    <tabBarItem key="tabBarItem" title="My Waste" image="mywastetab" id="mDH-oK-juu"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="wdz-vx-jim"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="6F0-TK-JHf">
@@ -920,12 +920,12 @@
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="econovice" width="500" height="500"/>
+        <image name="mywastetab" width="22" height="25"/>
         <image name="oval" width="10" height="10"/>
         <image name="oval_" width="10" height="10"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <image name="setTarget" width="512" height="512"/>
         <image name="star" width="500" height="462"/>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
         <image name="wasteBasket" width="500" height="468"/>
         <namedColor name="glass">
             <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
