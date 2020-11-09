@@ -353,11 +353,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="setTarget" translatesAutoresizingMaskIntoConstraints="NO" id="2FC-3R-UXh">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="2FC-3R-UXh">
                                 <rect key="frame" x="59" y="300" width="296" height="296"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WnY-q0-9u6">
-                                <rect key="frame" x="92" y="628" width="230" height="41"/>
+                                <rect key="frame" x="92" y="604" width="230" height="41"/>
                                 <color key="backgroundColor" name="metalSoft"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="Set Your Target">
@@ -408,7 +408,7 @@
                             <constraint firstItem="fs8-1C-JBx" firstAttribute="top" secondItem="PwN-Yk-rlG" secondAttribute="bottom" constant="16" id="RZw-hR-NR1"/>
                             <constraint firstItem="PwN-Yk-rlG" firstAttribute="height" secondItem="igu-Ka-FVP" secondAttribute="height" multiplier="0.200893" id="S2Q-yH-gh6"/>
                             <constraint firstItem="2FC-3R-UXh" firstAttribute="width" secondItem="igu-Ka-FVP" secondAttribute="width" multiplier="0.714976" id="TRG-Qx-wbx"/>
-                            <constraint firstItem="WnY-q0-9u6" firstAttribute="top" secondItem="2FC-3R-UXh" secondAttribute="bottom" constant="32" id="UFg-Pc-bgi"/>
+                            <constraint firstItem="WnY-q0-9u6" firstAttribute="top" secondItem="2FC-3R-UXh" secondAttribute="bottom" constant="8" id="UFg-Pc-bgi"/>
                             <constraint firstItem="M2f-Z4-Jq2" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="WJd-7s-l4C"/>
                             <constraint firstItem="Xyh-3p-Tqs" firstAttribute="centerY" secondItem="PwN-Yk-rlG" secondAttribute="centerY" constant="28" id="WUy-j7-mc6"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="trailing" secondItem="fs8-1C-JBx" secondAttribute="trailing" constant="16" id="Wix-Ze-p0L"/>
@@ -920,11 +920,10 @@
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
         <image name="econovice" width="500" height="500"/>
-        <image name="mywastetab" width="22" height="25"/>
+        <image name="mywastetab" width="44" height="50"/>
         <image name="oval" width="10" height="10"/>
         <image name="oval_" width="10" height="10"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
-        <image name="setTarget" width="512" height="512"/>
         <image name="star" width="500" height="462"/>
         <image name="wasteBasket" width="500" height="468"/>
         <namedColor name="glass">
