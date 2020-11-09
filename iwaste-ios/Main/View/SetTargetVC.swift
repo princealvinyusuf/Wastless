@@ -34,7 +34,7 @@ class SetTargetVC: UIViewController {
     
     @IBAction func doneTappedButton(_ sender: Any) {
         if plasticTF.text!.isEmpty || glassTF.text!.isEmpty || paperTF.text!.isEmpty || metalTF.text!.isEmpty || organicTF.text!.isEmpty{
-            print("Input The Data")
+
         }else{
             addData()
             UserDefaultService.instance.isTargetSet = true

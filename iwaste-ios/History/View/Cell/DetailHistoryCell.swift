@@ -19,8 +19,9 @@ class DetailHistoryCell: UITableViewCell {
         viewParent.layer.cornerRadius = 11
     }
 
-    func configureCell() {
-        
+    func configureCell(listHistory: WasteHistory) {
+        lblNameWaste.text = String(listHistory.waste)
+        lblNumWaste.text = String(listHistory.count)
     }
     
 }

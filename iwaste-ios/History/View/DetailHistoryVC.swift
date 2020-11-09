@@ -29,7 +29,9 @@ class DetailHistoryVC: UIViewController {
     
     
     var pickedDate = Date()
+    var selectedHistory = "daily"
     var presenter: DetailHistoryPresenter?
+    var listWasteHistory = [WasteHistory]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +61,14 @@ class DetailHistoryVC: UIViewController {
     func updateUI(){
         presenter?.dateChecker(date: pickedDate){(date, dateCD)in
             self.txtTitle.title = date
-            self.presenter?.loadTrashData(date: dateCD){(trashCount)in
+            self.presenter?.loadTrashData(date: dateCD){(trashCount, listWaste)in
                 self.lblPlasticCount.text = String(trashCount[0])
                 self.lblGlassCount.text = String(trashCount[1])
                 self.lblPaperCount.text = String(trashCount[2])
                 self.lblMetalCount.text = String(trashCount[3])
                 self.lblOrganicCount.text = String(trashCount[4])
+                self.listWasteHistory = listWaste
+                self.tableView.reloadData()
                 
             }
             
@@ -74,12 +78,12 @@ class DetailHistoryVC: UIViewController {
 
 extension DetailHistoryVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return listWasteHistory.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "detailHistoryCell") as? DetailHistoryCell else {return UITableViewCell()}
-        
+        cell.configureCell(listHistory: listWasteHistory[indexPath.row])
         return cell
     }
     
