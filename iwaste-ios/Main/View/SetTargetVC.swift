@@ -17,6 +17,9 @@ class SetTargetVC: UIViewController {
     @IBOutlet weak var metalTF: UITextField!
     @IBOutlet weak var organicTF: UITextField!
     @IBOutlet weak var txtDate: UILabel!
+    @IBAction func cancelButton(_ sender: UIBarButtonItem) {
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var presenter: SetTargetPresenter?
     var delegate: WasteTargetDelegate?
