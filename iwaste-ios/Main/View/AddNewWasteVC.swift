@@ -37,6 +37,8 @@ class AddNewWasteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboard()
+        inputWasteField.delegate = self
         managedObjectContext = appDelegate?.persistentContainer.viewContext
         presenter = AddNewWastePresenter(delegate: self)
         
@@ -203,6 +205,11 @@ extension AddNewWasteVC: AddNewWasteDelegate {
     func addWasteError(err: Error) {
         // TODO Later
     }
-    
-    
+}
+
+extension UIViewController: UITextFieldDelegate{
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true;
+    }
 }

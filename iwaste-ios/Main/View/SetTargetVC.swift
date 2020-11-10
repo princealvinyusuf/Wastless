@@ -28,12 +28,15 @@ class SetTargetVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.isModalInPresentation = true
         presenter = SetTargetPresenter()
         presenter?.showDate(){(date) in
             self.txtDate.text = date
         }
+        self.hideKeyboard()
+        
     }
+    
+    
     
     @IBAction func doneTappedButton(_ sender: Any) {
         if plasticTF.text!.isEmpty || glassTF.text!.isEmpty || paperTF.text!.isEmpty || metalTF.text!.isEmpty || organicTF.text!.isEmpty{
@@ -43,6 +46,7 @@ class SetTargetVC: UIViewController {
             UserDefaultService.instance.isTargetSet = true
             
             self.dismiss(animated: true) {
+                self.delegate?.checkTargetSet()
                 self.delegate?.updateUI()
             }
         }
@@ -76,5 +80,16 @@ class SetTargetVC: UIViewController {
         }
         
         presenter?.addDataTrash()
+    }
+}
+
+extension UIViewController {
+    func hideKeyboard(){
+        let Tap:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(Tap)
+    }
+    
+    @objc func dismissKeyboard(){
+        view.endEditing(true)
     }
 }

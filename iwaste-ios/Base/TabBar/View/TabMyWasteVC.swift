@@ -12,6 +12,7 @@ import UserNotifications
 
 protocol WasteTargetDelegate {
     func updateUI()
+    func checkTargetSet()
 }
 
 class TabMyWasteVC: UIViewController {
@@ -87,14 +88,14 @@ class TabMyWasteVC: UIViewController {
         waveConfigure()
         waveColor()
         
-        print(udService.isTargetSet)
-        if udService.isTargetSet {
-            main(isHidden: false)
-            target(isHidden: true)
-        } else {
-            main(isHidden: true)
-            target(isHidden: false)
-        }
+//        print(udService.isTargetSet)
+//        if udService.isTargetSet {
+//            main(isHidden: false)
+//            target(isHidden: true)
+//        } else {
+//            main(isHidden: true)
+//            target(isHidden: false)
+//        }
         
         if isEmpty!{
             main(isHidden: false)
@@ -186,8 +187,6 @@ class TabMyWasteVC: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let setTargetVC = storyboard.instantiateViewController(identifier: "SetTarget") as! SetTargetVC
         setTargetVC.delegate = self
-        target(isHidden: true)
-        main(isHidden: false)
         self.present(setTargetVC, animated: true, completion: nil)
     }
     
@@ -267,19 +266,31 @@ extension TabMyWasteVC: WasteTargetDelegate {
         }
     
         // Change the value of Trash bin Wave
-        wave = WaveAnimationView(frame: CGRect(origin: .zero, size: waveView.bounds.size), color: UIColor.blue.withAlphaComponent(0.5))
-        waveView.addSubview(wave)
-        wave.maskImage = UIImage(named: "wasteBasket")
-        wave.startAnimation()
-        presenter?.totalTrashUsage(categories: categories){ (progress) in
-            self.wave.setProgress(progress)
+        
+    }
+    
+    func checkTargetSet(){
+        if categories!.count > 0{
+            main(isHidden: true)
+            target(isHidden: false)
             
+            wave = WaveAnimationView(frame: CGRect(origin: .zero, size: waveView.bounds.size), color: UIColor.blue.withAlphaComponent(0.5))
+            waveView.addSubview(wave)
+            wave.maskImage = UIImage(named: "wasteBasket")
+            wave.startAnimation()
+            presenter?.totalTrashUsage(categories: categories){ (progress) in
+                self.wave.setProgress(progress)
+            }
+            trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
+            print("waveProgress",wave.progress)
+            wave.frontColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).withAlphaComponent(1)
+            wave.backColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).withAlphaComponent(0.3)
+            waveView.layer.borderColor = UIColor.gray.cgColor
+            
+        }else {
+            main(isHidden: false)
+            target(isHidden: true)
         }
-        trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
-        print("waveProgress",wave.progress)
-        wave.frontColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).withAlphaComponent(1)
-        wave.backColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).withAlphaComponent(0.3)
-        waveView.layer.borderColor = UIColor.gray.cgColor
     }
 }
 
