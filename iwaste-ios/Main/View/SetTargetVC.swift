@@ -46,8 +46,8 @@ class SetTargetVC: UIViewController {
             UserDefaultService.instance.isTargetSet = true
             
             self.dismiss(animated: true) {
-                self.delegate?.checkTargetSet()
                 self.delegate?.updateUI()
+                self.delegate?.checkTargetSet()
             }
         }
         

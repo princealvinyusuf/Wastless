@@ -271,8 +271,8 @@ extension TabMyWasteVC: WasteTargetDelegate {
     
     func checkTargetSet(){
         if categories!.count > 0{
-            main(isHidden: true)
-            target(isHidden: false)
+            main(isHidden: false)
+            target(isHidden: true)
             
             wave = WaveAnimationView(frame: CGRect(origin: .zero, size: waveView.bounds.size), color: UIColor.blue.withAlphaComponent(0.5))
             waveView.addSubview(wave)
@@ -288,8 +288,8 @@ extension TabMyWasteVC: WasteTargetDelegate {
             waveView.layer.borderColor = UIColor.gray.cgColor
             
         }else {
-            main(isHidden: false)
-            target(isHidden: true)
+            main(isHidden: true)
+            target(isHidden: false)
         }
     }
 }

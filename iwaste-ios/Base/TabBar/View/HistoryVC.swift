@@ -68,6 +68,9 @@ class HistoryVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self, action: #selector(detailPressed))
         viewDetail.addGestureRecognizer(tap)
     }
+    override func viewDidAppear(_ animated: Bool) {
+        updateDate(type: selectedHistory)
+    }
     
     @objc func detailPressed() {
         let storyboard = UIStoryboard(name: "History", bundle: nil)
@@ -85,7 +88,7 @@ class HistoryVC: UIViewController {
             selectedHistory = "daily"
             updateDate(type: selectedHistory)
         }else if sender.selectedSegmentIndex == 1 {
-            selectedHistory = "weekly"
+            selectedHistory = "monthly"
             updateDate(type: selectedHistory)
         }else if sender.selectedSegmentIndex == 2 {
             print("sender 3")
@@ -128,7 +131,7 @@ class HistoryVC: UIViewController {
         if selectedHistory == "daily"{
             pickedDate = Calendar.current.date(byAdding: .day , value: 1, to: pickedDate)!
             updateDate(type: selectedHistory)
-        }else if selectedHistory == "weekly"{
+        }else if selectedHistory == "monthly"{
             pickedDate = Calendar.current.date(byAdding: .month , value: 1, to: pickedDate)!
             updateDate(type: selectedHistory)
         }
@@ -137,7 +140,7 @@ class HistoryVC: UIViewController {
         if selectedHistory == "daily"{
             pickedDate = Calendar.current.date(byAdding: .day , value: -1, to: pickedDate)!
             updateDate(type: selectedHistory)
-        }else if selectedHistory == "weekly"{
+        }else if selectedHistory == "monthly"{
             pickedDate = Calendar.current.date(byAdding: .month , value: -1, to: pickedDate)!
             updateDate(type: selectedHistory)
         }
@@ -196,7 +199,7 @@ class HistoryVC: UIViewController {
             lblDetailDay.text = dateFormatter3.string(from: pickedDate)
             lblDetailDate.text = dateFormatter4.string(from: pickedDate)
             lblSummary.text = "Daily Summary"
-        case "weekly":
+        case "monthly":
             presenter?.getTotalWasteWeekly(date:pickedDate){(totalTrash, totalTarget) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
                 
@@ -207,13 +210,13 @@ class HistoryVC: UIViewController {
                 }else{
                     let highestTrashCount = totalTrash.max()
                     let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
-                    self.lblSummaryDetail.text = weeklySummary[indexofTrash!]
+                    self.lblSummaryDetail.text = monthlySummary[indexofTrash!]
                 }
             }
             lblChartDate.text = dateFormatter5.string(from: pickedDate)
             lblDetailDay.text = dateFormatter6.string(from: pickedDate)
             lblDetailDate.text = dateFormatter7.string(from: pickedDate)
-            lblSummary.text = "Weekly Summary"
+            lblSummary.text = "Monthly Summary"
         case "monthly":
             print("Monthly")
         default:

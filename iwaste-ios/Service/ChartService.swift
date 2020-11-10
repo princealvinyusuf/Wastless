@@ -59,10 +59,10 @@ extension HistoryVC: ChartViewDelegate {
         let groupSpaces = groupChartData.groupWidth(groupSpace: groupSpace, barSpace: barSpace)
         
         
-        //If Daily Or Weekly
+        //If Daily Or Monthly
         if selectedHistory == "daily" {
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Plastics", "Glass", "Papers", "Metals", "Organics"])
-        }else if selectedHistory == "weekly"{
+        }else if selectedHistory == "monthly"{
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Week 1", "Week 2", "Week 3", "Week 4"])
         }
         

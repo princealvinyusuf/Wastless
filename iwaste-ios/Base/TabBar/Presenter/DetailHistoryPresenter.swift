@@ -57,10 +57,6 @@ class DetailHistoryPresenter{
                     
                 }
                 totalTrashCount.append(countOfWaste)
-                
-                
-                
-                
             }
             completion(totalTrashCount, listSelectedWaste)
         }
@@ -71,97 +67,5 @@ class DetailHistoryPresenter{
         listSelectedWaste.append(wasteAdded)
     }
     
-//    func getTotalWasteWeekly(date: Date, completion: @escaping (_ totalTrash : [Int], _ totalTarget : [Int])->()){
-//        let monthFormatter = DateFormatter()
-//        let yearFormatter = DateFormatter()
-//
-//        monthFormatter.dateFormat = "MM"
-//        yearFormatter.dateFormat = "yyyy"
-//
-//
-//        let month = monthFormatter.string(from: date)
-//        let year = yearFormatter.string(from: date)
-//
-//
-//        var totalWasteWeekly = 0
-//        var totalTargetWeekly = 0
-//
-//
-//        //Week 1
-//        for i in 1...8{
-//            let day = String(format: "%02d", i)
-//            let date = ("\(day)/\(month)/\(year)")
-//            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
-//                totalWasteWeekly += totalTrash
-//                totalTargetWeekly += totalTarget
-//            }
-//        }
-//
-//
-//        //Week 2
-//        for i in 9...16{
-//            let day = String(format: "%02d", i)
-//            let date = ("\(day)/\(month)/\(year)")
-//            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
-//                totalWasteWeekly += totalTrash
-//                totalTargetWeekly += totalTarget
-//            }
-//        }
-//
-//
-//
-//        //Week 3
-//        for i in 17...24{
-//            let day = String(format: "%02d", i)
-//            let date = ("\(day)/\(month)/\(year)")
-//            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
-//                totalWasteWeekly += totalTrash
-//                totalTargetWeekly += totalTarget
-//            }
-//        }
-//
-//
-//
-//        //Week 4
-//        for i in 25...31{
-//            let day = String(format: "%02d", i)
-//            let date = ("\(day)/\(month)/\(year)")
-//            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
-//                totalWasteWeekly += totalTrash
-//                totalTargetWeekly += totalTarget
-//            }
-//        }
-//
-//    }
-//
-//    func getTrashDataWeekly(date:String, completion: @escaping (_ totalTrashCount: Int) -> ()){
-//        var trashes = [TrashCD]()
-//        var totalTrashCount: [Int] = []
-//        var totalCategoryTarget: [Int] = []
-//
-//        if let appDelegate = appDelegate {
-//            for trash in trashList{
-//                totalTrashCount.removeAll()
-//                totalCategoryTarget.removeAll()
-//                let datePredicate = NSPredicate(format: "date=%@", date)
-//
-//                //TRASH DATA
-//                let managedContext = appDelegate.persistentContainer.viewContext
-//                let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-//                trashRequest.predicate = datePredicate
-//                do {
-//                    try trashes = managedContext.fetch(trashRequest)
-//                } catch {
-//                    print("Error Data could not be shown")
-//                }
-//                var countOfWaste = 0
-//                for ttrash in trashes{
-//                    countOfWaste += Int(truncatingIfNeeded: ttrash.count)
-//                }
-//
-//                completion(countOfWaste)
-//
-//            }
-//        }
-//    }
+
 }

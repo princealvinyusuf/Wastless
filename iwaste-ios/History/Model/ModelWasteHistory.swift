@@ -8,7 +8,7 @@
 import Foundation
 
 struct WasteHistory{
-    let waste: String
-    let count: Int
+    var waste: String
+    var count: Int
 }
 
