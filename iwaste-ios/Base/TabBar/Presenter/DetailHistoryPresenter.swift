@@ -106,10 +106,11 @@ class DetailHistoryPresenter{
                 }
                 
                 for ttrash in trashes{
+                    
                     countOfWaste += Int(truncatingIfNeeded: ttrash.count)
                     if ttrash.count > 0 { // Check if trash available
                         if listSelectedWaste.contains(where:{$0.waste == ttrash.name}){ // Check if trash Exist or no
-                            let trashExist = listSelectedWaste.firstIndex(where: {$0.waste == "Jar"})
+                            let trashExist = listSelectedWaste.firstIndex(where: {$0.waste == ttrash.name})
                             listSelectedWaste[trashExist!].count += Int(truncatingIfNeeded: ttrash.count)
                             
                         }else{
