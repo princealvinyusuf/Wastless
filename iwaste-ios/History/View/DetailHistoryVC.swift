@@ -59,17 +59,35 @@ class DetailHistoryVC: UIViewController {
     }
     
     func updateUI(){
-        presenter?.dateChecker(date: pickedDate){(date, dateCD)in
-            self.txtTitle.title = date
-            self.presenter?.loadTrashData(date: dateCD){(trashCount, listWaste)in
-                self.lblPlasticCount.text = String(trashCount[0])
-                self.lblGlassCount.text = String(trashCount[1])
-                self.lblPaperCount.text = String(trashCount[2])
-                self.lblMetalCount.text = String(trashCount[3])
-                self.lblOrganicCount.text = String(trashCount[4])
-                self.listWasteHistory = listWaste
-                self.tableView.reloadData()
-                 
+        presenter?.dateChecker(date: pickedDate, type: selectedHistory){(date, dateCD)in
+            if self.selectedHistory == "daily"{
+                print("daily")
+                print(date)
+                self.txtTitle.title = date
+                self.presenter?.loadTrashData(date: dateCD){(trashCount, listWaste)in
+                    self.lblPlasticCount.text = String(trashCount[0])
+                    self.lblGlassCount.text = String(trashCount[1])
+                    self.lblPaperCount.text = String(trashCount[2])
+                    self.lblMetalCount.text = String(trashCount[3])
+                    self.lblOrganicCount.text = String(trashCount[4])
+                    self.listWasteHistory = listWaste
+                    self.tableView.reloadData()
+                     
+                }
+            }
+            else if self.selectedHistory == "monthly"{
+                print("monthly")
+                print(date)
+                self.txtTitle.title = date
+                self.presenter?.loadTrashDataMonthly(date: self.pickedDate){(trashCount, listWaste)in
+                    self.lblPlasticCount.text = String(trashCount[0])
+                    self.lblGlassCount.text = String(trashCount[1])
+                    self.lblPaperCount.text = String(trashCount[2])
+                    self.lblMetalCount.text = String(trashCount[3])
+                    self.lblOrganicCount.text = String(trashCount[4])
+                    self.listWasteHistory = listWaste
+                    self.tableView.reloadData()
+                }
             }
             
         }

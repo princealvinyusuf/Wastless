@@ -48,7 +48,6 @@ class CurrentWastePresenter {
         }
         
         delegate?.loadCategoriesSuccess(cat: categories!)
-        print("ccat: ", categories)
     }
     
     private func loadDataTrash(type: WasteType) -> TrashData {
