@@ -55,7 +55,7 @@
 		59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFF32547D81500EE1B8B /* SetTargetPresenter.swift */; };
 		59FBF2AD25362AAD00F940D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59FBF2AC25362AAD00F940D5 /* Main.storyboard */; };
 		9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DA253E89F800870DE8 /* AchievementVC.swift */; };
-		9F1A43DE253E8BCA00870DE8 /* ChallengesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DD253E8BCA00870DE8 /* ChallengesVC.swift */; };
+		9F1A43DE253E8BCA00870DE8 /* ActivityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DD253E8BCA00870DE8 /* ActivityVC.swift */; };
 		9F1A43E1253E8C2200870DE8 /* BadgesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E0253E8C2200870DE8 /* BadgesVC.swift */; };
 		9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E3253E8F3C00870DE8 /* TableCell.swift */; };
 		9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43E7253E8FDA00870DE8 /* Challenge.swift */; };
@@ -132,7 +132,7 @@
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8795EA6333CC938D26AC02F2 /* Pods-iwaste-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iwaste-ios.debug.xcconfig"; path = "Target Support Files/Pods-iwaste-ios/Pods-iwaste-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		9F1A43DA253E89F800870DE8 /* AchievementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AchievementVC.swift; sourceTree = "<group>"; };
-		9F1A43DD253E8BCA00870DE8 /* ChallengesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengesVC.swift; sourceTree = "<group>"; };
+		9F1A43DD253E8BCA00870DE8 /* ActivityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityVC.swift; sourceTree = "<group>"; };
 		9F1A43E0253E8C2200870DE8 /* BadgesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgesVC.swift; sourceTree = "<group>"; };
 		9F1A43E3253E8F3C00870DE8 /* TableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableCell.swift; sourceTree = "<group>"; };
 		9F1A43E7253E8FDA00870DE8 /* Challenge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Challenge.swift; sourceTree = "<group>"; };
@@ -433,7 +433,7 @@
 			children = (
 				59D26EE5255065CA00E46F4E /* CustomAlert */,
 				9F1E14EA25412E6F00946F71 /* Cell */,
-				9F1A43DD253E8BCA00870DE8 /* ChallengesVC.swift */,
+				9F1A43DD253E8BCA00870DE8 /* ActivityVC.swift */,
 				9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */,
 				9F1A43E0253E8C2200870DE8 /* BadgesVC.swift */,
 				9F4143962540234500B738A0 /* DetailBadgesVC.swift */,
@@ -662,7 +662,7 @@
 				9F4143972540234500B738A0 /* DetailBadgesVC.swift in Sources */,
 				59AA9DF3254473060074644A /* ChartService.swift in Sources */,
 				9FC20D732536BA30007A828E /* CurrentWasteVC.swift in Sources */,
-				9F1A43DE253E8BCA00870DE8 /* ChallengesVC.swift in Sources */,
+				9F1A43DE253E8BCA00870DE8 /* ActivityVC.swift in Sources */,
 				59450D44254F8280000357C2 /* DetailChallengePresenter.swift in Sources */,
 				59C8D2DB2550E08800E55CF2 /* Badges.swift in Sources */,
 				A824EB98254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift in Sources */,

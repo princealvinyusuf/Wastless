@@ -142,7 +142,7 @@ class TabMyWasteVC: UIViewController {
     }
     
     @IBAction func dateTappedForNotifTest(_ sender: Any) {
-        NotificationService.instance.scheduleNotification()
+//        NotificationService.instance.scheduleNotification()
     }
     
     func subViewConfigure() {

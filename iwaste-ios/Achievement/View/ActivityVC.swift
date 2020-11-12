@@ -13,7 +13,7 @@ protocol ChallengesDelegate {
     func upgradeLevel()
 }
 
-class ChallengesVC: UIViewController, UIViewControllerTransitioningDelegate {
+class ActivityVC: UIViewController, UIViewControllerTransitioningDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,7 +22,6 @@ class ChallengesVC: UIViewController, UIViewControllerTransitioningDelegate {
     
     var udService = UserDefaultService.instance
     
-    var delegate: AchievementDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -50,7 +49,7 @@ class ChallengesVC: UIViewController, UIViewControllerTransitioningDelegate {
     
 }
 
-extension ChallengesVC: UITableViewDelegate, UITableViewDataSource {
+extension ActivityVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return challenge.count
     }
@@ -84,7 +83,7 @@ extension ChallengesVC: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension ChallengesVC: BonsaiControllerDelegate {
+extension ActivityVC: BonsaiControllerDelegate {
     
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
         
@@ -97,9 +96,9 @@ extension ChallengesVC: BonsaiControllerDelegate {
     }
 }
 
-extension ChallengesVC: ChallengesDelegate {
+extension ActivityVC: ChallengesDelegate {
     func upgradeLevel() {
-        self.delegate?.upgradeLevel()
+//        self.delegate?.upgradeLevel()
         print("hhhhhh: ", udService.level)
         refreshView()
         
@@ -111,7 +110,7 @@ extension ChallengesVC: ChallengesDelegate {
     }
     
     func refreshView() {
-        self.delegate?.refreshView()
+//        self.delegate?.refreshView()
         self.tableView.reloadData()
     }
 }

@@ -15,52 +15,44 @@ protocol AchievementDelegate {
 
 class AchievementVC: UIViewController {
     
-    @IBOutlet weak var linearProgressAchievement: LinearProgressView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var containerView: UIView!
-    @IBOutlet weak var imgLevel: UIImageView!
-    @IBOutlet weak var lblLevelName: UILabel!
-    @IBOutlet weak var lblProgress: UILabel!
+    @IBOutlet weak var viewDescription: UIView!
+    @IBOutlet weak var lblAchCategory: UILabel!
+    @IBOutlet weak var lblAchDescription: UILabel!
+    
     
     var presenter: AchievementPresenter?
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = AchievementPresenter()
         
-        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
-
-        linearProgressAchievement.animationDuration = 0.5
-        linearProgressAchievement.barColor = #colorLiteral(red: 1, green: 0.7568627451, blue: 0.7294117647, alpha: 1)
-        linearProgressAchievement.trackColor = #colorLiteral(red: 1, green: 0.4352941176, blue: 0.3803921569, alpha: 1)
+//        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
+//        segmentedControl.isHidden = true
         
-        updateLinearProgress()
+        viewDescription.layer.cornerRadius = 5
+        viewDescription.layer.shadowColor = UIColor.black.cgColor
+        viewDescription.layer.shadowRadius = 5
+        viewDescription.layer.shadowOffset = CGSize(width: 0, height: 2)
+        viewDescription.layer.shadowOpacity = 0.3
         
         self.setupView()
         
-        refreshView()
-    }
-    
-    @objc
-    func updateLinearProgress() {
-        linearProgressAchievement.setProgress(80, animated: true)
-        linearProgressAchievement.barInset = CGFloat(4)
-        linearProgressAchievement.isCornersRounded = true
     }
     
     func setupView() {
         updateView()
     }
 
-    private lazy var summaryViewController: ChallengesVC = {
+    private lazy var activityVC: ActivityVC = {
         let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
-        var viewController = storyboard.instantiateViewController(withIdentifier: "ChallengesVC") as! ChallengesVC
-        viewController.delegate = self
+        var viewController = storyboard.instantiateViewController(withIdentifier: "ChallengesVC") as! ActivityVC
         self.add(asChildViewController: viewController)
         
         return viewController
     }()
     
-    private lazy var sessionsViewController: BadgesVC = {
+    private lazy var badgesVC: BadgesVC = {
         // Load Storyboard
         let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
         
@@ -110,38 +102,20 @@ class AchievementVC: UIViewController {
     }
     
     private func updateView() {
-        if segmentedControl.selectedSegmentIndex == 0 {
-            remove(asChildViewController: sessionsViewController)
-            add(asChildViewController: summaryViewController)
-        } else {
-            remove(asChildViewController: summaryViewController)
-            add(asChildViewController: sessionsViewController)
-        }
+//        if segmentedControl.selectedSegmentIndex == 0 {
+            remove(asChildViewController: activityVC)
+            add(asChildViewController: badgesVC)
+            
+            lblAchCategory.text = "Badges"
+            lblAchDescription.text = "Badges collected shows your level in your Zero Waste life journey. You will earn a badge after reaching standard set for each badge."
+            
+//        } else {
+//            remove(asChildViewController: badgesVC)
+//            add(asChildViewController: activityVC)
+//            
+//            lblAchCategory.text = "Activities"
+//            lblAchDescription.text = "Beside collecting badges, you can challenge yourself to do the supporting activites. These are 21 days activities means you can done it after 21 days keep doing so. Each activity will be reset to undone, after 21 days of completion."
+//        }
     }
     
-}
-
-extension AchievementVC: AchievementDelegate {
-    func upgradeLevel() {
-        
-        refreshView()
-    }
-    
-    func refreshView() {
-        presenter?.loadDataLevel(completion: { (dataLevel, progress) in
-            self.imgLevel.image = dataLevel.image
-            self.lblLevelName.text = dataLevel.name
-            
-            let floatProgress = Float(progress)/Float(dataLevel.maxPoint)
-            print("ffll: ", floatProgress)
-            
-            if UserDefaultService.instance.level == Level.ecoMaster.rawValue {
-                self.linearProgressAchievement.setProgress(1, animated: true)
-                self.lblProgress.text = "MAX"
-            } else {
-                self.lblProgress.text = "\(progress)/\(dataLevel.maxPoint)"
-                self.linearProgressAchievement.setProgress(floatProgress, animated: true)
-            }
-        })
-    }
 }
