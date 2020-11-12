@@ -468,7 +468,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="p77-GB-W3N" kind="relationship" relationship="viewControllers" id="5fI-nl-gbi"/>
-                        <segue destination="APz-4N-3bk" kind="relationship" relationship="viewControllers" id="lFf-sX-ACw"/>
+                        <segue destination="PYf-eS-15V" kind="relationship" relationship="viewControllers" id="lFf-sX-ACw"/>
                         <segue destination="cSx-yD-a2B" kind="relationship" relationship="viewControllers" id="Sfd-WS-XdB"/>
                     </connections>
                 </tabBarController>
@@ -767,114 +767,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="econovice" translatesAutoresizingMaskIntoConstraints="NO" id="wOg-F1-EQ2">
-                                <rect key="frame" x="167.5" y="56" width="79" height="79"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="79" id="Oak-rR-xVj"/>
-                                    <constraint firstAttribute="height" constant="79" id="hag-8Q-xzk"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beginner" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMf-Ww-64x">
-                                <rect key="frame" x="170.5" y="143" width="73.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" name="navigationBarModal"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48r-7M-k1o" userLabel="Linear Progress Plastics" customClass="LinearProgressView" customModule="LinearProgressView">
-                                <rect key="frame" x="113" y="171.5" width="188" height="20"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="0FM-8n-y4C"/>
-                                    <constraint firstAttribute="width" constant="188" id="5zd-i0-VZG"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                        <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                        <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                        <real key="value" value="1"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="barInset">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="STb-i1-BHU">
-                                <rect key="frame" x="117" y="241.5" width="180" height="37"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="B1f-vv-1kx"/>
-                                    <constraint firstAttribute="width" constant="180" id="KKN-o5-6v8"/>
-                                </constraints>
-                                <segments>
-                                    <segment title="Challenge"/>
-                                    <segment title="Badges"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" name="navigationBarModal"/>
-                                <connections>
-                                    <action selector="segmentedValueChanged:" destination="APz-4N-3bk" eventType="valueChanged" id="zkW-rk-0gM"/>
-                                </connections>
-                            </segmentedControl>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V6M-7t-AJp">
-                                <rect key="frame" x="0.0" y="312.5" width="414" height="500.5"/>
+                                <rect key="frame" x="0.0" y="265.5" width="414" height="547.5"/>
                             </containerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="star" translatesAutoresizingMaskIntoConstraints="NO" id="uEI-b3-t0n">
-                                <rect key="frame" x="84" y="169.5" width="24" height="24"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bdk-uR-Jwc">
+                                <rect key="frame" x="20" y="160" width="374" height="85.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duF-pi-in9">
+                                        <rect key="frame" x="20" y="12" width="334" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3Q-OE-KiA">
+                                        <rect key="frame" x="20" y="50" width="334" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="J8W-gt-qJI"/>
-                                    <constraint firstAttribute="width" secondItem="uEI-b3-t0n" secondAttribute="height" multiplier="1:1" id="ZA5-Qs-02t"/>
+                                    <constraint firstItem="duF-pi-in9" firstAttribute="top" secondItem="Bdk-uR-Jwc" secondAttribute="top" constant="12" id="0sw-XO-MAQ"/>
+                                    <constraint firstItem="duF-pi-in9" firstAttribute="leading" secondItem="Bdk-uR-Jwc" secondAttribute="leading" constant="20" id="5Px-Rn-4qB"/>
+                                    <constraint firstAttribute="trailing" secondItem="duF-pi-in9" secondAttribute="trailing" constant="20" id="Bof-SK-8IX"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z3Q-OE-KiA" secondAttribute="trailing" constant="20" id="GJZ-h0-DQr"/>
+                                    <constraint firstItem="Z3Q-OE-KiA" firstAttribute="top" secondItem="duF-pi-in9" secondAttribute="bottom" constant="8" id="Iks-ma-TT0"/>
+                                    <constraint firstItem="Z3Q-OE-KiA" firstAttribute="leading" secondItem="Bdk-uR-Jwc" secondAttribute="leading" constant="20" id="cTn-MY-f7A"/>
+                                    <constraint firstAttribute="bottom" secondItem="Z3Q-OE-KiA" secondAttribute="bottom" constant="16" id="dwO-uI-hQl"/>
                                 </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0/0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SLe-qu-rqL">
-                                <rect key="frame" x="306" y="174" width="21" height="15"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AER-fd-R9p"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rMf-Ww-64x" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="EqG-QM-5AM"/>
-                            <constraint firstItem="STb-i1-BHU" firstAttribute="top" secondItem="48r-7M-k1o" secondAttribute="bottom" constant="50" id="GQ2-eP-RPI"/>
-                            <constraint firstItem="V6M-7t-AJp" firstAttribute="top" secondItem="STb-i1-BHU" secondAttribute="bottom" constant="35" id="HgV-df-4HH"/>
-                            <constraint firstItem="SLe-qu-rqL" firstAttribute="centerY" secondItem="48r-7M-k1o" secondAttribute="centerY" id="Jbn-aL-AEU"/>
-                            <constraint firstItem="uEI-b3-t0n" firstAttribute="centerY" secondItem="48r-7M-k1o" secondAttribute="centerY" id="Mxm-yS-Cg0"/>
-                            <constraint firstItem="SLe-qu-rqL" firstAttribute="leading" secondItem="48r-7M-k1o" secondAttribute="trailing" constant="5" id="QBn-i1-sZr"/>
-                            <constraint firstItem="48r-7M-k1o" firstAttribute="top" secondItem="rMf-Ww-64x" secondAttribute="bottom" constant="8" id="Z5h-k8-lzt"/>
+                            <constraint firstItem="Bdk-uR-Jwc" firstAttribute="leading" secondItem="AER-fd-R9p" secondAttribute="leading" constant="20" id="5Pw-uo-8EY"/>
+                            <constraint firstItem="AER-fd-R9p" firstAttribute="trailing" secondItem="Bdk-uR-Jwc" secondAttribute="trailing" constant="20" id="H7f-Wy-yLg"/>
+                            <constraint firstItem="Bdk-uR-Jwc" firstAttribute="top" secondItem="AER-fd-R9p" secondAttribute="top" constant="20" id="XcH-BM-XzH"/>
                             <constraint firstItem="V6M-7t-AJp" firstAttribute="width" secondItem="LKX-HB-7Xi" secondAttribute="width" id="cMn-gV-sdr"/>
-                            <constraint firstItem="rMf-Ww-64x" firstAttribute="top" secondItem="wOg-F1-EQ2" secondAttribute="bottom" constant="8" id="d7x-Ur-gD6"/>
-                            <constraint firstItem="48r-7M-k1o" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="ezB-X9-D6Z"/>
-                            <constraint firstItem="wOg-F1-EQ2" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="ha9-H7-8cj"/>
                             <constraint firstItem="V6M-7t-AJp" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="kYe-eJ-VYl"/>
-                            <constraint firstItem="wOg-F1-EQ2" firstAttribute="top" secondItem="AER-fd-R9p" secondAttribute="top" constant="12" id="kqI-P8-B7n"/>
-                            <constraint firstItem="STb-i1-BHU" firstAttribute="centerX" secondItem="LKX-HB-7Xi" secondAttribute="centerX" id="qTs-6g-kdC"/>
-                            <constraint firstItem="48r-7M-k1o" firstAttribute="leading" secondItem="uEI-b3-t0n" secondAttribute="trailing" constant="5" id="t2b-Iu-ytK"/>
                             <constraint firstItem="AER-fd-R9p" firstAttribute="bottom" secondItem="V6M-7t-AJp" secondAttribute="bottom" id="xxl-WX-B5y"/>
+                            <constraint firstItem="V6M-7t-AJp" firstAttribute="top" secondItem="Bdk-uR-Jwc" secondAttribute="bottom" constant="20" id="zyX-XR-7JG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Achievement" image="rosette" catalog="system" id="7cb-YT-Pw7"/>
+                    <navigationItem key="navigationItem" title="Achievement" id="KuX-bJ-GMp"/>
                     <connections>
                         <outlet property="containerView" destination="V6M-7t-AJp" id="emi-uL-yZ0"/>
-                        <outlet property="imgLevel" destination="wOg-F1-EQ2" id="xXF-16-Aed"/>
-                        <outlet property="lblLevelName" destination="rMf-Ww-64x" id="mwa-IC-7b3"/>
-                        <outlet property="lblProgress" destination="SLe-qu-rqL" id="rAJ-r7-ttI"/>
-                        <outlet property="linearProgressAchievement" destination="48r-7M-k1o" id="GBu-Ah-32l"/>
-                        <outlet property="segmentedControl" destination="STb-i1-BHU" id="GbY-yc-yDG"/>
+                        <outlet property="lblAchCategory" destination="duF-pi-in9" id="mIp-41-bwn"/>
+                        <outlet property="lblAchDescription" destination="Z3Q-OE-KiA" id="duc-5N-doQ"/>
+                        <outlet property="viewDescription" destination="Bdk-uR-Jwc" id="RfL-As-7JG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rfA-oq-yLd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1027.536231884058" y="859.82142857142856"/>
+            <point key="canvasLocation" x="1937.68115942029" y="859.82142857142856"/>
         </scene>
         <!--History-->
         <scene sceneID="dbK-uU-Ays">
@@ -895,17 +841,34 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="1581.6964285714284"/>
         </scene>
+        <!--Achievement-->
+        <scene sceneID="MWm-so-6j9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PYf-eS-15V" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Achievement" image="rosette" catalog="system" id="7cb-YT-Pw7"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="gcY-1s-xVE">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="APz-4N-3bk" kind="relationship" relationship="rootViewController" id="Ii7-kg-hRb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CZF-ip-EK7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1027.536231884058" y="859.82142857142856"/>
+        </scene>
     </scenes>
     <resources>
         <image name="chart.bar.fill" catalog="system" width="128" height="92"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>
-        <image name="econovice" width="500" height="500"/>
         <image name="mywastetab" width="44" height="50"/>
         <image name="oval" width="10" height="10"/>
         <image name="oval_" width="10" height="10"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
-        <image name="star" width="500" height="462"/>
         <image name="wasteBasket" width="500" height="468"/>
         <namedColor name="glass">
             <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
