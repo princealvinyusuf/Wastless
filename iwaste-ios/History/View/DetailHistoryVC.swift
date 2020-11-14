@@ -90,8 +90,47 @@ class DetailHistoryVC: UIViewController {
                 }
             }
             
+            else if self.selectedHistory == "weekly"{
+                self.getWeeklyDate(date: self.pickedDate){(startDate, endDate, dateArray) in
+                    self.txtTitle.title = ("\(startDate) - \(endDate)")
+                    self.presenter?.loadTrashDataWeekly(date: dateArray){(trashCount, listWaste)in
+                        self.lblPlasticCount.text = String(trashCount[0])
+                        self.lblGlassCount.text = String(trashCount[1])
+                        self.lblPaperCount.text = String(trashCount[2])
+                        self.lblMetalCount.text = String(trashCount[3])
+                        self.lblOrganicCount.text = String(trashCount[4])
+                        self.listWasteHistory = listWaste
+                        self.tableView.reloadData()
+                    }
+                    
+                }
+
+            }
+            
         }
     }
+    
+    func getWeeklyDate(date : Date, completion: @escaping (_ startDate: String, _ endDate: String, _ dateArray: [Date]) ->()){
+        //THIS FUNCTION IS TO GET DATE IN A WEEK
+        let dateInWeek = date
+        let calendar = Calendar.current
+        let dayOfWeek = calendar.component(.weekday, from: dateInWeek)
+        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: dateInWeek)!
+        let days = (weekdays.lowerBound ..< weekdays.upperBound)
+            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: dateInWeek) }
+        
+        let dateFormatterStart = DateFormatter()
+        dateFormatterStart.dateFormat = "MMM d"
+        
+        let dateFormatterEnd = DateFormatter()
+        dateFormatterEnd.dateFormat = "MMM d"
+
+        let startDate = dateFormatterStart.string(from: days[0])
+        let endDate = dateFormatterStart.string(from: days[6])
+        completion(startDate, endDate, days)
+    }
+    
+    
 }
 
 extension DetailHistoryVC: UITableViewDelegate, UITableViewDataSource {

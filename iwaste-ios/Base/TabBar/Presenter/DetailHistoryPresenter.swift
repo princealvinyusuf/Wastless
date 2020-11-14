@@ -128,6 +128,62 @@ class DetailHistoryPresenter{
         
     }
     
+    func loadTrashDataWeekly(date: [Date], completion: @escaping (_ trashCount: [Int],_ listTrash: [WasteHistory])->()){
+        var trashes = [TrashCD]()
+        var totalTrashCount: [Int] = []
+        
+        let dayFormatter = DateFormatter()
+        let monthFormatter = DateFormatter()
+        let yearFormatter = DateFormatter()
+        
+        dayFormatter.dateFormat = "dd"
+        monthFormatter.dateFormat = "MM"
+        yearFormatter.dateFormat = "yyyy"
+        
+        for trash in trashList{//Trash Type
+            var countOfWaste = 0
+            for dates in date{ //Weekly Check
+                let day = dayFormatter.string(from: dates)
+                let month = monthFormatter.string(from: dates)
+                let year = yearFormatter.string(from: dates)
+                let datePicked = ("\(day)/\(month)/\(year)")
+                
+                
+                
+                let managedContext = appDelegate!.persistentContainer.viewContext
+                let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+
+                let datePredicate = NSPredicate(format: "date=%@", datePicked)
+                let typePredicate = NSPredicate(format: "type=%@", trash)
+                
+                trashRequest.predicate = NSCompoundPredicate(type: .and, subpredicates: [datePredicate, typePredicate])
+                do {
+                    try trashes = managedContext.fetch(trashRequest)
+                } catch {
+                    print("Error Data could not be shown")
+                }
+                for ttrash in trashes{
+                    
+                    countOfWaste += Int(truncatingIfNeeded: ttrash.count)
+                    if ttrash.count > 0 { // Check if trash available
+                        if listSelectedWaste.contains(where:{$0.waste == ttrash.name}){ // Check if trash Exist or no
+                            let trashExist = listSelectedWaste.firstIndex(where: {$0.waste == ttrash.name})
+                            listSelectedWaste[trashExist!].count += Int(truncatingIfNeeded: ttrash.count)
+                            
+                        }else{
+                            addWasteModel(wasteName: String(ttrash.name!), wasteCount: Int(truncatingIfNeeded: ttrash.count))
+
+                        }
+                    }
+                    
+                }
+            }
+            totalTrashCount.append(countOfWaste)
+        }
+        completion(totalTrashCount, listSelectedWaste)
+
+    }
+    
     func addWasteModel(wasteName: String, wasteCount: Int){
         let wasteAdded = WasteHistory(waste: wasteName, count: wasteCount)
         listSelectedWaste.append(wasteAdded)
