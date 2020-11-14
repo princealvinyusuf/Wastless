@@ -62,12 +62,20 @@ extension HistoryVC: ChartViewDelegate {
         //If Daily Or Monthly
         if selectedHistory == "daily" {
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Plastics", "Glass", "Papers", "Metals", "Organics"])
+            barChart.xAxis.axisMinimum = 0
+            barChart.xAxis.axisMaximum = groupSpaces * 5 / 2
         }else if selectedHistory == "monthly"{
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Week 1", "Week 2", "Week 3", "Week 4"])
+            barChart.xAxis.axisMinimum = 0
+            barChart.xAxis.axisMaximum = groupSpaces * 4 / 2
+        }else if selectedHistory == "weekly"{
+            barChart.xAxis.valueFormatter = IndexAxisValueFormatter(values: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"])
+            barChart.xAxis.axisMinimum = 0
+            barChart.xAxis.axisMaximum = groupSpaces * 7 / 2
+
         }
         
-        barChart.xAxis.axisMinimum = 0
-        barChart.xAxis.axisMaximum = groupSpaces * 5 / 2
+        
         barChart.xAxis.centerAxisLabelsEnabled = true
         barChart.xAxis.granularity = 1
         barChart.xAxis.drawGridLinesEnabled = false

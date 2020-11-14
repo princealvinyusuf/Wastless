@@ -88,10 +88,12 @@ class HistoryVC: UIViewController {
             selectedHistory = "daily"
             updateDate(type: selectedHistory)
         }else if sender.selectedSegmentIndex == 1 {
+            selectedHistory = "weekly"
+            updateDate(type: selectedHistory)
+        }
+        else if sender.selectedSegmentIndex == 2 {
             selectedHistory = "monthly"
             updateDate(type: selectedHistory)
-        }else if sender.selectedSegmentIndex == 2 {
-            print("sender 3")
         }
     }
     func setupChart() {
@@ -131,7 +133,12 @@ class HistoryVC: UIViewController {
         if selectedHistory == "daily"{
             pickedDate = Calendar.current.date(byAdding: .day , value: 1, to: pickedDate)!
             updateDate(type: selectedHistory)
-        }else if selectedHistory == "monthly"{
+        }else if selectedHistory == "weekly"{
+            pickedDate = Calendar.current.date(byAdding: .day , value: 7, to: pickedDate)!
+            updateDate(type: selectedHistory)
+
+        }
+        else if selectedHistory == "monthly"{
             pickedDate = Calendar.current.date(byAdding: .month , value: 1, to: pickedDate)!
             updateDate(type: selectedHistory)
         }
@@ -140,7 +147,11 @@ class HistoryVC: UIViewController {
         if selectedHistory == "daily"{
             pickedDate = Calendar.current.date(byAdding: .day , value: -1, to: pickedDate)!
             updateDate(type: selectedHistory)
-        }else if selectedHistory == "monthly"{
+        }else if selectedHistory == "weekly"{
+            pickedDate = Calendar.current.date(byAdding: .day , value: -7, to: pickedDate)!
+            updateDate(type: selectedHistory)
+        }
+        else if selectedHistory == "monthly"{
             pickedDate = Calendar.current.date(byAdding: .month , value: -1, to: pickedDate)!
             updateDate(type: selectedHistory)
         }
@@ -170,20 +181,11 @@ class HistoryVC: UIViewController {
         
         let date = dateFormatter2.string(from: pickedDate)
         
-//        presenter?.getTrashData(date: date){(totalTrash, totalTargetCategory) in
-//            self.setDataChart(countWaste: totalTrash, targetWaste: totalTargetCategory)
-//        }
-        
-        
-        
-        presenter?.getTotalWaste(date: date){(totalWaste) in
-            self.lblDetailTotal.text = String(totalWaste)
-            
-        }
         switch type{
         case "daily":
-            presenter?.getTrashData(date: date){(totalTrash, totalTarget) in
+            presenter?.getTotalWasteDaily(date: date){(totalTrash, totalTarget, total) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
+                self.lblDetailTotal.text = String(total)
                 
                 //Function to show Summary
                 let totalData = totalTrash.reduce(0, +)
@@ -200,13 +202,14 @@ class HistoryVC: UIViewController {
             lblDetailDate.text = dateFormatter4.string(from: pickedDate)
             lblSummary.text = "Daily Summary"
         case "monthly":
-            presenter?.getTotalWasteWeekly(date:pickedDate){(totalTrash, totalTarget) in
+            presenter?.getTotalWasteMonthly(date:pickedDate){(totalTrash, totalTarget, total) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
+                self.lblDetailTotal.text = String(total)
                 
                 //Function to show Summary
                 let totalData = totalTrash.reduce(0, +)
                 if totalData == 0{
-                    self.lblSummaryDetail.text = weeklySummary[5]
+                    self.lblSummaryDetail.text = monthlySummary[5]
                 }else{
                     let highestTrashCount = totalTrash.max()
                     let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
@@ -217,14 +220,58 @@ class HistoryVC: UIViewController {
             lblDetailDay.text = dateFormatter6.string(from: pickedDate)
             lblDetailDate.text = dateFormatter7.string(from: pickedDate)
             lblSummary.text = "Monthly Summary"
-        case "monthly":
-            print("Monthly")
+        case "weekly":
+            getWeeklyDate(date: pickedDate){(startDate, endDate, dayArray) in
+                self.lblChartDate.text = ("\(startDate) - \(endDate)")
+                self.lblDetailDate.text = ("\(startDate) - \(endDate)")
+                self.lblDetailDay.text = ("This Week")
+                self.lblSummary.text = "Weekly Summary"
+                
+                self.presenter?.getTotalWasteWeekly(date: dayArray){(totalTrash, totalTarget, total) in
+                    self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
+                    self.lblDetailTotal.text = String(total)
+                    
+                    //Function to show Summary
+                    let totalData = totalTrash.reduce(0, +)
+                    if totalData == 0{
+                        self.lblSummaryDetail.text = weeklySummary[5]
+                    }else{
+                        let highestTrashCount = totalTrash.max()
+                        let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
+                        self.lblSummaryDetail.text = weeklySummary[indexofTrash!]
+                    }
+                }
+                
+                
+                
+            }
+            
         default:
             print("Default")
         }
         
         setupChart()
         
+    }
+    
+    func getWeeklyDate(date : Date, completion: @escaping (_ startDate: String, _ endDate: String, _ dateArray: [Date]) ->()){
+        //THIS FUNCTION IS TO GET DATE IN A WEEK
+        let dateInWeek = date
+        let calendar = Calendar.current
+        let dayOfWeek = calendar.component(.weekday, from: dateInWeek)
+        let weekdays = calendar.range(of: .weekday, in: .weekOfYear, for: dateInWeek)!
+        let days = (weekdays.lowerBound ..< weekdays.upperBound)
+            .compactMap { calendar.date(byAdding: .day, value: $0 - dayOfWeek, to: dateInWeek) }
+        
+        let dateFormatterStart = DateFormatter()
+        dateFormatterStart.dateFormat = "MMM d"
+        
+        let dateFormatterEnd = DateFormatter()
+        dateFormatterEnd.dateFormat = "MMM d"
+
+        let startDate = dateFormatterStart.string(from: days[0])
+        let endDate = dateFormatterStart.string(from: days[6])
+        completion(startDate, endDate, days)
     }
 }
 
@@ -239,6 +286,4 @@ extension HistoryVC: UIViewControllerTransitioningDelegate, BonsaiControllerDele
     }
 }
 
-//extension HistoryVC: AppDelegate{
-//    
-//}
+

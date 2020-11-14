@@ -17,9 +17,10 @@ class HistoryPresenter{
     var totalTrashCount: [Int] = []
     var totalCategoryTarget: [Int] = []
     
-    func getTrashData(date: String, completion: @escaping (_ totalTrash : [Int], _ targetCategory : [Int])->()){
+    func getTotalWasteDaily(date: String, completion: @escaping (_ totalTrash : [Int], _ targetCategory : [Int], _ total: Int)->()){
         var trashes = [TrashCD]()
         var category = [CategoryCD]()
+        var total = 0
         totalTrashCount.removeAll()
         totalCategoryTarget.removeAll()
 
@@ -45,6 +46,7 @@ class HistoryPresenter{
                 var countOfWaste = 0
                 for ttrash in trashes{
                     countOfWaste += Int(truncatingIfNeeded: ttrash.count)
+                    total += Int(truncatingIfNeeded: ttrash.count)
                 }
                 totalTrashCount.append(countOfWaste)
             }
@@ -74,45 +76,15 @@ class HistoryPresenter{
                 
             }
             
-            completion(totalTrashCount,totalCategoryTarget)
+            completion(totalTrashCount,totalCategoryTarget,total)
             
             
             
         }
     }
     
-    func getTotalWaste(date: String, completion: @escaping (_ totalWaste: Int) ->()){
-        var totalWaste = 0
-        if let appDelegate = appDelegate {
-            var trashes = [TrashCD]()
-            let managedContext = appDelegate.persistentContainer.viewContext
-            let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
-            
-            //Predicate
-            let datePredicate = NSPredicate(format: "date=%@", date)
-            trashRequest.predicate = datePredicate
-            do {
-                try trashes = managedContext.fetch(trashRequest)
-            } catch {
-                print("Error Data could not be shown")
-            }
-            
-            if trashes.count>0{
-                for ttrash in trashes{
-                    totalWaste += Int(truncatingIfNeeded: ttrash.count)
-                }
-            }else{
-
-                totalWaste = 0
-            }
-            
-            
-            completion(totalWaste)
-            
-        }
-    }
     
-    func getTotalWasteWeekly(date: Date, completion: @escaping (_ totalTrash : [Int], _ totalTarget : [Int])->()){
+    func getTotalWasteMonthly(date: Date, completion: @escaping (_ totalTrash : [Int], _ totalTarget : [Int], _ total: Int)->()){
         let monthFormatter = DateFormatter()
         let yearFormatter = DateFormatter()
         
@@ -127,6 +99,7 @@ class HistoryPresenter{
         
         var totalWasteWeekly = 0
         var totalTargetWeekly = 0
+        var total = 0
         totalTrashCount.removeAll()
         totalCategoryTarget.removeAll()
         
@@ -134,9 +107,10 @@ class HistoryPresenter{
         for i in 1...8{
             let day = String(format: "%02d", i)
             let date = ("\(day)/\(month)/\(year)")
-            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
+            getTrashDataMonthly(date: date){(totalTrash, totalTarget) in
                 totalWasteWeekly += totalTrash
                 totalTargetWeekly += totalTarget
+                total += totalTrash
             }
         }
         totalTrashCount.append(totalWasteWeekly)
@@ -148,9 +122,10 @@ class HistoryPresenter{
         for i in 9...16{
             let day = String(format: "%02d", i)
             let date = ("\(day)/\(month)/\(year)")
-            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
+            getTrashDataMonthly(date: date){(totalTrash, totalTarget) in
                 totalWasteWeekly += totalTrash
                 totalTargetWeekly += totalTarget
+                total += totalTrash
             }
         }
         totalTrashCount.append(totalWasteWeekly)
@@ -163,9 +138,10 @@ class HistoryPresenter{
         for i in 17...24{
             let day = String(format: "%02d", i)
             let date = ("\(day)/\(month)/\(year)")
-            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
+            getTrashDataMonthly(date: date){(totalTrash, totalTarget) in
                 totalWasteWeekly += totalTrash
                 totalTargetWeekly += totalTarget
+                total += totalTrash
             }
         }
         totalTrashCount.append(totalWasteWeekly)
@@ -178,20 +154,21 @@ class HistoryPresenter{
         for i in 25...31{
             let day = String(format: "%02d", i)
             let date = ("\(day)/\(month)/\(year)")
-            getTrashDataWeekly(date: date){(totalTrash, totalTarget) in
+            getTrashDataMonthly(date: date){(totalTrash, totalTarget) in
                 totalWasteWeekly += totalTrash
                 totalTargetWeekly += totalTarget
+                total += totalTrash
             }
         }
         totalTrashCount.append(totalWasteWeekly)
         totalCategoryTarget.append(totalTargetWeekly)
         
-        completion(totalTrashCount, totalCategoryTarget)
+        completion(totalTrashCount, totalCategoryTarget, total)
 
         
     }
     
-    func getTrashDataWeekly(date:String, completion: @escaping (_ totalTrashCount: Int, _ totalTargetCount: Int) -> ()){
+    func getTrashDataMonthly(date:String, completion: @escaping (_ totalTrashCount: Int, _ totalTargetCount: Int) -> ()){
         var trashes = [TrashCD]()
         var category = [CategoryCD]()
         var totalTrashCount: [Int] = []
@@ -237,5 +214,70 @@ class HistoryPresenter{
             completion(countOfWaste, countOfTarget)
             
         }
+    }
+    
+    func getTotalWasteWeekly(date: [Date], completion: @escaping (_ totalTrash : [Int], _ totalTarget : [Int], _ total: Int)->()){
+        var trashes = [TrashCD]()
+        var category = [CategoryCD]()
+        var total = 0
+        totalTrashCount.removeAll()
+        totalCategoryTarget.removeAll()
+        
+        let dayFormatter = DateFormatter()
+        let monthFormatter = DateFormatter()
+        let yearFormatter = DateFormatter()
+        
+        dayFormatter.dateFormat = "dd"
+        monthFormatter.dateFormat = "MM"
+        yearFormatter.dateFormat = "yyyy"
+        
+        for dates in date{
+            let day = dayFormatter.string(from: dates)
+            let month = monthFormatter.string(from: dates)
+            let year = yearFormatter.string(from: dates)
+            let date = ("\(day)/\(month)/\(year)")
+            
+            
+            if let appDelegate = appDelegate{
+                let managedContext = appDelegate.persistentContainer.viewContext
+                let datePredicate = NSPredicate(format: "date=%@", date)
+                
+                //TRASH DATA
+                let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+                trashRequest.predicate = datePredicate
+                do {
+                    try trashes = managedContext.fetch(trashRequest)
+                } catch {
+                    print("Error Data could not be shown")
+                }
+                var countOfWaste = 0
+                for ttrash in trashes{
+                    countOfWaste += Int(truncatingIfNeeded: ttrash.count)
+                    total += Int(truncatingIfNeeded: ttrash.count)
+                }
+                totalTrashCount.append(countOfWaste)
+                
+                
+                //CATEGORY DATA
+                let catRequest: NSFetchRequest<CategoryCD> = CategoryCD.fetchRequest()
+                catRequest.predicate = datePredicate
+                do {
+                    try category = managedContext.fetch(catRequest)
+                }catch{
+                    print("Error data could not be shown")
+                }
+                var countOfTarget = 0
+                if category.count == 0{
+                    
+                }else{
+                    for ccategory in category{
+                        countOfTarget += Int(truncatingIfNeeded: ccategory.target)
+                    }
+                }
+                totalCategoryTarget.append(countOfTarget)
+            }
+        }
+        completion(totalTrashCount, totalCategoryTarget, total)
+        
     }
 }
