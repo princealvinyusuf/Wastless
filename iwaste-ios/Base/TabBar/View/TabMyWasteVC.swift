@@ -278,7 +278,7 @@ extension TabMyWasteVC: WasteTargetDelegate {
             waveView.addSubview(wave)
             wave.maskImage = UIImage(named: "wasteBasket")
             wave.startAnimation()
-            presenter?.totalTrashUsage(categories: categories){ (progress) in
+            presenter?.totalTrashUsage(){ (progress) in
                 self.wave.setProgress(progress)
             }
             trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"

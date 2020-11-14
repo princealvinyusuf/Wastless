@@ -94,15 +94,21 @@ class MyWastePresenter {
         completion(countOfWaste, targetOfCategory, progress)
     }
     
-    func totalTrashUsage(categories: [CategoryCD]?, completion: @escaping (_ progress: Float) -> ()){
+    func totalTrashUsage(completion: @escaping (_ progress: Float) -> ()){
         var trashes = [TrashCD]()
+        var categories = [CategoryCD]()
         if let appDelegate = appDelegate {
             let managedContext = appDelegate.persistentContainer.viewContext
             let trashRequest: NSFetchRequest<TrashCD> = TrashCD.fetchRequest()
+            let catRequest: NSFetchRequest<CategoryCD> = CategoryCD.fetchRequest()
+            
             trashRequest.predicate = NSPredicate(format: "date=%@", self.getDate())
+            catRequest.predicate = NSPredicate(format: "date=%@", self.getDate())
+            
             trashRequest.sortDescriptors = [NSSortDescriptor(key: "type", ascending: true)]
             do {
                 try trashes = managedContext.fetch(trashRequest)
+                try categories = managedContext.fetch(catRequest)
             } catch {
                 print("Error Data could not be shown")
             }
@@ -116,7 +122,7 @@ class MyWastePresenter {
         
         // Get data of total Target
         var targetOfCategory = 0
-        for cat in categories!{
+        for cat in categories{
             targetOfCategory += Int(truncatingIfNeeded: cat.target)
         }
         

@@ -112,6 +112,7 @@ class AddNewWasteVC: UIViewController {
         // TODO save data to core data here
         addData()
         delegate?.updateUI()
+        delegate?.checkTargetSet()
         self.dismiss(animated: true, completion: nil)
         
     }
