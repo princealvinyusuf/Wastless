@@ -100,6 +100,7 @@ class TabMyWasteVC: UIViewController {
         if isEmpty!{
             main(isHidden: false)
             target(isHidden: true)
+            checkTargetSet()
         }else{
             main(isHidden: true)
             target(isHidden: false)
