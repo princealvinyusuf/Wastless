@@ -90,7 +90,7 @@
 "puf-gI-jgn.title" = "Waste up?";
 
 /* Class = "UILabel"; text = "Your average waste production today is twice higher than yesterday. Mostly, your waste is dominated by plastic. Thus, consider to take the challenge 2."; ObjectID = "qLL-vI-Zsn"; */
-"qLL-vI-Zsn.text" = "Your average waste production today is twice higher than yesterday. Mostly, your waste is dominated by plastic. Thus, consider to take the challenge 2.";
+"qLL-vI-Zsn.text" = "No data available at the moment";
 
 /* Class = "UILabel"; text = "Plastics"; ObjectID = "uRo-F8-9Cj"; */
 "uRo-F8-9Cj.text" = "Plastics";

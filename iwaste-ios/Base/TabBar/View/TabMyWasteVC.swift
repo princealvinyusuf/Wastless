@@ -134,7 +134,6 @@ class TabMyWasteVC: UIViewController {
         super.viewWillAppear(animated)
         self.updateUI()
         if !udService.isFirstLaunched {
-            udService.isFirstLaunched = true
             let storyBoard : UIStoryboard = UIStoryboard(name: "Base", bundle:nil)
             let welcomeVC = storyBoard.instantiateViewController(withIdentifier: "WelcomeVC") as! WelcomeVC
             self.present(welcomeVC, animated:true, completion:nil)

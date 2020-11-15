@@ -45,7 +45,7 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
         
         let slide1 = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! SlideView
         slide1.welcomeImage.image = UIImage(named: "illustrateOne")
-        slide1.underImageLabel.text = NSLocalizedString("onboarding_title1", comment: "Keep On Track")
+        slide1.underImageLabel.text = NSLocalizedString("onboard_title1", comment: "Keep On Track")
         slide1.descriptionLabel.text = NSLocalizedString("onboarding_desc1", comment: "Make sure that you're on track to your zero waste life journey by continuously collecting badges in achievement.")
         
         let slide2 = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! SlideView
@@ -116,7 +116,8 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
     }
     
     @IBAction func startTapped(_ sender: UIButton){
-        
+        UserDefaultService.instance.isFirstLaunched = true
+
     }
     
 }
