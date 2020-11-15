@@ -9,7 +9,7 @@ import UIKit
 import BonsaiController
 
 class HistoryVC: UIViewController {
-
+    
     @IBOutlet weak var segmentedController: UISegmentedControl!
     @IBOutlet weak var viewSummary: UIView!
     @IBOutlet weak var viewChart: UIView!
@@ -28,42 +28,42 @@ class HistoryVC: UIViewController {
     
     var presenter: HistoryPresenter?
     var pickedDate = Date()
-    var selectedHistory: String = "daily"
+    var selectedHistory: String = NSLocalizedString("segmented_daily", comment: "daily")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = HistoryPresenter()
         updateDate(type: selectedHistory)
-
+        
         viewSummary.layer.cornerRadius = 15
         viewChart.layer.cornerRadius = 15
         viewDetail.layer.cornerRadius = 11
         
         //viewSummary.layer.cornerRadius = 10
-//        viewSummary.layer.shadowColor = UIColor.black.cgColor
-//        viewSummary.layer.shadowOpacity = 0.5
-//        viewSummary.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        viewSummary.layer.shadowRadius = 25.0
+        //        viewSummary.layer.shadowColor = UIColor.black.cgColor
+        //        viewSummary.layer.shadowOpacity = 0.5
+        //        viewSummary.layer.shadowOffset = CGSize(width: 0, height: 0)
+        //        viewSummary.layer.shadowRadius = 25.0
         
-//        viewSummary.backgroundColor = UIColor.darkGray
-//        viewChart.backgroundColor = UIColor.darkGray
+        //        viewSummary.backgroundColor = UIColor.darkGray
+        //        viewChart.backgroundColor = UIColor.darkGray
         
         viewSummary.layer.shadowColor = UIColor.black.cgColor
         viewChart.layer.shadowColor = UIColor.black.cgColor
-
+        
         viewSummary.layer.shadowRadius = 5
         viewChart.layer.shadowRadius = 5
-
+        
         viewSummary.layer.shadowOffset = CGSize(width: 0, height: 2)
         viewChart.layer.shadowOffset = CGSize(width: 0, height: 2)
-
+        
         viewSummary.layer.shadowOpacity = 0.3
         viewChart.layer.shadowOpacity = 0.3
         
-//        presenter?.getTrashData(date: "01/11/2020"){(totalTrash, totalTargetCategory) in
-//            self.setDataChart(countWaste: totalTrash, targetWaste: totalTargetCategory)
-//        }
-//        setupChart()
+        //        presenter?.getTrashData(date: "01/11/2020"){(totalTrash, totalTargetCategory) in
+        //            self.setDataChart(countWaste: totalTrash, targetWaste: totalTargetCategory)
+        //        }
+        //        setupChart()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(detailPressed))
         viewDetail.addGestureRecognizer(tap)
@@ -100,7 +100,7 @@ class HistoryVC: UIViewController {
         barChart.delegate = self
         barChart.doubleTapToZoomEnabled = false
         view.addSubview(barChart)
-                
+        
         barChart.backgroundColor = .clear
         barChart.isUserInteractionEnabled = false
         
@@ -136,7 +136,7 @@ class HistoryVC: UIViewController {
         }else if selectedHistory == "weekly"{
             pickedDate = Calendar.current.date(byAdding: .day , value: 7, to: pickedDate)!
             updateDate(type: selectedHistory)
-
+            
         }
         else if selectedHistory == "monthly"{
             pickedDate = Calendar.current.date(byAdding: .month , value: 1, to: pickedDate)!
@@ -200,7 +200,8 @@ class HistoryVC: UIViewController {
             lblChartDate.text = dateFormatter.string(from: pickedDate)
             lblDetailDay.text = dateFormatter3.string(from: pickedDate)
             lblDetailDate.text = dateFormatter4.string(from: pickedDate)
-            lblSummary.text = "Daily Summary"
+            lblSummary.text = NSLocalizedString("daily_summary", comment: "Daily Summary")
+            
         case "monthly":
             presenter?.getTotalWasteMonthly(date:pickedDate){(totalTrash, totalTarget, total) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
@@ -219,13 +220,14 @@ class HistoryVC: UIViewController {
             lblChartDate.text = dateFormatter5.string(from: pickedDate)
             lblDetailDay.text = dateFormatter6.string(from: pickedDate)
             lblDetailDate.text = dateFormatter7.string(from: pickedDate)
-            lblSummary.text = "Monthly Summary"
+            lblSummary.text = NSLocalizedString("monthly_summary", comment: "Monthly Summary")
+
         case "weekly":
             getWeeklyDate(date: pickedDate){(startDate, endDate, dayArray) in
                 self.lblChartDate.text = ("\(startDate) - \(endDate)")
                 self.lblDetailDate.text = ("\(startDate) - \(endDate)")
-                self.lblDetailDay.text = ("This Week")
-                self.lblSummary.text = "Weekly Summary"
+                self.lblDetailDay.text = NSLocalizedString("this_week", comment: "This Week")
+                self.lblSummary.text = NSLocalizedString("weekly_summary", comment: "Weekly Summary")
                 
                 self.presenter?.getTotalWasteWeekly(date: dayArray){(totalTrash, totalTarget, total) in
                     self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
@@ -241,11 +243,7 @@ class HistoryVC: UIViewController {
                         self.lblSummaryDetail.text = weeklySummary[indexofTrash!]
                     }
                 }
-                
-                
-                
             }
-            
         default:
             print("Default")
         }
@@ -268,7 +266,7 @@ class HistoryVC: UIViewController {
         
         let dateFormatterEnd = DateFormatter()
         dateFormatterEnd.dateFormat = "MMM d"
-
+        
         let startDate = dateFormatterStart.string(from: days[0])
         let endDate = dateFormatterStart.string(from: days[6])
         completion(startDate, endDate, days)

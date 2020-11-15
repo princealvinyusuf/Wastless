@@ -1,0 +1,261 @@
+
+/* Class = "UILabel"; text = "Leftovers"; ObjectID = "0nW-Yl-JJU"; */
+"0nW-Yl-JJU.text" = "Sisa Makanan";
+
+/* Class = "UILabel"; text = "25 of 30"; ObjectID = "2dM-gx-2b1"; */
+"2dM-gx-2b1.text" = "25 dari 30";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "2sv-9H-ljX"; */
+"2sv-9H-ljX.title" = "Kembali";
+
+/* Class = "UILabel"; text = "Hard Box"; ObjectID = "5XG-C6-Y5I"; */
+"5XG-C6-Y5I.text" = "Kardus";
+
+/* Class = "UILabel"; text = "Rind & Weevils"; ObjectID = "6c9-Ec-7vp"; */
+"6c9-Ec-7vp.text" = "Kulit Buah & Sayur";
+
+/* Class = "UILabel"; text = "25 of 30"; ObjectID = "6cK-bn-SbS"; */
+"6cK-bn-SbS.text" = "25 dari 30";
+
+/* Class = "UILabel"; text = "25 of 30"; ObjectID = "6es-kQ-hR7"; */
+"6es-kQ-hR7.text" = "25 dari 30";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "6gg-7z-70g"; */
+"6gg-7z-70g.title" = "Selesai";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "9vl-if-p3p"; */
+"9vl-if-p3p.text" = "3";
+
+/* Class = "UILabel"; text = "Or input manually here:"; ObjectID = "AJb-Nf-WsF"; */
+"AJb-Nf-WsF.text" = "Atau ketik di sini:";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "BoI-9z-2io"; */
+"BoI-9z-2io.text" = "3";
+
+/* Class = "UILabel"; text = "Organic"; ObjectID = "C0L-Fe-Mk1"; */
+"C0L-Fe-Mk1.text" = "Organik";
+
+/* Class = "UILabel"; text = "Bottle"; ObjectID = "Cnb-A7-taH"; */
+"Cnb-A7-taH.text" = "Botol";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "D7k-ub-Wsg"; */
+"D7k-ub-Wsg.title" = "Kembali";
+
+/* Class = "UILabel"; text = "Plastic Bag"; ObjectID = "Dzx-Ob-sXE"; */
+"Dzx-Ob-sXE.text" = "Kantong Plastik";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "GeJ-bD-sqw"; */
+"GeJ-bD-sqw.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Gg2-ra-cN0"; */
+"Gg2-ra-cN0.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Gvt-OT-kYw"; */
+"Gvt-OT-kYw.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Gxc-Wo-qbm"; */
+"Gxc-Wo-qbm.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "IJt-lW-vty"; */
+"IJt-lW-vty.text" = "3";
+
+/* Class = "UILabel"; text = "300"; ObjectID = "KEu-eY-zPt"; */
+"KEu-eY-zPt.text" = "300";
+
+/* Class = "UILabel"; text = "Glass"; ObjectID = "KcI-qJ-cq1"; */
+"KcI-qJ-cq1.text" = "Kaca";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "KiI-FE-hlP"; */
+"KiI-FE-hlP.text" = "3";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "LSY-Sr-Vi1"; */
+"LSY-Sr-Vi1.text" = "1";
+
+/* Class = "UILabel"; text = "Pcs"; ObjectID = "M2p-TS-kWJ"; */
+"M2p-TS-kWJ.text" = "Buah";
+
+/* Class = "UILabel"; text = "25 of 30"; ObjectID = "MHB-Sx-PR1"; */
+"MHB-Sx-PR1.text" = "25 dari 30";
+
+/* Class = "UILabel"; text = "Organic"; ObjectID = "Me4-6J-iq2"; */
+"Me4-6J-iq2.text" = "Organik";
+
+/* Class = "UILabel"; text = "Glass"; ObjectID = "NaX-Mv-9MA"; */
+"NaX-Mv-9MA.text" = "Kaca";
+
+/* Class = "UILabel"; text = "Leaves"; ObjectID = "OyH-O4-Lzm"; */
+"OyH-O4-Lzm.text" = "Dedaunan";
+
+/* Class = "UINavigationItem"; title = "Current Waste"; ObjectID = "PAF-ac-2GC"; */
+"PAF-ac-2GC.title" = "Sampah Saat Ini";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "QFO-Vq-Vhl"; */
+"QFO-Vq-Vhl.text" = "3";
+
+/* Class = "UILabel"; text = "Pcs"; ObjectID = "Qh1-3V-l7O"; */
+"Qh1-3V-l7O.text" = "Buah";
+
+/* Class = "UILabel"; text = "300"; ObjectID = "R4q-ne-JqO"; */
+"R4q-ne-JqO.text" = "300";
+
+/* Class = "UILabel"; text = "Food Box"; ObjectID = "Rxx-Mz-v8J"; */
+"Rxx-Mz-v8J.text" = "Kotak Makanan";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "SiM-nu-b13"; */
+"SiM-nu-b13.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "Tdo-S6-gTV"; */
+"Tdo-S6-gTV.text" = "3";
+
+/* Class = "UILabel"; text = "Plastics"; ObjectID = "TqF-QG-YXv"; */
+"TqF-QG-YXv.text" = "Plastik";
+
+/* Class = "UILabel"; text = "Paper"; ObjectID = "UMO-w5-4Kq"; */
+"UMO-w5-4Kq.text" = "Kertas";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "VSG-6z-gXo"; */
+"VSG-6z-gXo.text" = "3";
+
+/* Class = "UILabel"; text = "Food Cans"; ObjectID = "VW9-Uf-Ddh"; */
+"VW9-Uf-Ddh.text" = "Kaleng Makanan";
+
+/* Class = "UITextField"; placeholder = "Input Trash Name"; ObjectID = "Vxn-BS-9Pc"; */
+"Vxn-BS-9Pc.placeholder" = "Masukkan Nama Sampah";
+
+/* Class = "UILabel"; text = "Soft Box"; ObjectID = "W93-9w-GUF"; */
+"W93-9w-GUF.text" = "Kardus Lunak";
+
+/* Class = "UINavigationItem"; title = "Current Waste"; ObjectID = "Yug-fc-sUX"; */
+"Yug-fc-sUX.title" = "Sampah Saat Ini";
+
+/* Class = "UIButton"; normalTitle = "   Add waste   "; ObjectID = "Zx7-zR-ouu"; */
+"Zx7-zR-ouu.normalTitle" = "   Tambah Sampah   ";
+
+/* Class = "UILabel"; text = "Fill each waste column with your reachable target for today"; ObjectID = "aYl-l7-FwZ"; */
+"aYl-l7-FwZ.text" = "Isi setiap kolom sampah dengan target yang ingin kamu capai hari ini";
+
+/* Class = "UILabel"; text = "Pcs"; ObjectID = "an9-7V-75z"; */
+"an9-7V-75z.text" = "Buah";
+
+/* Class = "UINavigationItem"; title = "Plastics"; ObjectID = "b2r-uL-mWo"; */
+"b2r-uL-mWo.title" = "Plastik";
+
+/* Class = "UILabel"; text = "Ceramic Cup"; ObjectID = "bJO-uG-RJE"; */
+"bJO-uG-RJE.text" = "Cangkir Keramik";
+
+/* Class = "UILabel"; text = "300"; ObjectID = "bVI-1g-uQ3"; */
+"bVI-1g-uQ3.text" = "300";
+
+/* Class = "UILabel"; text = "Straw"; ObjectID = "cSG-hg-Vq2"; */
+"cSG-hg-Vq2.text" = "Sedotan";
+
+/* Class = "UILabel"; text = "25 of 30"; ObjectID = "cjN-oC-EGl"; */
+"cjN-oC-EGl.text" = "25 dari 30";
+
+/* Class = "UILabel"; text = "300"; ObjectID = "d4u-kQ-Gp2"; */
+"d4u-kQ-Gp2.text" = "300";
+
+/* Class = "UILabel"; text = "Papers"; ObjectID = "dNM-tq-M4K"; */
+"dNM-tq-M4K.text" = "Kertas";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "dUP-0R-51n"; */
+"dUP-0R-51n.text" = "3";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "dej-Od-wzr"; */
+"dej-Od-wzr.title" = "Kembali";
+
+/* Class = "UILabel"; text = "Battery"; ObjectID = "e5D-eM-muo"; */
+"e5D-eM-muo.text" = "Baterai";
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "eeo-FE-z60"; */
+"eeo-FE-z60.title" = "Selesai";
+
+/* Class = "UILabel"; text = "Beverage Cans"; ObjectID = "fbl-Gu-pgh"; */
+"fbl-Gu-pgh.text" = "Kaleng Minuman";
+
+/* Class = "UILabel"; text = "Cigarette"; ObjectID = "gI8-W4-yhh"; */
+"gI8-W4-yhh.text" = "Rokok";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "gcG-Nf-SE6"; */
+"gcG-Nf-SE6.text" = "3";
+
+/* Class = "UILabel"; text = "Drink Cup"; ObjectID = "gk4-eQ-k0A"; */
+"gk4-eQ-k0A.text" = "Gelas Minuman";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "jAO-ag-2Al"; */
+"jAO-ag-2Al.text" = "3";
+
+/* Class = "UILabel"; text = "Metals"; ObjectID = "k7O-oT-0uR"; */
+"k7O-oT-0uR.text" = "Logam";
+
+/* Class = "UILabel"; text = "20 October 2020"; ObjectID = "kKx-6h-TcK"; */
+"kKx-6h-TcK.text" = "20 Oktober 2020";
+
+/* Class = "UILabel"; text = "Plastic"; ObjectID = "lJR-lM-1r9"; */
+"lJR-lM-1r9.text" = "Plastik";
+
+/* Class = "UILabel"; text = "Pcs"; ObjectID = "lgY-Br-VAS"; */
+"lgY-Br-VAS.text" = "Buah";
+
+/* Class = "UILabel"; text = "Screw & Utensils"; ObjectID = "ljt-2Y-nFC"; */
+"ljt-2Y-nFC.text" = "Sekrup & Perkakas";
+
+/* Class = "UILabel"; text = "Plate"; ObjectID = "loY-bX-daq"; */
+"loY-bX-daq.text" = "Piring";
+
+/* Class = "UILabel"; text = "Pick from the list below:"; ObjectID = "mhr-iu-DaL"; */
+"mhr-iu-DaL.text" = "Pilih dari daftar di bawah ini:";
+
+/* Class = "UILabel"; text = "Spray Can"; ObjectID = "mzp-XF-HVN"; */
+"mzp-XF-HVN.text" = "Kaleng Semprot";
+
+/* Class = "UILabel"; text = "Glass Bottle"; ObjectID = "oII-JP-igf"; */
+"oII-JP-igf.text" = "Botol Kaca";
+
+/* Class = "UILabel"; text = "300"; ObjectID = "pHa-f9-hYa"; */
+"pHa-f9-hYa.text" = "300";
+
+/* Class = "UILabel"; text = "Drink Cup"; ObjectID = "pqI-pn-2Uy"; */
+"pqI-pn-2Uy.text" = "Gelas Minuman";
+
+/* Class = "UILabel"; text = "Metal"; ObjectID = "qmy-Rf-dKw"; */
+"qmy-Rf-dKw.text" = "Logam";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "sV0-bv-MTA"; */
+"sV0-bv-MTA.text" = "3";
+
+/* Class = "UINavigationItem"; title = "Set Target"; ObjectID = "swS-Ex-YJr"; */
+"swS-Ex-YJr.title" = "Atur Target";
+
+/* Class = "UILabel"; text = "Papers"; ObjectID = "tQU-KI-rHG"; */
+"tQU-KI-rHG.text" = "Kertas";
+
+/* Class = "UILabel"; text = "Snack Package"; ObjectID = "uda-dh-9sz"; */
+"uda-dh-9sz.text" = "Kemasan Snack";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "uoe-0X-A86"; */
+"uoe-0X-A86.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "xgY-et-JHZ"; */
+"xgY-et-JHZ.text" = "3";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "xj5-7i-BHK"; */
+"xj5-7i-BHK.text" = "3";
+
+/* Class = "UILabel"; text = "Glass Cup"; ObjectID = "y6G-RI-agl"; */
+"y6G-RI-agl.text" = "Gelas Kaca";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "yhy-sE-3Ch"; */
+"yhy-sE-3Ch.title" = "Kembali";
+
+/* Class = "UILabel"; text = "3"; ObjectID = "z15-5m-fpk"; */
+"z15-5m-fpk.text" = "3";
+
+/* Class = "UILabel"; text = "Jar"; ObjectID = "zKn-YF-tWX"; */
+"zKn-YF-tWX.text" = "Toples";
+
+/* Class = "UILabel"; text = "Pcs"; ObjectID = "ziN-pY-sIL"; */
+"ziN-pY-sIL.text" = "Buah";
+
+/* Class = "UILabel"; text = "Eggshell"; ObjectID = "znA-Ce-umt"; */
+"znA-Ce-umt.text" = "Kulit Telur";

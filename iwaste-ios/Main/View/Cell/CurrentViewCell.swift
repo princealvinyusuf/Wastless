@@ -51,7 +51,7 @@ class CurrentViewCell: UITableViewCell {
         linearWasteProgress.isCornersRounded = true
         let text = String(count)
         let text2 = String(target)
-        txtWasteTargetStatus.text = ("\(text) of \(text2)")
+        txtWasteTargetStatus.text = ("\(text)" + NSLocalizedString("statsprogress_of", comment: " of ") + "\(text2)")
     }
     
     private func setProgressColor(_ order: Int) {

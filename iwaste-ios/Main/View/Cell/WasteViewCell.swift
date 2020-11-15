@@ -14,6 +14,6 @@ class WasteViewCell: UITableViewCell {
     
     func configureCell(wasteAdded: WasteAdded) {
         imgWaste.image = wasteAdded.waste.wasteImg
-        txtWasteStatus.text = "\(wasteAdded.numOfWaste) \(wasteAdded.waste.wasteName) added"
+        txtWasteStatus.text = "\(wasteAdded.numOfWaste) \(wasteAdded.waste.wasteName)" + NSLocalizedString("addwaste_status", comment:  " added")
     }
 }

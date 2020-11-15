@@ -26,19 +26,19 @@ extension Badges {
             Badges(
                 title: "Eco Sprinter",
                 image: UIImage(named: "ecoSprinter")!,
-                missionBin: 50,
+                missionBin: 40,
                 missionChallenge: [0,1]
             ),
             Badges(
                 title: "Eco Adventurer",
                 image: UIImage(named: "ecoAdventurer")!,
-                missionBin: 40,
+                missionBin: 30,
                 missionChallenge: [2,3]
             ),
             Badges(
                 title: "Zero Waste Master",
                 image: UIImage(named: "zeroWasteMaster")!,
-                missionBin: 30,
+                missionBin: 20,
                 missionChallenge: [4]
             )
         ]
