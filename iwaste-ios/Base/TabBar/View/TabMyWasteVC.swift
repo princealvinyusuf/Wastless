@@ -122,6 +122,7 @@ class TabMyWasteVC: UIViewController {
             util.showAlertLevelUp(parentVC: self)
         }
 
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

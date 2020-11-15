@@ -9,11 +9,11 @@ import UIKit
 import CoreData
 import Foundation
 
-
 class HistoryPresenter{
     private let appDelegate = UIApplication.shared.delegate as? AppDelegate
     let trashList: [String] = [NSLocalizedString("trashlist_plastic", comment: "Plastic"), NSLocalizedString("trashlist_glass", comment: "Glass"), NSLocalizedString("trashlist_glass", comment: "Paper"), NSLocalizedString("trashlist_metal", comment: "Metal"), NSLocalizedString("trashlist_organic", comment: "Organic")]
-    let categoryList: [String] = [NSLocalizedString("categorylist_plastic", comment: "APlastic"), NSLocalizedString("categorylist_glass", comment: "BGlass"), NSLocalizedString("categorylist_paper", comment: "CPaper"), NSLocalizedString("categorylist_metal", comment: "DMetal"), NSLocalizedString("categorylist_organic", comment: "EOrganic")]
+    let categoryList: [String] = ["APlastic", "BGlass", "CPaper", "DMetal", "EOrganic"]
+
     var totalTrashCount: [Int] = []
     var totalCategoryTarget: [Int] = []
     

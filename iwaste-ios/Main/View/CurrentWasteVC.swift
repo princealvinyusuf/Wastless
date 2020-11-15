@@ -25,7 +25,6 @@ class CurrentWasteVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CurrentViewCell", bundle: self.nibBundle), forCellReuseIdentifier: "currentViewCell")
-
     }
 
     @IBAction func btnCancel(_ sender: UIBarButtonItem) {

@@ -6,7 +6,7 @@
   
 */
 
-//"onboarding_title1" = "Keep On Track";
+"onboard_title1" = "Keep On Track";
 "onboarding_desc1" = "Make sure you that you’re on track to your zero waste life journey by continously collecting badges in achievement.";
 "onboarding_title2" = "Record Your Waste";
 "onboarding_desc2" = "Record each waste you’ve produced in daily basis based on it’s category to help you reach the next level of zero waste life.";

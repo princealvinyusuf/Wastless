@@ -70,16 +70,16 @@ class CurrentWastePresenter {
         }
         
         let trashData = TrashData(trashname: type.rawValue, trash: trashes)
-        
-        print("ttrashh: ", trashes)
-        
-        let dateFormat = "dd/MM/yyyy"
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat
-        for trash in trashes {
-            let datee = dateFormatter.date(from: trash.date!)
-            print("weekNum: ", datee!.weekOfMonth)
-        }
+//        
+//        print("ttrashh: ", trashes)
+//        
+//        let dateFormat = "dd/MM/yyyy"
+//        let dateFormatter = DateFormatter()
+//        dateFormatter.dateFormat = dateFormat
+//        for trash in trashes {
+//            let datee = dateFormatter.date(from: trash.date!)
+//            print("weekNum: ", datee!.weekOfMonth)
+//        }
         return trashData
     }
     
