@@ -29,7 +29,8 @@
 "challenge" = "Tantangan: ";
 "challenge_1" = "Bawa Tumblermu";
 "emptystate_chart" = "Belum ada data terekam.";
-"medal_desc1" = "Kamu akan mendapatkan medali ini jika kamu menjaga isi tempat sampahmu lebih rendah dari ";
+"medal_before_desc1" = "Kamu akan mendapatkan medali ini jika kamu menjaga isi tempat sampahmu lebih rendah dari ";
+"medal_after_desc1" = "Kamu mendapatkan medali ini karena kamu berhasil menjaga isi tempat sampahmu lebih rendah dari ";
 "medal_subdesc1" = " sampah berturut-turut dalam 1 minggu.";
 "trashlist_plastic" = "Plastik";
 "trashlist_glass" = "Kaca";

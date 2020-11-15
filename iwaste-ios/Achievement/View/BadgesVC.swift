@@ -17,7 +17,7 @@ class BadgesVC: UIViewController, UIViewControllerTransitioningDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         collectionBadges.delegate = self
         collectionBadges.dataSource = self
         collectionBadges.register(UINib(nibName: "BadgeViewCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "badgeViewCell")
@@ -57,11 +57,8 @@ extension BadgesVC: UICollectionViewDelegate, UICollectionViewDataSource {
         let badge = arrayBadges[indexPath.row]
         cell.configureCell(badge: badge)
         
-        let arrayDate = udService.badgeObtainedDateArray
-        for i in arrayDate.count...arrayBadges.count-1 {
-            if i == indexPath.row {
-                cell.imgBadge.image = UIImage(named: "blankBadges")!
-            }
+        if !BadgeService.isContain(num: indexPath.row) {
+            cell.imgBadge.image = UIImage(named: "blankBadges")!
         }
         
         return cell

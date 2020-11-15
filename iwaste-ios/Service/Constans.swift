@@ -27,6 +27,12 @@ struct K {
         static let colorGlass = UIColor(named: "glass")!
         static let colorGlassSoft = UIColor(named: "glassSoft")!
     }
+    
+    struct Core {
+        static let badgeEntity = "BadgeCD"
+        static let badgeNum = "badgeNum"
+        static let badgeDate = "badgeDate"
+    }
 }
 
 enum WasteType: String {

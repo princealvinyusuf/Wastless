@@ -11,6 +11,9 @@
 		50587E13256033D800C2CA73 /* Achievement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50587E15256033D800C2CA73 /* Achievement.storyboard */; };
 		50587E222560403C00C2CA73 /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50587E242560403C00C2CA73 /* History.storyboard */; };
 		50587E322560DEAC00C2CA73 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 50587E342560DEAC00C2CA73 /* Localizable.strings */; };
+		590A32052561640400AE0266 /* DataBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A32042561640400AE0266 /* DataBadge.swift */; };
+		590A32082561646800AE0266 /* BadgeDataFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590A32072561646800AE0266 /* BadgeDataFunction.swift */; };
+		590A3219256197B000AE0266 /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 590A321B256197B000AE0266 /* Alert.storyboard */; };
 		591D06982537E37A0008098A /* ModelWaste.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D06972537E37A0008098A /* ModelWaste.swift */; };
 		591D069B2537E3F00008098A /* DataCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D069A2537E3F00008098A /* DataCategory.swift */; };
 		591D069E2538059E0008098A /* ModelWasteAdded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 591D069D2538059E0008098A /* ModelWasteAdded.swift */; };
@@ -53,7 +56,6 @@
 		59C8D2D72550DD9F00E55CF2 /* BadgeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8D2D52550DD9F00E55CF2 /* BadgeViewCell.swift */; };
 		59C8D2D82550DD9F00E55CF2 /* BadgeViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59C8D2D62550DD9F00E55CF2 /* BadgeViewCell.xib */; };
 		59C8D2DB2550E08800E55CF2 /* Badges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C8D2DA2550E08800E55CF2 /* Badges.swift */; };
-		59D26EE7255065D900E46F4E /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 59D26EE6255065D900E46F4E /* Alert.storyboard */; };
 		59D2EFF12547CA9600EE1B8B /* CurrentWastePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFF02547CA9600EE1B8B /* CurrentWastePresenter.swift */; };
 		59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59D2EFF32547D81500EE1B8B /* SetTargetPresenter.swift */; };
 		9F1A43DB253E89F800870DE8 /* AchievementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F1A43DA253E89F800870DE8 /* AchievementVC.swift */; };
@@ -94,6 +96,11 @@
 		50587E422560DF8700C2CA73 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		50C3761A255EBABE0017D2A5 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Base.strings; sourceTree = "<group>"; };
 		50C3761B255EBABE0017D2A5 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		590A32042561640400AE0266 /* DataBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBadge.swift; sourceTree = "<group>"; };
+		590A32072561646800AE0266 /* BadgeDataFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeDataFunction.swift; sourceTree = "<group>"; };
+		590A321A256197B000AE0266 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Alert.storyboard; sourceTree = "<group>"; };
+		590A321E256197B200AE0266 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Alert.strings; sourceTree = "<group>"; };
+		590A3221256197B300AE0266 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Alert.strings; sourceTree = "<group>"; };
 		591D06972537E37A0008098A /* ModelWaste.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWaste.swift; sourceTree = "<group>"; };
 		591D069A2537E3F00008098A /* DataCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataCategory.swift; sourceTree = "<group>"; };
 		591D069D2538059E0008098A /* ModelWasteAdded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelWasteAdded.swift; sourceTree = "<group>"; };
@@ -138,7 +145,6 @@
 		59C8D2D52550DD9F00E55CF2 /* BadgeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeViewCell.swift; sourceTree = "<group>"; };
 		59C8D2D62550DD9F00E55CF2 /* BadgeViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BadgeViewCell.xib; sourceTree = "<group>"; };
 		59C8D2DA2550E08800E55CF2 /* Badges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Badges.swift; sourceTree = "<group>"; };
-		59D26EE6255065D900E46F4E /* Alert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
 		59D2EFF02547CA9600EE1B8B /* CurrentWastePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWastePresenter.swift; sourceTree = "<group>"; };
 		59D2EFF32547D81500EE1B8B /* SetTargetPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetTargetPresenter.swift; sourceTree = "<group>"; };
 		855B67F695D99579871E8C57 /* Pods_iwaste_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iwaste_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -378,7 +384,7 @@
 		59D26EE5255065CA00E46F4E /* CustomAlert */ = {
 			isa = PBXGroup;
 			children = (
-				59D26EE6255065D900E46F4E /* Alert.storyboard */,
+				590A321B256197B000AE0266 /* Alert.storyboard */,
 				5928C90F25506BAA003489C5 /* AlertDoneChallengeVC.swift */,
 				5928C91225506BB7003489C5 /* AlertUtil.swift */,
 				5928C915255074BA003489C5 /* AlertLevelUpVC.swift */,
@@ -436,6 +442,7 @@
 				9F1A43E7253E8FDA00870DE8 /* Challenge.swift */,
 				59450D37254F0D46000357C2 /* ModelLevel.swift */,
 				59C8D2DA2550E08800E55CF2 /* Badges.swift */,
+				590A32042561640400AE0266 /* DataBadge.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -489,6 +496,7 @@
 				A824EB95254DDDAF0096975E /* TrashCD+CoreDataClass.swift */,
 				A824EB96254DDDAF0096975E /* TrashCD+CoreDataProperties.swift */,
 				5934E33C2531FC480082D01D /* iwaste_ios.xcdatamodeld */,
+				590A32072561646800AE0266 /* BadgeDataFunction.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -567,7 +575,6 @@
 				595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */,
 				591D06D4253839880008098A /* HorizontalModalCurrentWaste.xib in Resources */,
 				59C8D2D82550DD9F00E55CF2 /* BadgeViewCell.xib in Resources */,
-				59D26EE7255065D900E46F4E /* Alert.storyboard in Resources */,
 				50587E322560DEAC00C2CA73 /* Localizable.strings in Resources */,
 				50587E13256033D800C2CA73 /* Achievement.storyboard in Resources */,
 				59450D4E25506328000357C2 /* Assets.xcassets in Resources */,
@@ -577,6 +584,7 @@
 				59AA9E0125448BE20074644A /* DetailHistoryCell.xib in Resources */,
 				591D0782253DF1BB0008098A /* CardCategoryCell.xib in Resources */,
 				50587E222560403C00C2CA73 /* History.storyboard in Resources */,
+				590A3219256197B000AE0266 /* Alert.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -659,6 +667,7 @@
 				591D06D3253839880008098A /* HorizontalModalCurrentWaste.swift in Sources */,
 				9F42AA33253A60DF00EB8056 /* SlideView.swift in Sources */,
 				598A768B2552FC5C00154BC1 /* NotificationService.swift in Sources */,
+				590A32082561646800AE0266 /* BadgeDataFunction.swift in Sources */,
 				9F1A43E1253E8C2200870DE8 /* BadgesVC.swift in Sources */,
 				59D2EFF12547CA9600EE1B8B /* CurrentWastePresenter.swift in Sources */,
 				5934E33E2531FC480082D01D /* iwaste_ios.xcdatamodeld in Sources */,
@@ -672,6 +681,7 @@
 				5934E3362531FC480082D01D /* SceneDelegate.swift in Sources */,
 				59AA9E0025448BE20074644A /* DetailHistoryCell.swift in Sources */,
 				598A76882552B73300154BC1 /* Date.swift in Sources */,
+				590A32052561640400AE0266 /* DataBadge.swift in Sources */,
 				591D0781253DF1BB0008098A /* CardCategoryCell.swift in Sources */,
 				9F4143972540234500B738A0 /* DetailBadgesVC.swift in Sources */,
 				59AA9DF3254473060074644A /* ChartService.swift in Sources */,
@@ -724,6 +734,16 @@
 				50587E422560DF8700C2CA73 /* id */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		590A321B256197B000AE0266 /* Alert.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				590A321A256197B000AE0266 /* Base */,
+				590A321E256197B200AE0266 /* en */,
+				590A3221256197B300AE0266 /* id */,
+			);
+			name = Alert.storyboard;
 			sourceTree = "<group>";
 		};
 		5934E3392531FC480082D01D /* Base.storyboard */ = {
@@ -873,18 +893,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = PRNFYV2V9S;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infiniteloop.iwaste-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -895,18 +915,18 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = PRNFYV2V9S;
 				INFOPLIST_FILE = "iwaste-ios/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infiniteloop.iwaste-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

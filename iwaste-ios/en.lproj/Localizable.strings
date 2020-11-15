@@ -29,7 +29,8 @@
 "challenge" = "Challenge: ";
 "challenge_1" = "Bring Your Tumbler";
 "emptystate_chart" = "No Data Recorded.";
-"medal_desc1" = "You've earned this medal for keeping your trash bin lower than ";
+"medal_before_desc1" = "You will earn this medal if you keep your trash bin lower than ";
+"medal_after_desc1" = "You've earned this medal for keeping your trash bin lower than ";
 "medal_subdesc1" = " trash everyday in a week.";
 "trashlist_plastic" = "Plastics";
 "trashlist_glass" = "Glass";

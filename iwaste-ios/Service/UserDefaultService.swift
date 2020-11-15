@@ -18,7 +18,7 @@ class UserDefaultService {
     fileprivate let levelKey = "levelKey"
     fileprivate let achievementArrayKey = "achievementArrayKey"
     fileprivate let coinKey = "coinKey"
-    fileprivate let badgeObtainedDateArrayKey = "badgeObtainedDateArrayKey"
+    fileprivate let badgeObtainedArrayKey = "badgeObtainedArrayKey"
     
     var isFirstLaunched: Bool {
         get {
@@ -57,21 +57,30 @@ class UserDefaultService {
         }
     }
     
-    var badgeObtainedDateArray: [Date] {
-        get {
-            return def.array(forKey: badgeObtainedDateArrayKey) as? [Date] ?? [Date]()
-        }
-        set {
-            def.set(newValue, forKey: badgeObtainedDateArrayKey)
-        }
-    }
-    
-//    var coin: Int {
+//    var badgeObtainedArray: [Int:Date] {
 //        get {
-//            return def.integer(forKey: coinKey)
+//            if def.object(forKey: badgeObtainedArrayKey) != nil{
+//                let decoded = def.object(forKey: badgeObtainedArrayKey) as! Data
+//                let decodedDict = try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! Dictionary<Int, Date>
+//
+//                return decodedDict
+//            } else {
+//                let emptyDict = Dictionary<Int, Date>()
+//                return emptyDict
+//            }
 //        }
 //        set {
-//            def.set(newValue, forKey: coinKey)
+//            let encodedData: Data = try! NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false)
+//            def.set(encodedData, forKey: badgeObtainedArrayKey)
 //        }
 //    }
+    
+    //    var coin: Int {
+    //        get {
+    //            return def.integer(forKey: coinKey)
+    //        }
+    //        set {
+    //            def.set(newValue, forKey: coinKey)
+    //        }
+    //    }
 }

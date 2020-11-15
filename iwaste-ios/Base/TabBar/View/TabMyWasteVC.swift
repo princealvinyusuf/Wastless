@@ -45,6 +45,7 @@ class TabMyWasteVC: UIViewController {
     let udService = UserDefaultService.instance
     var presenter: MyWastePresenter?
     var categories: [CategoryCD]?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -88,15 +89,6 @@ class TabMyWasteVC: UIViewController {
         waveConfigure()
         waveColor()
         
-//        print(udService.isTargetSet)
-//        if udService.isTargetSet {
-//            main(isHidden: false)
-//            target(isHidden: true)
-//        } else {
-//            main(isHidden: true)
-//            target(isHidden: false)
-//        }
-        
         if isEmpty!{
             main(isHidden: false)
             target(isHidden: true)
@@ -126,8 +118,10 @@ class TabMyWasteVC: UIViewController {
         
         let isBadgeComplete = BadgeService.isBadgeComplete()
         if isBadgeComplete {
-            NotificationService.instance.scheduleNotification()
+            let util = AlertUtil()
+            util.showAlertLevelUp(parentVC: self)
         }
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

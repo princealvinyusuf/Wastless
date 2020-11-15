@@ -14,11 +14,12 @@ class AlertLevelUpVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let level = Level(rawValue: UserDefaultService.instance.level)
-        let currentData = getDataLevel(level: level ?? .novice)
+        let dataBadge = BadgeDataFunction.retrieveAllBadgeData()
+        let badgeOrder = dataBadge.last?.num
+        let badgeForDisplay = Badges.createBadges()[badgeOrder!]
         
-        imgLevelUp.image = currentData.image
-        lblLevelUp.text = NSLocalizedString("alert_levelup", comment: "Level Up :") + "\(currentData.name)"
+        imgLevelUp.image = badgeForDisplay.image
+        lblLevelUp.text = NSLocalizedString("alert_levelup", comment: "Level Up :") + "\(badgeForDisplay.title)"
     }
     
     @IBAction func btnCloseTapped(_ sender: UIButton) {
