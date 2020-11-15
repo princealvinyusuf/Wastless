@@ -42,7 +42,10 @@
 "Tz1-V0-I1F.segmentTitles[0]" = "Daily";
 
 /* Class = "UISegmentedControl"; Tz1-V0-I1F.segmentTitles[1] = "Monthly"; ObjectID = "Tz1-V0-I1F"; */
-"Tz1-V0-I1F.segmentTitles[1]" = "Monthly";
+"Tz1-V0-I1F.segmentTitles[1]" = "Weekly";
+
+/* Class = "UISegmentedControl"; Tz1-V0-I1F.segmentTitles[2] = "Monthly"; ObjectID = "Tz1-V0-I1F"; */
+"Tz1-V0-I1F.segmentTitles[2]" = "Monthly";
 
 /* Class = "UIButton"; normalTitle = "Set Your Target"; ObjectID = "WnY-q0-9u6"; */
 "WnY-q0-9u6.normalTitle" = "Set Your Target";

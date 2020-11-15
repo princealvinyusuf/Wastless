@@ -42,7 +42,11 @@
 "Tz1-V0-I1F.segmentTitles[0]" = "Harian";
 
 /* Class = "UISegmentedControl"; Tz1-V0-I1F.segmentTitles[1] = "Monthly"; ObjectID = "Tz1-V0-I1F"; */
-"Tz1-V0-I1F.segmentTitles[1]" = "Bulanan";
+"Tz1-V0-I1F.segmentTitles[1]" = "Mingguan";
+
+/* Class = "UISegmentedControl"; Tz1-V0-I1F.segmentTitles[2] = "Daily"; ObjectID = "Tz1-V0-I1F"; */
+"Tz1-V0-I1F.segmentTitles[2]" = "Bulanan";
+
 
 /* Class = "UIButton"; normalTitle = "Set Your Target"; ObjectID = "WnY-q0-9u6"; */
 "WnY-q0-9u6.normalTitle" = "Atur Targetmu";
