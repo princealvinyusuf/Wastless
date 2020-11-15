@@ -1,0 +1,99 @@
+
+/* Class = "UILabel"; text = "Glass"; ObjectID = "0ky-gN-AUE"; */
+"0ky-gN-AUE.text" = "Glass";
+
+/* Class = "UILabel"; text = "Organic"; ObjectID = "5cr-xE-WME"; */
+"5cr-xE-WME.text" = "Organic";
+
+/* Class = "UINavigationItem"; title = "History"; ObjectID = "6Jr-Tg-awH"; */
+"6Jr-Tg-awH.title" = "History";
+
+/* Class = "UITabBarItem"; title = "Achievement"; ObjectID = "7cb-YT-Pw7"; */
+"7cb-YT-Pw7.title" = "Achievement";
+
+/* Class = "UILabel"; text = "0 of 0"; ObjectID = "8zT-ul-3cy"; */
+"8zT-ul-3cy.text" = "0 of 0";
+
+/* Class = "UIBarButtonItem"; title = "Date"; ObjectID = "Jiw-r0-5tf"; */
+"Jiw-r0-5tf.title" = "Date";
+
+/* Class = "UINavigationItem"; title = "Achievement"; ObjectID = "KuX-bJ-GMp"; */
+"KuX-bJ-GMp.title" = "Achievement";
+
+/* Class = "UILabel"; text = "You have not set your target waste. Please set your target first to start the waste tracker. "; ObjectID = "M2f-Z4-Jq2"; */
+"M2f-Z4-Jq2.text" = "You have not set your target waste. Please set your target first to start the waste tracker. ";
+
+/* Class = "UILabel"; text = "Metals"; ObjectID = "Mi0-Zc-MFz"; */
+"Mi0-Zc-MFz.text" = "Metals";
+
+/* Class = "UITabBarItem"; title = "History"; ObjectID = "OCI-Nw-39m"; */
+"OCI-Nw-39m.title" = "History";
+
+/* Class = "UILabel"; text = "Sunday"; ObjectID = "OmO-cg-aYM"; */
+"OmO-cg-aYM.text" = "Sunday";
+
+/* Class = "UIButton"; normalTitle = "GET STARTED"; ObjectID = "QBm-zD-g5s"; */
+"QBm-zD-g5s.normalTitle" = "GET STARTED";
+
+/* Class = "UILabel"; text = "Daily Summary"; ObjectID = "Th6-qH-4ml"; */
+"Th6-qH-4ml.text" = "Daily Summary";
+
+/* Class = "UISegmentedControl"; Tz1-V0-I1F.segmentTitles[0] = "Daily"; ObjectID = "Tz1-V0-I1F"; */
+"Tz1-V0-I1F.segmentTitles[0]" = "Daily";
+
+/* Class = "UISegmentedControl"; Tz1-V0-I1F.segmentTitles[1] = "Monthly"; ObjectID = "Tz1-V0-I1F"; */
+"Tz1-V0-I1F.segmentTitles[1]" = "Monthly";
+
+/* Class = "UIButton"; normalTitle = "Set Your Target"; ObjectID = "WnY-q0-9u6"; */
+"WnY-q0-9u6.normalTitle" = "Set Your Target";
+
+/* Class = "UILabel"; text = "100%"; ObjectID = "Xyh-3p-Tqs"; */
+"Xyh-3p-Tqs.text" = "100%";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Z3Q-OE-KiA"; */
+"Z3Q-OE-KiA.text" = "Label";
+
+/* Class = "UILabel"; text = "0 of 0"; ObjectID = "ak2-sq-lNF"; */
+"ak2-sq-lNF.text" = "0 of 0";
+
+/* Class = "UILabel"; text = "0 of 0"; ObjectID = "d2l-A7-Eyd"; */
+"d2l-A7-Eyd.text" = "0 of 0";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "duF-pi-in9"; */
+"duF-pi-in9.text" = "Label";
+
+/* Class = "UITabBarItem"; title = "Item"; ObjectID = "ea1-QV-kn1"; */
+"ea1-QV-kn1.title" = "Item";
+
+/* Class = "UILabel"; text = "Saturday, Oct 10"; ObjectID = "ex7-Cg-NVd"; */
+"ex7-Cg-NVd.text" = "Saturday, Oct 10";
+
+/* Class = "UILabel"; text = "Total waste: 16"; ObjectID = "f9P-E8-Zsh"; */
+"f9P-E8-Zsh.text" = "Total waste: 16";
+
+/* Class = "UILabel"; text = "Papers"; ObjectID = "gmf-ak-Pye"; */
+"gmf-ak-Pye.text" = "Papers";
+
+/* Class = "UILabel"; text = "11 October 2020"; ObjectID = "iNk-6v-3l5"; */
+"iNk-6v-3l5.text" = "11 October 2020";
+
+/* Class = "UITabBarItem"; title = "My Waste"; ObjectID = "mDH-oK-juu"; */
+"mDH-oK-juu.title" = "My Waste";
+
+/* Class = "UILabel"; text = "0 of 0"; ObjectID = "me3-4z-UeK"; */
+"me3-4z-UeK.text" = "0 of 0";
+
+/* Class = "UILabel"; text = "0 of 0"; ObjectID = "mer-Pp-sAb"; */
+"mer-Pp-sAb.text" = "0 of 0";
+
+/* Class = "UINavigationItem"; title = "Waste up?"; ObjectID = "puf-gI-jgn"; */
+"puf-gI-jgn.title" = "Waste up?";
+
+/* Class = "UILabel"; text = "Your average waste production today is twice higher than yesterday. Mostly, your waste is dominated by plastic. Thus, consider to take the challenge 2."; ObjectID = "qLL-vI-Zsn"; */
+"qLL-vI-Zsn.text" = "Your average waste production today is twice higher than yesterday. Mostly, your waste is dominated by plastic. Thus, consider to take the challenge 2.";
+
+/* Class = "UILabel"; text = "Plastics"; ObjectID = "uRo-F8-9Cj"; */
+"uRo-F8-9Cj.text" = "Plastics";
+
+/* Class = "UILabel"; text = "Current Waste"; ObjectID = "vAb-Je-KUX"; */
+"vAb-Je-KUX.text" = "Current Waste";

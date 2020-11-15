@@ -1,0 +1,36 @@
+
+/* Class = "UIBarButtonItem"; title = "Done"; ObjectID = "1g9-cl-D0L"; */
+"1g9-cl-D0L.title" = "Selesai";
+
+/* Class = "UINavigationItem"; title = "Badges"; ObjectID = "5Th-aJ-zt7"; */
+"5Th-aJ-zt7.title" = "Lencana";
+
+/* Class = "UILabel"; text = "Bring your tumblr"; ObjectID = "7iF-Ud-LlB"; */
+"7iF-Ud-LlB.text" = "Bawa Tumblermu";
+
+/* Class = "UIBarButtonItem"; title = "Cancel"; ObjectID = "Fua-k0-zrW"; */
+"Fua-k0-zrW.title" = "Kembali";
+
+/* Class = "UINavigationItem"; title = "Challenge"; ObjectID = "Kdy-se-KU7"; */
+"Kdy-se-KU7.title" = "Tantangan";
+
+/* Class = "UITextView"; text = "Bring your own drink bottle is great for you and the environment. Here are some key reasons:\n\n1. Reduce waste with an eco water bottle\n2. Save more money!\n3. Protect your health\n4. Send a message, join a worldwide movement\n5. Plastic bottles have plastic fibers in them... so you're drinking plastic"; ObjectID = "Lzp-tN-HlD"; */
+"Lzp-tN-HlD.text" = "Membawa botol minuman sendiri sangat bagus untuk kamu dan lingkunganmu. Berikut beberapa alasan utama:\n\n1. Kurangi limbah dengan botol air ramah lingkungan\n2. Hemat lebih banyak uang!\n3. Lindungi kesehatanmu\n4. Kirim pesan, bergabunglah dengan gerakan sedunia\n5. Botol plastik memiliki serat plastik di dalamnya ... jadi kamu sebenarnya turut meminum plastik";
+
+/* Class = "UIButton"; normalTitle = "Done the challenge"; ObjectID = "OTr-Po-4nW"; */
+"OTr-Po-4nW.normalTitle" = "Selesaikan tantangan";
+
+/* Class = "UILabel"; text = "You will earn this medal if you keep your trash bin lower than 50 trash in a week. "; ObjectID = "flB-2x-GzU"; */
+"flB-2x-GzU.text" = "Kamu akan mendapatkan medali ini jika kamu menjaga isi tempat sampahmu lebih rendah dari 50 sampah berturut-turut dalam seminggu. ";
+
+/* Class = "UILabel"; text = "Challenge: Bring Your Tumbler"; ObjectID = "kGL-r1-hQ7"; */
+"kGL-r1-hQ7.text" = "Tantangan: Bawa Tumblermu";
+
+/* Class = "UITabBarItem"; title = "Achievement"; ObjectID = "lDw-oI-3XJ"; */
+"lDw-oI-3XJ.title" = "Pencapaian";
+
+/* Class = "UILabel"; text = "Bring tumblr ro reduce plastic bottle"; ObjectID = "qwy-i4-snK"; */
+"qwy-i4-snK.text" = "Bawa tumbler untuk mengurangi botol plastik";
+
+/* Class = "UILabel"; text = "20 October 2020"; ObjectID = "t21-ng-hMs"; */
+"t21-ng-hMs.text" = "20 Oktober 2020";

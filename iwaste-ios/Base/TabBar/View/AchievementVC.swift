@@ -106,8 +106,8 @@ class AchievementVC: UIViewController {
             remove(asChildViewController: activityVC)
             add(asChildViewController: badgesVC)
             
-            lblAchCategory.text = "Badges"
-            lblAchDescription.text = "Badges collected shows your level in your Zero Waste life journey. You will earn a badge after reaching standard set for each badge."
+            lblAchCategory.text = NSLocalizedString("badges_title", comment: "Badges")
+            lblAchDescription.text = NSLocalizedString("badges_desc", comment: "Badges collected shows your level in your Zero Waste life journey. You will earn a badge after reaching standard set for each badge.")
             
 //        } else {
 //            remove(asChildViewController: badgesVC)

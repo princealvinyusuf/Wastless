@@ -18,7 +18,7 @@ class AlertLevelUpVC: UIViewController {
         let currentData = getDataLevel(level: level ?? .novice)
         
         imgLevelUp.image = currentData.image
-        lblLevelUp.text = "Level Up : \(currentData.name)"
+        lblLevelUp.text = NSLocalizedString("alert_levelup", comment: "Level Up :") + "\(currentData.name)"
     }
     
     @IBAction func btnCloseTapped(_ sender: UIButton) {

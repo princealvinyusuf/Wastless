@@ -28,7 +28,7 @@ class HistoryVC: UIViewController {
     
     var presenter: HistoryPresenter?
     var pickedDate = Date()
-    var selectedHistory: String = "daily"
+    var selectedHistory: String = NSLocalizedString("segmented_daily", comment: "daily")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -198,8 +198,8 @@ class HistoryVC: UIViewController {
             lblChartDate.text = dateFormatter.string(from: pickedDate)
             lblDetailDay.text = dateFormatter3.string(from: pickedDate)
             lblDetailDate.text = dateFormatter4.string(from: pickedDate)
-            lblSummary.text = "Daily Summary"
-        case "monthly":
+            lblSummary.text = NSLocalizedString("daily_summary", comment: "Daily Summary")
+        case "weekly":
             presenter?.getTotalWasteWeekly(date:pickedDate){(totalTrash, totalTarget) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
                 
@@ -216,7 +216,7 @@ class HistoryVC: UIViewController {
             lblChartDate.text = dateFormatter5.string(from: pickedDate)
             lblDetailDay.text = dateFormatter6.string(from: pickedDate)
             lblDetailDate.text = dateFormatter7.string(from: pickedDate)
-            lblSummary.text = "Monthly Summary"
+            lblSummary.text = NSLocalizedString("monthly_summary", comment: "Monthly Summary")
         case "monthly":
             print("Monthly")
         default:

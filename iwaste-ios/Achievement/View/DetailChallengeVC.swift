@@ -27,7 +27,7 @@ class DetailChallengeVC: UIViewController {
         presenter = DetailChallengePresenter(delegate: self)
         
         if let challenge = challenge {
-            titleLabel.text = "Challenge: " + challenge.title
+            titleLabel.text = NSLocalizedString("challenge", comment: "Challenge: ") + challenge.title
             challengeImageView.image = UIImage(named: challenge.image)
             contentTextView.text = challenge.challengeDetail
         }

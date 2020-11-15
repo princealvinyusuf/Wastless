@@ -36,9 +36,9 @@ class DetailBadgesVC: UIViewController {
         
         requirementLabel.text = badge?.title
         
-        let header = "You will earn this medal if you keep your trash bin lower than \(String(describing: badge!.missionBin))"
+        let header = NSLocalizedString("medal_desc1", comment: "You will earn this medal if you keep your trash bin lower than ") + "\(String(describing: badge!.missionBin))"
         var center = " and finish challenge "
-        let footer = " in a week."
+        let footer = NSLocalizedString("medal_subdesc1", comment: " in a week.")
         
         if !(badge?.missionChallenge.isEmpty)! {
             center = center + "\(String(describing: badge!.missionChallenge.map{"\($0+1)"}.joined(separator: " and ")))"

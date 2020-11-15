@@ -1,8 +1,8 @@
 PODS:
   - BonsaiController (6.0.0)
-  - Charts (3.5.0):
-    - Charts/Core (= 3.5.0)
-  - Charts/Core (3.5.0)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
   - LinearProgressView (2.0.1)
   - WaveAnimationView (1.0.2)
 
@@ -21,10 +21,10 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BonsaiController: 63410fc39bc5b3a9df5b329dbc848b6b27edf663
-  Charts: 40a08591df1f8ad5c223ddedfb1a06da92f24f7c
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
   LinearProgressView: 353d4d45dc599b83cc4b43f14e6c0336aa6f3834
   WaveAnimationView: 1ffdf3184884eb3270f4b19cc2e69893fec16b9d
 
-PODFILE CHECKSUM: f505508724e0d69d1ccc8e90ba5a635ddc4d2b9e
+PODFILE CHECKSUM: 89058cb3435876bf9308552be40ba2040d7ed04f
 
 COCOAPODS: 1.9.1
