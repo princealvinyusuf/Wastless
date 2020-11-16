@@ -491,7 +491,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="subView"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Th6-qH-4ml" secondAttribute="trailing" id="2b8-XB-6En"/>
                                     <constraint firstAttribute="trailing" secondItem="qLL-vI-Zsn" secondAttribute="trailing" constant="16" id="7Gk-Rv-cuL"/>
@@ -605,7 +605,7 @@
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="WnP-B7-fk5"/>
-                        <color key="backgroundColor" name="subView"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="byR-KA-dx7" firstAttribute="leading" secondItem="WnP-B7-fk5" secondAttribute="leading" constant="20" id="9rB-sf-qfm"/>
                             <constraint firstItem="byR-KA-dx7" firstAttribute="width" secondItem="8zF-jj-UXg" secondAttribute="width" multiplier="0.903382" id="Cgx-Kb-306"/>
