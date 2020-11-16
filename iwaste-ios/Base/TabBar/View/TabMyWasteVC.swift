@@ -232,31 +232,31 @@ extension TabMyWasteVC: WasteTargetDelegate {
             // Plastic
             presenter?.loadDataTrash(categories: categories, type: .plastic) { (wasteCount, target, progress) in
                 self.linearProgressPlastics.setProgress(progress, animated: true)
-                self.plasticLabel.text = "\(wasteCount)" + NSLocalizedString("stats_plastic", comment: "of") + "\(target)"
+                self.plasticLabel.text = "\(wasteCount) of \(target)"
             }
             
             // Glass
             presenter?.loadDataTrash(categories: categories, type: .glass) { (wasteCount, target, progress) in
                 self.linearProgressGlass.setProgress(progress, animated: true)
-                self.glassLabel.text = "\(wasteCount)" +  NSLocalizedString("stats_glass", comment: "of") + "\(target)"
+                self.glassLabel.text = "\(wasteCount) of \(target)"
             }
             
             // Papers
             presenter?.loadDataTrash(categories: categories, type: .paper) { (wasteCount, target, progress) in
                 self.linearProgressPapers.setProgress(progress, animated: true)
-                self.paperLabel.text = "\(wasteCount)" +  NSLocalizedString("stats_paper", comment: "of") + "\(target)"
+                self.paperLabel.text = "\(wasteCount) of \(target)"
             }
             
             // Metals
             presenter?.loadDataTrash(categories: categories, type: .metal) { (wasteCount, target, progress) in
                 self.linearProgressMetals.setProgress(progress, animated: true)
-                self.metalLabel.text = "\(wasteCount)" + NSLocalizedString("stats_metal", comment: "of") + "\(target)"
+                self.metalLabel.text = "\(wasteCount) of \(target)"
             }
             
             // Organics
             presenter?.loadDataTrash(categories: categories, type: .organic) { (wasteCount, target, progress) in
                 self.linearProgressOrganic.setProgress(progress, animated: true)
-                self.organicLabel.text = "\(wasteCount)" +  NSLocalizedString("stats_organic", comment: "of") + "\(target)"
+                self.organicLabel.text = "\(wasteCount) of \(target)"
             }
         }
     

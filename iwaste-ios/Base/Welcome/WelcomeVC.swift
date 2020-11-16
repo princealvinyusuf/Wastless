@@ -45,18 +45,18 @@ class WelcomeVC: UIViewController, UIScrollViewDelegate {
         
         let slide1 = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! SlideView
         slide1.welcomeImage.image = UIImage(named: "illustrateOne")
-        slide1.underImageLabel.text = NSLocalizedString("onboard_title1", comment: "Keep On Track")
-        slide1.descriptionLabel.text = NSLocalizedString("onboarding_desc1", comment: "Make sure that you're on track to your zero waste life journey by continuously collecting badges in achievement.")
+        slide1.underImageLabel.text = "Keep On Track"
+        slide1.descriptionLabel.text = "Make sure that you're on track to your zero waste life journey by continuously collecting badges in achievement."
         
         let slide2 = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! SlideView
         slide2.welcomeImage.image = UIImage(named: "illustrateTwo")
-        slide2.underImageLabel.text = NSLocalizedString("onboarding_title2", comment: "Record Your Waste")
-        slide2.descriptionLabel.text = NSLocalizedString("onboarding_desc2", comment: "Record each waste you've produced in daily basis based on it's category to help you reach the next level of zero waste life.")
+        slide2.underImageLabel.text = "Record Your Waste"
+        slide2.descriptionLabel.text = "Record each waste you've produced in daily basis based on it's category to help you reach the next level of zero waste life."
         
         let slide3 = Bundle.main.loadNibNamed("Slide", owner: self, options: nil)?.first as! SlideView
         slide3.welcomeImage.image = UIImage(named: "illustrateThree")
-        slide3.underImageLabel.text = NSLocalizedString("onboarding_title3", comment: "Set Your Goals")
-        slide3.descriptionLabel.text = NSLocalizedString("onboarding_desc3", comment: "Set your daily waste target and finish weekly eco friendly-task to keep you on track in your zero waste life goals.")
+        slide3.underImageLabel.text = "Set Your Goals"
+        slide3.descriptionLabel.text = "Set your daily waste target and finish weekly eco friendly-task to keep you on track in your zero waste life goals."
         
         return [slide1, slide2, slide3]
     }

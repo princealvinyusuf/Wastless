@@ -20,11 +20,11 @@ class DetailBadgesVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let header1 = NSLocalizedString("medal_before_desc1", comment: "You will earn this medal if you keep your trash bin lower than ") + "\(String(describing: badge!.missionBin))"
-        let header2 = NSLocalizedString("medal_after_desc1", comment: "You've earned this medal for keeping your trash bin lower than ") + "\(String(describing: badge!.missionBin))"
+        let header1 = "You will earn this medal if you keep your trash bin lower than " + "\(String(describing: badge!.missionBin))"
+        let header2 = "You've earned this medal for keeping your trash bin lower than " + "\(String(describing: badge!.missionBin))"
         
-        let footer = NSLocalizedString("medal_subdesc1", comment: " in a week.")
-        
+        let footer = " in a week."
+
         if BadgeService.isContain(num: pos!) {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd MMMM yyyy"

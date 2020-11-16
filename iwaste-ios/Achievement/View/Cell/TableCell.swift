@@ -51,7 +51,5 @@ class TableCell: UITableViewCell {
         subView.layer.shadowRadius = 7.0
         subView.layer.shadowOpacity = 0.3
         subView.layer.masksToBounds = false
-//        subView.layer.shadowPath = UIBezierPath(roundedRect:subView.bounds, cornerRadius:subView.layer.cornerRadius).cgPath
-
     }
 }

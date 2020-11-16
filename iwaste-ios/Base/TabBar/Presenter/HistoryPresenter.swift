@@ -11,7 +11,7 @@ import Foundation
 
 class HistoryPresenter{
     private let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    let trashList: [String] = [NSLocalizedString("trashlist_plastic", comment: "Plastic"), NSLocalizedString("trashlist_glass", comment: "Glass"), NSLocalizedString("trashlist_glass", comment: "Paper"), NSLocalizedString("trashlist_metal", comment: "Metal"), NSLocalizedString("trashlist_organic", comment: "Organic")]
+    let trashList: [String] = ["Plastic", "Glass", "Paper", "Metal", "Organic"]
     let categoryList: [String] = ["APlastic", "BGlass", "CPaper", "DMetal", "EOrganic"]
 
     var totalTrashCount: [Int] = []

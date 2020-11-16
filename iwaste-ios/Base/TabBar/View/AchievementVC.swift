@@ -27,8 +27,8 @@ class AchievementVC: UIViewController {
         super.viewDidLoad()
         presenter = AchievementPresenter()
         
-//        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
-//        segmentedControl.isHidden = true
+        //        segmentedControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: UIColor.white], for: UIControl.State.selected)
+        //        segmentedControl.isHidden = true
         
         viewDescription.layer.cornerRadius = 5
         viewDescription.layer.shadowColor = UIColor.black.cgColor
@@ -43,7 +43,7 @@ class AchievementVC: UIViewController {
     func setupView() {
         updateView()
     }
-
+    
     private lazy var activityVC: ActivityVC = {
         let storyboard = UIStoryboard(name: "Achievement", bundle: Bundle.main)
         var viewController = storyboard.instantiateViewController(withIdentifier: "ChallengesVC") as! ActivityVC
@@ -102,20 +102,21 @@ class AchievementVC: UIViewController {
     }
     
     private func updateView() {
-//        if segmentedControl.selectedSegmentIndex == 0 {
-            remove(asChildViewController: activityVC)
-            add(asChildViewController: badgesVC)
-            
-            lblAchCategory.text = NSLocalizedString("badges_title", comment: "Badges")
-            lblAchDescription.text = NSLocalizedString("badges_desc", comment: "Badges collected shows your level in your Zero Waste life journey. You will earn a badge after reaching standard set for each badge.")
-            
-//        } else {
-//            remove(asChildViewController: badgesVC)
-//            add(asChildViewController: activityVC)
-//            
-//            lblAchCategory.text = "Activities"
-//            lblAchDescription.text = "Beside collecting badges, you can challenge yourself to do the supporting activites. These are 21 days activities means you can done it after 21 days keep doing so. Each activity will be reset to undone, after 21 days of completion."
-//        }
+        //        if segmentedControl.selectedSegmentIndex == 0 {
+        
+        remove(asChildViewController: activityVC)
+        add(asChildViewController: badgesVC)
+        
+        lblAchCategory.text = "Badges"
+        lblAchDescription.text = "Badges collected shows your level in your Zero Waste life journey. You will earn a badge after reaching standard set for each badge."
+        
+        //        } else {
+        //            remove(asChildViewController: badgesVC)
+        //            add(asChildViewController: activityVC)
+        //
+        //            lblAchCategory.text = "Activities"
+        //            lblAchDescription.text = "Beside collecting badges, you can challenge yourself to do the supporting activites. These are 21 days activities means you can done it after 21 days keep doing so. Each activity will be reset to undone, after 21 days of completion."
+        //        }
     }
     
 }

@@ -28,8 +28,8 @@ class HistoryVC: UIViewController {
     
     var presenter: HistoryPresenter?
     var pickedDate = Date()
-    var selectedHistory: String = NSLocalizedString("segmented_daily", comment: "daily")
-    
+    var selectedHistory: String = "daily"
+
     override func viewDidLoad() {
         super.viewDidLoad()
         presenter = HistoryPresenter()
@@ -200,7 +200,7 @@ class HistoryVC: UIViewController {
             lblChartDate.text = dateFormatter.string(from: pickedDate)
             lblDetailDay.text = dateFormatter3.string(from: pickedDate)
             lblDetailDate.text = dateFormatter4.string(from: pickedDate)
-            lblSummary.text = NSLocalizedString("daily_summary", comment: "Daily Summary")
+            lblSummary.text = "Daily Summary"
             
         case "monthly":
             presenter?.getTotalWasteMonthly(date:pickedDate){(totalTrash, totalTarget, total) in
@@ -220,14 +220,14 @@ class HistoryVC: UIViewController {
             lblChartDate.text = dateFormatter5.string(from: pickedDate)
             lblDetailDay.text = dateFormatter6.string(from: pickedDate)
             lblDetailDate.text = dateFormatter7.string(from: pickedDate)
-            lblSummary.text = NSLocalizedString("monthly_summary", comment: "Monthly Summary")
+            lblSummary.text = "Monthly Summary"
 
         case "weekly":
             getWeeklyDate(date: pickedDate){(startDate, endDate, dayArray) in
                 self.lblChartDate.text = ("\(startDate) - \(endDate)")
                 self.lblDetailDate.text = ("\(startDate) - \(endDate)")
-                self.lblDetailDay.text = NSLocalizedString("this_week", comment: "This Week")
-                self.lblSummary.text = NSLocalizedString("weekly_summary", comment: "Weekly Summary")
+                self.lblDetailDay.text = "This Week"
+                self.lblSummary.text = "Weekly Summary"
                 
                 self.presenter?.getTotalWasteWeekly(date: dayArray){(totalTrash, totalTarget, total) in
                     self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)

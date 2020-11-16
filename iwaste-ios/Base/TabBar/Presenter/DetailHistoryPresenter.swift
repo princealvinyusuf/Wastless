@@ -10,9 +10,8 @@ import CoreData
 
 class DetailHistoryPresenter{
     private let appDelegate = UIApplication.shared.delegate as? AppDelegate
-    let trashList: [String] = [NSLocalizedString("trashlist_plastic", comment: "Plastic"), NSLocalizedString("trashlist_glass", comment: "Glass"), NSLocalizedString("trashlist_paper", comment: "Paper"), NSLocalizedString("trashlist_metal", comment: "Metal"), NSLocalizedString("trashlist_organic", comment: "Organic")]
+    let trashList: [String] = ["Plastic", "Glass", "Paper", "Metal", "Organic"]
     var listSelectedWaste = [WasteHistory]()
-    
     
     func dateChecker(date: Date, type: String, completion: @escaping (_ date : String, _ dateCD: String)->()){
         let dateFormatterDaily = DateFormatter()

@@ -41,11 +41,11 @@ extension HistoryVC: ChartViewDelegate {
         }
         
         
-        let countWasteDataSet = BarChartDataSet(entries: countWasteEntry, label: NSLocalizedString("chart_yourprogress", comment: "Your Progress"))
+        let countWasteDataSet = BarChartDataSet(entries: countWasteEntry, label: "Your Progress")
         countWasteDataSet.drawValuesEnabled = false
         countWasteDataSet.setColor(K.Color.primarySoft)
         
-        let targetWasteDataSet = BarChartDataSet(entries: targetWasteEntry, label: NSLocalizedString("chart_yourtarget", comment: "Your Target"))
+        let targetWasteDataSet = BarChartDataSet(entries: targetWasteEntry, label: "Your Target")
         targetWasteDataSet.drawValuesEnabled = false
         targetWasteDataSet.setColor(K.Color.primaryColor)
         
@@ -63,21 +63,21 @@ extension HistoryVC: ChartViewDelegate {
         if selectedHistory == "daily" {
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(
                 values: [
-                    NSLocalizedString("axis_plastics", comment: "Plastics"),
-                    NSLocalizedString("axis_glass", comment: "Glass"),
-                    NSLocalizedString("axis_papers", comment: "Papers"),
-                    NSLocalizedString("axis_metals", comment: "Metals"),
-                    NSLocalizedString("axis_organic", comment: "Organic")])
+                    "Plastics",
+                    "Glass",
+                    "Papers",
+                    "Metals",
+                    "Organic"])
             
             barChart.xAxis.axisMinimum = 0
             barChart.xAxis.axisMaximum = groupSpaces * 5 / 2
         }else if selectedHistory == "monthly"{
             barChart.xAxis.valueFormatter = IndexAxisValueFormatter(
                 values: [
-                    NSLocalizedString("axis_week1", comment: "Week 1"),
-                    NSLocalizedString("axis_week2", comment: "Week 2"),
-                    NSLocalizedString("axis_week3", comment: "Week 3"),
-                    NSLocalizedString("axis_week4", comment: "Week 4")])
+                    "Week 1",
+                    "Week 2",
+                    "Week 3",
+                    "Week 4"])
             
             barChart.xAxis.axisMinimum = 0
             barChart.xAxis.axisMaximum = groupSpaces * 4 / 2
@@ -87,7 +87,6 @@ extension HistoryVC: ChartViewDelegate {
             barChart.xAxis.axisMaximum = groupSpaces * 7 / 2
             
         }
-        
         
         barChart.xAxis.centerAxisLabelsEnabled = true
         barChart.xAxis.granularity = 1

@@ -57,30 +57,4 @@ class UserDefaultService {
         }
     }
     
-//    var badgeObtainedArray: [Int:Date] {
-//        get {
-//            if def.object(forKey: badgeObtainedArrayKey) != nil{
-//                let decoded = def.object(forKey: badgeObtainedArrayKey) as! Data
-//                let decodedDict = try! NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as! Dictionary<Int, Date>
-//
-//                return decodedDict
-//            } else {
-//                let emptyDict = Dictionary<Int, Date>()
-//                return emptyDict
-//            }
-//        }
-//        set {
-//            let encodedData: Data = try! NSKeyedArchiver.archivedData(withRootObject: newValue, requiringSecureCoding: false)
-//            def.set(encodedData, forKey: badgeObtainedArrayKey)
-//        }
-//    }
-    
-    //    var coin: Int {
-    //        get {
-    //            return def.integer(forKey: coinKey)
-    //        }
-    //        set {
-    //            def.set(newValue, forKey: coinKey)
-    //        }
-    //    }
 }
