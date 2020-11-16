@@ -296,23 +296,15 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-bg-ksZ">
                                         <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
                                     </imageView>
-                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-3p-Tqs">
-                                        <rect key="frame" x="71" y="109" width="48" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="bFJ-bg-ksZ" firstAttribute="top" secondItem="PwN-Yk-rlG" secondAttribute="top" id="D7f-qi-5Je"/>
                                     <constraint firstAttribute="width" constant="190" id="G7F-FE-PqG"/>
                                     <constraint firstAttribute="bottom" secondItem="bFJ-bg-ksZ" secondAttribute="bottom" id="HeC-Vt-yEW"/>
-                                    <constraint firstItem="Xyh-3p-Tqs" firstAttribute="centerX" secondItem="PwN-Yk-rlG" secondAttribute="centerX" id="NJN-ML-DTB"/>
                                     <constraint firstAttribute="trailing" secondItem="bFJ-bg-ksZ" secondAttribute="trailing" id="ZU4-I7-EsP"/>
                                     <constraint firstAttribute="height" constant="190" id="aBb-MP-yIu"/>
                                     <constraint firstItem="bFJ-bg-ksZ" firstAttribute="leading" secondItem="PwN-Yk-rlG" secondAttribute="leading" id="mef-8K-HqC"/>
-                                    <constraint firstItem="Xyh-3p-Tqs" firstAttribute="centerY" secondItem="PwN-Yk-rlG" secondAttribute="centerY" constant="24" id="xEo-SE-Xmr"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fs8-1C-JBx">
@@ -326,6 +318,12 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-3p-Tqs">
+                                <rect key="frame" x="183" y="501" width="48" height="20.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="2FC-3R-UXh">
                                 <rect key="frame" x="59" y="300" width="296" height="296"/>
                             </imageView>
@@ -377,8 +375,17 @@
                             <constraint firstItem="hot-VU-Gty" firstAttribute="top" secondItem="1I3-0y-xtv" secondAttribute="top" id="oIW-9c-Hoa"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="qWp-Jg-G20"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="bottom" secondItem="fs8-1C-JBx" secondAttribute="bottom" constant="12" id="rbH-cL-Jm5"/>
+                            <constraint firstItem="Xyh-3p-Tqs" firstAttribute="centerX" secondItem="PwN-Yk-rlG" secondAttribute="centerX" id="sxF-k9-xBV"/>
                             <constraint firstItem="2FC-3R-UXh" firstAttribute="height" secondItem="igu-Ka-FVP" secondAttribute="height" multiplier="0.330357" id="v4d-oj-Rs6"/>
+                            <constraint firstItem="Xyh-3p-Tqs" firstAttribute="centerY" secondItem="PwN-Yk-rlG" secondAttribute="centerY" constant="25" id="xNB-KE-ZwE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2FC-3R-UXh"/>
+                                <exclude reference="WnY-q0-9u6"/>
+                                <exclude reference="M2f-Z4-Jq2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="ea1-QV-kn1"/>
                     <navigationItem key="navigationItem" title="Waste up?" leftItemsSupplementBackButton="YES" id="puf-gI-jgn">
