@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alert Done ChallengeVC-->
+        <scene sceneID="TOL-rY-xVt">
+            <objects>
+                <viewController storyboardIdentifier="AlertDoneChallenge" id="1O9-BP-u9a" customClass="AlertDoneChallengeVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aDo-eJ-JJF">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you sure to finish this challenge ?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UB4-Kn-BEG">
+                                <rect key="frame" x="16" y="91.5" width="283" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                <color key="textColor" name="navigationBarModal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC4-2H-44R">
+                                <rect key="frame" x="279" y="16" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="3cx-M4-op8"/>
+                                    <constraint firstAttribute="width" secondItem="iC4-2H-44R" secondAttribute="height" multiplier="1:1" id="ZuB-5x-J6g"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="btnCloseTapped:" destination="1O9-BP-u9a" eventType="touchUpInside" id="usk-7v-2L1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If your level has gone up, this challenge will be locked." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qit-YI-pmJ">
+                                <rect key="frame" x="16" y="131" width="283" height="38.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVY-dD-P7D">
+                                <rect key="frame" x="80" y="209.5" width="155" height="45"/>
+                                <color key="backgroundColor" name="navigationBarModal"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="dhs-rC-VUc"/>
+                                    <constraint firstAttribute="width" constant="155" id="xQu-fZ-BnL"/>
+                                </constraints>
+                                <state key="normal" title="Yes, I’m sure">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDoneTapped:" destination="1O9-BP-u9a" eventType="touchUpInside" id="Jdr-9U-Gwt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kV1-q8-hyf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UB4-Kn-BEG" firstAttribute="leading" secondItem="kV1-q8-hyf" secondAttribute="leading" constant="16" id="61V-pR-gaD"/>
+                            <constraint firstItem="Qit-YI-pmJ" firstAttribute="leading" secondItem="aDo-eJ-JJF" secondAttribute="leading" constant="16" id="7ff-Ws-NeP"/>
+                            <constraint firstItem="UB4-Kn-BEG" firstAttribute="centerX" secondItem="aDo-eJ-JJF" secondAttribute="centerX" id="8tI-bT-78d"/>
+                            <constraint firstItem="Qit-YI-pmJ" firstAttribute="centerY" secondItem="aDo-eJ-JJF" secondAttribute="centerY" id="E5c-QE-kJb"/>
+                            <constraint firstAttribute="trailing" secondItem="iC4-2H-44R" secondAttribute="trailing" constant="12" id="EXy-8X-9fg"/>
+                            <constraint firstItem="Qit-YI-pmJ" firstAttribute="centerX" secondItem="aDo-eJ-JJF" secondAttribute="centerX" id="LkC-XL-U99"/>
+                            <constraint firstItem="zVY-dD-P7D" firstAttribute="top" secondItem="Qit-YI-pmJ" secondAttribute="bottom" constant="40" id="Shl-hx-MrA"/>
+                            <constraint firstItem="zVY-dD-P7D" firstAttribute="centerX" secondItem="aDo-eJ-JJF" secondAttribute="centerX" id="VpQ-Z4-Ule"/>
+                            <constraint firstAttribute="trailing" secondItem="Qit-YI-pmJ" secondAttribute="trailing" constant="16" id="aqs-pW-1YJ"/>
+                            <constraint firstItem="iC4-2H-44R" firstAttribute="top" secondItem="aDo-eJ-JJF" secondAttribute="top" constant="16" id="lKb-43-Ge2"/>
+                            <constraint firstItem="kV1-q8-hyf" firstAttribute="trailing" secondItem="UB4-Kn-BEG" secondAttribute="trailing" constant="16" id="pJD-th-CdL"/>
+                            <constraint firstItem="Qit-YI-pmJ" firstAttribute="top" secondItem="UB4-Kn-BEG" secondAttribute="bottom" constant="20" id="wdP-6h-VdB"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="315" height="440"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="315" height="300"/>
+                    <connections>
+                        <outlet property="btnDone" destination="zVY-dD-P7D" id="xOp-IB-CfB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="07H-kc-ddf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="408" y="146"/>
+        </scene>
+        <!--Alert Level UpVC-->
+        <scene sceneID="HMk-Pk-8BV">
+            <objects>
+                <viewController storyboardIdentifier="AlertLevelUpVC" id="zXf-cQ-Oab" customClass="AlertLevelUpVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7Cn-SI-wxM">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ayf-H3-Kgm">
+                                <rect key="frame" x="86" y="51" width="143" height="26"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level Up : Eco Starter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbZ-nS-c9C">
+                                <rect key="frame" x="12" y="247" width="291" height="22"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" name="navigationBarModal"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbS-Za-ftd">
+                                <rect key="frame" x="16" y="314" width="283" height="57.5"/>
+                                <string key="text">You have collected 1 badges. 
+Keep the momentum to collect the next badge.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcD-0G-ZQf">
+                                <rect key="frame" x="279" y="16" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="IcD-0G-ZQf" secondAttribute="height" multiplier="1:1" id="HNA-Rj-40e"/>
+                                    <constraint firstAttribute="width" constant="24" id="J2t-PX-G9o"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" image="xmark.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="btnCloseTapped:" destination="zXf-cQ-Oab" eventType="touchUpInside" id="wpc-wQ-1dt"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ecoAdventurer" translatesAutoresizingMaskIntoConstraints="NO" id="sck-4C-cnL">
+                                <rect key="frame" x="82.5" y="85" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sck-4C-cnL" secondAttribute="height" multiplier="1:1" id="MK2-QR-KYe"/>
+                                    <constraint firstAttribute="width" constant="150" id="iC4-dX-8X2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rlI-hC-tto"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qbZ-nS-c9C" firstAttribute="top" secondItem="sck-4C-cnL" secondAttribute="bottom" constant="12" id="9HH-MV-DuK"/>
+                            <constraint firstItem="rlI-hC-tto" firstAttribute="trailing" secondItem="qbZ-nS-c9C" secondAttribute="trailing" constant="12" id="EWs-Y1-frY"/>
+                            <constraint firstItem="nbS-Za-ftd" firstAttribute="top" secondItem="qbZ-nS-c9C" secondAttribute="bottom" constant="45" id="NCd-5v-XVH"/>
+                            <constraint firstItem="Ayf-H3-Kgm" firstAttribute="centerX" secondItem="7Cn-SI-wxM" secondAttribute="centerX" id="OZD-tE-Q9Z"/>
+                            <constraint firstAttribute="trailing" secondItem="IcD-0G-ZQf" secondAttribute="trailing" constant="12" id="PBY-MJ-9tp"/>
+                            <constraint firstItem="sck-4C-cnL" firstAttribute="centerX" secondItem="7Cn-SI-wxM" secondAttribute="centerX" id="QAE-eV-ThF"/>
+                            <constraint firstItem="qbZ-nS-c9C" firstAttribute="leading" secondItem="rlI-hC-tto" secondAttribute="leading" constant="12" id="UIX-4d-pdt"/>
+                            <constraint firstItem="sck-4C-cnL" firstAttribute="centerY" secondItem="7Cn-SI-wxM" secondAttribute="centerY" constant="-40" id="bZQ-ci-nvf"/>
+                            <constraint firstItem="IcD-0G-ZQf" firstAttribute="top" secondItem="7Cn-SI-wxM" secondAttribute="top" constant="16" id="pBJ-4l-1Xc"/>
+                            <constraint firstItem="rlI-hC-tto" firstAttribute="trailing" secondItem="nbS-Za-ftd" secondAttribute="trailing" constant="16" id="x7c-5E-dGE"/>
+                            <constraint firstItem="sck-4C-cnL" firstAttribute="top" secondItem="Ayf-H3-Kgm" secondAttribute="bottom" constant="8" id="xgY-cu-cHx"/>
+                            <constraint firstItem="nbS-Za-ftd" firstAttribute="leading" secondItem="rlI-hC-tto" secondAttribute="leading" constant="16" id="zNd-0j-zDT"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="315" height="440"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="315" height="400"/>
+                    <connections>
+                        <outlet property="imgLevelUp" destination="sck-4C-cnL" id="IMX-cj-tDu"/>
+                        <outlet property="lblLevelUp" destination="qbZ-nS-c9C" id="WQK-rk-hnr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CbV-oA-MZE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-221" y="146"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ecoAdventurer" width="500" height="589"/>
+        <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="navigationBarModal">
+            <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
