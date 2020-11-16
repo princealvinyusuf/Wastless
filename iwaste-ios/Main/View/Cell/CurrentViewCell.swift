@@ -56,19 +56,24 @@ class CurrentViewCell: UITableViewCell {
     
     private func setProgressColor(_ order: Int) {
         
+        txtWasteName.textColor = K.Color.colorOrganic
         var progressTrackColor = K.Color.colorOrganic
         var progressBarColor = K.Color.colorOrganicSoft
         
         if order == 0 {
+            txtWasteName.textColor = K.Color.colorPlastic
             progressTrackColor = K.Color.colorPlastic
             progressBarColor = K.Color.colorPlasticSoft
         } else if order == 1 {
+            txtWasteName.textColor = K.Color.colorGlass
             progressTrackColor = K.Color.colorGlass
             progressBarColor = K.Color.colorGlassSoft
         } else if order == 2 {
+            txtWasteName.textColor = K.Color.colorPaper
             progressTrackColor = K.Color.colorPaper
             progressBarColor = K.Color.colorPaperSoft
         } else if order == 3 {
+            txtWasteName.textColor = K.Color.colorMetal
             progressTrackColor = K.Color.colorMetal
             progressBarColor = K.Color.colorMetalSoft
         }
