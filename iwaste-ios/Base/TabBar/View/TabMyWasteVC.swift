@@ -30,62 +30,45 @@ class TabMyWasteVC: UIViewController {
     @IBOutlet weak var trashBinPercentage: UILabel!
     @IBOutlet weak var dateNavigationBar: UIBarButtonItem!
     
-    @IBOutlet weak var linearProgressPlastics: LinearProgressView!
-    @IBOutlet weak var linearProgressMetals: LinearProgressView!
-    @IBOutlet weak var linearProgressGlass: LinearProgressView!
-    @IBOutlet weak var linearProgressPapers: LinearProgressView!
-    @IBOutlet weak var linearProgressOrganic: LinearProgressView!
-    
-    @IBOutlet weak var plasticLabel: UILabel!
-    @IBOutlet weak var metalLabel: UILabel!
-    @IBOutlet weak var glassLabel: UILabel!
-    @IBOutlet weak var paperLabel: UILabel!
-    @IBOutlet weak var organicLabel: UILabel!
+    @IBOutlet weak var tableStats: UITableView!
     
     let udService = UserDefaultService.instance
     var presenter: MyWastePresenter?
     var categories: [CategoryCD]?
+    
+    let mainColor = [K.Color.colorPlastic, K.Color.colorGlass, K.Color.colorPaper, K.Color.colorMetal, K.Color.colorOrganic]
+    let secondaryColor = [K.Color.colorPlasticSoft, K.Color.colorGlassSoft, K.Color.colorPaperSoft, K.Color.colorMetalSoft, K.Color.colorOrganicSoft]
+    let textColor = [K.Color.colorPlasticText, K.Color.colorGlassText, K.Color.colorPaperText, K.Color.colorMetalText, K.Color.colorOrganicText]
+    let catName = [WasteType.plastic.rawValue, WasteType.glass.rawValue, WasteType.paper.rawValue, WasteType.metal.rawValue, WasteType.organic.rawValue]
+    var arrayTarget = [Int]()
+    var arrayWasteCount = [Int]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         presenter = MyWastePresenter(delegate: self)
         let isEmpty = presenter?.checkTodayData()
+                
+        collectionCategory.delegate = self
+        collectionCategory.dataSource = self
+        collectionCategory.register(UINib(nibName: "CardCategoryCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "cardCategoryCell")
+
+        tableStats.delegate = self
+        tableStats.dataSource = self
+        tableStats.register(UINib(nibName: "MainStatsCell", bundle: self.nibBundle), forCellReuseIdentifier: "mainStatsCell")
         
-        linearProgressPlastics.animationDuration = 0.5
-        linearProgressPlastics.barColor = K.Color.colorPlasticSoft
-        linearProgressPlastics.trackColor = K.Color.colorPlastic
-        linearProgressPlastics.barInset = CGFloat(4)
-        linearProgressPlastics.isCornersRounded = true
-        
-        linearProgressMetals.animationDuration = 0.5
-        linearProgressMetals.barColor = K.Color.colorMetalSoft
-        linearProgressMetals.trackColor = K.Color.colorMetal
-        linearProgressMetals.barInset = CGFloat(4)
-        linearProgressMetals.isCornersRounded = true
-        
-        linearProgressGlass.animationDuration = 0.5
-        linearProgressGlass.barColor = K.Color.colorGlassSoft
-        linearProgressGlass.trackColor = K.Color.colorGlass
-        linearProgressGlass.barInset = CGFloat(4)
-        linearProgressGlass.isCornersRounded = true
-        
-        linearProgressPapers.animationDuration = 0.5
-        linearProgressPapers.barColor = K.Color.colorPaperSoft
-        linearProgressPapers.trackColor = K.Color.colorPaper
-        linearProgressPapers.barInset = CGFloat(4)
-        linearProgressPapers.isCornersRounded = true
-        
-        linearProgressOrganic.animationDuration = 0.5
-        linearProgressOrganic.barColor = K.Color.colorOrganicSoft
-        linearProgressOrganic.trackColor = K.Color.colorOrganic
-        linearProgressOrganic.barInset = CGFloat(4)
-        linearProgressOrganic.isCornersRounded = true
+        // Collection View
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.itemSize = CGSize(width: 72, height: 115)
+        flowLayout.minimumLineSpacing = 5.0
+        flowLayout.minimumInteritemSpacing = 5.0
+        self.collectionCategory.collectionViewLayout = flowLayout
         
         self.updateUI()
         
         subViewConfigure()
-        
+
         waveConfigure()
         waveColor()
         
@@ -97,18 +80,6 @@ class TabMyWasteVC: UIViewController {
             main(isHidden: true)
             target(isHidden: false)
         }
-        
-        // Collection View
-        let flowLayout = UICollectionViewFlowLayout()
-        flowLayout.scrollDirection = .horizontal
-        flowLayout.itemSize = CGSize(width: 72, height: 115)
-        flowLayout.minimumLineSpacing = 5.0
-        flowLayout.minimumInteritemSpacing = 5.0
-        self.collectionCategory.collectionViewLayout = flowLayout
-        
-        collectionCategory.delegate = self
-        collectionCategory.dataSource = self
-        collectionCategory.register(UINib(nibName: "CardCategoryCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "cardCategoryCell")
         
         presenter?.getTodayDate(completion: { (date) in
             self.dateNavigationBar.title = "\(date)"
@@ -163,7 +134,6 @@ class TabMyWasteVC: UIViewController {
         // Change the value of Trash bin Wave
         wave.setProgress(0)
         trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
-        print("waveProgress",wave.progress)
     }
     
     func waveColor() {
@@ -227,41 +197,43 @@ extension TabMyWasteVC: WasteTargetDelegate {
     func updateUI() {
         presenter?.loadCategory()
         
+        arrayTarget.removeAll()
+        arrayWasteCount.removeAll()
+        
         //Change UI for Linear Progress
         if categories!.count > 0{
             // Plastic
             presenter?.loadDataTrash(categories: categories, type: .plastic) { (wasteCount, target, progress) in
-                self.linearProgressPlastics.setProgress(progress, animated: true)
-                self.plasticLabel.text = "\(wasteCount) of \(target)"
+                self.arrayTarget.append(target)
+                self.arrayWasteCount.append(wasteCount)
             }
             
             // Glass
             presenter?.loadDataTrash(categories: categories, type: .glass) { (wasteCount, target, progress) in
-                self.linearProgressGlass.setProgress(progress, animated: true)
-                self.glassLabel.text = "\(wasteCount) of \(target)"
+                self.arrayTarget.append(target)
+                self.arrayWasteCount.append(wasteCount)
             }
             
             // Papers
             presenter?.loadDataTrash(categories: categories, type: .paper) { (wasteCount, target, progress) in
-                self.linearProgressPapers.setProgress(progress, animated: true)
-                self.paperLabel.text = "\(wasteCount) of \(target)"
+                self.arrayTarget.append(target)
+                self.arrayWasteCount.append(wasteCount)
             }
             
             // Metals
             presenter?.loadDataTrash(categories: categories, type: .metal) { (wasteCount, target, progress) in
-                self.linearProgressMetals.setProgress(progress, animated: true)
-                self.metalLabel.text = "\(wasteCount) of \(target)"
+                self.arrayTarget.append(target)
+                self.arrayWasteCount.append(wasteCount)
             }
             
             // Organics
             presenter?.loadDataTrash(categories: categories, type: .organic) { (wasteCount, target, progress) in
-                self.linearProgressOrganic.setProgress(progress, animated: true)
-                self.organicLabel.text = "\(wasteCount) of \(target)"
+                self.arrayTarget.append(target)
+                self.arrayWasteCount.append(wasteCount)
             }
+            
+            tableStats.reloadData()
         }
-    
-        // Change the value of Trash bin Wave
-        
     }
     
     func checkTargetSet(){
@@ -305,5 +277,29 @@ extension TabMyWasteVC: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert])
     }
+}
+
+extension TabMyWasteVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dataWaste.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "mainStatsCell") as? MainStatsCell else {return UITableViewCell()}
+        
+        let i = indexPath.row
+        if arrayTarget.count > 0 {
+            cell.configureCell(
+                mainColor: mainColor[i],
+                secondaryColor: secondaryColor[i],
+                catName: catName[i],
+                target: arrayTarget[i],
+                wasteCount: arrayWasteCount[i],
+                textColor: textColor[i]
+            )
+        }
+        return cell
+    }
+    
     
 }

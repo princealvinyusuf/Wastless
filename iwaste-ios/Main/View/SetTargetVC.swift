@@ -45,6 +45,8 @@ class SetTargetVC: UIViewController {
             addData()
             UserDefaultService.instance.isTargetSet = true
             
+            let cats = BadgeService.loadCategories()
+            print("categories: ", cats.count)
             self.dismiss(animated: true) {
                 self.delegate?.updateUI()
                 self.delegate?.checkTargetSet()

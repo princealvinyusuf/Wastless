@@ -45,8 +45,15 @@ class CurrentViewCell: UITableViewCell {
             let data = Int(exactly: listTrash[i].count)
             count = count + data!
         }
-        let progressBar: Float = Float(count)/Float(target)*100
-        linearWasteProgress.setProgress(progressBar, animated: true)
+        
+        var progressNum: Float = 0.0
+        if target > 0 {
+            progressNum = Float(count)/Float(target)
+        } else if count > target {
+            progressNum = 1.0
+        }
+        
+        linearWasteProgress.setProgress(progressNum, animated: true)
         linearWasteProgress.barInset = CGFloat(4)
         linearWasteProgress.isCornersRounded = true
         let text = String(count)

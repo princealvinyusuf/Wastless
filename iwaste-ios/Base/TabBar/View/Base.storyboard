@@ -20,281 +20,41 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hot-VU-Gty">
-                                <rect key="frame" x="8" y="140" width="398" height="227"/>
+                                <rect key="frame" x="8" y="140" width="398" height="210"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Waste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAb-Je-KUX">
-                                        <rect key="frame" x="22.5" y="4" width="124.5" height="21.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Waste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="vAb-Je-KUX">
+                                        <rect key="frame" x="16" y="12" width="366" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="0w2-92-nRh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="cCB-bW-Fg3">
-                                        <rect key="frame" x="30.5" y="58" width="347" height="135"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yzF-l9-HU2">
-                                                <rect key="frame" x="0.0" y="0.0" width="55" height="135"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uRo-F8-9Cj">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="N08-if-rRz"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                        <color key="textColor" name="plasticLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Glass" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0ky-gN-AUE">
-                                                        <rect key="frame" x="0.0" y="30" width="55" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="PzO-Ng-PS1"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                        <color key="textColor" name="glassLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Papers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gmf-ak-Pye">
-                                                        <rect key="frame" x="0.0" y="60" width="55" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="HZU-IF-Pnm"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                        <color key="textColor" name="paperLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Metals" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Mi0-Zc-MFz">
-                                                        <rect key="frame" x="0.0" y="90" width="55" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="tUL-Iw-epa"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                                        <color key="textColor" name="metalLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Organic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-xE-WME">
-                                                        <rect key="frame" x="0.0" y="120" width="55" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="55" id="Dsa-ME-gog"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
-                                                        <color key="textColor" name="organicLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="aEF-qX-Iq6">
-                                                <rect key="frame" x="67" y="0.0" width="223" height="135"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3MO-nA-lrd" userLabel="Linear Progress Plastics" customClass="LinearProgressView" customModule="LinearProgressView">
-                                                        <rect key="frame" x="0.0" y="0.0" width="223" height="15"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="15" id="ar2-vc-ElI"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                                                <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                                                <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                                <real key="value" value="100"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="barInset">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y6y-Z9-Had" userLabel="Linear Progress Metals" customClass="LinearProgressView" customModule="LinearProgressView">
-                                                        <rect key="frame" x="0.0" y="30" width="223" height="15"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="15" id="ngV-kX-2Ax"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                                                <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                                                <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                                <real key="value" value="100"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="barInset">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WuT-ZH-OJA" userLabel="Linear Progress Glass" customClass="LinearProgressView" customModule="LinearProgressView">
-                                                        <rect key="frame" x="0.0" y="60" width="223" height="15"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="15" id="pvx-LK-Na4"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                                                <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                                                <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                                <real key="value" value="100"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="barInset">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SDj-EF-VHs" userLabel="Linear Progress Papers" customClass="LinearProgressView" customModule="LinearProgressView">
-                                                        <rect key="frame" x="0.0" y="90" width="223" height="15"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="15" id="USI-Ii-rBp"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                                                <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                                                <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                                <real key="value" value="100"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="barInset">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Ia-ou-4W0" userLabel="Linear Progress Organic" customClass="LinearProgressView" customModule="LinearProgressView">
-                                                        <rect key="frame" x="0.0" y="120" width="223" height="15"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="15" id="IJV-pk-BC9"/>
-                                                        </constraints>
-                                                        <userDefinedRuntimeAttributes>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="trackColor">
-                                                                <color key="value" red="0.0078431372550000003" green="0.44705882349999998" blue="0.69411764710000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="color" keyPath="barColor">
-                                                                <color key="value" red="0.90196078430000004" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                                                <real key="value" value="100"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="barInset">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                            <userDefinedRuntimeAttribute type="number" keyPath="progress">
-                                                                <real key="value" value="0.0"/>
-                                                            </userDefinedRuntimeAttribute>
-                                                        </userDefinedRuntimeAttributes>
-                                                    </view>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="kbW-4w-t3q">
-                                                <rect key="frame" x="302" y="0.0" width="45" height="135"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 of 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ak2-sq-lNF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="45" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="abZ-P2-zjj"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                        <color key="textColor" name="plasticLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 of 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-A7-Eyd">
-                                                        <rect key="frame" x="0.0" y="30" width="45" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="pus-eY-qXw"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                        <color key="textColor" name="glassLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 of 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="me3-4z-UeK">
-                                                        <rect key="frame" x="0.0" y="60" width="45" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="Bag-yN-6Sa"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                        <color key="textColor" name="paperLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 of 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8zT-ul-3cy">
-                                                        <rect key="frame" x="0.0" y="90" width="45" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="ikD-pP-9ng"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                        <color key="textColor" name="metalLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 of 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mer-Pp-sAb">
-                                                        <rect key="frame" x="0.0" y="120" width="45" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="45" id="gzc-cb-rbJ"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="12"/>
-                                                        <color key="textColor" name="organicLabel"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="30" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dtn-hE-KKz">
+                                        <rect key="frame" x="20" y="52" width="358" height="150"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="347" id="ECD-gN-I9O"/>
+                                            <constraint firstAttribute="height" constant="150" id="GXt-Qb-V0X"/>
                                         </constraints>
-                                    </stackView>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" name="subView"/>
                                 <constraints>
-                                    <constraint firstItem="vAb-Je-KUX" firstAttribute="leading" secondItem="cCB-bW-Fg3" secondAttribute="leading" constant="-8" id="MAl-HV-HD4"/>
-                                    <constraint firstItem="cCB-bW-Fg3" firstAttribute="centerX" secondItem="hot-VU-Gty" secondAttribute="centerX" constant="5" id="N1J-Ls-nIG"/>
-                                    <constraint firstItem="cCB-bW-Fg3" firstAttribute="centerY" secondItem="hot-VU-Gty" secondAttribute="centerY" constant="12" id="ff4-aB-3f2"/>
-                                    <constraint firstItem="vAb-Je-KUX" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="top" constant="4" id="kXa-fq-3tj"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dtn-hE-KKz" secondAttribute="bottom" constant="8" id="4KL-RT-1Q6"/>
+                                    <constraint firstAttribute="trailing" secondItem="vAb-Je-KUX" secondAttribute="trailing" constant="16" id="9vJ-ad-Dy6"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dtn-hE-KKz" secondAttribute="trailing" constant="20" id="M4v-wK-MbG"/>
+                                    <constraint firstItem="Dtn-hE-KKz" firstAttribute="top" secondItem="vAb-Je-KUX" secondAttribute="bottom" constant="8" id="Obc-hW-jI6"/>
+                                    <constraint firstItem="vAb-Je-KUX" firstAttribute="leading" secondItem="hot-VU-Gty" secondAttribute="leading" constant="16" id="TWC-Ww-Wlx"/>
+                                    <constraint firstItem="Dtn-hE-KKz" firstAttribute="leading" secondItem="hot-VU-Gty" secondAttribute="leading" constant="20" id="d65-lb-xsf"/>
+                                    <constraint firstItem="vAb-Je-KUX" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="top" constant="12" id="kXa-fq-3tj"/>
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PwN-Yk-rlG" userLabel="Wave View">
-                                <rect key="frame" x="112" y="391" width="190" height="190"/>
+                                <rect key="frame" x="112" y="370" width="190" height="267"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-bg-ksZ">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="bFJ-bg-ksZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="190" height="267"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,7 +63,6 @@
                                     <constraint firstAttribute="width" constant="190" id="G7F-FE-PqG"/>
                                     <constraint firstAttribute="bottom" secondItem="bFJ-bg-ksZ" secondAttribute="bottom" id="HeC-Vt-yEW"/>
                                     <constraint firstAttribute="trailing" secondItem="bFJ-bg-ksZ" secondAttribute="trailing" id="ZU4-I7-EsP"/>
-                                    <constraint firstAttribute="height" constant="190" id="aBb-MP-yIu"/>
                                     <constraint firstItem="bFJ-bg-ksZ" firstAttribute="leading" secondItem="PwN-Yk-rlG" secondAttribute="leading" id="mef-8K-HqC"/>
                                 </constraints>
                             </view>
@@ -319,7 +78,7 @@
                                 <cells/>
                             </collectionView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyh-3p-Tqs">
-                                <rect key="frame" x="183" y="501" width="48" height="20.5"/>
+                                <rect key="frame" x="183" y="518" width="48" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -363,8 +122,7 @@
                             <constraint firstItem="2FC-3R-UXh" firstAttribute="width" secondItem="igu-Ka-FVP" secondAttribute="width" multiplier="0.714976" id="TRG-Qx-wbx"/>
                             <constraint firstItem="WnY-q0-9u6" firstAttribute="top" secondItem="2FC-3R-UXh" secondAttribute="bottom" constant="8" id="UFg-Pc-bgi"/>
                             <constraint firstItem="WnY-q0-9u6" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="UNO-1g-FxH"/>
-                            <constraint firstItem="hot-VU-Gty" firstAttribute="height" secondItem="igu-Ka-FVP" secondAttribute="height" multiplier="0.253348" id="UnG-pq-F7v"/>
-                            <constraint firstItem="PwN-Yk-rlG" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="24" id="Vmo-yq-Xhe"/>
+                            <constraint firstItem="PwN-Yk-rlG" firstAttribute="top" secondItem="hot-VU-Gty" secondAttribute="bottom" constant="20" id="Vmo-yq-Xhe"/>
                             <constraint firstItem="M2f-Z4-Jq2" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="16" id="WJd-7s-l4C"/>
                             <constraint firstItem="2FC-3R-UXh" firstAttribute="centerY" secondItem="igu-Ka-FVP" secondAttribute="centerY" id="YE8-bo-EAJ"/>
                             <constraint firstItem="2FC-3R-UXh" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="bKe-hL-Rie"/>
@@ -373,6 +131,7 @@
                             <constraint firstItem="hot-VU-Gty" firstAttribute="leading" secondItem="1I3-0y-xtv" secondAttribute="leading" constant="8" id="fha-76-V8Y"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="trailing" secondItem="hot-VU-Gty" secondAttribute="trailing" constant="8" id="mFk-fk-HFV"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="top" secondItem="1I3-0y-xtv" secondAttribute="top" id="oIW-9c-Hoa"/>
+                            <constraint firstItem="fs8-1C-JBx" firstAttribute="top" secondItem="PwN-Yk-rlG" secondAttribute="bottom" constant="4" id="pAu-uf-Xkq"/>
                             <constraint firstItem="hot-VU-Gty" firstAttribute="centerX" secondItem="igu-Ka-FVP" secondAttribute="centerX" id="qWp-Jg-G20"/>
                             <constraint firstItem="1I3-0y-xtv" firstAttribute="bottom" secondItem="fs8-1C-JBx" secondAttribute="bottom" constant="12" id="rbH-cL-Jm5"/>
                             <constraint firstItem="Xyh-3p-Tqs" firstAttribute="centerX" secondItem="PwN-Yk-rlG" secondAttribute="centerX" id="sxF-k9-xBV"/>
@@ -392,19 +151,10 @@
                     <connections>
                         <outlet property="collectionCategory" destination="fs8-1C-JBx" id="u8a-X4-rB5"/>
                         <outlet property="dateNavigationBar" destination="Jiw-r0-5tf" id="cwI-0C-h09"/>
-                        <outlet property="glassLabel" destination="d2l-A7-Eyd" id="44o-8y-wy0"/>
-                        <outlet property="linearProgressGlass" destination="y6y-Z9-Had" id="8e8-1j-bie"/>
-                        <outlet property="linearProgressMetals" destination="SDj-EF-VHs" id="Elv-1p-jNV"/>
-                        <outlet property="linearProgressOrganic" destination="2Ia-ou-4W0" id="XCb-sO-uZV"/>
-                        <outlet property="linearProgressPapers" destination="WuT-ZH-OJA" id="Ibb-vs-6Wl"/>
-                        <outlet property="linearProgressPlastics" destination="3MO-nA-lrd" id="XEs-HB-Idb"/>
-                        <outlet property="metalLabel" destination="8zT-ul-3cy" id="4s1-2z-fcR"/>
-                        <outlet property="organicLabel" destination="mer-Pp-sAb" id="fC5-6M-IBA"/>
-                        <outlet property="paperLabel" destination="me3-4z-UeK" id="uEN-gY-MAs"/>
-                        <outlet property="plasticLabel" destination="ak2-sq-lNF" id="4Q6-2t-SFC"/>
                         <outlet property="setTargetImage" destination="2FC-3R-UXh" id="Bcw-Yl-nnj"/>
                         <outlet property="setTargetOutlet" destination="WnY-q0-9u6" id="K4c-yu-jOr"/>
                         <outlet property="subView" destination="hot-VU-Gty" id="cUa-FS-HJe"/>
+                        <outlet property="tableStats" destination="Dtn-hE-KKz" id="Ht6-U3-xaP"/>
                         <outlet property="textIntro" destination="M2f-Z4-Jq2" id="Ad0-Fg-qLQ"/>
                         <outlet property="trashBinPercentage" destination="Xyh-3p-Tqs" id="z6Q-Me-nAM"/>
                         <outlet property="waveView" destination="PwN-Yk-rlG" id="KZh-6w-wTB"/>
@@ -549,13 +299,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OmO-cg-aYM">
-                                        <rect key="frame" x="20" y="12" width="354" height="21.5"/>
+                                        <rect key="frame" x="20" y="12" width="354" height="22"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="11 October 2020" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iNk-6v-3l5">
-                                        <rect key="frame" x="20" y="41.5" width="354" height="18"/>
+                                        <rect key="frame" x="20" y="42" width="354" height="18"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -746,7 +496,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="subView"/>
                                 <constraints>
                                     <constraint firstItem="duF-pi-in9" firstAttribute="top" secondItem="Bdk-uR-Jwc" secondAttribute="top" constant="12" id="0sw-XO-MAQ"/>
                                     <constraint firstItem="duF-pi-in9" firstAttribute="leading" secondItem="Bdk-uR-Jwc" secondAttribute="leading" constant="20" id="5Px-Rn-4qB"/>
@@ -1050,13 +800,7 @@
         <image name="oval_" width="10" height="10"/>
         <image name="rosette" catalog="system" width="106" height="128"/>
         <image name="wasteBasket" width="500" height="468"/>
-        <namedColor name="glassLabel">
-            <color red="0.4309999942779541" green="0.071000002324581146" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="metal">
-            <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="metalLabel">
             <color red="0.80400002002716064" green="0.0080000003799796104" blue="0.0080000003799796104" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="navBarSoft">
@@ -1064,15 +808,6 @@
         </namedColor>
         <namedColor name="navigationBarModal">
             <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="organicLabel">
-            <color red="0.043000001460313797" green="0.5690000057220459" blue="0.046999998390674591" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="paperLabel">
-            <color red="0.98000001907348633" green="0.69800001382827759" blue="0.027000000700354576" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="plasticLabel">
-            <color red="0.059000000357627869" green="0.49799999594688416" blue="0.68199998140335083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="subView">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

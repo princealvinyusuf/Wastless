@@ -46,6 +46,8 @@
 		598E144525625DE900C782EE /* Achievement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598E144425625DE900C782EE /* Achievement.storyboard */; };
 		598E144825625E2A00C782EE /* History.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598E144725625E2A00C782EE /* History.storyboard */; };
 		598E144C25625E8A00C782EE /* Alert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 598E144B25625E8A00C782EE /* Alert.storyboard */; };
+		598E14562562D6C500C782EE /* MainStatsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598E14542562D6C500C782EE /* MainStatsCell.swift */; };
+		598E14572562D6C500C782EE /* MainStatsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 598E14552562D6C500C782EE /* MainStatsCell.xib */; };
 		59AA9DEA2544413B0074644A /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9DE92544413B0074644A /* HistoryVC.swift */; };
 		59AA9DF3254473060074644A /* ChartService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9DF2254473060074644A /* ChartService.swift */; };
 		59AA9E0025448BE20074644A /* DetailHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AA9DFE25448BE20074644A /* DetailHistoryCell.swift */; };
@@ -123,6 +125,8 @@
 		598E144425625DE900C782EE /* Achievement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Achievement.storyboard; sourceTree = "<group>"; };
 		598E144725625E2A00C782EE /* History.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = History.storyboard; sourceTree = "<group>"; };
 		598E144B25625E8A00C782EE /* Alert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Alert.storyboard; sourceTree = "<group>"; };
+		598E14542562D6C500C782EE /* MainStatsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStatsCell.swift; sourceTree = "<group>"; };
+		598E14552562D6C500C782EE /* MainStatsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainStatsCell.xib; sourceTree = "<group>"; };
 		59AA9DE92544413B0074644A /* HistoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
 		59AA9DF2254473060074644A /* ChartService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartService.swift; sourceTree = "<group>"; };
 		59AA9DFE25448BE20074644A /* DetailHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailHistoryCell.swift; sourceTree = "<group>"; };
@@ -250,6 +254,8 @@
 			children = (
 				591D077F253DF1BB0008098A /* CardCategoryCell.swift */,
 				591D0780253DF1BB0008098A /* CardCategoryCell.xib */,
+				598E14542562D6C500C782EE /* MainStatsCell.swift */,
+				598E14552562D6C500C782EE /* MainStatsCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -560,6 +566,7 @@
 				591D06D4253839880008098A /* HorizontalModalCurrentWaste.xib in Resources */,
 				59C8D2D82550DD9F00E55CF2 /* BadgeViewCell.xib in Resources */,
 				59450D4E25506328000357C2 /* Assets.xcassets in Resources */,
+				598E14572562D6C500C782EE /* MainStatsCell.xib in Resources */,
 				598E144225625DB900C782EE /* Main.storyboard in Resources */,
 				598E144525625DE900C782EE /* Achievement.storyboard in Resources */,
 				598E144825625E2A00C782EE /* History.storyboard in Resources */,
@@ -639,6 +646,7 @@
 				59C8D2D72550DD9F00E55CF2 /* BadgeViewCell.swift in Sources */,
 				591D06A925382FA00008098A /* Constans.swift in Sources */,
 				5934E3342531FC480082D01D /* AppDelegate.swift in Sources */,
+				598E14562562D6C500C782EE /* MainStatsCell.swift in Sources */,
 				59D2EFF42547D81500EE1B8B /* SetTargetPresenter.swift in Sources */,
 				9F1A43E8253E8FDA00870DE8 /* Challenge.swift in Sources */,
 				9F1A43E4253E8F3D00870DE8 /* TableCell.swift in Sources */,

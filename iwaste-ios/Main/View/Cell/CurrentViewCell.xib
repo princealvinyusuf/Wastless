@@ -20,16 +20,16 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="7zT-bt-Vh7">
-                        <rect key="frame" x="2" y="8" width="316" height="18"/>
+                        <rect key="frame" x="20" y="8" width="280" height="18"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Plastics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7m-Nx-Hkv">
-                                <rect key="frame" x="0.0" y="0.0" width="158" height="18"/>
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="plasticLabel"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="25 of 30" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxm-gi-Omq" userLabel="counter plastic">
-                                <rect key="frame" x="158" y="0.0" width="158" height="18"/>
+                                <rect key="frame" x="140" y="0.0" width="140" height="18"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" name="plasticLabel"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                         </subviews>
                     </stackView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3VR-xY-T2L" userLabel="Linear Progress Plastics" customClass="LinearProgressView" customModule="LinearProgressView">
-                        <rect key="frame" x="2" y="31" width="316" height="20"/>
+                        <rect key="frame" x="20" y="31" width="280" height="20"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="Rxh-FU-BcW"/>
@@ -51,7 +51,7 @@
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="boolean" keyPath="isCornersRounded" value="YES"/>
                             <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
-                                <real key="value" value="100"/>
+                                <real key="value" value="1"/>
                             </userDefinedRuntimeAttribute>
                             <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
                                 <real key="value" value="0.0"/>
@@ -65,7 +65,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="Tpk-8s-xlz">
-                        <rect key="frame" x="2" y="59" width="316" height="105"/>
+                        <rect key="frame" x="20" y="59" width="280" height="105"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="105" id="USA-20-ub0"/>
@@ -79,13 +79,13 @@
                     </collectionView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="3VR-xY-T2L" secondAttribute="trailing" constant="2" id="3vB-Lj-yFb"/>
-                    <constraint firstAttribute="trailing" secondItem="7zT-bt-Vh7" secondAttribute="trailing" constant="2" id="7q1-y9-9mH"/>
-                    <constraint firstItem="Tpk-8s-xlz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="92T-GR-5DV"/>
-                    <constraint firstAttribute="trailing" secondItem="Tpk-8s-xlz" secondAttribute="trailing" constant="2" id="Gkn-gC-z4n"/>
+                    <constraint firstAttribute="trailing" secondItem="3VR-xY-T2L" secondAttribute="trailing" constant="20" id="3vB-Lj-yFb"/>
+                    <constraint firstAttribute="trailing" secondItem="7zT-bt-Vh7" secondAttribute="trailing" constant="20" id="7q1-y9-9mH"/>
+                    <constraint firstItem="Tpk-8s-xlz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="92T-GR-5DV"/>
+                    <constraint firstAttribute="trailing" secondItem="Tpk-8s-xlz" secondAttribute="trailing" constant="20" id="Gkn-gC-z4n"/>
                     <constraint firstItem="3VR-xY-T2L" firstAttribute="top" secondItem="7zT-bt-Vh7" secondAttribute="bottom" constant="5" id="Nga-2F-BER"/>
-                    <constraint firstItem="7zT-bt-Vh7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="byg-pu-yBa"/>
-                    <constraint firstItem="3VR-xY-T2L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="2" id="cKY-qT-lss"/>
+                    <constraint firstItem="7zT-bt-Vh7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="byg-pu-yBa"/>
+                    <constraint firstItem="3VR-xY-T2L" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="cKY-qT-lss"/>
                     <constraint firstItem="7zT-bt-Vh7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cgv-DU-Fbi"/>
                     <constraint firstAttribute="bottom" secondItem="Tpk-8s-xlz" secondAttribute="bottom" constant="16" id="m5W-Mz-BxF"/>
                     <constraint firstItem="Tpk-8s-xlz" firstAttribute="top" secondItem="3VR-xY-T2L" secondAttribute="bottom" constant="8" id="pYE-7k-n1s"/>

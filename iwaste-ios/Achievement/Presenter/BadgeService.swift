@@ -157,4 +157,30 @@ class BadgeService {
         
         completion(numTimes, mostRecent.date)
     }
+    
+    static func loadCategories() -> [CategoryCD] {
+        var categories: [CategoryCD]?
+        if let appDelegate = appDelegate {
+            let managedContext = appDelegate.persistentContainer.viewContext
+            let catRequest: NSFetchRequest<CategoryCD> = CategoryCD.fetchRequest()
+            catRequest.predicate = NSPredicate(format: "date=%@", getDate())
+            catRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+            do {
+                try categories = managedContext.fetch(catRequest)
+            } catch let err {
+                print("error get categories: ", err.localizedDescription)
+            }
+        }
+        return categories!
+    }
+    
+    static func getDate() -> String{
+        //Check today date
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = ("dd/MM/yyyy")
+        let datenow = dateFormatter.string(from: date)
+        
+        return datenow
+    }
 }

@@ -46,7 +46,7 @@ class CurrentWastePresenter {
                 delegate?.loadCategoriesFail(err: err)
             }
         }
-        
+        print("cat: \(categories) ||| \(categories?.count)")
         delegate?.loadCategoriesSuccess(cat: categories!)
     }
     
