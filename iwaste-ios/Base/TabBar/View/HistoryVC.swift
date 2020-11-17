@@ -39,15 +39,6 @@ class HistoryVC: UIViewController {
         viewChart.layer.cornerRadius = 15
         viewDetail.layer.cornerRadius = 11
         
-        //viewSummary.layer.cornerRadius = 10
-        //        viewSummary.layer.shadowColor = UIColor.black.cgColor
-        //        viewSummary.layer.shadowOpacity = 0.5
-        //        viewSummary.layer.shadowOffset = CGSize(width: 0, height: 0)
-        //        viewSummary.layer.shadowRadius = 25.0
-        
-        //        viewSummary.backgroundColor = UIColor.darkGray
-        //        viewChart.backgroundColor = UIColor.darkGray
-        
         viewSummary.layer.shadowColor = UIColor.black.cgColor
         viewChart.layer.shadowColor = UIColor.black.cgColor
         
@@ -275,7 +266,7 @@ class HistoryVC: UIViewController {
 
 extension HistoryVC: UIViewControllerTransitioningDelegate, BonsaiControllerDelegate {
     func frameOfPresentedView(in containerViewFrame: CGRect) -> CGRect {
-        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 2.5), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / (4/3)))
+        return CGRect(origin: CGPoint(x: 0, y: containerViewFrame.height / 2.5), size: CGSize(width: containerViewFrame.width, height: containerViewFrame.height / 1.665))
     }
     
     func presentationController(forPresented presented: UIViewController, presenting: UIViewController?, source: UIViewController) -> UIPresentationController? {

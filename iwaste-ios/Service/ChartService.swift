@@ -40,10 +40,9 @@ extension HistoryVC: ChartViewDelegate {
             }
         }
         
-        
         let countWasteDataSet = BarChartDataSet(entries: countWasteEntry, label: "Your Progress")
         countWasteDataSet.drawValuesEnabled = false
-        countWasteDataSet.setColor(K.Color.primarySoft)
+        countWasteDataSet.setColor(K.Color.primaryColor.withAlphaComponent(0.4))
         
         let targetWasteDataSet = BarChartDataSet(entries: targetWasteEntry, label: "Your Target")
         targetWasteDataSet.drawValuesEnabled = false
