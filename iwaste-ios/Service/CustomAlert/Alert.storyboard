@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
@@ -162,9 +162,80 @@ Keep the momentum to collect the next badge.</string>
             </objects>
             <point key="canvasLocation" x="-221" y="146"/>
         </scene>
+        <!--Alert Warning WasteVC-->
+        <scene sceneID="FsA-Hb-4qp">
+            <objects>
+                <viewController storyboardIdentifier="AlertWarningWasteVC" id="IaF-22-hSg" customClass="AlertWarningWasteVC" customModule="iwaste_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2D1-va-Zwz">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="400"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oops..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mRX-n0-TKQ">
+                                <rect key="frame" x="116.5" y="35" width="82" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your organic waste has almost reached the target. Finish your meal and reduce more waste to keep you on track." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IMV-nM-jsI">
+                                <rect key="frame" x="12" y="247" width="291" height="57.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteGlass" translatesAutoresizingMaskIntoConstraints="NO" id="HRJ-Iw-HhE">
+                                <rect key="frame" x="82.5" y="85" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HRJ-Iw-HhE" secondAttribute="height" multiplier="1:1" id="Aih-R5-kD8"/>
+                                    <constraint firstAttribute="width" constant="150" id="sSR-en-ktD"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIB-gx-fgV">
+                                <rect key="frame" x="82.5" y="340" width="150" height="40"/>
+                                <color key="backgroundColor" name="navigationBarModal"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="YMd-C5-9TJ"/>
+                                    <constraint firstAttribute="width" constant="150" id="slM-Ad-ehB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Okay">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnDoneTapped:" destination="1O9-BP-u9a" eventType="touchUpInside" id="6CC-zu-rXR"/>
+                                    <action selector="btnOkayPressed:" destination="IaF-22-hSg" eventType="touchUpInside" id="MYP-e3-YAK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pqm-WL-zDu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HRJ-Iw-HhE" firstAttribute="centerX" secondItem="2D1-va-Zwz" secondAttribute="centerX" id="3d7-Nz-owx"/>
+                            <constraint firstItem="HRJ-Iw-HhE" firstAttribute="top" secondItem="mRX-n0-TKQ" secondAttribute="bottom" constant="20" id="F2B-Yg-f8f"/>
+                            <constraint firstItem="pqm-WL-zDu" firstAttribute="bottom" secondItem="HIB-gx-fgV" secondAttribute="bottom" constant="20" id="LHP-3M-2e7"/>
+                            <constraint firstItem="HRJ-Iw-HhE" firstAttribute="centerY" secondItem="2D1-va-Zwz" secondAttribute="centerY" constant="-40" id="OGe-CQ-w8C"/>
+                            <constraint firstItem="HIB-gx-fgV" firstAttribute="centerX" secondItem="2D1-va-Zwz" secondAttribute="centerX" id="Oop-Hh-011"/>
+                            <constraint firstItem="IMV-nM-jsI" firstAttribute="leading" secondItem="pqm-WL-zDu" secondAttribute="leading" constant="12" id="XCl-Sq-lDY"/>
+                            <constraint firstItem="pqm-WL-zDu" firstAttribute="trailing" secondItem="IMV-nM-jsI" secondAttribute="trailing" constant="12" id="hs4-oU-Fg9"/>
+                            <constraint firstItem="mRX-n0-TKQ" firstAttribute="centerX" secondItem="2D1-va-Zwz" secondAttribute="centerX" id="mjR-Kl-kPL"/>
+                            <constraint firstItem="IMV-nM-jsI" firstAttribute="top" secondItem="HRJ-Iw-HhE" secondAttribute="bottom" constant="12" id="rFY-Af-ohb"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="315" height="440"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="315" height="400"/>
+                    <connections>
+                        <outlet property="btnOkay" destination="HIB-gx-fgV" id="Z29-Fq-10h"/>
+                        <outlet property="imgWasteWarning" destination="HRJ-Iw-HhE" id="bdh-Ht-WGu"/>
+                        <outlet property="lblDescWarning" destination="IMV-nM-jsI" id="N72-P2-LdD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pFK-6H-D8i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="959" y="139"/>
+        </scene>
     </scenes>
     <resources>
         <image name="ecoAdventurer" width="500" height="589"/>
+        <image name="wasteGlass" width="500" height="456"/>
         <image name="xmark.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="navigationBarModal">
             <color red="1" green="0.43500000238418579" blue="0.37999999523162842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

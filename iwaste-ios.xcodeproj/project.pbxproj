@@ -38,6 +38,8 @@
 		595F90F62536A521004D40CE /* WasteViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F42536A521004D40CE /* WasteViewCell.swift */; };
 		595F90F72536A521004D40CE /* WasteViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 595F90F52536A521004D40CE /* WasteViewCell.xib */; };
 		595F90FA2536A55D004D40CE /* AddNewWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595F90F92536A55D004D40CE /* AddNewWasteVC.swift */; };
+		597D8EEA2576B2F20084F070 /* AlertWarningWasteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597D8EE92576B2F20084F070 /* AlertWarningWasteVC.swift */; };
+		597D8EEE2576BFE90084F070 /* WasteWarning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 597D8EED2576BFE90084F070 /* WasteWarning.swift */; };
 		598A76852552B21300154BC1 /* BadgeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A76842552B21300154BC1 /* BadgeService.swift */; };
 		598A76882552B73300154BC1 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A76872552B73300154BC1 /* Date.swift */; };
 		598A768B2552FC5C00154BC1 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A768A2552FC5C00154BC1 /* NotificationService.swift */; };
@@ -117,6 +119,8 @@
 		595F90F42536A521004D40CE /* WasteViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteViewCell.swift; sourceTree = "<group>"; };
 		595F90F52536A521004D40CE /* WasteViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WasteViewCell.xib; sourceTree = "<group>"; };
 		595F90F92536A55D004D40CE /* AddNewWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewWasteVC.swift; sourceTree = "<group>"; };
+		597D8EE92576B2F20084F070 /* AlertWarningWasteVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertWarningWasteVC.swift; sourceTree = "<group>"; };
+		597D8EED2576BFE90084F070 /* WasteWarning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WasteWarning.swift; sourceTree = "<group>"; };
 		598A76842552B21300154BC1 /* BadgeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadgeService.swift; sourceTree = "<group>"; };
 		598A76872552B73300154BC1 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		598A768A2552FC5C00154BC1 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
@@ -381,6 +385,7 @@
 				5928C90F25506BAA003489C5 /* AlertDoneChallengeVC.swift */,
 				5928C91225506BB7003489C5 /* AlertUtil.swift */,
 				5928C915255074BA003489C5 /* AlertLevelUpVC.swift */,
+				597D8EE92576B2F20084F070 /* AlertWarningWasteVC.swift */,
 			);
 			path = CustomAlert;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 		59FBF2A925362A1D00F940D5 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				59D26EE5255065CA00E46F4E /* CustomAlert */,
 				A87451FB253FACF200F03F79 /* CoreData */,
 				591D06A825382FA00008098A /* Constans.swift */,
 				591D077A253D4B0C0008098A /* UserDefaultService.swift */,
@@ -442,7 +448,6 @@
 			isa = PBXGroup;
 			children = (
 				598E144425625DE900C782EE /* Achievement.storyboard */,
-				59D26EE5255065CA00E46F4E /* CustomAlert */,
 				9F1E14EA25412E6F00946F71 /* Cell */,
 				9F1A43DD253E8BCA00870DE8 /* ActivityVC.swift */,
 				9FB8274F254073670042E4C8 /* DetailChallengeVC.swift */,
@@ -476,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				A860DC422552BE3D0094A4C6 /* ModalSummary.swift */,
+				597D8EED2576BFE90084F070 /* WasteWarning.swift */,
 			);
 			path = Modal;
 			sourceTree = "<group>";
@@ -640,6 +646,7 @@
 				59B2F63125471AE80010DCA4 /* MyWastePresenter.swift in Sources */,
 				591D06982537E37A0008098A /* ModelWaste.swift in Sources */,
 				59450D38254F0D46000357C2 /* ModelLevel.swift in Sources */,
+				597D8EEA2576B2F20084F070 /* AlertWarningWasteVC.swift in Sources */,
 				5934E3382531FC480082D01D /* TabMyWasteVC.swift in Sources */,
 				5928C91325506BB7003489C5 /* AlertUtil.swift in Sources */,
 				A860DC432552BE3D0094A4C6 /* ModalSummary.swift in Sources */,
@@ -682,6 +689,7 @@
 				59450D44254F8280000357C2 /* DetailChallengePresenter.swift in Sources */,
 				59C8D2DB2550E08800E55CF2 /* Badges.swift in Sources */,
 				A824EB98254DDDAF0096975E /* CategoryCD+CoreDataProperties.swift in Sources */,
+				597D8EEE2576BFE90084F070 /* WasteWarning.swift in Sources */,
 				9F42AA39253A632F00EB8056 /* WelcomeVC.swift in Sources */,
 				598A76852552B21300154BC1 /* BadgeService.swift in Sources */,
 			);

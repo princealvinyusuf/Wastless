@@ -48,11 +48,11 @@ class TabMyWasteVC: UIViewController {
         
         presenter = MyWastePresenter(delegate: self)
         let isEmpty = presenter?.checkTodayData()
-                
+        
         collectionCategory.delegate = self
         collectionCategory.dataSource = self
         collectionCategory.register(UINib(nibName: "CardCategoryCell", bundle: self.nibBundle), forCellWithReuseIdentifier: "cardCategoryCell")
-
+        
         tableStats.delegate = self
         tableStats.dataSource = self
         tableStats.register(UINib(nibName: "MainStatsCell", bundle: self.nibBundle), forCellReuseIdentifier: "mainStatsCell")
@@ -68,7 +68,7 @@ class TabMyWasteVC: UIViewController {
         self.updateUI()
         
         subViewConfigure()
-
+        
         waveConfigure()
         waveColor()
         
@@ -84,16 +84,17 @@ class TabMyWasteVC: UIViewController {
         presenter?.getTodayDate(completion: { (date) in
             self.dateNavigationBar.title = "\(date)"
         })
-        
-        UNUserNotificationCenter.current().delegate = self
-        
+                
         let isBadgeComplete = BadgeService.isBadgeComplete()
         if isBadgeComplete {
             let util = AlertUtil()
             util.showAlertLevelUp(parentVC: self)
         }
-
         
+        let data = WasteWarning.getSelectedDataWarning(type: .almostOrganic)
+        
+        let util = AlertUtil()
+        util.showAlertWarningWaste(parentVC: self, model: data)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -105,10 +106,11 @@ class TabMyWasteVC: UIViewController {
             self.present(welcomeVC, animated:true, completion:nil)
             return
         }
+        
+        NotificationService.instance.scheduleDailyReminder()
     }
     
     @IBAction func dateTappedForNotifTest(_ sender: Any) {
-//        NotificationService.instance.scheduleNotification()
     }
     
     func subViewConfigure() {
@@ -271,13 +273,13 @@ extension TabMyWasteVC: MyWasteDelegate {
         print("error data categories: ", error.localizedDescription)
     }
 }
-
-extension TabMyWasteVC: UNUserNotificationCenterDelegate {
-
-    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        completionHandler([.alert])
-    }
-}
+//
+//extension TabMyWasteVC: UNUserNotificationCenterDelegate {
+//
+//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+//        completionHandler([.alert])
+//    }
+//}
 
 extension TabMyWasteVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

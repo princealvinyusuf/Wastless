@@ -22,6 +22,16 @@ class AlertUtil {
         parentVC.present(alertController, animated: true, completion: nil)
     }
     
+    func showAlertWarningWaste(parentVC: UIViewController, model: WasteWarning) {
+        let alertLevelUpVC = self.instantiateViewController(storyboardName: "Alert", vcIdentifier: "AlertWarningWasteVC") as! AlertWarningWasteVC
+        alertLevelUpVC.model = model
+        
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        alertController.setValue(alertLevelUpVC, forKey: "contentViewController")
+        
+        parentVC.present(alertController, animated: true, completion: nil)
+    }
+    
     func showAlertDoneChallenge(parentVC: UIViewController, delegate: AlertDoneDelegate) {
         let alertDoneChallengeVC = self.instantiateViewController(storyboardName: "Alert", vcIdentifier: "AlertDoneChallenge") as! AlertDoneChallengeVC
         alertDoneChallengeVC.delegate = delegate
