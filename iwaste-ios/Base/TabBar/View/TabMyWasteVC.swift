@@ -33,6 +33,10 @@ class TabMyWasteVC: UIViewController {
     
     @IBOutlet weak var tableStats: UITableView!
     
+    @IBOutlet weak var topSpace: NSLayoutConstraint!
+    @IBOutlet weak var heightTrashbin: NSLayoutConstraint!
+    @IBOutlet weak var widthTrashbin: NSLayoutConstraint!
+    
     let udService = UserDefaultService.instance
     var presenter: MyWastePresenter?
     var categories: [CategoryCD]?
@@ -91,6 +95,52 @@ class TabMyWasteVC: UIViewController {
             let util = AlertUtil()
             util.showAlertLevelUp(parentVC: self)
         }
+        
+        if UIDevice().userInterfaceIdiom == .phone {
+            switch UIScreen.main.nativeBounds.height {
+                case 1136:
+                    topSpace.constant = 15
+                    heightTrashbin.constant = 170
+                    widthTrashbin.constant = 170
+                    // iPhone 5 or 5S or 5C
+
+                case 1334:
+                    topSpace.constant = 25
+                    heightTrashbin.constant = 170
+                    widthTrashbin.constant = 170
+                    // iPhone 6/6S/7/8
+
+                case 1920, 2208:
+                    topSpace.constant = 40
+                    heightTrashbin.constant = 190
+                    widthTrashbin.constant = 190
+                    // iPhone 6+/6S+/7+/8+
+
+                case 2436:
+                    topSpace.constant = 50
+                    heightTrashbin.constant = 210
+                    widthTrashbin.constant = 210
+                    // iPhone X/XS/11 Pro
+
+                case 2688:
+                    topSpace.constant = 50
+                    heightTrashbin.constant = 210
+                    widthTrashbin.constant = 210
+                    // iPhone XS Max/11 Pro Max
+
+                case 1792:
+                    topSpace.constant = 60
+//                    heightTrashbin.constant = 190
+//                    widthTrashbin.constant = 190
+                    // iPhone XR/11
+
+                default:
+                    topSpace.constant = 17
+                    heightTrashbin.constant = 190
+                    widthTrashbin.constant = 190
+                    // default constant
+                }
+            }
     }
     
     override func viewWillAppear(_ animated: Bool) {

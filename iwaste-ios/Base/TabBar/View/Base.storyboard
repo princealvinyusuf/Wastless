@@ -51,10 +51,10 @@
                                 </constraints>
                             </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5X-Q5-5C2" userLabel="Wave View">
-                                <rect key="frame" x="112" y="354" width="190" height="190"/>
+                                <rect key="frame" x="87" y="354" width="240" height="240"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wasteBasket" translatesAutoresizingMaskIntoConstraints="NO" id="ZBA-QG-BVY">
-                                        <rect key="frame" x="0.0" y="0.0" width="190" height="190"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="240"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="" value="YES"/>
                                         </userDefinedRuntimeAttributes>
@@ -63,9 +63,9 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZBA-QG-BVY" secondAttribute="bottom" id="2k0-FI-y5k"/>
-                                    <constraint firstAttribute="width" constant="190" id="3kG-x1-WuQ"/>
+                                    <constraint firstAttribute="width" constant="240" id="3kG-x1-WuQ"/>
                                     <constraint firstItem="ZBA-QG-BVY" firstAttribute="leading" secondItem="i5X-Q5-5C2" secondAttribute="leading" id="IJP-Uc-J6b"/>
-                                    <constraint firstAttribute="height" constant="190" id="P3h-uA-DLY"/>
+                                    <constraint firstAttribute="height" constant="240" id="P3h-uA-DLY"/>
                                     <constraint firstItem="ZBA-QG-BVY" firstAttribute="top" secondItem="i5X-Q5-5C2" secondAttribute="top" id="ZZW-B2-OeA"/>
                                     <constraint firstAttribute="trailing" secondItem="ZBA-QG-BVY" secondAttribute="trailing" id="bnQ-ti-IZc"/>
                                 </constraints>
@@ -82,7 +82,7 @@
                                 <cells/>
                             </collectionView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1oL-2U-XRA">
-                                <rect key="frame" x="183" y="463" width="48" height="20.5"/>
+                                <rect key="frame" x="183" y="488" width="48" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -151,18 +151,21 @@
                     <connections>
                         <outlet property="collectionCategory" destination="fs8-1C-JBx" id="u8a-X4-rB5"/>
                         <outlet property="dateNavigationBar" destination="Jiw-r0-5tf" id="cwI-0C-h09"/>
+                        <outlet property="heightTrashbin" destination="P3h-uA-DLY" id="qLX-0g-rfd"/>
                         <outlet property="setTargetImage" destination="2FC-3R-UXh" id="Bcw-Yl-nnj"/>
                         <outlet property="setTargetOutlet" destination="WnY-q0-9u6" id="K4c-yu-jOr"/>
                         <outlet property="subView" destination="hot-VU-Gty" id="cUa-FS-HJe"/>
                         <outlet property="tableStats" destination="Dtn-hE-KKz" id="Ht6-U3-xaP"/>
                         <outlet property="textIntro" destination="M2f-Z4-Jq2" id="Ad0-Fg-qLQ"/>
+                        <outlet property="topSpace" destination="HLM-7y-5MX" id="5et-Kj-xJR"/>
                         <outlet property="trashBinPercentage" destination="1oL-2U-XRA" id="2Va-Cs-rtU"/>
                         <outlet property="waveView" destination="i5X-Q5-5C2" id="1iE-Y9-Hw4"/>
+                        <outlet property="widthTrashbin" destination="3kG-x1-WuQ" id="4WB-eZ-GfQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fmn-Mo-Tt0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1937.68115942029" y="122.54464285714285"/>
+            <point key="canvasLocation" x="1938" y="123"/>
         </scene>
         <!--My Waste-->
         <scene sceneID="rx9-Zq-RhL">
