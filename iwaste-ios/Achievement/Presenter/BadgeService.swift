@@ -80,7 +80,7 @@ class BadgeService {
             weekFromDate.append(date.week)
             // Potential bug here is when last week data only store one day then its still count as a week
             if weekFromDate.count > 1 {
-                if weekFromDate.last != weekFromDate.first {
+                if weekFromDate.last! - weekFromDate.last!-1 == 1 {
                     isChanging = true
                 } else {
                     count += getAllTrashesData(date).count

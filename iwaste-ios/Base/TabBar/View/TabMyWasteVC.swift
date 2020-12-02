@@ -13,6 +13,7 @@ import UserNotifications
 protocol WasteTargetDelegate {
     func updateUI()
     func checkTargetSet()
+    func checkWasteCondition(type: WasteType)
 }
 
 class TabMyWasteVC: UIViewController {
@@ -84,17 +85,12 @@ class TabMyWasteVC: UIViewController {
         presenter?.getTodayDate(completion: { (date) in
             self.dateNavigationBar.title = "\(date)"
         })
-                
+        
         let isBadgeComplete = BadgeService.isBadgeComplete()
         if isBadgeComplete {
             let util = AlertUtil()
             util.showAlertLevelUp(parentVC: self)
         }
-        
-        let data = WasteWarning.getSelectedDataWarning(type: .almostOrganic)
-        
-        let util = AlertUtil()
-        util.showAlertWarningWaste(parentVC: self, model: data)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -108,9 +104,6 @@ class TabMyWasteVC: UIViewController {
         }
         
         NotificationService.instance.scheduleDailyReminder()
-    }
-    
-    @IBAction func dateTappedForNotifTest(_ sender: Any) {
     }
     
     func subViewConfigure() {
@@ -196,6 +189,36 @@ extension TabMyWasteVC: UICollectionViewDelegate, UICollectionViewDataSource {
 }
 
 extension TabMyWasteVC: WasteTargetDelegate {
+    func checkWasteCondition(type: WasteType) {
+        if categories!.count > 0{
+            presenter?.loadDataTrash(categories: categories, type: type) { (wasteCount, target, progress) in
+                
+                var warningType = Warning.reachedGeneral
+                switch type {
+                case .plastic:
+                    warningType = .almostPlastic
+                case .glass:
+                    warningType = .almostGlass
+                case .paper:
+                    warningType = .almostPaper
+                case .metal:
+                    warningType = .almostMetal
+                case .organic:
+                    warningType = .almostOrganic
+                }
+                
+                let data = WasteWarning.getSelectedDataWarning(type: warningType)
+                print("progressWasteAdded: ", progress)
+                if progress >= 80 {
+                    DispatchQueue.main.async {
+                        let util = AlertUtil()
+                        util.showAlertWarningWaste(parentVC: self, model: data)
+                    }
+                }
+            }
+        }
+    }
+    
     func updateUI() {
         presenter?.loadCategory()
         
@@ -251,11 +274,28 @@ extension TabMyWasteVC: WasteTargetDelegate {
                 self.wave.setProgress(progress)
             }
             trashBinPercentage.text = String(format: "%.0f", wave.progress*100) + "%"
-            print("waveProgress",wave.progress)
             wave.frontColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1).withAlphaComponent(1)
             wave.backColor = #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1).withAlphaComponent(0.3)
             waveView.layer.borderColor = UIColor.gray.cgColor
             
+            print("waveProgress",wave.progress)
+            
+            // Check if num of waste reach the target
+            var warningType: Warning!
+            if wave.progress >= 0.75 && wave.progress < 1 {
+                warningType = .almostGeneral
+            } else if wave.progress >= 1 {
+                warningType = .reachedGeneral
+            }
+            
+            // show alert reminder when almost or reached the target
+            if let type = warningType {
+                let dataWarning = WasteWarning.getSelectedDataWarning(type: type)
+                DispatchQueue.main.async {
+                    let util = AlertUtil()
+                    util.showAlertWarningWaste(parentVC: self, model: dataWarning)
+                }
+            }
         }else {
             main(isHidden: true)
             target(isHidden: false)
@@ -273,13 +313,6 @@ extension TabMyWasteVC: MyWasteDelegate {
         print("error data categories: ", error.localizedDescription)
     }
 }
-//
-//extension TabMyWasteVC: UNUserNotificationCenterDelegate {
-//
-//    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-//        completionHandler([.alert])
-//    }
-//}
 
 extension TabMyWasteVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -302,6 +335,4 @@ extension TabMyWasteVC: UITableViewDelegate, UITableViewDataSource {
         }
         return cell
     }
-    
-    
 }

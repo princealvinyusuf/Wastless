@@ -146,9 +146,6 @@
                     <navigationItem key="navigationItem" title="Waste up?" leftItemsSupplementBackButton="YES" id="puf-gI-jgn">
                         <barButtonItem key="leftBarButtonItem" title="Date" style="plain" id="Jiw-r0-5tf">
                             <color key="tintColor" name="navigationBarModal"/>
-                            <connections>
-                                <action selector="dateTappedForNotifTest:" destination="UCs-Mc-rqc" id="Tw2-1t-J4W"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

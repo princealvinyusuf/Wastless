@@ -99,7 +99,6 @@ extension ActivityVC: BonsaiControllerDelegate {
 extension ActivityVC: ChallengesDelegate {
     func upgradeLevel() {
 //        self.delegate?.upgradeLevel()
-        print("hhhhhh: ", udService.level)
         refreshView()
         
         DispatchQueue.main.async {

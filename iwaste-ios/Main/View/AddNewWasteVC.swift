@@ -37,8 +37,6 @@ class AddNewWasteVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.hideKeyboard()
-//        inputWasteField.delegate = self
         managedObjectContext = appDelegate?.persistentContainer.viewContext
         presenter = AddNewWastePresenter(delegate: self)
         
@@ -113,6 +111,9 @@ class AddNewWasteVC: UIViewController {
         addData()
         delegate?.updateUI()
         delegate?.checkTargetSet()
+        
+        let type = WasteType(rawValue: selectedCategory!.categoryName)
+        delegate?.checkWasteCondition(type: type!)
         self.dismiss(animated: true, completion: nil)
         
     }
@@ -165,9 +166,6 @@ extension AddNewWasteVC: UICollectionViewDelegate, UICollectionViewDataSource, U
         selectedWaste = selectedCategory?.waste[indexPath.row]
     }
     
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-    //            return CGSize(width: view.frame.width/5, height: view.frame.height)
-    //    }
 }
 
 extension AddNewWasteVC: UITableViewDelegate, UITableViewDataSource {
@@ -207,10 +205,3 @@ extension AddNewWasteVC: AddNewWasteDelegate {
         // TODO Later
     }
 }
-
-//extension UIViewController: UITextFieldDelegate{
-//    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        view.endEditing(true)
-//        return true;
-//    }
-//}
