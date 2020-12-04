@@ -186,6 +186,7 @@ class HistoryVC: UIViewController {
                     let highestTrashCount = totalTrash.max()
                     let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
                     self.lblSummaryDetail.text = dailySummary[indexofTrash!]
+                    print(totalTrash)
                 }
             }
             lblChartDate.text = dateFormatter.string(from: pickedDate)
@@ -194,18 +195,19 @@ class HistoryVC: UIViewController {
             lblSummary.text = "Daily Summary"
             
         case "monthly":
-            presenter?.getTotalWasteMonthly(date:pickedDate){(totalTrash, totalTarget, total) in
+            presenter?.getTotalWasteMonthly2(date:pickedDate){(totalTrash, totalTarget, total, trashSummary) in
                 self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
                 self.lblDetailTotal.text = String(total)
                 
                 //Function to show Summary
-                let totalData = totalTrash.reduce(0, +)
+                let totalData = trashSummary.reduce(0, +)
                 if totalData == 0{
                     self.lblSummaryDetail.text = monthlySummary[5]
                 }else{
-                    let highestTrashCount = totalTrash.max()
-                    let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
+                    let highestTrashCount = trashSummary.max()
+                    let indexofTrash = trashSummary.firstIndex(of: highestTrashCount!)
                     self.lblSummaryDetail.text = monthlySummary[indexofTrash!]
+                    print(trashSummary)
                 }
             }
             lblChartDate.text = dateFormatter5.string(from: pickedDate)
@@ -220,18 +222,19 @@ class HistoryVC: UIViewController {
                 self.lblDetailDay.text = "This Week"
                 self.lblSummary.text = "Weekly Summary"
                 
-                self.presenter?.getTotalWasteWeekly(date: dayArray){(totalTrash, totalTarget, total) in
+                self.presenter?.getTotalWasteWeekly(date: dayArray){(totalTrash, totalTarget, total, trashSummary) in
                     self.setDataChart(countWaste: totalTrash, targetWaste: totalTarget, selectedHistory: self.selectedHistory)
                     self.lblDetailTotal.text = String(total)
                     
                     //Function to show Summary
-                    let totalData = totalTrash.reduce(0, +)
+                    let totalData = trashSummary.reduce(0, +)
                     if totalData == 0{
                         self.lblSummaryDetail.text = weeklySummary[5]
                     }else{
-                        let highestTrashCount = totalTrash.max()
-                        let indexofTrash = totalTrash.firstIndex(of: highestTrashCount!)
+                        let highestTrashCount = trashSummary.max()
+                        let indexofTrash = trashSummary.firstIndex(of: highestTrashCount!)
                         self.lblSummaryDetail.text = weeklySummary[indexofTrash!]
+                        print(trashSummary)
                     }
                 }
             }
