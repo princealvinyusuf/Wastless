@@ -35,6 +35,8 @@ class AddNewWasteVC: UIViewController {
     
     var presenter: AddNewWastePresenter?
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         managedObjectContext = appDelegate?.persistentContainer.viewContext
@@ -66,6 +68,9 @@ class AddNewWasteVC: UIViewController {
         navHeader.titleTextAttributes = textAttributes
         navHeader.topItem?.title = selectedCategory?.categoryName
         
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
     }
     
     @IBAction func btnPlusMinusClicked(_ sender: UIButton) {
