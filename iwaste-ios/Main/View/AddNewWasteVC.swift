@@ -122,6 +122,9 @@ class AddNewWasteVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
         
     }
+    @IBAction func inputTextDoneClicked(_ sender: UITextField) {
+        sender.resignFirstResponder()
+    }
     
     func addData(){
         if(listWasteAdded.count>=1){
