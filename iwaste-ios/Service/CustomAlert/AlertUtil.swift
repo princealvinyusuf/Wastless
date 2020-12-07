@@ -27,6 +27,7 @@ class AlertUtil {
         alertLevelUpVC.model = model
         
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+        alertController.view.subviews.first?.subviews.first?.subviews.first?.backgroundColor = UIColor.systemBackground
         alertController.setValue(alertLevelUpVC, forKey: "contentViewController")
         
         parentVC.present(alertController, animated: true, completion: nil)

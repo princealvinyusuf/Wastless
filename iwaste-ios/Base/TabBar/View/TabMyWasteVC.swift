@@ -312,6 +312,7 @@ extension TabMyWasteVC: WasteTargetDelegate {
     }
     
     func checkTargetSet(){
+        wave = nil
         if categories!.count > 0{
             main(isHidden: false)
             target(isHidden: true)

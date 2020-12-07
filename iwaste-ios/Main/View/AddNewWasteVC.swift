@@ -35,8 +35,6 @@ class AddNewWasteVC: UIViewController {
     
     var presenter: AddNewWastePresenter?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         managedObjectContext = appDelegate?.persistentContainer.viewContext
@@ -71,6 +69,8 @@ class AddNewWasteVC: UIViewController {
         let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         tap.cancelsTouchesInView = false
         view.addGestureRecognizer(tap)
+        
+        btnDone.isEnabled = false
     }
     
     @IBAction func btnPlusMinusClicked(_ sender: UIButton) {
@@ -105,6 +105,10 @@ class AddNewWasteVC: UIViewController {
                 presenter?.addWaste(selectedWaste: wasteSelected, numOfWaste: currentNum)
             }
         }
+        
+        if listWasteAdded.count > 0 {
+            btnDone.isEnabled = true
+        }
     }
     
     @IBAction func btnCancelClicked(_ sender: Any) {
@@ -112,15 +116,15 @@ class AddNewWasteVC: UIViewController {
     }
     
     @IBAction func btnDoneClicked(_ sender: Any) {
-        // TODO save data to core data here
-        addData()
-        delegate?.updateUI()
-        delegate?.checkTargetSet()
-        
-        let type = WasteType(rawValue: selectedCategory!.categoryName)
-        delegate?.checkWasteCondition(type: type!)
-        self.dismiss(animated: true, completion: nil)
-        
+        if(listWasteAdded.count>=1){
+            addData()
+            delegate?.updateUI()
+            delegate?.checkTargetSet()
+            
+            let type = WasteType(rawValue: selectedCategory!.categoryName)
+            delegate?.checkWasteCondition(type: type!)
+            self.dismiss(animated: true, completion: nil)
+        }
     }
     @IBAction func inputTextDoneClicked(_ sender: UITextField) {
         sender.resignFirstResponder()
@@ -201,7 +205,7 @@ extension AddNewWasteVC: AddNewWasteDelegate {
         // reload table view to display newest data
         listWasteAdded = wasteAdded
         tableWasteAdded.reloadData()
-
+        
         // deselect all item on collection view
         let selectedItems = collectionWaste.indexPathsForSelectedItems
         selectedItems?.forEach({ (index) in
