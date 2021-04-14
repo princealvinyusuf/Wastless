@@ -1,5 +1,5 @@
-# iwaste-ios
-This is project for macro challenge at Apple Developer Academy @IL Cohort 2020
+# Wastless
+A native iOS App that help people who wants to achieve zero waste lifestyle through waste diet by regularly setting target and recording their daily waste
 
 
 # Screenshot
